@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wine on Hack</title>
+    <link>https://sinujohn.github.io/tags/wine/index.xml</link>
+    <description>Recent content in Wine on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/wine/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Run Windows programs on Linux</title>
+      <link>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</link>
+      <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</guid>
+      <description>&lt;p&gt;&lt;p&gt;This is the most important question that a Linux newbie faces - &amp;ldquo;&lt;em&gt;How to run his/her favourite Windows application on Linux?&lt;/em&gt;&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!&lt;/p&gt;
+&lt;h2&gt;1. Find the Linux versions of your Windows applications&lt;/h2&gt;
+&lt;p&gt;If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!&lt;/p&gt;
+&lt;h2&gt;2. Find the Linux equivalent of your Windows Application&lt;/h2&gt;
+&lt;p&gt;If you can&amp;rsquo;t find a Linux version, you might find that there are many native Linux softwares that suites your need. This is true for various media players(VLC, Amarok etc. instead of Windows Media Player or Winamp), Graphics applications(GIMP instead of Photoshop) etc. In this case you&amp;rsquo;ll have to search for the new software(again GIYF), and once you have found one you&amp;rsquo;ll have to study how to use it.&lt;/p&gt;
+&lt;h2&gt;3. Use Wine to run your Windows application&lt;/h2&gt;
+&lt;p&gt;If you are not satisfied with neither of the above steps, try running your Windows application with Wine(Wine is a Linux application that reimplements Win32 API). This solution might not work 100% all the time. But still its worth giving a try because running your application with Wine is better than the solution of step4. And if you have got source code of your Windows application then you can port it to Linux using Winelib.&lt;/p&gt;
+&lt;h2&gt;4. Use a virtual machine&lt;/h2&gt;
+&lt;p&gt;If you want your application to work without any glitches (but with some performance overhead) then you can try installing a virtual machine with Windows OS loaded. You can then install your application in the virtual machine in the same way as you do in your Windows OS. VirtualBox is a really easy to use one. It provides seamless integration with your Linux desktop. Here is a screenshot of MS Paint in OpenSuSE with VirtualBox&amp;rsquo;s seamless integration enabled:&lt;/p&gt;
+&lt;img src=&#34;https://sinujohn.github.io/assets/winlin.png&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

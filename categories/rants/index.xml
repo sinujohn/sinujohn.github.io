@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rants on Hack</title>
+    <link>https://sinujohn.github.io/categories/rants/index.xml</link>
+    <description>Recent content in Rants on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/categories/rants/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My Developer Personality</title>
+      <link>https://sinujohn.github.io/2015/05/21/my-developer-personality/</link>
+      <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/05/21/my-developer-personality/</guid>
+      <description>&lt;p&gt;I took a &lt;a href=&#34;http://bit.ly/1uSzyss&#34; target=&#34;_blank&#34;&gt;Developer Personality Test&lt;/a&gt;, conducted by &lt;a href=&#34;http://java.dzone.com/dzone-developer-personality-quiz&#34; target=&#34;_blank&#34;&gt;DZone&lt;/a&gt; and it almost sums up what I am! Here&amp;rsquo;s the result I got:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&#34;sgE-1883619-2-119-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Here are your results!&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-2-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
+&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Independent vs Collaborative&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 class=&#34;sg-question-options&#34;&gt;You are &lt;strong&gt;Independent&lt;/strong&gt;!&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-104-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Independent:&lt;/strong&gt;
+You prefer to spend most of your time working in an isolated environment.  You rarely want to collaborate because you have a better chance of solving problems on your own.  If you do have to collaborate on the direction of a project, you dislike it when you have to defend your position or when others try to muddy your plans for the project.  It&#39;s better to have one strong vision for a project from the lead programmer on that project.  Having a large team or allowing others to have significant control over the project risks communication errors, a muddied code base, and inefficiencies.  If one developer has a firm grasp on the entire codebase, they&#39;ll be much better at fixing and improving it quickly.
+
+&lt;strong&gt;Collaborative:&lt;/strong&gt;
+Good code doesn&#39;t happen in a vacuum.  You need a team to keep you energized and on your toes so that you&#39;re constantly improving the project code using the entire team&#39;s varied experience and strengths.  You like to talk frequently with colleagues and discuss ideas so that you can learn from others and spark ideas.  It doesn&#39;t matter what their experience level is, you can always learn something by including everyone.  A solo coder can&#39;t possibly code a large software project with the speed and quality that a team can.&lt;/div&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-59-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
+&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Abstract vs Low-Level&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 class=&#34;sg-question-options&#34;&gt;You are both &lt;strong&gt;Abstract &lt;/strong&gt;&amp;amp;&lt;strong&gt; Low-Level&lt;/strong&gt;!&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-105-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Abstract:&lt;/strong&gt;
+You prefer to write in languages and frameworks that simplify development as much as possible and use as few characters and lines of code as possible. The trajectory of software development has always been toward making life easier and error-free. Programming has always been about adding more abstraction layers to simplify tasks, so why not trust the technology on your layer and don&#39;t worry about handling the lower layers?
+
+&lt;strong&gt;Low-Level:&lt;/strong&gt;
+The more abstraction tools and high-level languages we build, the further we get from understanding and controlling the deeper components in our programs.  This means lower performance and endless bug searches.  Developers today need to have a stronger understanding of compilers, memory management, pointer arithmetic, and other low-level topics.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-8-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
+&lt;div class=&#34;sg-question-title&#34;&gt;&lt;/div&gt;
+&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Frontier vs Conservative&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 class=&#34;sg-question-options&#34;&gt;You are &lt;strong&gt;Conservative&lt;/strong&gt;!&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-106-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Frontiers:&lt;/strong&gt;
+You like to work at the cutting edge.  Using too many old languages and technologies bores you, and it severely hinders your software&#39;s potential to keep outdated technologies in it for too long. Developers need keep their ears to the ground for new technologies and new versions of tools that they already use.  Even if the community and maturity of the project isn&#39;t at a level that most enterprises would consider &#34;safe,&#34; you&#39;re willing to be an early adopter if you believe the community and the technology has momentum.  Development technology is changing faster every day, and we need to constantly be adopting new tools and methods to keep up.
+
+&lt;strong&gt;Conservative:&lt;/strong&gt;
+It seems like every 10 years we forget all the problems we solved in the previous decade and start to build &#39;new&#39; tools that solve the same problems, even though there is a perfectly good solution that has existed for years.  Enterprises have it right when they make conservative decisions about their technology stack. Why would you hang your business on a technology with only a few years of maturity in just a handful of production use cases?  Technologies like PHP, Java, and SQL have been mainstays of the development industry for years, and it takes a lot of time for new technologies to make it into that maturity tier.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-72-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
+&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Generalist vs Specialist&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 class=&#34;sg-question-options&#34;&gt;You are both a &lt;strong&gt;Generalist &lt;/strong&gt;&amp;amp; a&lt;strong&gt; Specialist&lt;/strong&gt;!&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-107-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Generalist:&lt;/strong&gt;
+You like to be known as a &#34;Jack of all Trades&#34; and a reference for others on your team. You jump at every chance to enhance your skills in a wide variety technology topics, not just the ones that apply to your day to day work.  You don&#39;t always know when it might be useful to have these extra skills, but when the time comes, you are ready.  If more developers took the time to learn other skills outside of the ones relevant to their project, they&#39;d work more seamlessly with the rest of their organization because they&#39;d have more empathy and understanding of the challenges that their colleagues face.
+
+&lt;strong&gt;Specialist:&lt;/strong&gt;
+If you&#39;re a Jack of all Trades, you&#39;re a master of none. Mastery in one or two areas is what makes you valuable.  What&#39;s the point of learning skills for other jobs you don&#39;t have and can&#39;t control? When you plan for a project or do technical research, it&#39;s always focused on something you&#39;re working on. You don&#39;t get side-tracked. If you learn a new skill, it&#39;s because the project requires that you do it. Most or all of your hobby projects are also building your mastery of the skills you use at your job.&lt;/div&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-93-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
+&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Idealist vs Pragmatist&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 class=&#34;sg-question-options&#34;&gt;You are an &lt;strong&gt;Idealist&lt;/strong&gt;!&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sgE-1883619-2-108-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
+&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Idealist:&lt;/strong&gt;
+You believe in the power of well-defined processes. It&#39;s crucial to an organization&#39;s success that they create and follow appropriate and effective processes for building software. Trying to improvise or play it by ear invites the possibility of workflow errors that can decrease the quality of the software or even cause major product failures. Planning is also extremely important to you.  You like to research all of the things you will need to know before starting a project.  It&#39;s important to find out the best architecture for your software beforehand, and then strictly implement that architecture with objective best practices.  The more planning and scaffolding you do in the beginning, the less overall work you will have to do to complete the software.
+
+&lt;strong&gt;Pragmatist:&lt;/strong&gt;
+Speed is your best weapon in a competitive industry, and to quickly prototype and build new products, you need to have a flexible, pragmatic process.  You don&#39;t have a few months to plan your projects, you need to just start coding and a good path for the project will reveal itself.  Great products are made through frequent feedback and releases, so why shouldn&#39;t your plan be just as adaptable? Your plan should be adapted to changes in the software, and your expertise should be adapted to the project. You shouldn&#39;t spend your precious time studying a problem that you&#39;re not certain to run into while coding your projects.  Trying to build test coverage for every possible scenario and having long meetings throughout the process are a waste of time and distract you from doing more productive work.&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RIP Thulika Keyboard.. (sob).. (sob)</title>
+      <link>https://sinujohn.github.io/2015/05/12/rip-thulika-keyboard-sob-sob/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/05/12/rip-thulika-keyboard-sob-sob/</guid>
+      <description>&lt;p&gt;Just got to know that Google has came up with an handwriting recognition app - &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.android.apps.handwriting.ime&amp;amp;hl=en&#34;&gt;Google Handwriting Input&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And the good part is it has got Indian language support. Yay!!&lt;/p&gt;
+
+&lt;p&gt;But the bad part is that, it means the demise of my very own &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&amp;amp;hl=en&#34;&gt;Thulika Keyboard&lt;/a&gt;. I had created it &lt;a href=&#34;https://sinujohn.github.io/2013/01/21/thulika-keyboard/&#34;&gt;about 2 years back&lt;/a&gt;, and at that time there was no handwriting recognition app for any Indian language. I also had opensourced it, and have got requests from many to translate it to their language(Arabic, Hausa, Tamil to name a few) and some even have used it as part of their school/college projects.&lt;/p&gt;
+
+&lt;p&gt;RIP Thulika Keyboard, it was pleasure to have you around(it&amp;rsquo;s still out there, so you can download it and play with it, but with Google&amp;rsquo;s new app, mine seems a bit primitive :( ).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/rip.jpg&#34; alt=&#34;RIP&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Google&amp;rsquo;s new app is awesome though, it recognises full words (mine could only do a letter at a time), and speaking about recognition, its very good at that.&lt;/p&gt;
+
+&lt;p&gt;So, here is me(Thulika), the old out dated tech giving way for the new stylish Google app ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wait... But... Why?</title>
+      <link>https://sinujohn.github.io/2015/05/12/wait-but-why/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/05/12/wait-but-why/</guid>
+      <description>&lt;p&gt;I don&amp;rsquo;t always subscribe to blogs..&lt;/p&gt;
+
+&lt;p&gt;But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like:
+&lt;img src=&#34;https://sinujohn.github.io/assets/9e9.gif&#34; alt=&#34;takemymoney&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have become a fan of &lt;a href=&#34;http://waitbutwhy.com/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://waitbutwhy.com/&#34;&gt;http://waitbutwhy.com/&lt;/a&gt;&lt;/a&gt; just after reading an &lt;a href=&#34;http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html&#34; target=&#34;_blank&#34;&gt;article about Elon Musk&lt;/a&gt; and one about &lt;a href=&#34;http://waitbutwhy.com/2014/05/fermi-paradox.html&#34; target=&#34;_blank&#34;&gt;Fermi Paradox&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Programmer Zen</title>
+      <link>https://sinujohn.github.io/2015/05/04/programmer-zen/</link>
+      <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/05/04/programmer-zen/</guid>
+      <description>&lt;p&gt;Just &lt;a href=&#34;http://eloquentjavascript.net/10_modules.html&#34;&gt;read this quote&lt;/a&gt; and I loved it:
+&lt;blockquote&gt;A beginning programmer writes her programs like an ant builds her hill, one piece at a time, without thought for the bigger structure. Her programs will be like loose sand. They may stand for a while, but growing too big they fall apart.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;p_OfZWeuo+oF&#34; class=&#34;p_ident&#34; href=&#34;http://eloquentjavascript.net/10_modules.html#p_OfZWeuo+oF&#34;&gt;&lt;/a&gt;Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures. They are solid, but when they must change, violence must be done to them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;p_fFMEGH1dk3&#34; class=&#34;p_ident&#34; href=&#34;http://eloquentjavascript.net/10_modules.html#p_fFMEGH1dk3&#34;&gt;&lt;/a&gt;The master programmer knows when to apply structure and when to leave things in their simple form. Her programs are like clay, solid yet malleable.&lt;/blockquote&gt;
+&amp;ndash; Master Yuan-Ma, &lt;cite&gt;The Book of Programming&lt;/cite&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>angamaly-marakkamo</title>
+      <link>https://sinujohn.github.io/2015/03/10/angamaly-marakkamo/</link>
+      <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/03/10/angamaly-marakkamo/</guid>
+      <description>&lt;p&gt;&lt;blockquote&gt;&amp;ldquo;മനുഷ്യരെ രക്ഷിക്കേണ്ടത് ദൈവമാണ്. അല്ലാതെ ദൈവത്തെ രക്ഷിക്കേണ്ടത് മനുഷ്യരല്ല. ദൈവത്തെ മനുഷ്യൻ രക്ഷിക്കേണ്ടി വരുമ്പോൾ ദൈവത്തിന്റെ വിലയിടിയുന്നു.&amp;rdquo; - &lt;a href=&#34;http://www.firstministry.kerala.gov.in/pdf/angamali.pdf&#34; target=&#34;_blank&#34;&gt;അങ്കമാലി മറക്കാമോ? - P.J.Antony&lt;/a&gt;&lt;/blockquote&gt;
+P.J. Antony writes that people were fooled into taking part in the Liberation Struggle (Vimochanasamaram) by the Church, the Congress party and everyone else (Uncle Sam&amp;rsquo;s CIA??) who were afraid of the Communist party getting their first foothold in India&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hearing it from the granpa!</title>
+      <link>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
+      <description>&lt;p&gt;I was searching for good JavaScript resources and then stumbled onto this guy - &lt;a href=&#34;http://www.crockford.com/&#34;&gt;Douglas Crockford&lt;/a&gt;. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - &lt;a href=&#34;http://shop.oreilly.com/product/9780596517748.do&#34;&gt;Javascript: the good parts&lt;/a&gt;. He is one of the most authoritative person to talk about JavaScript.&lt;/p&gt;&lt;p&gt;I found his &lt;a href=&#34;http://www.yuiblog.com/crockford/&#34;&gt;talks on JavaScript&lt;/a&gt; and just finished watching the first part.&lt;/p&gt;&lt;p&gt;Its a video which I wish I had seen when I was in my Engineering class! The first part talks nothing about JavaScript. Its about the history of computing and programming languages. His talk, unlike our Computer Science teachers, is very inspiring - and the reason is, he has EXPERIENCED it (atleast most of it) and not just read about it in some book. The way he speaks about punch card readers, early computers etc. remind you of the way old people tell you the stories of their childhood - with passion and love.&lt;/p&gt;&lt;p&gt;Now I should watch the remaining of the series.&lt;/p&gt;&lt;p&gt;Happy Coding and Keep smiling :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First half of 2014</title>
+      <link>https://sinujohn.github.io/2014/07/08/first-half-of-2014/</link>
+      <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/08/first-half-of-2014/</guid>
+      <description>&lt;p&gt;The past 6 months had been very fruitful for me. I have added many stuffs to my skill set in this small span of time. Here are some of it:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The new Java kid - Java 8&lt;/li&gt;&lt;li&gt;Spring Security&lt;/li&gt;&lt;li&gt;Creating zero-xml Spring projects using Spring javaconfig and Spring Boot&lt;/li&gt;&lt;li&gt;Spring AOP&lt;/li&gt;&lt;li&gt;Git(had used it before, but had been using it almost daily for past 6 months)&lt;/li&gt;&lt;li&gt;Redis&lt;/li&gt;&lt;li&gt;Spring Data Redis&lt;/li&gt;&lt;li&gt;Spring Data JPA&lt;/li&gt;&lt;li&gt;REST(using Spring&#39;s REST as well as JAX-RS spec)&lt;/li&gt;&lt;li&gt;Security - PKI, Encryption-Decryption, Certificates, Auth mechanisms (like BASIC and Digest) etc., How to use tools like Fiddler&lt;/li&gt;&lt;li&gt;C# - Read-only knowledge :) I don&#39;t know to write a single line of code in C#, but I can understand a fairly large C# codebase given some time. I think that&#39;s fair amount of improvement for a guy who haven&#39;t looked into .NET code before.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Hmm.. that&#39;s a pretty impressive list ;)&lt;/p&gt;&lt;p&gt;Happy Coding! :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Musings of a Windows-using Linux fan!</title>
+      <link>https://sinujohn.github.io/2014/07/08/musings-of-a-windows-using-linux-fan/</link>
+      <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/08/musings-of-a-windows-using-linux-fan/</guid>
+      <description>&lt;p&gt;And now, the previous blog post made me thinking... Why didn&#39;t I learn .NET, C#, DirectX or other Microsoft technologies?&lt;br /&gt;Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono), languages and tools. &lt;br /&gt;And maybe, there is a little Leftist hidden in me. (I would like to call myself opportunistic Leftist though :), and by the way I believe most of the Keralites have a soft corner for Communist beliefs - that&#39;s why Kerala is one of the few states where Communists are still strong). And the words opensource and free software bring the thoughts of Freedom, independence and revolution to the mind.&lt;br /&gt;Using Microsoft technologies, means tied to Microsoft platform and tools. I guess the leftist in me doesn&#39;t want to get tied up.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;PS: I switched back to using Windows a couple of years ago though. Was a hardcore Linux fan before. If I hadn&#39;t I would have turned into a mad FOSS fanatic! Phew.. that didn&#39;t happen, and am glad it didn&#39;t!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Debugging</title>
+      <link>https://sinujohn.github.io/2014/06/19/debugging/</link>
+      <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/06/19/debugging/</guid>
+      <description>&lt;blockquote&gt;You can find how good a programmer is by the way he debugs!&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DRM-free content</title>
+      <link>https://sinujohn.github.io/2014/05/06/drm-free-content/</link>
+      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/05/06/drm-free-content/</guid>
+      <description>&lt;p&gt;These days all publishers are worried about their rights and the books are locked in, which is especially problematic in this digital age. Because unlike old days where we could share a book(hardcopy) which we bought, the new avatar of books - the e-books - are increasingly made to be under DRM, which means it stays only on one device or person. It can&amp;rsquo;t be shared with our friends even if we bought it with our hard earned cash. People who realize this come forward and fight against DRM these days to support free sharing. Because&amp;hellip;
+&lt;blockquote&gt;only free sharing promotes free knowledge&lt;/blockquote&gt;
+And now Packt publishing is giving an offer for today. Check it out!
+Celebrate #DayAgainstDRM with #Packt: For 24 hours only all eBooks and Videos at $10 each! &lt;a href=&#34;http://bit.ly/1q6bpha&#34;&gt;http://bit.ly/1q6bpha&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Namesake</title>
+      <link>https://sinujohn.github.io/2013/11/08/the-namesake/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/11/08/the-namesake/</guid>
+      <description>&lt;p&gt;One of the best novels i have ever read - The Namesake. Loved it. Awesome work by Jhumpa Lahiri. Following is a quote I have found to be very inspiring&lt;/p&gt;
+
+&lt;blockquote&gt;&#34;Do yourself a favor. Before it&#39;s too late, without thinking too much about it first, pack a pillow and a blanket and see as much of the world as you can. You will not regret it. One day it will be too late.&#34;
+
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now I have started reading her another book - &amp;ldquo;The interpreter of maladies&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thiruvananthapuram Life</title>
+      <link>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</link>
+      <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</guid>
+      <description>&lt;p&gt;For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram.
+Do I love this place? Yes and No.
+No? Why? Because this place lacks some sort of energy :(
+And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the &lt;a href=&#34;http://en.wikipedia.org/wiki/Trivandrum_Public_library&#34;&gt;Trivandrum Public Library&lt;/a&gt; (where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.
+The bike trips that I have done around this place is close to 10000 km!
+The following map show some of the short distance trips:&lt;/p&gt;
+
+&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d267521.8636949016!2d76.80008028469128!3d8.555347941141372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05a5960e90dc0f%3A0x6c20be6dc7c83670!2sKovalam+Light+house%2C+Kerala%2C+India!3m2!1d8.3829317!2d76.9796703!4m5!1s0x0%3A0x60cdff4235654bb9!2sVizhinjam+Juma+Masjid!3m2!1d8.3766123!2d76.9865183!4m5!1s0x3b05bb6774e1149b%3A0x1efe85dbc5053198!2sValiathura+Beach!3m2!1d8.464157!2d76.92454149999999!4m5!1s0x3b05bc83dedcfc07%3A0xc899203065f19098!2sShangumugham+Beach%2C+Thiruvananthapuram%2C+Kerala%2C+India!3m2!1d8.4784498!2d76.9119061!4m5!1s0x3b05bc3b8bcd7c63%3A0xf2a956af86a27253!2sVeli+Lake+and+Tourist+Village%2C+Veli+Sanghumugham+Road%2C+Veli%2C+Thiruvananthapuram%2C+Kerala%2C+India!3m2!1d8.5080206!2d76.88867019999999!4m5!1s0x3b05ef1c47000001%3A0x28d32906ae208476!2sPapanasam+Beach%2C+Varkala%2C+Kerala%2C+India!3m2!1d8.7327015!2d76.70605669999999!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05c95ff9740455%3A0x74aefbb63ac4f952!2sVazhvanthol+Waterfalls%2C+Kerala%2C+India!3m2!1d8.6745608!2d77.1633027!4m5!1s0x3b05cdc56677fbd3%3A0xb9400a2604d8f63d!2sPonmudi+Hill+Station%2C+Ponmudi%2C+Kerala%2C+India!3m2!1d8.7577585!2d77.1157944!5e0!3m2!1sen!2sus!4v1489429824438&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;And here are the long distance trips :&lt;/p&gt;
+
+&lt;p&gt;to &lt;a href=&#34;{{ site.baseurl }}{% post_url 2012-09-01-a-trip-to-the-southernmost-tip %}&#34;&gt;Kanyakumari&lt;/a&gt;, to &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}&#34;&gt;Agastyarkoodam&lt;/a&gt; and to Thenkasi (via Thenmala and Palaruvi waterfalls)
+&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m72!1m8!1m3!1d1009750.7718668396!2d77.088097!3d8.659278!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05af5b949c96d9%3A0x82c2dfa6dffb751c!2sPoovar+-+Vizhinjam+Rd%2C+Karumkulam%2C+Kerala+695525%2C+India!3m2!1d8.3271391!2d77.0560321!4m5!1s0x3b0454f79775f7c3%3A0x86b55a2e872ecd32!2sChitral+Rock+Temple%2C+Vellamcode%2C+Tamil+Nadu+629151%2C+India!3m2!1d8.3323779!2d77.2384304!4m5!1s0x3b05af5b949c96d9%3A0x82c2dfa6dffb751c!2sPoovar+-+Vizhinjam+Rd%2C+Karumkulam%2C+Kerala+695525%2C+India!3m2!1d8.3194559!2d77.0655432!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05bf3cc78b105b%3A0xe2d7c8ffbb9798b!2sUnknown%2C+Uliyazhathura%2C+Kerala+695581%2C+India!3m2!1d8.5785933!2d76.8994874!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05d628ce443a95%3A0x21700d924118d43c!2sThenmala%2C+Kerala%2C+India!3m2!1d8.9632448!2d77.0650809!4m5!1s0x3b05d570afa845b3%3A0x9ad29897133245dc!2sPalaruvi+Waterfalls%2C+Road+to+Palaruvi+Waterfalls%2C+Kollam%2C+Kerala%2C+India!3m2!1d8.952378699999999!2d77.15484479999999!4m5!1s0x3b0429c15ac547f7%3A0x9a707276cd8ae327!2sTenkasi%2C+Tamil+Nadu%2C+India!3m2!1d8.9590214!2d77.3129383!5e0!3m2!1sen!2sus!4v1489426569264&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m42!1m8!1m3!1d1010633.21746241!2d77.227604!3d8.324051!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3be7e7d457af298f%3A0xf816a5f8d82383ff!2sPanvel+-+Kochi+-+Kanyakumari+Hwy%2C+Vettunimadam%2C+Nagercoil%2C+Tamil+Nadu+629001%2C+India!3m2!1d8.179677!2d77.421188!4m5!1s0x3b04f51233a9b575%3A0xada29bbad5cd14c2!2sMuppandal+Wind+Farm%2C+Aralvaimozhi%2C+Tamil+Nadu+627105%2C+India!3m2!1d8.2616075!2d77.54175599999999!4m5!1s0x3b04ed3d2a087861%3A0x1e790e896aeffaa0!2sKanyakumari%2C+Tamil+Nadu%2C+India!3m2!1d8.0883064!2d77.5384507!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!5e0!3m2!1sen!2sus!4v1489426740046&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Travelling these routes one time alone is around 1000 kilometres! :D&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thrown into the ebook bandwagon</title>
+      <link>https://sinujohn.github.io/2013/10/16/thrown-into-the-ebook-bandwagon/</link>
+      <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/10/16/thrown-into-the-ebook-bandwagon/</guid>
+      <description>&lt;p&gt;Recently I have started reading a lot of books. And by recently, I mean the last two weeks. And these books are not ordinary paperback books, but they are ebooks which I read on my Nexus 7. I never thought I will be reading ebooks - I thought this was just a hype and ebooks can&#39;t just give you that feel that you get while reading a hardcopy of the book, I always thought I will miss the turning of pages, the smell of new books, the look of old books, but alas, I haven&#39;t started to miss much of these!&lt;br /&gt;Its true, sometimes it feels mechanical, but you can always go back!&lt;br /&gt;The books that I am reading now are: &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Namesake&#34;&gt;The Namesake&lt;/a&gt;, &lt;a href=&#34;http://www.packtpub.com/learning-libgdx-game-development/book&#34;&gt;Learning Libgdx Game Development&lt;/a&gt;, &lt;a href=&#34;http://pragprog.com/book/cfcar2/the-passionate-programmer&#34;&gt;The Passionate Programmer&lt;/a&gt; and &lt;a href=&#34;http://pragprog.com/book/tpp/the-pragmatic-programmer&#34;&gt;The Pragmatic Programmer&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I am an INTP</title>
+      <link>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</link>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</guid>
+      <description>&lt;p&gt;A few days back I took the &lt;a href=&#34;http://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/&#34;&gt;Myers-Briggs Type Indicator&lt;/a&gt; test at &lt;a href=&#34;http://www.16personalities.com/free-personality-test&#34;&gt;this site&lt;/a&gt;.&lt;br /&gt;It says that I fall in &lt;a href=&#34;http://www.16personalities.com/INTP-personality&#34;&gt;INTP&lt;/a&gt; category. &lt;br /&gt;From Myers-Briggs website, this is the &lt;a href=&#34;http://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/the-16-mbti-types.asp#INTP&#34;&gt;description&lt;/a&gt;:&lt;/p&gt;&lt;h2&gt;INTP&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;Seek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction. Quiet, contained, flexible, and adaptable. Have unusual ability to focus in depth to solve problems in their area of interest. Skeptical, sometimes critical, always analytical.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;According to Myers-Briggs theory, there are &lt;a href=&#34;http://www.16personalities.com/type-descriptions&#34;&gt;16 types&lt;/a&gt; of personalities.&lt;br /&gt;Don&#39;t know whether this test is authentic!&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;So I am an INTP, atleast thats what they say! By the way, Albert Einstein, Isaac Newton, Blaise Pascal were also INTP guys ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My New Nexus 7</title>
+      <link>https://sinujohn.github.io/2013/09/23/my-new-nexus-7/</link>
+      <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/09/23/my-new-nexus-7/</guid>
+      <description>&lt;p&gt;After what seemed like a long wait, I finally got my own Nexus7 2nd generation. Am now playing with the device and the first impression is IT IS AWESOME!
+A good friend of mine asked her family who was flying down from the US to get it for me.
+The device landed last week but I got my hands on it only today as I was on a vacation last week. So at last here is my Nexus 7(courtesy: Ms.Shaniyaji and her family :P)
+Am writing this post from my new Nexus 7 :)
+It&amp;rsquo;s sleek, not so large and not so small. The OpenGL ES 3 capability should make it a graphic powerhouse - just ideal for my experiments with Android!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

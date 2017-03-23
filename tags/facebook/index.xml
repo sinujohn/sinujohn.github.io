@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Facebook on Hack</title>
+    <link>https://sinujohn.github.io/tags/facebook/index.xml</link>
+    <description>Recent content in Facebook on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/facebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Authenticating using Facebook</title>
+      <link>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</link>
+      <pubDate>Thu, 12 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</guid>
+      <description>&lt;p&gt;I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)&lt;/p&gt;
+
+&lt;p&gt;Prerequisite: &lt;a href=&#34;https://developers.facebook.com/apps/&#34; target=&#34;_blank&#34;&gt;Create an app&lt;/a&gt; using Facebook Developer account and create the necessary App ID and App Secret keys.&lt;/p&gt;
+
+&lt;p&gt;If you are testing out your app and you are running it locally, the site URL should be something like &lt;a href=&#34;http://localhost:8090/&#34;&gt;http://localhost:8090/&lt;/a&gt;
+&lt;h3&gt;At the client side:&lt;/h3&gt;
+&lt;strong&gt;Asking for permission and login:&lt;/strong&gt;
+&lt;ul&gt;
+    &lt;li&gt;Use the SDK provided by facebook&lt;/li&gt;
+    &lt;li&gt;I am assuming Javascript SDK is used. Inspect the response returned.
+&lt;ul&gt;
+    &lt;li&gt;Send the &lt;strong&gt;authResponse.accessToken&lt;/strong&gt; and &lt;strong&gt;authResponse.userID&lt;/strong&gt; to the server for authentication.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;
+At the server side:&lt;/h3&gt;
+&lt;strong&gt;Authentication:&lt;/strong&gt;
+&lt;ul&gt;
+    &lt;li&gt;Verify the user by calling the Facebook Graph API:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&#34;padding-left:60px;&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://graph.facebook.com/debug_token?input_token={authResponse.accessToken}&amp;amp;access_token={app_id|app_secret&#34;&gt;https://graph.facebook.com/debug_token?input_token={authResponse.accessToken}&amp;amp;access_token={app_id|app_secret&lt;/a&gt;}&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&#34;padding-left:60px;&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;:&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;data&amp;quot;: {
+        &amp;quot;app_id&amp;quot;: &amp;quot;1234&amp;quot;,
+        &amp;quot;application&amp;quot;: &amp;quot;testapp&amp;quot;,
+        &amp;quot;expires_at&amp;quot;: 1426158000,
+        &amp;quot;is_valid&amp;quot;: true,
+        &amp;quot;scopes&amp;quot;: [
+                &amp;quot;public_profile&amp;quot;,
+                &amp;quot;email&amp;quot;
+                ],
+        &amp;quot;user_id&amp;quot;: &amp;quot;111112223333&amp;quot;
+     }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt; input_token&lt;/strong&gt; is the &lt;strong&gt;authResponse.accessToken&lt;/strong&gt; we obtained as a result of the login process from Facebook.
+&lt;strong&gt;access_token&lt;/strong&gt; is the &lt;a href=&#34;https://developers.facebook.com/docs/facebook-login/access-tokens/#apptokens&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;App Token&lt;/strong&gt;&lt;/a&gt;. It can either be generated as mentioned in &lt;a href=&#34;https://developers.facebook.com/docs/facebook-login/access-tokens/#apptokens&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;. Or instead of generating we can use the concatenated form: &lt;strong&gt;{app_id}&lt;/strong&gt; + &lt;strong&gt;&amp;rsquo;|&amp;rsquo;&lt;/strong&gt; + &lt;strong&gt;{app_secret}&lt;/strong&gt;. I have used this second form above.&lt;/li&gt;
+    &lt;li&gt;Verify the JSON obtained and check whether &lt;strong&gt;&amp;ldquo;is_valid&amp;rdquo; == True&lt;/strong&gt; and &lt;strong&gt;&amp;ldquo;user_id&amp;rdquo; == authResponse.userID&lt;/strong&gt; to make sure user is a valid one.&lt;/li&gt;
+    &lt;li&gt;The &lt;strong&gt;authResponse.userID&lt;/strong&gt; returned can be used to identify the user and used instead of username to lookup users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;strong&gt;Using the Graph API:&lt;/strong&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;Suppose we want to obtain the user&amp;rsquo;s email Id at the server side:
+Call the API as follows:
+&lt;strong&gt;&lt;a href=&#34;https://graph.facebook.com/{authResponse.userID}?fields=email&amp;amp;access_token={authResponse.accessToken&#34;&gt;https://graph.facebook.com/{authResponse.userID}?fields=email&amp;amp;access_token={authResponse.accessToken&lt;/a&gt;}&lt;/strong&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Make on Hack</title>
+    <link>https://sinujohn.github.io/tags/make/index.xml</link>
+    <description>Recent content in Make on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Making ‘make’ work</title>
+      <link>https://sinujohn.github.io/2010/09/04/making-make-work/</link>
+      <pubDate>Sat, 04 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/09/04/making-make-work/</guid>
+      <description>&lt;p&gt;&amp;lsquo;make&amp;rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.&lt;/p&gt;
+
+&lt;p&gt;This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &amp;lsquo;Beginning Linux Programming&amp;rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &amp;lsquo;make&amp;rsquo; utility.&lt;/p&gt;
+
+&lt;p&gt;&amp;lsquo;make&amp;rsquo; searches for a file &amp;lsquo;makefile&amp;rsquo; or &amp;lsquo;Makefile&amp;rsquo;. To use another filename with make use -f option.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;make -f Makefile4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h1&gt;Makefile Syntax&lt;/h1&gt;
+Makefile is a set of Dependencies and Rules.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dependencies:&lt;/strong&gt; It consist of two parts - Target file and the set of file on which target depends i.e. prerequisites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rules:&lt;/strong&gt; This consist of the command that must be executed to obtain the Target file from the prerequisites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syntax is:&lt;/strong&gt;&lt;br/&gt;&lt;em&gt;Target_name:&amp;lt;space or tab&amp;gt;Prerequisite1 [Prerequisite2 &amp;hellip;]&lt;/em&gt;&lt;br/&gt;
+&lt;em&gt;&amp;lt;tab&amp;gt;Command_to_Execute&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Important: The Rule should be on a line that begins with TAB.
+Comments begin with #&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;myapp: main.o 2.o 3.o
+    gcc -o myapp main.o 2.o 3.o
+
+main.o: main.c a.h
+    gcc -c main.c
+
+2.o: 2.c a.h b.h
+    gcc -c 2.c
+
+3.o: 3.c b.h c.h
+    gcc -c 3.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here myapp is the final executable. It depends on main.o, 2.o and 3.o.
+main.o in turn depends on main.c and a.h. Similarly others.
+Usually a Target called &lt;em&gt;&amp;lsquo;all&amp;rsquo;&lt;/em&gt; is used (as the first target). This is handy if more than one output files are required.
+By default &amp;lsquo;make&amp;rsquo; tries to fulfill the first &amp;lsquo;Target&amp;rsquo;. So here &amp;lsquo;make&amp;rsquo; tries to obtain first target &amp;lsquo;myapp&amp;rsquo;. To obtain &amp;lsquo;myapp&amp;rsquo;, it requires main.o, 2.o and 3.o. So then it tries to obtain mao=in.o and so on.
+We can also specify a specific target:
+&lt;em&gt;make main.o&lt;/em&gt;
+&lt;h1&gt;Macros in Makefile&lt;/h1&gt;
+Defined by &lt;em&gt;MACRONAME=value&lt;/em&gt;
+The value of a macro is accessed by &lt;em&gt;$(MACRONAME)&lt;/em&gt; or &lt;em&gt;${MACRONAME}&lt;/em&gt;. Some also support &lt;em&gt;$MACRONAME&lt;/em&gt;.
+$(MACRONAME) is replaced with the value of the macro. &amp;lsquo;value&amp;rsquo; can be empty also.&lt;/p&gt;
+
+&lt;p&gt;Commonly used macro names:&lt;/p&gt;
+
+&lt;p&gt;CC                - Compiler&lt;/p&gt;
+
+&lt;p&gt;INCLUDE  - Directory in which include files are present&lt;/p&gt;
+
+&lt;p&gt;CFLAGS     - Compiler flags/options&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;all: myapp
+CC=gcc
+CFLAGS= -g -Wall -ansi
+# dot specifies current directory
+INCLUDE=.
+
+myapp: main.o 2.o
+    $(CC) -o myapp main.o 2.o
+
+main.o: main.c a.h
+    $(CC) -I$(INCLUDE) $(CFLAGS) -c main.c
+
+2.o: 2.c a.h b.h
+    $(CC) -I$(INCLUDE) $(CFLAGS) -c 2.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here &lt;em&gt;$(CC) -I$(INCLUDE) $(CFLAGS) -c main.c&lt;/em&gt; is expanded to &lt;em&gt;gcc -I. -g -Wall -ansi -c main.c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Predefined Macros:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$?              - List of prerequisites changed more recently than the target&lt;/p&gt;
+
+&lt;p&gt;$@            - Name of current target&lt;/p&gt;
+
+&lt;p&gt;$&amp;lt;             - Name of current prerequisite (Example - main.c)&lt;/p&gt;
+
+&lt;p&gt;$*              - Name of current prerequisite without suffix (Example - main for main.c)&lt;/p&gt;
+
+&lt;p&gt;Two other useful characters:&lt;/p&gt;
+
+&lt;p&gt;&amp;rsquo;-&amp;rsquo; (minus sign)     - Ignore errors. For example, -mkdir ignores any error if the directory already exists.&lt;/p&gt;
+
+&lt;p&gt;@                   - Tells &amp;lsquo;make&amp;rsquo; not to print the command to output. We may use echo to print instructions.&lt;/p&gt;
+
+&lt;p&gt;&lt;h1&gt;Other Targets&lt;/h1&gt;
+I have always wondered what is &amp;lsquo;&lt;em&gt;make clean&lt;/em&gt;&amp;rsquo; and &amp;lsquo;&lt;em&gt;make install&lt;/em&gt;&amp;rsquo; that we type while compiling programs from source. Its only now that I understood that &amp;lsquo;clean&amp;rsquo; and &amp;lsquo;install&amp;rsquo; are just other targets. So &amp;lsquo;make clean&amp;rsquo; and &amp;lsquo;make install&amp;rsquo; tries to achieve &amp;lsquo;clean&amp;rsquo; and &amp;lsquo;install&amp;rsquo; targets.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+...
+clean:
+    -rm main.o 2.o 3.o
+
+install: myapp
+    @if [ -d $(INSTDIR) ]; \
+    then \
+        cp myapp $(INSTDIR);\
+        chmod a+x $(INSTDIR)/myapp;\
+        echo &amp;quot;Installed in $(INSTDIR)&amp;quot;;\
+    else \
+        echo &amp;quot;Error: $(INSTDIR) does not exist&amp;quot;;\
+    fi
+...
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;lsquo;clean&amp;rsquo; has no dependencies. So it is executed whenever the target &amp;lsquo;clean&amp;rsquo; is specified. The command &amp;lsquo;rm&amp;rsquo; is preceded by &amp;lsquo;-&amp;rsquo; to ignore the errors. Similarly we have used &amp;lsquo;@&amp;rsquo; before &amp;lsquo;if&amp;rsquo;.
+Note: &amp;lsquo;[&amp;rsquo; is short for command &amp;lsquo;&lt;em&gt;test&lt;/em&gt;&amp;rsquo;. It is used for checking files. For more info, &amp;lsquo;&lt;em&gt;man test&lt;/em&gt;&amp;lsquo;
+&lt;h1&gt;Built-in Rules&lt;/h1&gt;
+&amp;lsquo;make&amp;rsquo; has several Built-in rules. You can see them by typing &amp;lsquo;&lt;em&gt;make -p&lt;/em&gt;&amp;rsquo;.
+So makefile can simply be&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;main.o: main.c a.h
+2.o: 2.c a.h b.h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The built-in rules are applied by looking at the file extensions(suffixes). We can add new suffix rules.
+&lt;strong&gt;Syntax:&lt;/strong&gt;
+&lt;em&gt;&amp;lt;old_suffix&amp;gt;.&amp;lt;new_suffix&amp;gt;:&lt;/em&gt;
+Example for converting .cpp to .o files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.SUFFIXES: .cpp
+.cpp.o:
+    $(CC) -xc++ -I($INCLUDE) $(CFLAGS) -c $&amp;amp;lt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h1&gt;Libraries and &amp;lsquo;make&amp;rsquo;&lt;/h1&gt;
+&amp;lsquo;make&amp;rsquo; has built-in rules to create and append to library(archive files created with &amp;lsquo;ar&amp;rsquo; command). To refer to file in the library use following syntax:
+&lt;em&gt;libMyCol(foo.o)&lt;/em&gt;
+This refers to file &lt;em&gt;foo.o&lt;/em&gt; as stored in library &lt;em&gt;libMyCol.a&lt;/em&gt;.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+MYLIB = libMyCol.a
+...
+...
+myapp: main.o $(MYLIB)
+    $(CC) -o myapp main.o $(MYLIB)
+...
+...
+$(MYLIB): $(MYLIB)(2.o) $(MYLIB)(3.o)
+main.o: main.c a.h
+2.o: 2.c a.h b.h
+3.o: 3.c b.h c.h
+...
+...
+clean:
+    -rm main.o 2.o 3.o
+
+install: myapp
+    @if [ -d $(INSTDIR) ]; \
+    then \
+        cp myapp $(INSTDIR);\
+        chmod a+x $(INSTDIR)/myapp;\
+        echo &amp;quot;Installed in $(INSTDIR)&amp;quot;;\
+    else \
+        echo &amp;quot;Error: $(INSTDIR) does not exist&amp;quot;;\
+    fi
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h1&gt;A Useful Option&lt;/h1&gt;
+Want to create dependency list easily? Use &lt;em&gt;-MM&lt;/em&gt; option with gcc. It produces a list which can be almost copy-pasted for use in a makefile!
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -MM main.c 2.c 3.c
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

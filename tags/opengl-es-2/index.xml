@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opengl Es 2 on Hack</title>
+    <link>https://sinujohn.github.io/tags/opengl-es-2/index.xml</link>
+    <description>Recent content in Opengl Es 2 on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/opengl-es-2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Android OpenGL ES2.0 Template</title>
+      <link>https://sinujohn.github.io/2011/10/20/android-opengl-es2-0-template/</link>
+      <pubDate>Thu, 20 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2011/10/20/android-opengl-es2-0-template/</guid>
+      <description>&lt;p&gt;Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.&lt;/p&gt;
+
+&lt;p&gt;OpenGL ES2.0 API is provided by &amp;lsquo;android.opengl.GLES20&amp;rsquo; package.&lt;/p&gt;
+
+&lt;p&gt;The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;glClearColor(0.5f, 0.5f, 0.5f, 1.0f) --&amp;gt;&amp;gt; GLES20.glClearColor(0.5f, 0.5f, 0.5f, 1.0f)
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) --&amp;gt;&amp;gt; GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For debugging we can can use &amp;lsquo;android.util.Log&amp;rsquo; package. Example, Log.d(&amp;ldquo;TAG name like Program name&amp;rdquo;, &amp;ldquo;Surface Created&amp;rdquo;). These debugging logs can be observed in LogCat window. There are also other functions in Log like Log.e(), Log.i() etc. For making our lives easier there is also a Matrix class - android.opengl.Matrix. Remember these are Column Major Order Matrices. Example,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Matrix.setIdentityM(mModelMatrix, 0);
+Matrix.translateM(mModelMatrix, 0, 0, 0, -3f);
+Matrix.rotateM(mModelMatrix, 0, angleInDegrees, 0, 1, 0);
+Matrix.translateM(mModelMatrix, 0, 0, 0, 1.5f);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can multiply two matrices by Matrix.multiplyMM(). We can multiply a matrix by a vector using Matrix.multiplyMV(). Other useful functions: Setting up View Matrix:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Matrix.setLookAtM(mViewMatrix, 0, eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setting up Perspective Projection Matrix:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Matrix.frustumM(mProjectionMatrix, 0, left, right, bottom, top, near, far)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The object data is stored in Buffer objects like FloatBuffer. For example,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Float[] positions = {...............}; // Has x,y,z positions of all vertices
+FloatBuffer mPositionBuffer; // from java.nio.FloatBuffer
+mPositionBuffer = ByteBuffer.allocateDirect(mBytesPerFloat * positions.length).order(ByteOrder.nativeOrder()).asFloatBuffer();
+mPositionBuffer.put(objData.positions).position(0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now the template for the renderer class (the class which implements GLSurfaceView.Renderer):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Constructor()
+{
+    Gather object&#39;s data
+}
+
+OnSurfaceCreated()
+{
+    Create shaders and programs
+    Set View Matrix.
+    Other initializations.
+    Call glClearColor()
+}
+
+OnSurfaceChanged(unusedArg, width, height)
+{
+    Call glViewport()
+    Set Projection Matrix (since the width and height is available over here)
+}
+
+OnDrawFrame()
+{
+    Call glClear()
+    draw calls go over here
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using textures is also easier as Android provides many helper classes. A template for generating textures (returns texture handle):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+private int createTexture(Context ctx, int imgResId) // imgResId = R.drawable.filename&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
+{
+    int[] tempHandle = new int[1];
+    Bitmap img = null;
+    img = BitmapFactory.decodeResource(ctx.getResources(), imgResId);
+
+    GLES20.glGenTextures(.....);
+    GLES20.glTexParameteri(......);
+    GLES20.glTexParameteri(......); //as many GLES20.glTexParameteri()as u need
+
+    GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, img, 0);
+
+    img.recycle();
+    return tempHandle[0];
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

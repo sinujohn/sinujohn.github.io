@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Hack</title>
+    <link>https://sinujohn.github.io/tags/spring/index.xml</link>
+    <description>Recent content in Spring on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Certified Spring Professional</title>
+      <link>https://sinujohn.github.io/2015/09/19/certified-spring-professional/</link>
+      <pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2015/09/19/certified-spring-professional/</guid>
+      <description>&lt;p&gt;Now am a &lt;a href=&#34;http://pivotal.io/academy#certification&#34; target=&#34;_blank&#34;&gt;Pivotal Certified Spring Professional&lt;/a&gt;. Took the exam yesterday in Core Spring (Spring 4.0) and received the certificate today.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/spring.png&#34; alt=&#34;Certified Spring Professional&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating collection of Spring Beans</title>
+      <link>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</link>
+      <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
+      <description>&lt;p&gt;Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.&lt;/p&gt;&lt;p&gt;Usually, you create a Spring bean as follows:&lt;/p&gt;
+&lt;script src=&#34;//gist.github.com/sinujohn/384d51261c13e8f78b11.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?&lt;br /&gt; In such cases, we can create the bean definitions and add the beans to Spring container at runtime using &lt;strong&gt;BeanFactoryPostProcessor&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Implement &lt;strong&gt;BeanFactoryPostProcessor&lt;/strong&gt; in either a &lt;strong&gt;@Configuration&lt;/strong&gt; file or a &lt;strong&gt;@Component&lt;/strong&gt; bean(make sure this bean gets scanned and created).&lt;/p&gt;
+&lt;script src=&#34;//gist.github.com/sinujohn/ca787f0e6730eb9890d5.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;If there are more than one constructor arguments, the call can be chained as follows:&lt;/p&gt;
+&lt;script src=&#34;//gist.github.com/sinujohn/96f6480a4120989dfa7f.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;All this works fine when you have to create a bean using constructor. But :( I haven&#39;t figured out how to do this when we use a chain of factory methods to create a bean as follows:&lt;/p&gt;
+&lt;script src=&#34;//gist.github.com/sinujohn/512ca43414bcfc9d6609.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Happy Coding! :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring AOP</title>
+      <link>https://sinujohn.github.io/2014/07/03/spring-aop/</link>
+      <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
+      <description>&lt;p&gt;I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.&lt;/p&gt;&lt;p&gt;Here are a couple of cheatsheets/examples for AspectJ. (Remember Spring AOP has limitations, but AspectJ doesn&#39;t).&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An excellent &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://blog.espenberntsen.net/2010/03/20/aspectj-cheat-sheet/&#34;&gt;cheat sheet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;A &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://blog.espenberntsen.net/2010/03/18/aspectj-examples-with-pointcuts-based-on-annotations/&#34;&gt;good example&lt;/a&gt; by the same guy&lt;/li&gt;&lt;li&gt;An &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://stackoverflow.com/a/2522821/952511&#34;&gt;SO answer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To start off a project just start a new Spring Boot project from STS with Spring AOP ticked. Thats it. Spring Boot handles all the dependencies bootifully. It adds some unnecessary dependencies also. So if you just need AOP, just add AOP dependencies instead of Spring Boot.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a Maven Spring-REST project</title>
+      <link>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</link>
+      <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</guid>
+      <description>&lt;p&gt;Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse.
+Now go to File &amp;gt; New &amp;gt; Maven Project.
+&lt;img src=&#34;https://sinujohn.github.io/assets/rest1.png&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click Next. Select maven-archetype-webapp.
+&lt;img src=&#34;https://sinujohn.github.io/assets/rest2.png&#34; alt=&#34;screenshot2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &amp;lsquo;com.companyname.yourname&amp;rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).&lt;/p&gt;
+
+&lt;p&gt;There can be several projects under the same GroupID, but ArtifactID should be different for each project. I have given GroupID as &lt;em&gt;&amp;lsquo;me.sinu.jugaad&amp;rsquo;&lt;/em&gt; and ArtifactID as &lt;em&gt;&amp;lsquo;rest&amp;rsquo;&lt;/em&gt;.
+&lt;img src=&#34;https://sinujohn.github.io/assets/rest3.png&#34; alt=&#34;screenshot3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click Finish to create the project.&lt;/p&gt;
+
+&lt;p&gt;The webapp archetype would have created the necessary folder structure and a web.xml for you. This web.xml might be for older Servlets without support for Servlet v.3, it doesn&amp;rsquo;t matter as we&amp;rsquo;ll overwrite it later.
+You might examine pom.xml now, it may contain a single dependency of jUnit(even if you won&amp;rsquo;t find it its fine :) )&lt;/p&gt;
+
+&lt;p&gt;Now lets examine the dependencies we might require for our simple project:
+&lt;ul&gt;
+    &lt;li&gt;We are building REST services, so we need REST api (&lt;strong&gt;javax.ws.rs-api&lt;/strong&gt;) and an implentation for it. We&amp;rsquo;ll use Apache CXF implementation (&lt;strong&gt;cxf-bundle-jaxrs&lt;/strong&gt;).&lt;/li&gt;
+    &lt;li&gt;We&amp;rsquo;ll use Spring to wire the beans and for dependency injection. So we need a bunch of Spring libraries (&lt;strong&gt;spring-web&lt;/strong&gt; and &lt;strong&gt;spring-context&lt;/strong&gt; should be enough for our skeleton project. &lt;em&gt;&lt;strong&gt;spring-context&lt;/strong&gt;&lt;/em&gt; is needed for &lt;em&gt;ContextLoaderListener&lt;/em&gt; which loads the beans by scanning some Spring context xml configuration files)&lt;/li&gt;
+    &lt;li&gt;We&amp;rsquo;ll use a JSON provider which helps in converting object to/from JSON. It is not needed for this skeleton project, but its usually handy in almost all REST projects. So we&amp;rsquo;ll add one such provider (&lt;strong&gt;jackson-jaxrs-json-provider&lt;/strong&gt;) just in case we need it in future.&lt;/li&gt;
+&lt;/ul&gt;
+Here is the &lt;strong&gt;pom.xml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/c2839b0528fdbc8115b0.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now create a java folder under &lt;strong&gt;src/main&lt;/strong&gt;. Create a package (&lt;strong&gt;me.sinu.jugaad.rest&lt;/strong&gt;) and a class file inside it(&lt;strong&gt;HelloWorld.java&lt;/strong&gt;).
+We&amp;rsquo;ll just tell a simple &amp;ldquo;&lt;strong&gt;Hello REST!&lt;/strong&gt;&amp;rdquo; from our REST service. Here is the class:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/f4cc9425e52b407da5c4.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now we&amp;rsquo;ll create a Spring configuration file under &lt;strong&gt;WEB-INF&lt;/strong&gt; folder, say &lt;strong&gt;rest-context.xml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/60f8b04e584b5a0e5b0f.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;In this we just defined our &lt;strong&gt;helloWorld&lt;/strong&gt; bean and hooked it up with our JAXRS servlet. We also provided our JSON provider to it to automatically do any marshalling/unmarshalling. You may provide your own providers, which will be necessary as the app grows. Providers can contain Filters or other interceptors.&lt;/p&gt;
+
+&lt;p&gt;Now lets define our webapp&amp;rsquo;s &lt;strong&gt;web.xml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/982335d88382c37f60b4.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;We specify &amp;lsquo;&lt;strong&gt;contextConfigLocation&lt;/strong&gt;&amp;rsquo; for the Spring&amp;rsquo;s &amp;lsquo;&lt;strong&gt;ContextLoaderListener&lt;/strong&gt;&amp;rsquo; to pick it up as the webapp is loaded. The &lt;em&gt;contextConfigLocation&lt;/em&gt; can be given as exact file names or using wild cards.
+Since we are using CXF implementation, a CXF servlet is used. The address for our &lt;strong&gt;servlet&lt;/strong&gt; is &amp;ldquo;&lt;strong&gt;/services&lt;/strong&gt;&amp;rdquo; and that for our &amp;lsquo;&lt;strong&gt;helloREST&lt;/strong&gt;&amp;rsquo; JAX RS server is &amp;ldquo;&lt;strong&gt;/greet&lt;/strong&gt;&amp;rdquo;.
+So &amp;ldquo;&lt;strong&gt;WAR_FILE/services/greet&lt;/strong&gt;&amp;rdquo; will take us to the JAXRS server. Our simple GET function is annotated with &lt;strong&gt;@Path(&amp;ldquo;/hello&amp;rdquo;)&lt;/strong&gt;, so to access this we should give as follows: &amp;ldquo;&lt;strong&gt;WAR_FILE/services/greet/hello&lt;/strong&gt;&amp;rdquo;.
+Now run the project - &lt;em&gt;right-click the project &amp;gt; Run As &amp;gt; Run on server&lt;/em&gt;. You might choose a server like Tomcat server v.7. Now in a browser go to &amp;ldquo;&lt;strong&gt;&lt;a href=&#34;http://localhost:8080/rest/services/greet/hello&#34;&gt;http://localhost:8080/rest/services/greet/hello&lt;/a&gt;&lt;/strong&gt;&amp;rdquo; (here &amp;lsquo;&lt;em&gt;rest&lt;/em&gt;&amp;rsquo; is the WAR file name).&lt;/p&gt;
+
+&lt;p&gt;If you see &amp;ldquo;&lt;strong&gt;Hello REST!&lt;/strong&gt;&amp;rdquo; everything is fine, else, Dr.Watson, we have a problem ;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

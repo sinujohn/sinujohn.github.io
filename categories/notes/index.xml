@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Hack</title>
+    <link>https://sinujohn.github.io/categories/notes/index.xml</link>
+    <description>Recent content in Notes on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chef notes</title>
+      <link>https://sinujohn.github.io/2016/06/01/chef-notes/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2016/06/01/chef-notes/</guid>
+      <description>
+
+&lt;p&gt;Sometime back I had to fiddle with &lt;a href=&#34;https://www.chef.io/&#34; target=&#34;_blank&#34;&gt;Chef&lt;/a&gt;. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.&lt;/p&gt;
+
+&lt;p&gt;So, anyone other than me, please ignore this post!&lt;/p&gt;
+
+&lt;h2 id=&#34;write-a-cookbook&#34;&gt;Write a cookbook&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;chef generate repo ~/chef-repo&lt;/code&gt;
+=&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/chef-repo
+chef generate cookbook cookbooks/COOKBOOK_NAME
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;create-a-recipe&#34;&gt;Create a recipe:&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;chef generate recipe cookbooks/COOKBOOK_NAME RECIPE_NAME&lt;/code&gt; =&amp;gt; RECIPE_NAME shouldn’t have suffix. Eg. it should be ‘webserver and not ‘webserver.rb’
+=&amp;gt; Write the script in RECIPE_NAME.rb file that got generated&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-refer-include-a-recipe-recipe-name-in-another-recipe&#34;&gt;How to refer(include) a recipe(RECIPE_NAME) in another recipe:&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;include_recipe &#39;COOKBOOK_NAME::RECIPE_NAME&#39;&lt;/code&gt; =&amp;gt; Eg: include_recipe &amp;lsquo;my_cookbook::webserver&amp;rsquo;&lt;/p&gt;
+
+&lt;p&gt;=&amp;gt; By default the recipe that gets called is ‘cookbooks/COOKBOOK_NAME/recipes/default.rb’
+=&amp;gt; So include any other recipe in this using include_recipe&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-file&#34;&gt;Create a file:&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;chef generate file cookbooks/COOKBOOK_NAME FILE_NAME.txt&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;h2 id=&#34;how-to-upload-the-cookbook-to-the-chef-server-there-are-2-ways&#34;&gt;How to upload the cookbook to the chef server. There are 2 ways:&lt;/h2&gt;
+
+&lt;h4 id=&#34;option-1-prefer-this-one-this-one-takes-up-the-dependencies-if-any&#34;&gt;Option 1. Prefer this one. This one takes up the dependencies if any.&lt;/h4&gt;
+
+&lt;p&gt;Create a file named Berksfile in the ~/chef-repo/cookbooks/COOKBOOK_NAME directory
+Add the following to that file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;source &amp;quot;https://supermarket.chef.io&amp;quot;
+metadata
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Install the dependencies:
+&lt;code&gt;berks install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally upload (along with dependencies):
+&lt;code&gt;berks upload&lt;/code&gt; =&amp;gt; OR without SSL =&amp;gt; &lt;code&gt;berks upload --no-ssl-verify&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;option-2-this-one-just-uploads-the-cookbook-won-t-download-dependencies&#34;&gt;Option 2. This one just uploads the cookbook. Won’t download dependencies&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;knife cookbook upload COOKBOOK_NAME&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;view-uploaded-cookbooks&#34;&gt;View uploaded cookbooks:&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;knife cookbook list&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bootstraping-the-node&#34;&gt;Bootstraping the node&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;knife ssl fetch ##Save the SSL certificate
+knife bootstrap IP_ADDRESS_OF_NODE -x ROOT_USER_NAME -P ROOT_PASSWORD --sudo 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;verify-bootstrap-process-was-successful-either-check-in-chef-manage-console-or-do&#34;&gt;Verify bootstrap process was successful. Either check in chef manage console or do:&lt;/h2&gt;
+
+&lt;h4 id=&#34;on-windows&#34;&gt;On Windows&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;knife node list | findstr NODE_NAME_WINDOWS&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;on-linux&#34;&gt;On Linux&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;knife node list | grep NODE_NAME_WINDOWS&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-reference-another-cookbook&#34;&gt;How to reference another cookbook:&lt;/h2&gt;
+
+&lt;p&gt;Append following to &lt;code&gt;~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb&lt;/code&gt;:
+&lt;code&gt;depends &#39;ANOTHER_COOKBOOK_NAME&#39;, &#39;~&amp;gt; MAJOR.MINOR.PATCH&#39;&lt;/code&gt; =&amp;gt; Eg: &lt;code&gt;depends &#39;sql_server&#39;, &#39;~&amp;gt; 2.4.0&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-override-third-party-cookbook-s-attributes&#34;&gt;How to override third party cookbook’s attributes:&lt;/h2&gt;
+
+&lt;h4 id=&#34;create-a-custom-attribute-file-that-overrides-third-party-attribute-values&#34;&gt;Create a custom attribute file that overrides third party attribute values:&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;chef generate attribute cookbooks/COOKBOOK_NAME default&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;add-override-values-as-follows-in-the-generated-cookbooks-cookbook-name-attributes-default-rb&#34;&gt;Add override values as follows in the generated ‘cookbooks/COOKBOOK_NAME/attributes/default.rb‘:&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;default[&#39;ANOTHER_COOKBOOK_NAME&#39;][&#39;ATTRIBUTE_NAME&#39;] = ATTRIBUTE_VALUE&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;accept_eula&#39;] = true&lt;/code&gt;
+Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;version&#39;] = &#39;2012&#39;&lt;/code&gt;
+Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;instance_name&#39;] = &#39;MSSQLSERVER&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;modifying-cookbook-version&#34;&gt;Modifying cookbook version:&lt;/h2&gt;
+
+&lt;p&gt;Edit &lt;code&gt;~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb&lt;/code&gt; to change the version&lt;/p&gt;
+
+&lt;h2 id=&#34;applying-cookbook-on-node&#34;&gt;Applying cookbook on node:&lt;/h2&gt;
+
+&lt;p&gt;Run the following directly on the &lt;strong&gt;NODE&lt;/strong&gt;, (NOT ON THE workstation):
+&lt;code&gt;chef-client&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jackson JSON and Dynamic JSON creation</title>
+      <link>https://sinujohn.github.io/2014/09/29/jackson-json-and-dynamic-json-creations/</link>
+      <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/09/29/jackson-json-and-dynamic-json-creations/</guid>
+      <description>&lt;p&gt;FasterXML Jackson is a great tool for converting objects to/from POJOs.&lt;/p&gt;
+
+&lt;p&gt;Its a great tool when we know the structure of JSON beforehand. But what if we don&amp;rsquo;t know that? In that case we can use a Map&amp;lt;String, Object&amp;gt; to store the unknown objects. Below two links provide useful info:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library&#34;&gt;http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html&#34;&gt;http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Happy Coding :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JAX-RS</title>
+      <link>https://sinujohn.github.io/2014/08/27/jax-rs/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
+      <description>&lt;p&gt;There is a very good documentation in Jersey website: &lt;a href=&#34;https://jersey.java.net/documentation/latest/jaxrs-resources.html&#34;&gt;https://jersey.java.net/documentation/latest/jaxrs-resources.html&lt;/a&gt; and &lt;a href=&#34;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&#34;&gt;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Here is a small flowchart that I made showing how the JAX-RS flow works:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/jaxrs.png&#34; alt=&#34;jaxrs&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Happy coding :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Imperative vs Declarative</title>
+      <link>https://sinujohn.github.io/2014/07/03/imperative-vs-declarative/</link>
+      <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/03/imperative-vs-declarative/</guid>
+      <description>&lt;p&gt;I was watching an AngularJS video, and it said AngularJS had two sides - Imperative and Declarative programming. I looked it up and &lt;a href=&#34;http://latentflip.com/imperative-vs-declarative/&#34;&gt;here it is&lt;/a&gt; :&lt;/p&gt;&lt;p&gt;Let&#39;s generalize and say that there are two ways in which we can write code: imperative and declarative.&lt;/p&gt;&lt;p&gt;We could define the difference as follows:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Imperative programming: telling the &#34;machine&#34; &lt;em&gt;how&lt;/em&gt; to do something, and as a result &lt;em&gt;what&lt;/em&gt; you want to happen will happen.&lt;/li&gt;&lt;li&gt;Declarative programming: telling the &#34;machine&#34;&lt;sup&gt;1&lt;/sup&gt; &lt;em&gt;what&lt;/em&gt; you would like to happen, and let the computer figure out &lt;em&gt;how&lt;/em&gt; to do it.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;sup&gt;1&lt;/sup&gt; Computer/database/programming language/etc&lt;/p&gt;&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring AOP</title>
+      <link>https://sinujohn.github.io/2014/07/03/spring-aop/</link>
+      <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
+      <description>&lt;p&gt;I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.&lt;/p&gt;&lt;p&gt;Here are a couple of cheatsheets/examples for AspectJ. (Remember Spring AOP has limitations, but AspectJ doesn&#39;t).&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An excellent &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://blog.espenberntsen.net/2010/03/20/aspectj-cheat-sheet/&#34;&gt;cheat sheet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;A &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://blog.espenberntsen.net/2010/03/18/aspectj-examples-with-pointcuts-based-on-annotations/&#34;&gt;good example&lt;/a&gt; by the same guy&lt;/li&gt;&lt;li&gt;An &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://stackoverflow.com/a/2522821/952511&#34;&gt;SO answer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To start off a project just start a new Spring Boot project from STS with Spring AOP ticked. Thats it. Spring Boot handles all the dependencies bootifully. It adds some unnecessary dependencies also. So if you just need AOP, just add AOP dependencies instead of Spring Boot.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My Git Workflow</title>
+      <link>https://sinujohn.github.io/2014/06/21/my-git-workflow/</link>
+      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/06/21/my-git-workflow/</guid>
+      <description>&lt;p&gt;Clone repository to local machine: &lt;strong&gt;git clone &amp;lt;repository&amp;gt;&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git pull&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;code... code .... code...&lt;/li&gt;&lt;li&gt;code more.....&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git stash&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git pull&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git stash apply&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;git add&lt;/strong&gt; &amp;lt;filenames&amp;gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git commit -m &#34;commit message&#34;&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git push&lt;/strong&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;If any conflict occurs when stash is applied, resolve it either in IDE or using command line: &lt;strong&gt;git mergetool -t kdiff3&lt;/strong&gt; (invokes KDiff 3 if it installed)&lt;/p&gt;&lt;p&gt;Happy Coding :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tryst with Java 8!</title>
+      <link>https://sinujohn.github.io/2014/06/03/tryst-with-java-8/</link>
+      <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/06/03/tryst-with-java-8/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Java 8&lt;/strong&gt; - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!&lt;/p&gt;
+
+&lt;p&gt;Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections. Java 8 has brought in functional programming and Lambda expressions. There are many examples out there in the WWW which go to the intricacies of Lambda expressions and Java 8 features. Here I&amp;rsquo;ll jot down some notes which I found to be useful. Its no way an introduction or tutorial, its just some notes I have made which&amp;rsquo;ll help in understanding Java 8 features.
+&lt;h3&gt;Functional Interfaces&lt;/h3&gt;
+Any interface with just one non-default method.
+-Even though not necessary, we can enforce this constraint by annotating an interface with &lt;em&gt;&lt;strong&gt;@FunctionalInterface&lt;/strong&gt;&lt;/em&gt;
+&lt;h3&gt;Default Methods&lt;/h3&gt;
+An interface method with modifier &amp;lsquo;&lt;em&gt;&lt;strong&gt;default&lt;/strong&gt;&lt;/em&gt;&amp;rsquo;. Should have method implementation.
+&lt;h3&gt;Lambdas&lt;/h3&gt;
+Short-cut way to implement &lt;em&gt;anonymous inner classes&lt;/em&gt; for &lt;span style=&#34;text-decoration:underline;&#34;&gt;&lt;strong&gt;functional interfaces&lt;/strong&gt;&lt;/span&gt;.
+&lt;strong&gt;Syntax:&lt;/strong&gt;
+parameter || (parameters) || () -&amp;gt; expression || statement || { statements }
+&lt;ul&gt;
+    &lt;li&gt;Can reference external variables which are effectively final in the lambda body&lt;/li&gt;
+    &lt;li&gt;&amp;lsquo;parameters&amp;rsquo; - parameters for the functional interface method. Datatype is not required. Eg: (String s1, int i), (s1, i)&lt;/li&gt;
+    &lt;li&gt;a single &amp;lsquo;expression&amp;rsquo; can be used if the lambda body is just a return statement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Method Reference&lt;/h3&gt;
+&lt;strong&gt;Syntax:&lt;/strong&gt;
+ClassName::methodName
+&lt;strong&gt;To refer constructors:&lt;/strong&gt; ClassName::new
+&lt;ul&gt;
+    &lt;li&gt;Can be used anywhere where a lambda or functional interface implementation is expected.&lt;/li&gt;
+    &lt;li&gt;The referred method should be having same signature as of the functional interface method&lt;/li&gt;
+&lt;/ul&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Functions like foreach(), stream(), filter(), map(), findFirst() along with Consumer, Function and Predicate make life a hell lot of easy in dealing with Java Collections. Java 8 also brings functional programming to Java world with its lambdas. That means we can now pass a function to a function and return a function from a function! That brings a lot of changes in which we write Java programs. Java 8 also brings a new Date/Time API as well as some utils like Base64 encoding in the default library set.&lt;/p&gt;
+
+&lt;p&gt;Happy coding :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Persistence Using Java</title>
+      <link>https://sinujohn.github.io/2013/08/31/persistence-using-java/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/08/31/persistence-using-java/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Project Digitisation:&lt;/strong&gt; I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.&lt;/p&gt;
+
+&lt;p&gt;There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).&lt;/p&gt;
+
+&lt;p&gt;This blog post mentions JDBC. I will not go into the details of how to use JDBC as using JPA is the focus. Details about how to persist objects in Java using JPA is discussed in next blog post.
+&lt;h2&gt;JDBC&lt;/h2&gt;
+&lt;strong&gt;JDBC - Java DataBase Connectivity&lt;/strong&gt;
+JDBC works in the backstage of all the frameworks. Frameworks makes our life easy in persisting objects and modifying them.
+JDBC is a specification - it tells the DB vendor how to provide driver for Java and it tells the programmer how to write Java programs that can connect to the db. It is in &amp;ldquo;java.sql&amp;rdquo; package.
+JDBC drivers:
+&lt;ol&gt;
+    &lt;li&gt;Type 1 (JDBC - ODBC Bridge) - obsolete&lt;/li&gt;
+    &lt;li&gt;Type 2 (Native API Driver) - obsolete&lt;/li&gt;
+    &lt;li&gt;Type 3 (Network Protocol Driver)&lt;/li&gt;
+    &lt;li&gt;Type 4 (Native Protocol Driver)&lt;/li&gt;
+&lt;/ol&gt;
+Type 4 is NOT an improvement over Type3.
+Type 3 communicates with Application Servers. So even if we change databases, the programs need not be changed. The application server automatically selects the suitable driver.
+Type 4 is specific to each DB vendor. If we change the vendor then we need new driver. It is platform independent.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Map Reduce</title>
+      <link>https://sinujohn.github.io/2013/07/16/map-reduce/</link>
+      <pubDate>Tue, 16 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/07/16/map-reduce/</guid>
+      <description>&lt;p&gt;Everyone is saying that the world is going the cloud way. Big Data, Analytics etc are today&amp;rsquo;s buzzwords. I used to wonder what is so special about the cloud? I read a bit about Hadoop, HBase (the NoSQL DB for Hadoop) etc and came to know about the Map Reduce Framework.&lt;/p&gt;
+
+&lt;p&gt;Map Reduce is a framework which helps us to write program for the cloud. It is a simple framework. The MapReduce version of the Hello World program for Hadoop is the WordCount program.&lt;/p&gt;
+
+&lt;p&gt;I decided to start experimenting with this framework and have written a couple of programs.
+Find it here in &lt;a href=&#34;https://github.com/sinujohn/MapReduce/&#34;&gt;my git repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How Map and Reduce operations are actually carried out:
+&lt;a href=&#34;http://wiki.apache.org/hadoop/HadoopMapReduce&#34;&gt;http://wiki.apache.org/hadoop/HadoopMapReduce&lt;/a&gt;
+&lt;a href=&#34;http://wiki.apache.org/hadoop/MapReduce&#34;&gt;http://wiki.apache.org/hadoop/MapReduce&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some Usecases of MapReduce: &lt;a href=&#34;http://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/&#34;&gt;http://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Starting Eclipse Plugin Development</title>
+      <link>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</link>
+      <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</guid>
+      <description>&lt;p&gt;I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem.
+&lt;h3&gt;Start here:&lt;/h3&gt;
+&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html&#34;&gt;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html&lt;/a&gt;&lt;/a&gt;This blog post describes how to create a simple plugin(&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject&#34;&gt;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject&lt;/a&gt;&lt;/a&gt;) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.
+&lt;h3&gt;Displaying markers&lt;/h3&gt;
+Plugins allow us to highlight certain portions of the text in the code editor. Markers are used for this. Markers can also be used to show errors, so that error is marked in compilation and the error is shown in Problems view. The following links show how to create and manipulate markers:
+&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html&#34;&gt;http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html&lt;/a&gt;&lt;/a&gt;
+&lt;a href=&#34;http://cubussapiens.hu/tag/markers/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://cubussapiens.hu/tag/markers/&#34;&gt;http://cubussapiens.hu/tag/markers/&lt;/a&gt;&lt;/a&gt;
+&lt;h3&gt;Create Dialog boxes within Eclipse&lt;/h3&gt;
+Some times our plugin might need to show some dialog boxes to the users. It can range from a simple Error message box to some complex dialog box. Dialog boxes can be created using JFace as mentioned here : &lt;a href=&#34;http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0&#34;&gt;http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0&lt;/a&gt;&lt;/a&gt;
+How do I insert text in the active text editor? This is a common requirement. Find the solution here : &lt;a href=&#34;http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F&#34;&gt;http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F&lt;/a&gt;&lt;/a&gt;
+&lt;h3&gt;Formatting the code&lt;/h3&gt;
+Some times we might need to insert pieces of code into the code editor and it feel good if the code is formatted. Look here to see how to do it : &lt;a href=&#34;http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm&#34;&gt;http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm&lt;/a&gt;&lt;/a&gt;
+&lt;h3&gt;Fiddling with the source code&lt;/h3&gt;
+What is the use of a plugin if you can&amp;rsquo;t get into the details of Java source code of the opened projects? Eclipse provides Java Model and Abstract Syntax Trees for this purpose. Java Model is an easy to use and fast model whereas AST is relatively slow, but ASTs contain much more details. Here are the some links to start with this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34;&gt;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.vogella.com/articles/EclipseJDT/article.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.vogella.com/articles/EclipseJDT/article.html&#34;&gt;http://www.vogella.com/articles/EclipseJDT/article.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/library/os-ast/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/library/os-ast/&#34;&gt;http://www.ibm.com/developerworks/opensource/library/os-ast/&lt;/a&gt;&lt;/a&gt;
+&lt;div&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34;&gt;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&lt;/a&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;a href=&#34;http://sahits.ch/blog/?p=228&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://sahits.ch/blog/?p=228&#34;&gt;http://sahits.ch/blog/?p=228&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AOP using AspectJ</title>
+      <link>https://sinujohn.github.io/2013/05/09/aop-using-aspectj/</link>
+      <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/05/09/aop-using-aspectj/</guid>
+      <description>&lt;p&gt;Even though I had heard about AOP, I didn&amp;rsquo;t take it seriously. I thought it was meant for Enterprise applications usage like Transaction management, logging etc. But recently I was faced with a problem - how to know an Object&amp;rsquo;s state changes in Java. As you know state of an Object is its properties, so what I want is to know when the state changes. I didn&amp;rsquo;t quite get what to do about it, and so posted in stackoverflow. And the answer was to use AspectJ!&lt;/p&gt;
+
+&lt;p&gt;Here is the link to SO - &lt;a href=&#34;http://stackoverflow.com/q/16352838/952511&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/q/16352838/952511&#34;&gt;http://stackoverflow.com/q/16352838/952511&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To do AspectJ development in Eclipse we have to install AJDT(AspectJ Development Tools). Just add the correct URL from &lt;a href=&#34;http://www.eclipse.org/ajdt/downloads/&#34;&gt;http://www.eclipse.org/ajdt/downloads/&lt;/a&gt; for the Eclipse version we are using, to &amp;lsquo;Install New Software&amp;rsquo; in Help menu and install AJDT n its tools from the list.&lt;/p&gt;
+
+&lt;p&gt;And now am learning AspectJ - joinpoints and pointcuts!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

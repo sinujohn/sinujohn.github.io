@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rest on Hack</title>
+    <link>https://sinujohn.github.io/tags/rest/index.xml</link>
+    <description>Recent content in Rest on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>JAX-RS</title>
+      <link>https://sinujohn.github.io/2014/08/27/jax-rs/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
+      <description>&lt;p&gt;There is a very good documentation in Jersey website: &lt;a href=&#34;https://jersey.java.net/documentation/latest/jaxrs-resources.html&#34;&gt;https://jersey.java.net/documentation/latest/jaxrs-resources.html&lt;/a&gt; and &lt;a href=&#34;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&#34;&gt;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Here is a small flowchart that I made showing how the JAX-RS flow works:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/jaxrs.png&#34; alt=&#34;jaxrs&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Happy coding :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Singleton Pattern on Hack</title>
+    <link>https://sinujohn.github.io/tags/singleton-pattern/index.xml</link>
+    <description>Recent content in Singleton Pattern on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/singleton-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Singleton Pattern</title>
+      <link>https://sinujohn.github.io/2013/06/12/singleton-pattern/</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/12/singleton-pattern/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt;: Creational Pattern
+Description : Ensure a class has only one instance, and provide a global point of access to it.&lt;/p&gt;
+
+&lt;p&gt;Whenever I hear about Singleton &amp;lsquo;Forever Alone&amp;rsquo; troll face comes to my mind ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/forever-alone-guy.png&#34; alt=&#34;forever-alone-guy&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.&lt;/p&gt;
+
+&lt;p&gt;There are 3 ways of creating it :
+1. Traditional way without thread safety, where constructor is made private and a public method returns reference to the only object created.
+2. Thread-safe way : Double check locking
+3. Thread-safe way : Using enums (this is for Java of course!)&lt;/p&gt;
+
+&lt;p&gt;Read about &lt;a href=&#34;http://java.dzone.com/articles/singleton-design-pattern-%E2%80%93&#34;&gt;Singleton Pattern here&lt;/a&gt;.
+The enums&amp;rsquo; way of doing things is explained &lt;a href=&#34;http://javarevisited.blogspot.gr/2012/07/why-enum-singleton-are-better-in-java.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The sample program in Git shows the first 2 ways. Find it &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/singleton&#34;&gt;here on Github &lt;/a&gt;
+&lt;h2&gt;Double check locking:&lt;/h2&gt;
+In Java, we have to use &amp;lsquo;&lt;strong&gt;&lt;em&gt;volatile&lt;/em&gt;&lt;/strong&gt;&amp;rsquo; keyword. I was confused about this because the program gave the same output even if I use or not use the &amp;lsquo;volatile&amp;rsquo; keyword. Then I came across this &lt;a href=&#34;http://jeremymanson.blogspot.com/2008/05/double-checked-locking.html&#34;&gt;awesome blog&lt;/a&gt;. &lt;strong&gt;So according to this we have to use &amp;lsquo;&lt;em&gt;volatile&lt;/em&gt;&amp;rsquo; whenever we use Double check locking&lt;/strong&gt;. The problem is that compiler optimization may reorder execution orders, so that the flow of order of execution may be different from what we have written. The following can occur:
+When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instance&lt;/em&gt; will be assigned the reference value of the &lt;em&gt;Singleton&lt;/em&gt; object. But the constructor &lt;em&gt;Singleton()&lt;/em&gt; may not be called at this point. That means &lt;em&gt;instance&lt;/em&gt; is not fully initialized yet. So other threads that refer instance will get the partly initialized or not-yet-initialized object.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

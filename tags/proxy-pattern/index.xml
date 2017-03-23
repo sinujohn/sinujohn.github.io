@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy Pattern on Hack</title>
+    <link>https://sinujohn.github.io/tags/proxy-pattern/index.xml</link>
+    <description>Recent content in Proxy Pattern on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/proxy-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Proxy Pattern</title>
+      <link>https://sinujohn.github.io/2013/06/09/proxy-pattern/</link>
+      <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt; : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)&lt;/p&gt;
+
+&lt;p&gt;Find the code example &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/proxy&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.&lt;/p&gt;
+
+&lt;p&gt;Why use proxy pattern? Its because using the real object is more expensive. Read about it here &lt;a href=&#34;http://www.oodesign.com/proxy-pattern.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.oodesign.com/proxy-pattern.html&#34;&gt;http://www.oodesign.com/proxy-pattern.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Proxy pattern is used in Java RMI. But its not limited to RMI. We can use it in those situations where object creation is expensive. So instead of using real object we&amp;rsquo;ll use proxy object. We call methods of the Proxy object, and the proxy will then call the method of the real object.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Review on Hack</title>
+    <link>https://sinujohn.github.io/tags/review/index.xml</link>
+    <description>Recent content in Review on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Boost and a look back on C&#43;&#43;</title>
+      <link>https://sinujohn.github.io/2014/01/20/boost-and-a-look-back-on-c/</link>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/01/20/boost-and-a-look-back-on-c/</guid>
+      <description>&lt;p&gt;These days am a full time Java guy and the last time I coded in C++ was a little over an year ago. It was then I came across Boost library and I had heard that it packed a lot under the 5 letter library BOOST. Even though I haven&amp;rsquo;t much used Boost, since it is being made part of the C++ standard, I don&amp;rsquo;t want to be a person who knew legacy C++ and so was always keen to know about Boost. And thats when I came across &lt;a href=&#34;http://www.packtpub.com/boost-cplusplus-application-development-cookbook/book&#34;&gt;this book on Boost&lt;/a&gt;. Its a cookbook style book which helps people who already know C++ and want to learn Boost. Here is my review on GoodReads :&lt;em&gt;
+&lt;/em&gt;
+&lt;a style=&#34;float:left;padding-right:20px;&#34; href=&#34;https://www.goodreads.com/book/show/18430596-boost-c-application-development-cookbook&#34;&gt;&lt;img alt=&#34;Boost C++ Application Development Cookbook&#34; src=&#34;https://d202m5krfqbpi5.cloudfront.net/books/1390102286m/18430596.jpg&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/18430596-boost-c-application-development-cookbook&#34;&gt;Boost C++ Application Development Cookbook&lt;/a&gt; by &lt;a href=&#34;https://www.goodreads.com/author/show/7250001.Antony_Polukhin&#34;&gt;Antony Polukhin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My rating: &lt;a href=&#34;https://www.goodreads.com/review/show/829027786&#34;&gt;5 of 5 stars&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All those who want to use C++ in production will one day or other come across Boost Library. Being a coder who doesn&amp;rsquo;t use C++ as a primary language, but who wish to keep abreast of whats happening in the industry (and C++ is still not dead!), I always wanted to learn Boost. I had in fact downloaded boost about an year back, but haven&amp;rsquo;t used it much. A good tutorial was missing. And this cookbook definitely fills the void. It is not a beginners book who want to study C++. But its definitely an introduction to Boost. The author has made the cookbook way to give a very good introduction to Boost library.
+What I liked: It is straight to the point. A no-nonsense book.
+Boost is a large library and some of the it have been added in C++11. And some it is being said to be part of C++14. This itself tells that Boost is a library which every C++ programmer should be familiar of. And this cookbook is really a starting point to learning it. I should say that it is only the tip of the ice-berg, but it should make you capable of digging deep into the ice-berg&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/review/list/17057121-sinu-john&#34;&gt;View all my reviews&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

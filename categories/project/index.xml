@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on Hack</title>
+    <link>https://sinujohn.github.io/categories/project/index.xml</link>
+    <description>Recent content in Project on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/categories/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Training the Thulika Keyboard</title>
+      <link>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Before you read :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.&lt;/p&gt;
+
+&lt;p&gt;The decomposition is as follows: LetterCode + modifyingSymbolCode&lt;/p&gt;
+
+&lt;p&gt;Eg: ക്രൊ = ( ക + ്ര + ൊ )&lt;/p&gt;
+
+&lt;p&gt;So as you see the code that comes first(ക) need not be the first letter that the user writes(െ). Also some symbols(like the symbol that comes after െ) will not have direct Unicode substitution (it should be written as  ്ര).&lt;/p&gt;
+
+&lt;p&gt;Also the code that&amp;rsquo;s already written might have to be modified according to the symbol that the user writes next. For eg:&lt;/p&gt;
+
+&lt;p&gt;If user writes ാ and the symbol just before isെ, then we&amp;rsquo;ll have replaceെ withൊ.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Now onto the training part:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This post describes the steps needed to configure new language/symbols for the &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Thulika Keyboard&lt;/a&gt; app. For this you have to download  &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika.train&#34; target=&#34;_blank&#34;&gt;ThulikaTrainer&lt;/a&gt; app.&lt;/p&gt;
+
+&lt;p&gt;To train Thulika keyboard on new inputs, require three steps:
+&lt;ol&gt;
+    &lt;li&gt;Save handwriting images of all the symbols of the language you wish the keyboard recognises (This is using the ThulikaKeyboard app on your Android phone)&lt;/li&gt;
+    &lt;li&gt;Run a program on your PC (will update the steps for this later)&lt;/li&gt;
+    &lt;li&gt;ThulikaTrainer Load engine (will update later)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Step 1. ThulikaTrainer app&lt;/h3&gt;
+&lt;strong&gt;1.&lt;/strong&gt; Run the app for the first time. It&amp;rsquo;ll create directory structures on your sdcard. Make sure the following directories are created: sdcard/Android/data/me.sinu.thulika.train/files. There&amp;rsquo;ll be two folders under this - engines and letters.
+&lt;strong&gt;2.&lt;/strong&gt; Create a text file alpha.txt in sdcard/Android/data/me.sinu.thulika.train/files. This file should contain the symbols that the keyboard should recognize. Each symbol should be separated from other symbol using a COMMA(,).
+&lt;p style=&#34;padding-left:30px;&#34;&gt;For example, if you want to train the symbols a, b, c, 1 and 2, then, the alpha.txt should contain :&lt;/p&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;a, b, c, 1, 2&lt;/p&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;You can create the alpha.txt file using PC and then copy to the respective folder on your sdcard.&lt;/p&gt;
+&lt;strong&gt;3.&lt;/strong&gt; Now if you run the app, the symbols that you have specified in alpha.txt will be present on each of the buttons at the bottom of the app.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Draw a symbol on the screen and then press the button that corresponds to the symbol you have drawn. It&amp;rsquo;ll add a file under sdcard/Android/data/me.sinu.thulika.train/files/letters
+&lt;p style=&#34;padding-left:30px;&#34;&gt;If you have made a mistake you can press Clear button. If you accidentally pressed the wrong symbol button, press &amp;lsquo;Delete Last&amp;rsquo;, it will delete the last file you have created.&lt;/p&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;Please make sure you press the correct button corresponding to the symbol you have drawn. This is what ensures the correctness of the keyboard.&lt;/p&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;You can draw more than one symbol for each symbol button. It doesn&amp;rsquo;t matter, but it&amp;rsquo;ll be better if one person provides only one set of symbols. You can ask another person to provide images for the entire set again, so that there will be more than one handwriting for each symbol. But in the beginning make sure you have atleast one set of handwriting images for the entire symbol set.&lt;/p&gt;
+&amp;nbsp;
+&lt;h3&gt;Step 2 : Run ThulikaMaker on your PC&lt;/h3&gt;
+&lt;strong&gt;1.&lt;/strong&gt; &lt;a href=&#34;https://www.box.com/s/dt27vxv6769jln4qes0e&#34; target=&#34;_blank&#34;&gt;Click here&lt;/a&gt; to download ThulikaMaker.jar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Copy the folder sdcard/Android/data/me.sinu.thulika.train/files/letters from your phone to your PC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Run ThulikaMaker.jar.
+&lt;img src=&#34;https://sinujohn.github.io/assets/thulikamaker.png&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Enter a width and height. For south Indian languages width=13 and height=10 should work. Its usually a trial and error procedure to find width and height. For letters like English, give width=7, height=7. For numbers give width=5, height=5. Try to keep widthxheight (the product) value as low as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Click &amp;lsquo;Load Bundle&amp;rsquo; and select the &amp;lsquo;letters&amp;rsquo; folder that you have copied to the PC. Click open.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; Wait for a minute. Now files will be loaded. You can now select any entry to view the file. Press &amp;lsquo;Delete File&amp;rsquo; if you want to delete any file(if you find that the image is wrong for a particular file).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; Alternatives text is not used now(SKIP)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8.&lt;/strong&gt; Align value, the default value is 0 :&lt;/p&gt;
+
+&lt;p&gt;If the image is a symbol that comes on the left side of a letter (like െ, േ in Malayalam), set Align=-1&lt;/p&gt;
+
+&lt;p&gt;If the image is a symbol that comes on the right side of a letter (like ു, ൂ, ൃ in Malayalam), set Align=1&lt;/p&gt;
+
+&lt;p&gt;If it is a usual symbol, set Align=0. For latin letters and numerals, align will be 0.&lt;/p&gt;
+
+&lt;p&gt;If you modify align/rules for a symbol, make sure you click &amp;lsquo;Save Symbol&amp;rsquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9.&lt;/strong&gt; Rules: Give a rule if you want to modify the current letter according to a letter that comes before it. This applies only to complex languages like Indian languages. For English and numerals, there will not be any rules.&lt;/p&gt;
+
+&lt;p&gt;For a symbol X, if you want to modify what happens when letter X is written according to a symbol that comes before it,  then you have to give rules for symbol X. If the letter before is Y, and if you want to turn it into Z, give rule as Y:Z. If the letter is B, and if you want to turn it into BX, give rule as B:BX&lt;/p&gt;
+
+&lt;p&gt;For example: symbol:ാ align:1 rules:ഒ:ഓ; െ:ൊ; േ:ോ&lt;/p&gt;
+
+&lt;p&gt;If you modify align/rules for a symbol, make sure you click &amp;lsquo;Save Symbol&amp;rsquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; Finally, give a language ID.It can be any name. Usuall we give the name of the language. Click &amp;lsquo;Save Engine&amp;rsquo; . Give the name E_engine and click Save.
+&lt;h3&gt;Step 3: ThulikaTrainer Load Engine&lt;/h3&gt;
+&lt;strong&gt;1.&lt;/strong&gt; Copy E_engine file from PC to sdcard/Android/data/me.sinu.thulika.train/files/engines/ of your phone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Run ThulikaTrainer app on the phone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Press menu key, and select Load Engine. The E_engine file will be loaded.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Draw a symbol, and press Recognize button. Test for all the letters, and make sure all the letters are getting recognized.&lt;/p&gt;
+
+&lt;p&gt;Example: &lt;a href=&#34;https://www.box.com/s/h905qszbsj27d2rdhoct&#34; target=&#34;_blank&#34;&gt;Click here&lt;/a&gt; to see the details of all the letters for Malayalam language.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Mail the letter files folder and E_engine to &lt;strong&gt;sjsuperapps at gmail dot com&lt;/strong&gt;. If you have any doubt please mail at this address. I&amp;rsquo;ll do my best to help you.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visitor Pattern on Hack</title>
+    <link>https://sinujohn.github.io/tags/visitor-pattern/index.xml</link>
+    <description>Recent content in Visitor Pattern on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/visitor-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Visitor Pattern</title>
+      <link>https://sinujohn.github.io/2013/06/06/visitor-pattern/</link>
+      <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/06/visitor-pattern/</guid>
+      <description>&lt;p&gt;I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&amp;rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!).&lt;/p&gt;
+
+&lt;p&gt;Here is the repo I created to track my experiment with &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns&#34;&gt;Design Patterns&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Read about Visitor pattern &lt;a href=&#34;http://en.wikipedia.org/wiki/Visitor_pattern&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.javaworld.com/javaworld/javatips/jw-javatip98.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Classification : Behavioral Pattern&lt;/p&gt;
+
+&lt;p&gt;Check out the code &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/visitor&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Visitor pattern is used to parse through(or visit, in other words) through collections. Collections are made up of entities which themselves can be collections or simple elements.&lt;/p&gt;
+
+&lt;p&gt;Imagine a big colony. It has got some houses. And there are even smaller colonies. The big-colony and everthing it has (houses and smaller colonies) accepts visitors(athidi-devo-bhav!) with a very good heart. The colony in programming terms is a collection and houses are elements. Visitor is an object that visits the colony.&lt;/p&gt;
+
+&lt;p&gt;Now the colony and houses should declare that they accepts visitors. So they should implement &amp;lsquo;Visitable&amp;rsquo; interface which tells that they will have accept(Visitor).&lt;/p&gt;
+
+&lt;p&gt;Also our visitor should tell that he is really a &amp;lsquo;Visitor&amp;rsquo; and not a thief, so he must implement &amp;lsquo;Visitor&amp;rsquo; interface which tells that he&amp;rsquo;ll visit(Colony) and visit(House). What a visitor will do after visiting a house or colony is upto him, the &amp;lsquo;Visitor&amp;rsquo; tag just tells that he is a legitimate visitor.&lt;/p&gt;
+
+&lt;p&gt;There are two flavors of Visitor Pattern:
+&lt;ol&gt;
+    &lt;li&gt;&lt;strong&gt;Visitable can control where the visitor goes next&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. The colony will then decide where the visitor should go next. It may send the visitor to all the houses first or it can tell the visitor to visit the smaller colonies first.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; accept()&lt;/em&gt; for colony:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void accept(Visitor visitor) {
+    visitor.visit(this);
+    for(House house : houses) {
+        house.accept(visitor);
+    }
+    for(Colony colony : colonies) {
+        colony.accept(visitor);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;visit()&lt;/em&gt; of visitor:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void visit(Visitable visitable) {
+
+	if(visitable instanceof House) {
+		House house = (House) visitable;
+		System.out.println(&amp;quot;Visited House : &amp;quot; + house.getName());
+	} else if(visitable instanceof Colony) {
+		Colony colony = (Colony) visitable;
+		System.out.println(&amp;quot;Visited colony : &amp;quot; + colony.getName());
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;ol start=&#34;2&#34;&gt;
+    &lt;li&gt;&lt;strong&gt;Visitor controls where he goes next&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. Once the visitor is inside he decides where to go next. In this case there is more flexibility and power for the visitors.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;accept()&lt;/em&gt; for colony:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void accept(Visitor visitor) {
+    visitor.visit(this);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;visit()&lt;/em&gt; of visitor:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void visit(Visitable visitable) {
+
+	if(visitable instanceof House) {
+		House house = (House) visitable;
+		System.out.println(&amp;quot;Visited House : &amp;quot; + house.getName());
+	} else if(visitable instanceof Colony) {
+		Colony colony = (Colony) visitable;
+		System.out.println(&amp;quot;Visited colony : &amp;quot; + colony.getName());
+		for(House h : colony.getHouses()) {
+			this.visit(h);
+		}
+		for(Colony c : colony.getColonies()) {
+			this.visit(c);
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Happy coding :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

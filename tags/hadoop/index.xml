@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hadoop on Hack</title>
+    <link>https://sinujohn.github.io/tags/hadoop/index.xml</link>
+    <description>Recent content in Hadoop on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Map Reduce</title>
+      <link>https://sinujohn.github.io/2013/07/16/map-reduce/</link>
+      <pubDate>Tue, 16 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/07/16/map-reduce/</guid>
+      <description>&lt;p&gt;Everyone is saying that the world is going the cloud way. Big Data, Analytics etc are today&amp;rsquo;s buzzwords. I used to wonder what is so special about the cloud? I read a bit about Hadoop, HBase (the NoSQL DB for Hadoop) etc and came to know about the Map Reduce Framework.&lt;/p&gt;
+
+&lt;p&gt;Map Reduce is a framework which helps us to write program for the cloud. It is a simple framework. The MapReduce version of the Hello World program for Hadoop is the WordCount program.&lt;/p&gt;
+
+&lt;p&gt;I decided to start experimenting with this framework and have written a couple of programs.
+Find it here in &lt;a href=&#34;https://github.com/sinujohn/MapReduce/&#34;&gt;my git repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How Map and Reduce operations are actually carried out:
+&lt;a href=&#34;http://wiki.apache.org/hadoop/HadoopMapReduce&#34;&gt;http://wiki.apache.org/hadoop/HadoopMapReduce&lt;/a&gt;
+&lt;a href=&#34;http://wiki.apache.org/hadoop/MapReduce&#34;&gt;http://wiki.apache.org/hadoop/MapReduce&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some Usecases of MapReduce: &lt;a href=&#34;http://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/&#34;&gt;http://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

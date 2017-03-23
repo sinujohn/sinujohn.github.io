@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackintosh on Hack</title>
+    <link>https://sinujohn.github.io/tags/hackintosh/index.xml</link>
+    <description>Recent content in Hackintosh on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/hackintosh/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dellintosh :)</title>
+      <link>https://sinujohn.github.io/2010/12/26/dellintosh/</link>
+      <pubDate>Sun, 26 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/12/26/dellintosh/</guid>
+      <description>&lt;p&gt;Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D&lt;/p&gt;
+
+&lt;p&gt;I followed the excellent guide &lt;a href=&#34;http://macyourpc.com/2009/09/13/mac-os-x-10-6-snow-leopard-retail-install-boot-132-method/&#34;&gt;available here&lt;/a&gt;. Take a print out of this guide and then do as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Follow steps 1 to 7. Restart the system.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Update to 10.6.5 - don&amp;rsquo;t use Software Update, use manual update - &lt;a href=&#34;http://support.apple.com/kb/DL1324&#34;&gt;http://support.apple.com/kb/DL1324&lt;/a&gt; . Restart the system.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Continue from Step 8 onwards - but DON&amp;rsquo;T INSTALL Sleepenabler.kext and EHCIsleepenabler.kext at step 8.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Enjoy the Mac SL 10.6.5 :)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Now the only problem is that the computer won&amp;rsquo;t sleep - I don&amp;rsquo;t usually put my system to sleep, so its okay for me.
+&lt;h3&gt;Dual Booting with Windows 7:&lt;/h3&gt;
+1. When I installed Mac SL I made 3 partitions instead of 1 and formatted the first partition to &amp;lsquo;Mac OS Extended(Journaled)&amp;rsquo; and the remaining two to MSDOS FAT format.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Installed Mac to first partition and updated it to SL 10.6.5 as specified above.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Installed Windows 7 to second partition - Windows installer formatted it to NTFS&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now I can only boot into Win7. In Win7 install EasyBCD.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Add MacOS option to boot options (Choose MBR instead of EFI)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now I can dual boot :)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And now am ready with my Dellintosh Snow Leopard 10.6.5 :D&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

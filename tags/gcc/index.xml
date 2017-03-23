@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gcc on Hack</title>
+    <link>https://sinujohn.github.io/tags/gcc/index.xml</link>
+    <description>Recent content in Gcc on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/gcc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A quick introduction to GCC</title>
+      <link>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</link>
+      <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://gcc.gnu.org/&#34; target=&#34;_blank&#34;&gt;GCC&lt;/a&gt; - GNU Compiler Collection&lt;/strong&gt;
+From GCC manual - &lt;em&gt;When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.&lt;/em&gt;
+&lt;h2&gt;Compile and Link a simple program:&lt;/h2&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -o hello.out hello.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo;
+-o specifies the output file.
+&lt;h3&gt;&lt;strong&gt;Specify Language:&lt;/strong&gt;&lt;/h3&gt;
+Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -o hello.out hello.cpp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This results in an error as gcc tries to perform C++ compilation(assumed from the extension .cpp).
+We can specify that the file is a C file as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -x c -o hello.out hello.cpp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-x specifies the language.
+&lt;h3&gt;&lt;strong&gt;Compile Only(No Linking):&lt;/strong&gt;&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -c hello.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-c tells gcc to compile ONLY. This creates &amp;lsquo;hello.o&amp;rsquo;, which is an object file.
+&lt;h2&gt;Compiling and Linking multiple files:&lt;/h2&gt;
+File: hello.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;
+
+long myabs(long);
+long factorial(long);
+
+int main()
+{
+ printf(&amp;quot;Hello World..\n&amp;quot;);
+ printf(&amp;quot;Absolute(-3) = %d\nFactorial(5) = %d\n&amp;quot;,myabs(-3),factorial(5));
+ return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;File: myabs.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;long myabs(long a)
+{
+ if(a&amp;lt;0) return -a;
+ return a;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;File: myfac.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;long factorial(long no)
+{
+ if(no&amp;lt;=1) return 1;
+ else return no*factorial(no-1);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;METHOD 1: Use source files directly:&lt;/strong&gt;
+Make executable hello.out from 3 files by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c myabs.c myfac.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;METHOD 2: Use a source file with one or more object files:&lt;/strong&gt;
+Compile one file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -c myabs.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now object code of myabs.c is obtained. Use this in usual gcc command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c myabs.o myfac.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or you can compile remaining files also and use their object files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c myabs.o myfac.o
+ gcc -o hello.out hello.o myabs.o myfac.o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h2&gt;Create Library:&lt;/h2&gt;
+The above methods are suitable if the number of source files are really small. But if there are large number of source files, then its difficult to specify them each and every time you compile. To make this easy, you can create library.
+Library is a collection of object files. Create library with &amp;lsquo;ar&amp;rsquo; command, which is short for &amp;lsquo;archive&amp;rsquo;.
+So first create object files (.o files). With above example we have two object files - myabs.o and myfac.o. Now create library:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; ar cr libMyCol.a myabs.o myfac.o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now a library libMyCol.a is created. To see the contents of a library use &amp;lsquo;ar t&amp;rsquo;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; ar t libMyCol.a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It will show the present contents (myabs.o and myfac.o).&lt;/p&gt;
+
+&lt;p&gt;Compile using the library:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c libMyCol.a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OR&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c -L. -lMyCol
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-L&lt;span style=&#34;text-decoration:underline;&#34;&gt;dir&lt;/span&gt; specifies the direcory in which library files are present. Here we use current directory, so we use a &amp;lsquo;dot&amp;rsquo; as directory.
+-l&lt;span style=&#34;text-decoration:underline;&#34;&gt;library&lt;/span&gt; specifies the library name. library should only contain library name - extensions and preceeding &amp;lsquo;lib&amp;rsquo; is omitted. So here &amp;lsquo;libMyCol.a&amp;rsquo; is represented by -lMyCol   . This is why library names should start with &amp;lsquo;lib&amp;rsquo;.
+&lt;h2&gt;Create Shared Library:&lt;/h2&gt;
+To create shared libraries, object files must be created with -fPIC.
+From gcc manual :
+&lt;em&gt;-fpic
+Generate position-independent code (PIC) suitable for use in a shared library, if supported for the target machine.  Such code accesses all constant addresses through a global offset table (GOT). The dynamic loader resolves the GOT entries when the program starts (the dynamic loader is not part of GCC; it is part of the operating system).  If the GOT size for the linked executable exceeds a machine-specific maximum size, you get an error message from the linker indicating that -fpic does not work; in that case, recompile with -fPIC instead.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we use -fPIC
+Before continuing delete all files except the three C files - it looks nice to have a clean directory :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;STEP 1: Create object files as follows:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -c -fPIC myabs.c
+ gcc -c -fPIC myfac.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;STEP 2: Now we create shared library or shared object(.so) file from the two .o files created above.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -shared -o libMyCol.so myabs.o myfac.o
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The shared library created is libMyCol.so. You can delete the .o files as they are no longer needed.&lt;/p&gt;
+
+&lt;p&gt;The Shared Library can be linked either Statically or Dynamically.
+&lt;h2&gt;Static Linking of Shared Library:&lt;/h2&gt;
+&lt;strong&gt;METHOD 1: Give full path to .so file&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c ./libMyCol.so
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;METHOD 2: Use LD_LIBRARY_PATH environment variable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First set LD_LIBRARY_PATH variable to current directory (dot). Then export it. These two steps are shown below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;LD_LIBRARY_PATH=.
+ export LD_LIBRARY_PATH
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can perform the final compilation and linking as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c libMyCol.so
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h2&gt;Dynamic Linking of Shared Library:&lt;/h2&gt;
+To do dynamic linking, you need to modify the source file &amp;lsquo;hello.c&amp;rsquo; as follows:&lt;/p&gt;
+
+&lt;p&gt;File: hello.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;
+#include&amp;lt;dlfcn.h&amp;gt;
+
+typedef long (*FUN_PTR)(long);
+
+int main()
+{
+ void *handle = dlopen(&amp;quot;libMyCol.so&amp;quot;,RTLD_LAZY);
+ if(handle==0)
+ {
+  printf(&amp;quot;ERROR: Failed to load the library\n&amp;quot;);
+  return -1;
+ }
+ FUN_PTR fptr1 = dlsym(handle,&amp;quot;myabs&amp;quot;);
+ FUN_PTR fptr2 = dlsym(handle,&amp;quot;factorial&amp;quot;);
+ if(fptr1==0 || fptr2==0)
+ {
+  printf(&amp;quot;ERROR: Cannot retrieve function address\n&amp;quot;);
+  return -1;
+ }
+ long tp = (*fptr1)(-3);
+ printf(&amp;quot;Hello World..\n&amp;quot;);
+ printf(&amp;quot;Absolute(-3) = %d&amp;quot;,tp);
+ tp = (*fptr2)(5);
+ printf(&amp;quot;\nFactorial(5) = %d\n&amp;quot;,tp);
+ dlclose(handle);
+ return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you haven&amp;rsquo;t set LD_LIBRARY_PATH variable and exported it as mentioned above, then do it now.
+Now perform dynamic linking by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gcc -o hello.out hello.c -ldl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;dl is the dynamic linking library. -ldl asks gcc to use this library.&lt;/p&gt;
+
+&lt;p&gt;Dynamic Linking library provides 4 functions - dlopen, dlclose, dlsym and dlerror. These are in dlfcn.h.
+dlopen is used to open a .so file. It returns a handle to the file.
+FUN_PTR is a function pointer. fptr1 has address of function myabs().
+dlsym takes two parameters - handle and function name.
+dlclose is used to close the .so file.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;http://praseedp.blogspot.com/&#34; target=&#34;_blank&#34;&gt;Praseed.P&lt;/a&gt; for his session on GCC at &lt;a href=&#34;http://www.ilug-cochin.org/&#34; target=&#34;_blank&#34;&gt;ILUG Cochin&lt;/a&gt;. It had been very informative and this post is a result of that session.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

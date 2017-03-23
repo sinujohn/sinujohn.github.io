@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maven on Hack</title>
+    <link>https://sinujohn.github.io/tags/maven/index.xml</link>
+    <description>Recent content in Maven on Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://sinujohn.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java - Add lib folder to classpath</title>
+      <link>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
+      <description>&lt;p&gt;Adding non standard, non-maven, custom jars in a maven project is a common issue. And &lt;a href=&#34;http://stackoverflow.com/questions/364114/can-i-add-jars-to-maven-2-build-classpath-without-installing-them&#34; target=&#34;_blank&#34;&gt;this SO post&lt;/a&gt; is usually the first googled result. But here is another easier way: Use &lt;a href=&#34;https://code.google.com/archive/p/addjars-maven-plugin/wikis/UsagePage.wiki&#34; target=&#34;_blank&#34;&gt;addjars-maven-plugin&lt;/a&gt;. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.&lt;/p&gt;
+
+&lt;p&gt;How to use?&lt;/p&gt;
+
+&lt;p&gt;Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff). Now add this to the pom:
+&lt;pre&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;groupId&amp;gt;com.googlecode.addjars-maven-plugin&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;addjars-maven-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;1.0.5&amp;lt;/version&amp;gt;
+            &amp;lt;executions&amp;gt;
+                &amp;lt;execution&amp;gt;
+                    &amp;lt;goals&amp;gt;
+                        &amp;lt;goal&amp;gt;add-jars&amp;lt;/goal&amp;gt;
+                    &amp;lt;/goals&amp;gt;
+                    &amp;lt;configuration&amp;gt;
+                        &amp;lt;resources&amp;gt;
+                            &amp;lt;resource&amp;gt;
+                                &amp;lt;directory&amp;gt;${project.basedir}/lib&amp;lt;/directory&amp;gt;
+                            &amp;lt;/resource&amp;gt;
+                        &amp;lt;/resources&amp;gt;
+                    &amp;lt;/configuration&amp;gt;
+                &amp;lt;/execution&amp;gt;
+            &amp;lt;/executions&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;&lt;/pre&gt;
+This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it will work via CLI. So no worries! Very useful in those rare cases, where you have a dozen of custom jars!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a Maven Spring-REST project</title>
+      <link>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</link>
+      <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</guid>
+      <description>&lt;p&gt;Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse.
+Now go to File &amp;gt; New &amp;gt; Maven Project.
+&lt;img src=&#34;https://sinujohn.github.io/assets/rest1.png&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click Next. Select maven-archetype-webapp.
+&lt;img src=&#34;https://sinujohn.github.io/assets/rest2.png&#34; alt=&#34;screenshot2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &amp;lsquo;com.companyname.yourname&amp;rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).&lt;/p&gt;
+
+&lt;p&gt;There can be several projects under the same GroupID, but ArtifactID should be different for each project. I have given GroupID as &lt;em&gt;&amp;lsquo;me.sinu.jugaad&amp;rsquo;&lt;/em&gt; and ArtifactID as &lt;em&gt;&amp;lsquo;rest&amp;rsquo;&lt;/em&gt;.
+&lt;img src=&#34;https://sinujohn.github.io/assets/rest3.png&#34; alt=&#34;screenshot3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click Finish to create the project.&lt;/p&gt;
+
+&lt;p&gt;The webapp archetype would have created the necessary folder structure and a web.xml for you. This web.xml might be for older Servlets without support for Servlet v.3, it doesn&amp;rsquo;t matter as we&amp;rsquo;ll overwrite it later.
+You might examine pom.xml now, it may contain a single dependency of jUnit(even if you won&amp;rsquo;t find it its fine :) )&lt;/p&gt;
+
+&lt;p&gt;Now lets examine the dependencies we might require for our simple project:
+&lt;ul&gt;
+    &lt;li&gt;We are building REST services, so we need REST api (&lt;strong&gt;javax.ws.rs-api&lt;/strong&gt;) and an implentation for it. We&amp;rsquo;ll use Apache CXF implementation (&lt;strong&gt;cxf-bundle-jaxrs&lt;/strong&gt;).&lt;/li&gt;
+    &lt;li&gt;We&amp;rsquo;ll use Spring to wire the beans and for dependency injection. So we need a bunch of Spring libraries (&lt;strong&gt;spring-web&lt;/strong&gt; and &lt;strong&gt;spring-context&lt;/strong&gt; should be enough for our skeleton project. &lt;em&gt;&lt;strong&gt;spring-context&lt;/strong&gt;&lt;/em&gt; is needed for &lt;em&gt;ContextLoaderListener&lt;/em&gt; which loads the beans by scanning some Spring context xml configuration files)&lt;/li&gt;
+    &lt;li&gt;We&amp;rsquo;ll use a JSON provider which helps in converting object to/from JSON. It is not needed for this skeleton project, but its usually handy in almost all REST projects. So we&amp;rsquo;ll add one such provider (&lt;strong&gt;jackson-jaxrs-json-provider&lt;/strong&gt;) just in case we need it in future.&lt;/li&gt;
+&lt;/ul&gt;
+Here is the &lt;strong&gt;pom.xml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/c2839b0528fdbc8115b0.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now create a java folder under &lt;strong&gt;src/main&lt;/strong&gt;. Create a package (&lt;strong&gt;me.sinu.jugaad.rest&lt;/strong&gt;) and a class file inside it(&lt;strong&gt;HelloWorld.java&lt;/strong&gt;).
+We&amp;rsquo;ll just tell a simple &amp;ldquo;&lt;strong&gt;Hello REST!&lt;/strong&gt;&amp;rdquo; from our REST service. Here is the class:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/f4cc9425e52b407da5c4.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now we&amp;rsquo;ll create a Spring configuration file under &lt;strong&gt;WEB-INF&lt;/strong&gt; folder, say &lt;strong&gt;rest-context.xml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/60f8b04e584b5a0e5b0f.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;In this we just defined our &lt;strong&gt;helloWorld&lt;/strong&gt; bean and hooked it up with our JAXRS servlet. We also provided our JSON provider to it to automatically do any marshalling/unmarshalling. You may provide your own providers, which will be necessary as the app grows. Providers can contain Filters or other interceptors.&lt;/p&gt;
+
+&lt;p&gt;Now lets define our webapp&amp;rsquo;s &lt;strong&gt;web.xml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/982335d88382c37f60b4.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;We specify &amp;lsquo;&lt;strong&gt;contextConfigLocation&lt;/strong&gt;&amp;rsquo; for the Spring&amp;rsquo;s &amp;lsquo;&lt;strong&gt;ContextLoaderListener&lt;/strong&gt;&amp;rsquo; to pick it up as the webapp is loaded. The &lt;em&gt;contextConfigLocation&lt;/em&gt; can be given as exact file names or using wild cards.
+Since we are using CXF implementation, a CXF servlet is used. The address for our &lt;strong&gt;servlet&lt;/strong&gt; is &amp;ldquo;&lt;strong&gt;/services&lt;/strong&gt;&amp;rdquo; and that for our &amp;lsquo;&lt;strong&gt;helloREST&lt;/strong&gt;&amp;rsquo; JAX RS server is &amp;ldquo;&lt;strong&gt;/greet&lt;/strong&gt;&amp;rdquo;.
+So &amp;ldquo;&lt;strong&gt;WAR_FILE/services/greet&lt;/strong&gt;&amp;rdquo; will take us to the JAXRS server. Our simple GET function is annotated with &lt;strong&gt;@Path(&amp;ldquo;/hello&amp;rdquo;)&lt;/strong&gt;, so to access this we should give as follows: &amp;ldquo;&lt;strong&gt;WAR_FILE/services/greet/hello&lt;/strong&gt;&amp;rdquo;.
+Now run the project - &lt;em&gt;right-click the project &amp;gt; Run As &amp;gt; Run on server&lt;/em&gt;. You might choose a server like Tomcat server v.7. Now in a browser go to &amp;ldquo;&lt;strong&gt;&lt;a href=&#34;http://localhost:8080/rest/services/greet/hello&#34;&gt;http://localhost:8080/rest/services/greet/hello&lt;/a&gt;&lt;/strong&gt;&amp;rdquo; (here &amp;lsquo;&lt;em&gt;rest&lt;/em&gt;&amp;rsquo; is the WAR file name).&lt;/p&gt;
+
+&lt;p&gt;If you see &amp;ldquo;&lt;strong&gt;Hello REST!&lt;/strong&gt;&amp;rdquo; everything is fine, else, Dr.Watson, we have a problem ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Maven config for SLF4J and Logback</title>
+      <link>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</guid>
+      <description>&lt;p&gt;To use SLF4J and logback together, add the following to pom.xml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+ &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt;
+ &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt;
+ &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt;
+ &amp;lt;/dependency&amp;gt;
+ &amp;lt;dependency&amp;gt;
+ &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt;
+ &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt;
+ &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt;
+ &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
+ &amp;lt;/dependency&amp;gt;
+
+&amp;lt;dependency&amp;gt;
+ &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
+ &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
+ &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt;
+ &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+ &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-family:Georgia, &#39;Times New Roman&#39;, &#39;Bitstream Charter&#39;, Times, serif;font-size:14px;line-height:1.5em;&#34;&gt;Now SLF4J&amp;rsquo;s logger can be used:&lt;/span&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+....
+private final Logger logger =  LoggerFactory.getLogger(MyClass.class);
+...
+logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+        &amp;lt;pluginManagement&amp;gt;
+            &amp;lt;plugins&amp;gt;
+                &amp;lt;plugin&amp;gt;
+                    &amp;lt;groupId&amp;gt;org.eclipse.m2e&amp;lt;/groupId&amp;gt;
+                    &amp;lt;artifactId&amp;gt;lifecycle-mapping&amp;lt;/artifactId&amp;gt;
+                    &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
+                    &amp;lt;configuration&amp;gt;
+                        &amp;lt;lifecycleMappingMetadata&amp;gt;
+                            &amp;lt;pluginExecutions&amp;gt;
+                                &amp;lt;pluginExecution&amp;gt;
+                                    &amp;lt;pluginExecutionFilter&amp;gt;
+                                        &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt;
+                                        &amp;lt;artifactId&amp;gt;properties-maven-plugin&amp;lt;/artifactId&amp;gt;
+                                        &amp;lt;versionRange&amp;gt;[1.0-alpha-2,)&amp;lt;/versionRange&amp;gt;
+                                        &amp;lt;goals&amp;gt;
+                                            &amp;lt;goal&amp;gt;set-system-properties&amp;lt;/goal&amp;gt;
+                                        &amp;lt;/goals&amp;gt;
+                                    &amp;lt;/pluginExecutionFilter&amp;gt;
+                                    &amp;lt;action&amp;gt;
+                                        &amp;lt;ignore /&amp;gt;
+                                    &amp;lt;/action&amp;gt;
+                                &amp;lt;/pluginExecution&amp;gt;
+                            &amp;lt;/pluginExecutions&amp;gt;
+                        &amp;lt;/lifecycleMappingMetadata&amp;gt;
+                    &amp;lt;/configuration&amp;gt;
+                &amp;lt;/plugin&amp;gt;
+            &amp;lt;/plugins&amp;gt;
+        &amp;lt;/pluginManagement&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;properties-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;version&amp;gt;1.0-alpha-2&amp;lt;/version&amp;gt;
+                &amp;lt;executions&amp;gt;
+                    &amp;lt;execution&amp;gt;
+                        &amp;lt;goals&amp;gt;
+                            &amp;lt;goal&amp;gt;set-system-properties&amp;lt;/goal&amp;gt;
+                        &amp;lt;/goals&amp;gt;
+                        &amp;lt;configuration&amp;gt;
+                            &amp;lt;properties&amp;gt;
+                                &amp;lt;property&amp;gt;
+                                    &amp;lt;name&amp;gt;logback.configurationFile&amp;lt;/name&amp;gt;
+                                    &amp;lt;value&amp;gt;src/main/resources/logback.xml&amp;lt;/value&amp;gt;
+                                &amp;lt;/property&amp;gt;
+                            &amp;lt;/properties&amp;gt;
+                        &amp;lt;/configuration&amp;gt;
+                    &amp;lt;/execution&amp;gt;
+                &amp;lt;/executions&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here &amp;ldquo;src/main/resources/logback.xml&amp;rdquo; has the logback configuration. Even if it is not present output may be sent to console&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
