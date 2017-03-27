@@ -7,8 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Mar 2017 15:54:02 +0530</lastBuildDate>
     <atom:link href="https://sinujohn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Unit test - Sending emails via SMTP</title>
+      <link>https://sinujohn.github.io/2017/03/27/unit-test---sending-emails-via-smtp</link>
+      <pubDate>Mon, 27 Mar 2017 15:54:02 +0530</pubDate>
+      
+      <guid>https://sinujohn.github.io/2017/03/27/unit-test---sending-emails-via-smtp</guid>
+      <description>&lt;p&gt;I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!) and the content of the mail is actually what I intended to send. That&amp;rsquo;s how I hit upon &lt;a href=&#34;https://github.com/voodoodyne/subethasmtp&#34;&gt;Wiser or SubEtha SMTP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The code itself is self explanatory:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/sinujohn/f4c6f2fc8d8d2ac05d73cc740943eed2.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>From wordpress to github</title>
+      <link>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</link>
+      <pubDate>Mon, 27 Mar 2017 15:14:34 +0530</pubDate>
+      
+      <guid>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</guid>
+      <description>&lt;p&gt;It has been more than 6 months since I have blogged! I just shifted all my blog posts from my Wordpress &lt;a href=&#34;http://sinujohn.wordpress.com&#34;&gt;blog&lt;/a&gt; to github. First I used Jekyll. Setting it up was a pain on my Windows PC. It needed Ruby and all those extra Rubygems. Then I settled for the Jekyll Docker image. That was better, but still generating the 70-odd-posts took so long everytime, and I knew it&amp;rsquo;ll take longer as the number of posts increase. That is how I found out about &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.
+Hugo is a lot simpler. You have just one file to download and install. It has more appealing themes. It loads and generates the blog almost instantly. There is live reload too. This blog now runs on Hugo.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chef notes</title>
@@ -444,38 +469,6 @@ I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&
 &lt;p&gt;&lt;a href=&#34;http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html&#34;&gt;http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Happy Coding :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Creating collection of Spring Beans</title>
-      <link>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</link>
-      <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
-      <description>&lt;p&gt;Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.&lt;/p&gt;&lt;p&gt;Usually, you create a Spring bean as follows:&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/384d51261c13e8f78b11.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?&lt;br /&gt; In such cases, we can create the bean definitions and add the beans to Spring container at runtime using &lt;strong&gt;BeanFactoryPostProcessor&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Implement &lt;strong&gt;BeanFactoryPostProcessor&lt;/strong&gt; in either a &lt;strong&gt;@Configuration&lt;/strong&gt; file or a &lt;strong&gt;@Component&lt;/strong&gt; bean(make sure this bean gets scanned and created).&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/ca787f0e6730eb9890d5.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;If there are more than one constructor arguments, the call can be chained as follows:&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/96f6480a4120989dfa7f.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;All this works fine when you have to create a bean using constructor. But :( I haven&#39;t figured out how to do this when we use a chain of factory methods to create a bean as follows:&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/512ca43414bcfc9d6609.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;Happy Coding! :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>JAX-RS</title>
-      <link>https://sinujohn.github.io/2014/08/27/jax-rs/</link>
-      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
-      <description>&lt;p&gt;There is a very good documentation in Jersey website: &lt;a href=&#34;https://jersey.java.net/documentation/latest/jaxrs-resources.html&#34;&gt;https://jersey.java.net/documentation/latest/jaxrs-resources.html&lt;/a&gt; and &lt;a href=&#34;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&#34;&gt;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Here is a small flowchart that I made showing how the JAX-RS flow works:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/jaxrs.png&#34; alt=&#34;jaxrs&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Happy coding :)&lt;/p&gt;
 </description>
     </item>
     

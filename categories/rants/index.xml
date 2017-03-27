@@ -10,6 +10,17 @@
     <atom:link href="https://sinujohn.github.io/categories/rants/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>From wordpress to github</title>
+      <link>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</link>
+      <pubDate>Mon, 27 Mar 2017 15:14:34 +0530</pubDate>
+      
+      <guid>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</guid>
+      <description>&lt;p&gt;It has been more than 6 months since I have blogged! I just shifted all my blog posts from my Wordpress &lt;a href=&#34;http://sinujohn.wordpress.com&#34;&gt;blog&lt;/a&gt; to github. First I used Jekyll. Setting it up was a pain on my Windows PC. It needed Ruby and all those extra Rubygems. Then I settled for the Jekyll Docker image. That was better, but still generating the 70-odd-posts took so long everytime, and I knew it&amp;rsquo;ll take longer as the number of posts increase. That is how I found out about &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.
+Hugo is a lot simpler. You have just one file to download and install. It has more appealing themes. It loads and generates the blog almost instantly. There is live reload too. This blog now runs on Hugo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>My Developer Personality</title>
       <link>https://sinujohn.github.io/2015/05/21/my-developer-personality/</link>
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
@@ -261,20 +272,6 @@ The following map show some of the short distance trips:&lt;/p&gt;
       
       <guid>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</guid>
       <description>&lt;p&gt;A few days back I took the &lt;a href=&#34;http://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/&#34;&gt;Myers-Briggs Type Indicator&lt;/a&gt; test at &lt;a href=&#34;http://www.16personalities.com/free-personality-test&#34;&gt;this site&lt;/a&gt;.&lt;br /&gt;It says that I fall in &lt;a href=&#34;http://www.16personalities.com/INTP-personality&#34;&gt;INTP&lt;/a&gt; category. &lt;br /&gt;From Myers-Briggs website, this is the &lt;a href=&#34;http://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/the-16-mbti-types.asp#INTP&#34;&gt;description&lt;/a&gt;:&lt;/p&gt;&lt;h2&gt;INTP&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;Seek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction. Quiet, contained, flexible, and adaptable. Have unusual ability to focus in depth to solve problems in their area of interest. Skeptical, sometimes critical, always analytical.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;According to Myers-Briggs theory, there are &lt;a href=&#34;http://www.16personalities.com/type-descriptions&#34;&gt;16 types&lt;/a&gt; of personalities.&lt;br /&gt;Don&#39;t know whether this test is authentic!&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;So I am an INTP, atleast thats what they say! By the way, Albert Einstein, Isaac Newton, Blaise Pascal were also INTP guys ;)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>My New Nexus 7</title>
-      <link>https://sinujohn.github.io/2013/09/23/my-new-nexus-7/</link>
-      <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://sinujohn.github.io/2013/09/23/my-new-nexus-7/</guid>
-      <description>&lt;p&gt;After what seemed like a long wait, I finally got my own Nexus7 2nd generation. Am now playing with the device and the first impression is IT IS AWESOME!
-A good friend of mine asked her family who was flying down from the US to get it for me.
-The device landed last week but I got my hands on it only today as I was on a vacation last week. So at last here is my Nexus 7(courtesy: Ms.Shaniyaji and her family :P)
-Am writing this post from my new Nexus 7 :)
-It&amp;rsquo;s sleek, not so large and not so small. The OpenGL ES 3 capability should make it a graphic powerhouse - just ideal for my experiments with Android!&lt;/p&gt;
 </description>
     </item>
     

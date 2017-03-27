@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2013-07-16T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2013-08-31T00:00:00&#43;00:00"/>
 
 
 
@@ -189,12 +189,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        71
+        73
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          65
+          66
         
         <span>
             Tags
@@ -273,6 +273,307 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://sinujohn.github.io/2013/08/31/persistence-using-java/">
+    <h1 class="article-title" itemprop="name">
+        Persistence Using Java
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2013-08-31 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-08-31</time>
+            &middot;
+            253
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://sinujohn.github.io/categories/notes">Notes</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://sinujohn.github.io/tags/java">java</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
+This blog post mentions JDBC.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://sinujohn.github.io/2013/08/31/persistence-using-java/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://sinujohn.github.io/2013/08/31/persistence-using-java/" data-id="07ee1e230bec9eff60430969f4ae7523" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://sinujohn.github.io/2013/08/31/persistence-using-java/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/">
+    <h1 class="article-title" itemprop="name">
+        Unexpected newspaper article!
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2013-08-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-08-14</time>
+            &middot;
+            49
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://sinujohn.github.io/categories/rants">Rants</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://sinujohn.github.io/tags/android">android</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://sinujohn.github.io/tags/thulika">thulika</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Today I was scanning through Malayala Manorama and then I saw an article which mentions my Thulika Kayboard. The article appears in Malayala Manorama of 14th August 2013 (Padippura section). I saw it in Thiruvananthapuram edition and don&rsquo;t know whether other editions have it.
+Here is the article:</p>
+
+<p>&nbsp;
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/" data-id="e63e7209aa24b1aec246eb66901e8153" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -1516,326 +1817,6 @@ In this pattern, we create a proxy for the original class that we are trying to 
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/">
-    <h1 class="article-title" itemprop="name">
-        Agastyakoodam Trekking
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2013-03-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-03-11</time>
-            &middot;
-            1899
-            words
-            &middot;
-            9
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/categories/travel">Travel</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/agastyakoodam">agastyakoodam</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/nature">nature</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/travel">travel</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/trek">trek</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    On 2nd of March, we (a group of 10 friends) went onto the famous Agastyakoodam (or Agastyarkoodam as some call it that way). It is the second tallest hill in the Western Ghats. The tallest one is Anamudi. The only way to reach the top of Agastyakoodam is a 24km trek (although forest gaurds say it is only 18km). Of this only the last 6km include the flight to the hill.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/" data-id="7803fe9e415e5224793f4c532b172b52" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://sinujohn.github.io/2013/03/05/opensourced-thulika/">
-    <h1 class="article-title" itemprop="name">
-        Opensourced Thulika
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2013-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-03-05</time>
-            &middot;
-            17
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/categories/projects">Projects</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/ai">ai</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/android">android</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/encog">encog</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/opensource">opensource</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://sinujohn.github.io/tags/thulika">thulika</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    I just opensourced the Thulika Keyboard app and the associated training softwares. Find it here on Github
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://sinujohn.github.io/2013/03/05/opensourced-thulika/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://sinujohn.github.io/2013/03/05/opensourced-thulika/" data-id="46949ba8ba50704af8ab52cccc4c562d" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://sinujohn.github.io/2013/03/05/opensourced-thulika/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1863,6 +1844,51 @@ In this pattern, we create a proxy for the original class that we are trying to 
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://sinujohn.github.io/2017/03/27/unit-test---sending-emails-via-smtp" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="https://sinujohn.github.io/2017/03/27/unit-test---sending-emails-via-smtp" class="title">Unit test - Sending emails via SMTP</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-03-27 15:54:02 &#43;0530 IST" itemprop="datePublished">2017-03-27</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://sinujohn.github.io/2017/03/27/from-wordpress-to-github" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://sinujohn.github.io/categories/rants">
+                        Rants
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://sinujohn.github.io/2017/03/27/from-wordpress-to-github" class="title">From wordpress to github</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-03-27 15:14:34 &#43;0530 IST" itemprop="datePublished">2017-03-27</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1942,58 +1968,6 @@ In this pattern, we create a proxy for the original class that we are trying to 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://sinujohn.github.io/2015/09/19/certified-spring-professional/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://sinujohn.github.io/categories/certifications">
-                        Certifications
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://sinujohn.github.io/2015/09/19/certified-spring-professional/" class="title">Certified Spring Professional</a></p>
-                    <p class="item-date">
-                        <time datetime="2015-09-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-09-19</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://sinujohn.github.io/2015/05/21/my-developer-personality/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://sinujohn.github.io/categories/rants">
-                        Rants
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://sinujohn.github.io/2015/05/21/my-developer-personality/" class="title">My Developer Personality</a></p>
-                    <p class="item-date">
-                        <time datetime="2015-05-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-05-21</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -2044,7 +2018,7 @@ In this pattern, we create a proxy for the original class that we are trying to 
                 <a class="category-list-link" href="https://sinujohn.github.io/categories/rants">
                     rants
                 </a>
-                <span class="category-list-count">21</span>
+                <span class="category-list-count">22</span>
             </li>
             
             <li class="category-list-item">
@@ -2160,6 +2134,9 @@ In this pattern, we create a proxy for the original class that we are trying to 
         
         
         <a href="https://sinujohn.github.io/tags/git" style="font-size: 12px;">git</a>
+        
+        
+        <a href="https://sinujohn.github.io/tags/github" style="font-size: 12px;">github</a>
         
         
         <a href="https://sinujohn.github.io/tags/google" style="font-size: 12px;">google</a>
