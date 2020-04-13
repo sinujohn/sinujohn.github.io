@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Hack</title>
-    <link>https://sinujohn.github.io/tags/python/index.xml</link>
-    <description>Recent content in Python on Hack</description>
+    <title>python on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/python/</link>
+    <description>Recent content in python on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 26 Jun 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>BSNL Broadband Usage Viewer</title>
@@ -15,19 +18,9 @@
       <pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/06/26/bsnl-broadband-usage-viewer/</guid>
-      <description>&lt;p&gt;[UPDATE] The BSNL site design has been changed. So this program won&amp;rsquo;t work. I suppose only a small change is needed. Will try to update this post with the new link as soon as I find time for making necessary changes.[UPDATE]&lt;/p&gt;
-
-&lt;p&gt;What is the advantage of knowing a scripting language? It helps you to automate much of the boring tasks that you do on a day-to-day basis.&lt;/p&gt;
-
-&lt;p&gt;I was fed up of logging in, clicking a series of links and finally logging out from BSNL&amp;rsquo;s website (to be exact &lt;a href=&#34;http://www.data.bsnl.in&#34; target=&#34;_blank&#34;&gt;www.data.bsnl.in&lt;/a&gt;) just to check my broadband usage.
-So this thought of automating this process occurred to me. And finally I made a small script which does this. Also I gave a GUI for it. &lt;a href=&#34;https://sinujohn.github.io/pages/projects/&#34;&gt;Download Broadband Usage Meter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/bsnlmeter.png&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There is a file called &amp;lsquo;READ ME&amp;rsquo; in it. As it goes without saying, you ought to read it ;)&lt;/p&gt;
-
-&lt;p&gt;This program works only for those who uses &lt;a href=&#34;http://www.data.bsnl.in&#34; target=&#34;_blank&#34;&gt;www.data.bsnl.in&lt;/a&gt; to check their usage statistics. It depends heavily on the design of the site, so it maynot work in the future if BSNL decide to change their site design.&lt;/p&gt;
-</description>
+      <description>[UPDATE] The BSNL site design has been changed. So this program won&amp;rsquo;t work. I suppose only a small change is needed. Will try to update this post with the new link as soon as I find time for making necessary changes.[UPDATE]
+What is the advantage of knowing a scripting language? It helps you to automate much of the boring tasks that you do on a day-to-day basis.
+I was fed up of logging in, clicking a series of links and finally logging out from BSNL&amp;rsquo;s website (to be exact www.</description>
     </item>
     
     <item>
@@ -36,18 +29,8 @@ So this thought of automating this process occurred to me. And finally I made a 
       <pubDate>Fri, 18 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/06/18/simple-videocutter/</guid>
-      <description>&lt;p&gt;I took out some time to create a simple videocutter and converter. Its actually just a front-end to &lt;a href=&#34;http://www.ffmpeg.org/&#34; target=&#34;_blank&#34;&gt;ffmpeg&lt;/a&gt;, so you require ffmpeg to run it. &lt;a href=&#34;https://gist.github.com/sinujohn/49ce39eaf09f2e3828f61b347f76d2a1&#34;&gt;Download videoCutter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/videoeditor.png&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Why did I make this? Isn&amp;rsquo;t there any other good video converter or cutter? Oh ya, there are many. One of the good ones I have found is WinFF which is also a front-end to ffmpeg. But I don&amp;rsquo;t need all those complex functions to just convert a video. And its a converter not a cutter. So that means it converts the whole video. I needed a simple, a very simple, interface to do my job. Afterall, you just need to specify input and output files and conversion parameters. Whats the need for all the fuss? Thus I sat down to make my own front-end for ffmpeg.&lt;/p&gt;
-
-&lt;p&gt;But isn&amp;rsquo;t it same as CLI? Yep, it is. Even though I am not afraid of CLI, I prefer a beautiful GUI to do my task. Am bad at remembering all the options for ffmpeg :) Also i wanted to try out pyQt, I haven&amp;rsquo;t done anything much in it yet. The time is perfect too, am having vacation, so why shouldn&amp;rsquo;t I make a videocutter!&lt;/p&gt;
-
-&lt;p&gt;And speaking of pyQt, its a lot simpler than I thought. The whole program is only about 290 lines, in which most of them is auto generated as I used QtCreator to design the form. Took me only 3hours to get it right, but tweaking it till I was satisfied took almost one day!&lt;/p&gt;
-
-&lt;p&gt;And here comes an important question - can it do all conversions? Arey, yaar, it does everything which ffmpeg does, which is, a lot!&lt;/p&gt;
-</description>
+      <description>I took out some time to create a simple videocutter and converter. Its actually just a front-end to ffmpeg, so you require ffmpeg to run it. Download videoCutter.
+Why did I make this? Isn&amp;rsquo;t there any other good video converter or cutter? Oh ya, there are many. One of the good ones I have found is WinFF which is also a front-end to ffmpeg. But I don&amp;rsquo;t need all those complex functions to just convert a video.</description>
     </item>
     
   </channel>

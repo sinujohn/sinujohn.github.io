@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chef on Hack</title>
-    <link>https://sinujohn.github.io/tags/chef/index.xml</link>
-    <description>Recent content in Chef on Hack</description>
+    <title>chef on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/chef/</link>
+    <description>Recent content in chef on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/chef/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/chef/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Chef notes</title>
@@ -15,108 +18,9 @@
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/chef-notes/</guid>
-      <description>
-
-&lt;p&gt;Sometime back I had to fiddle with &lt;a href=&#34;https://www.chef.io/&#34; target=&#34;_blank&#34;&gt;Chef&lt;/a&gt;. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.&lt;/p&gt;
-
-&lt;p&gt;So, anyone other than me, please ignore this post!&lt;/p&gt;
-
-&lt;h2 id=&#34;write-a-cookbook&#34;&gt;Write a cookbook&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate repo ~/chef-repo&lt;/code&gt;
-=&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~/chef-repo
-chef generate cookbook cookbooks/COOKBOOK_NAME
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;create-a-recipe&#34;&gt;Create a recipe:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate recipe cookbooks/COOKBOOK_NAME RECIPE_NAME&lt;/code&gt; =&amp;gt; RECIPE_NAME shouldn’t have suffix. Eg. it should be ‘webserver and not ‘webserver.rb’
-=&amp;gt; Write the script in RECIPE_NAME.rb file that got generated&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-refer-include-a-recipe-recipe-name-in-another-recipe&#34;&gt;How to refer(include) a recipe(RECIPE_NAME) in another recipe:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;include_recipe &#39;COOKBOOK_NAME::RECIPE_NAME&#39;&lt;/code&gt; =&amp;gt; Eg: include_recipe &amp;lsquo;my_cookbook::webserver&amp;rsquo;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; By default the recipe that gets called is ‘cookbooks/COOKBOOK_NAME/recipes/default.rb’
-=&amp;gt; So include any other recipe in this using include_recipe&lt;/p&gt;
-
-&lt;h2 id=&#34;create-a-file&#34;&gt;Create a file:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate file cookbooks/COOKBOOK_NAME FILE_NAME.txt&lt;/code&gt;&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;h2 id=&#34;how-to-upload-the-cookbook-to-the-chef-server-there-are-2-ways&#34;&gt;How to upload the cookbook to the chef server. There are 2 ways:&lt;/h2&gt;
-
-&lt;h4 id=&#34;option-1-prefer-this-one-this-one-takes-up-the-dependencies-if-any&#34;&gt;Option 1. Prefer this one. This one takes up the dependencies if any.&lt;/h4&gt;
-
-&lt;p&gt;Create a file named Berksfile in the ~/chef-repo/cookbooks/COOKBOOK_NAME directory
-Add the following to that file:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;source &amp;quot;https://supermarket.chef.io&amp;quot;
-metadata
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Install the dependencies:
-&lt;code&gt;berks install&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally upload (along with dependencies):
-&lt;code&gt;berks upload&lt;/code&gt; =&amp;gt; OR without SSL =&amp;gt; &lt;code&gt;berks upload --no-ssl-verify&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;option-2-this-one-just-uploads-the-cookbook-won-t-download-dependencies&#34;&gt;Option 2. This one just uploads the cookbook. Won’t download dependencies&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;knife cookbook upload COOKBOOK_NAME&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;view-uploaded-cookbooks&#34;&gt;View uploaded cookbooks:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;knife cookbook list&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;bootstraping-the-node&#34;&gt;Bootstraping the node&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;knife ssl fetch ##Save the SSL certificate
-knife bootstrap IP_ADDRESS_OF_NODE -x ROOT_USER_NAME -P ROOT_PASSWORD --sudo 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;verify-bootstrap-process-was-successful-either-check-in-chef-manage-console-or-do&#34;&gt;Verify bootstrap process was successful. Either check in chef manage console or do:&lt;/h2&gt;
-
-&lt;h4 id=&#34;on-windows&#34;&gt;On Windows&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;knife node list | findstr NODE_NAME_WINDOWS&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;on-linux&#34;&gt;On Linux&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;knife node list | grep NODE_NAME_WINDOWS&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-reference-another-cookbook&#34;&gt;How to reference another cookbook:&lt;/h2&gt;
-
-&lt;p&gt;Append following to &lt;code&gt;~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb&lt;/code&gt;:
-&lt;code&gt;depends &#39;ANOTHER_COOKBOOK_NAME&#39;, &#39;~&amp;gt; MAJOR.MINOR.PATCH&#39;&lt;/code&gt; =&amp;gt; Eg: &lt;code&gt;depends &#39;sql_server&#39;, &#39;~&amp;gt; 2.4.0&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-override-third-party-cookbook-s-attributes&#34;&gt;How to override third party cookbook’s attributes:&lt;/h2&gt;
-
-&lt;h4 id=&#34;create-a-custom-attribute-file-that-overrides-third-party-attribute-values&#34;&gt;Create a custom attribute file that overrides third party attribute values:&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate attribute cookbooks/COOKBOOK_NAME default&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;add-override-values-as-follows-in-the-generated-cookbooks-cookbook-name-attributes-default-rb&#34;&gt;Add override values as follows in the generated ‘cookbooks/COOKBOOK_NAME/attributes/default.rb‘:&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;default[&#39;ANOTHER_COOKBOOK_NAME&#39;][&#39;ATTRIBUTE_NAME&#39;] = ATTRIBUTE_VALUE&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;accept_eula&#39;] = true&lt;/code&gt;
-Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;version&#39;] = &#39;2012&#39;&lt;/code&gt;
-Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;instance_name&#39;] = &#39;MSSQLSERVER&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;modifying-cookbook-version&#34;&gt;Modifying cookbook version:&lt;/h2&gt;
-
-&lt;p&gt;Edit &lt;code&gt;~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb&lt;/code&gt; to change the version&lt;/p&gt;
-
-&lt;h2 id=&#34;applying-cookbook-on-node&#34;&gt;Applying cookbook on node:&lt;/h2&gt;
-
-&lt;p&gt;Run the following directly on the &lt;strong&gt;NODE&lt;/strong&gt;, (NOT ON THE workstation):
-&lt;code&gt;chef-client&lt;/code&gt;&lt;/p&gt;
-</description>
+      <description>Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
+So, anyone other than me, please ignore this post!
+Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .</description>
     </item>
     
   </channel>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tuts on Hack</title>
-    <link>https://sinujohn.github.io/categories/tuts/index.xml</link>
-    <description>Recent content in Tuts on Hack</description>
+    <title>Tuts on Sinu John</title>
+    <link>https://sinujohn.github.io/categories/tuts/</link>
+    <description>Recent content in Tuts on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/categories/tuts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/categories/tuts/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Java - Add lib folder to classpath</title>
@@ -15,36 +18,8 @@
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
-      <description>&lt;p&gt;Adding non standard, non-maven, custom jars in a maven project is a common issue. And &lt;a href=&#34;http://stackoverflow.com/questions/364114/can-i-add-jars-to-maven-2-build-classpath-without-installing-them&#34; target=&#34;_blank&#34;&gt;this SO post&lt;/a&gt; is usually the first googled result. But here is another easier way: Use &lt;a href=&#34;https://code.google.com/archive/p/addjars-maven-plugin/wikis/UsagePage.wiki&#34; target=&#34;_blank&#34;&gt;addjars-maven-plugin&lt;/a&gt;. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.&lt;/p&gt;
-
-&lt;p&gt;How to use?&lt;/p&gt;
-
-&lt;p&gt;Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff). Now add this to the pom:
-&lt;pre&gt;&amp;lt;build&amp;gt;
-    &amp;lt;plugins&amp;gt;
-        &amp;lt;plugin&amp;gt;
-            &amp;lt;groupId&amp;gt;com.googlecode.addjars-maven-plugin&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;addjars-maven-plugin&amp;lt;/artifactId&amp;gt;
-            &amp;lt;version&amp;gt;1.0.5&amp;lt;/version&amp;gt;
-            &amp;lt;executions&amp;gt;
-                &amp;lt;execution&amp;gt;
-                    &amp;lt;goals&amp;gt;
-                        &amp;lt;goal&amp;gt;add-jars&amp;lt;/goal&amp;gt;
-                    &amp;lt;/goals&amp;gt;
-                    &amp;lt;configuration&amp;gt;
-                        &amp;lt;resources&amp;gt;
-                            &amp;lt;resource&amp;gt;
-                                &amp;lt;directory&amp;gt;${project.basedir}/lib&amp;lt;/directory&amp;gt;
-                            &amp;lt;/resource&amp;gt;
-                        &amp;lt;/resources&amp;gt;
-                    &amp;lt;/configuration&amp;gt;
-                &amp;lt;/execution&amp;gt;
-            &amp;lt;/executions&amp;gt;
-        &amp;lt;/plugin&amp;gt;
-    &amp;lt;/plugins&amp;gt;
-&amp;lt;/build&amp;gt;&lt;/pre&gt;
-This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it will work via CLI. So no worries! Very useful in those rare cases, where you have a dozen of custom jars!&lt;/p&gt;
-</description>
+      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?</description>
     </item>
     
     <item>
@@ -53,56 +28,9 @@ This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it wil
       <pubDate>Thu, 12 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</guid>
-      <description>&lt;p&gt;I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)&lt;/p&gt;
-
-&lt;p&gt;Prerequisite: &lt;a href=&#34;https://developers.facebook.com/apps/&#34; target=&#34;_blank&#34;&gt;Create an app&lt;/a&gt; using Facebook Developer account and create the necessary App ID and App Secret keys.&lt;/p&gt;
-
-&lt;p&gt;If you are testing out your app and you are running it locally, the site URL should be something like &lt;a href=&#34;http://localhost:8090/&#34;&gt;http://localhost:8090/&lt;/a&gt;
-&lt;h3&gt;At the client side:&lt;/h3&gt;
-&lt;strong&gt;Asking for permission and login:&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Use the SDK provided by facebook&lt;/li&gt;
-    &lt;li&gt;I am assuming Javascript SDK is used. Inspect the response returned.
-&lt;ul&gt;
-    &lt;li&gt;Send the &lt;strong&gt;authResponse.accessToken&lt;/strong&gt; and &lt;strong&gt;authResponse.userID&lt;/strong&gt; to the server for authentication.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;
-At the server side:&lt;/h3&gt;
-&lt;strong&gt;Authentication:&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Verify the user by calling the Facebook Graph API:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p style=&#34;padding-left:60px;&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://graph.facebook.com/debug_token?input_token={authResponse.accessToken}&amp;amp;access_token={app_id|app_secret&#34;&gt;https://graph.facebook.com/debug_token?input_token={authResponse.accessToken}&amp;amp;access_token={app_id|app_secret&lt;/a&gt;}&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&#34;padding-left:60px;&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;:&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;data&amp;quot;: {
-        &amp;quot;app_id&amp;quot;: &amp;quot;1234&amp;quot;,
-        &amp;quot;application&amp;quot;: &amp;quot;testapp&amp;quot;,
-        &amp;quot;expires_at&amp;quot;: 1426158000,
-        &amp;quot;is_valid&amp;quot;: true,
-        &amp;quot;scopes&amp;quot;: [
-                &amp;quot;public_profile&amp;quot;,
-                &amp;quot;email&amp;quot;
-                ],
-        &amp;quot;user_id&amp;quot;: &amp;quot;111112223333&amp;quot;
-     }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt; input_token&lt;/strong&gt; is the &lt;strong&gt;authResponse.accessToken&lt;/strong&gt; we obtained as a result of the login process from Facebook.
-&lt;strong&gt;access_token&lt;/strong&gt; is the &lt;a href=&#34;https://developers.facebook.com/docs/facebook-login/access-tokens/#apptokens&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;App Token&lt;/strong&gt;&lt;/a&gt;. It can either be generated as mentioned in &lt;a href=&#34;https://developers.facebook.com/docs/facebook-login/access-tokens/#apptokens&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;. Or instead of generating we can use the concatenated form: &lt;strong&gt;{app_id}&lt;/strong&gt; + &lt;strong&gt;&amp;rsquo;|&amp;rsquo;&lt;/strong&gt; + &lt;strong&gt;{app_secret}&lt;/strong&gt;. I have used this second form above.&lt;/li&gt;
-    &lt;li&gt;Verify the JSON obtained and check whether &lt;strong&gt;&amp;ldquo;is_valid&amp;rdquo; == True&lt;/strong&gt; and &lt;strong&gt;&amp;ldquo;user_id&amp;rdquo; == authResponse.userID&lt;/strong&gt; to make sure user is a valid one.&lt;/li&gt;
-    &lt;li&gt;The &lt;strong&gt;authResponse.userID&lt;/strong&gt; returned can be used to identify the user and used instead of username to lookup users.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;strong&gt;Using the Graph API:&lt;/strong&gt;
-&lt;p style=&#34;padding-left:30px;&#34;&gt;Suppose we want to obtain the user&amp;rsquo;s email Id at the server side:
-Call the API as follows:
-&lt;strong&gt;&lt;a href=&#34;https://graph.facebook.com/{authResponse.userID}?fields=email&amp;amp;access_token={authResponse.accessToken&#34;&gt;https://graph.facebook.com/{authResponse.userID}?fields=email&amp;amp;access_token={authResponse.accessToken&lt;/a&gt;}&lt;/strong&gt;&lt;/p&gt;&lt;/p&gt;
-</description>
+      <description>I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)
+Prerequisite: Create an app using Facebook Developer account and create the necessary App ID and App Secret keys.
+If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/ At the client side: Asking for permission and login:  Use the SDK provided by facebook I am assuming Javascript SDK is used.</description>
     </item>
     
     <item>
@@ -111,16 +39,9 @@ Call the API as follows:
       <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
-      <description>&lt;p&gt;Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.&lt;/p&gt;&lt;p&gt;Usually, you create a Spring bean as follows:&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/384d51261c13e8f78b11.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?&lt;br /&gt; In such cases, we can create the bean definitions and add the beans to Spring container at runtime using &lt;strong&gt;BeanFactoryPostProcessor&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Implement &lt;strong&gt;BeanFactoryPostProcessor&lt;/strong&gt; in either a &lt;strong&gt;@Configuration&lt;/strong&gt; file or a &lt;strong&gt;@Component&lt;/strong&gt; bean(make sure this bean gets scanned and created).&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/ca787f0e6730eb9890d5.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;If there are more than one constructor arguments, the call can be chained as follows:&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/96f6480a4120989dfa7f.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;All this works fine when you have to create a bean using constructor. But :( I haven&#39;t figured out how to do this when we use a chain of factory methods to create a bean as follows:&lt;/p&gt;
-&lt;script src=&#34;//gist.github.com/sinujohn/512ca43414bcfc9d6609.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;Happy Coding! :)&lt;/p&gt;
-</description>
+      <description>Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.
+Usually, you create a Spring bean as follows:
+ But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?</description>
     </item>
     
     <item>
@@ -129,12 +50,9 @@ Call the API as follows:
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
-      <description>&lt;p&gt;There is a very good documentation in Jersey website: &lt;a href=&#34;https://jersey.java.net/documentation/latest/jaxrs-resources.html&#34;&gt;https://jersey.java.net/documentation/latest/jaxrs-resources.html&lt;/a&gt; and &lt;a href=&#34;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&#34;&gt;https://jersey.java.net/documentation/latest/filters-and-interceptors.html&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Here is a small flowchart that I made showing how the JAX-RS flow works:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/jaxrs.png&#34; alt=&#34;jaxrs&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Happy coding :)&lt;/p&gt;
-</description>
+      <description>There is a very good documentation in Jersey website: https://jersey.java.net/documentation/latest/jaxrs-resources.html and https://jersey.java.net/documentation/latest/filters-and-interceptors.html
+Here is a small flowchart that I made showing how the JAX-RS flow works:
+Happy coding :)</description>
     </item>
     
     <item>
@@ -143,55 +61,7 @@ Call the API as follows:
       <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</guid>
-      <description>&lt;p&gt;Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse.
-Now go to File &amp;gt; New &amp;gt; Maven Project.
-&lt;img src=&#34;https://sinujohn.github.io/assets/rest1.png&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Click Next. Select maven-archetype-webapp.
-&lt;img src=&#34;https://sinujohn.github.io/assets/rest2.png&#34; alt=&#34;screenshot2&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &amp;lsquo;com.companyname.yourname&amp;rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).&lt;/p&gt;
-
-&lt;p&gt;There can be several projects under the same GroupID, but ArtifactID should be different for each project. I have given GroupID as &lt;em&gt;&amp;lsquo;me.sinu.jugaad&amp;rsquo;&lt;/em&gt; and ArtifactID as &lt;em&gt;&amp;lsquo;rest&amp;rsquo;&lt;/em&gt;.
-&lt;img src=&#34;https://sinujohn.github.io/assets/rest3.png&#34; alt=&#34;screenshot3&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Click Finish to create the project.&lt;/p&gt;
-
-&lt;p&gt;The webapp archetype would have created the necessary folder structure and a web.xml for you. This web.xml might be for older Servlets without support for Servlet v.3, it doesn&amp;rsquo;t matter as we&amp;rsquo;ll overwrite it later.
-You might examine pom.xml now, it may contain a single dependency of jUnit(even if you won&amp;rsquo;t find it its fine :) )&lt;/p&gt;
-
-&lt;p&gt;Now lets examine the dependencies we might require for our simple project:
-&lt;ul&gt;
-    &lt;li&gt;We are building REST services, so we need REST api (&lt;strong&gt;javax.ws.rs-api&lt;/strong&gt;) and an implentation for it. We&amp;rsquo;ll use Apache CXF implementation (&lt;strong&gt;cxf-bundle-jaxrs&lt;/strong&gt;).&lt;/li&gt;
-    &lt;li&gt;We&amp;rsquo;ll use Spring to wire the beans and for dependency injection. So we need a bunch of Spring libraries (&lt;strong&gt;spring-web&lt;/strong&gt; and &lt;strong&gt;spring-context&lt;/strong&gt; should be enough for our skeleton project. &lt;em&gt;&lt;strong&gt;spring-context&lt;/strong&gt;&lt;/em&gt; is needed for &lt;em&gt;ContextLoaderListener&lt;/em&gt; which loads the beans by scanning some Spring context xml configuration files)&lt;/li&gt;
-    &lt;li&gt;We&amp;rsquo;ll use a JSON provider which helps in converting object to/from JSON. It is not needed for this skeleton project, but its usually handy in almost all REST projects. So we&amp;rsquo;ll add one such provider (&lt;strong&gt;jackson-jaxrs-json-provider&lt;/strong&gt;) just in case we need it in future.&lt;/li&gt;
-&lt;/ul&gt;
-Here is the &lt;strong&gt;pom.xml&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/sinujohn/c2839b0528fdbc8115b0.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Now create a java folder under &lt;strong&gt;src/main&lt;/strong&gt;. Create a package (&lt;strong&gt;me.sinu.jugaad.rest&lt;/strong&gt;) and a class file inside it(&lt;strong&gt;HelloWorld.java&lt;/strong&gt;).
-We&amp;rsquo;ll just tell a simple &amp;ldquo;&lt;strong&gt;Hello REST!&lt;/strong&gt;&amp;rdquo; from our REST service. Here is the class:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/sinujohn/f4cc9425e52b407da5c4.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Now we&amp;rsquo;ll create a Spring configuration file under &lt;strong&gt;WEB-INF&lt;/strong&gt; folder, say &lt;strong&gt;rest-context.xml&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/sinujohn/60f8b04e584b5a0e5b0f.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;In this we just defined our &lt;strong&gt;helloWorld&lt;/strong&gt; bean and hooked it up with our JAXRS servlet. We also provided our JSON provider to it to automatically do any marshalling/unmarshalling. You may provide your own providers, which will be necessary as the app grows. Providers can contain Filters or other interceptors.&lt;/p&gt;
-
-&lt;p&gt;Now lets define our webapp&amp;rsquo;s &lt;strong&gt;web.xml&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/sinujohn/982335d88382c37f60b4.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;We specify &amp;lsquo;&lt;strong&gt;contextConfigLocation&lt;/strong&gt;&amp;rsquo; for the Spring&amp;rsquo;s &amp;lsquo;&lt;strong&gt;ContextLoaderListener&lt;/strong&gt;&amp;rsquo; to pick it up as the webapp is loaded. The &lt;em&gt;contextConfigLocation&lt;/em&gt; can be given as exact file names or using wild cards.
-Since we are using CXF implementation, a CXF servlet is used. The address for our &lt;strong&gt;servlet&lt;/strong&gt; is &amp;ldquo;&lt;strong&gt;/services&lt;/strong&gt;&amp;rdquo; and that for our &amp;lsquo;&lt;strong&gt;helloREST&lt;/strong&gt;&amp;rsquo; JAX RS server is &amp;ldquo;&lt;strong&gt;/greet&lt;/strong&gt;&amp;rdquo;.
-So &amp;ldquo;&lt;strong&gt;WAR_FILE/services/greet&lt;/strong&gt;&amp;rdquo; will take us to the JAXRS server. Our simple GET function is annotated with &lt;strong&gt;@Path(&amp;ldquo;/hello&amp;rdquo;)&lt;/strong&gt;, so to access this we should give as follows: &amp;ldquo;&lt;strong&gt;WAR_FILE/services/greet/hello&lt;/strong&gt;&amp;rdquo;.
-Now run the project - &lt;em&gt;right-click the project &amp;gt; Run As &amp;gt; Run on server&lt;/em&gt;. You might choose a server like Tomcat server v.7. Now in a browser go to &amp;ldquo;&lt;strong&gt;&lt;a href=&#34;http://localhost:8080/rest/services/greet/hello&#34;&gt;http://localhost:8080/rest/services/greet/hello&lt;/a&gt;&lt;/strong&gt;&amp;rdquo; (here &amp;lsquo;&lt;em&gt;rest&lt;/em&gt;&amp;rsquo; is the WAR file name).&lt;/p&gt;
-
-&lt;p&gt;If you see &amp;ldquo;&lt;strong&gt;Hello REST!&lt;/strong&gt;&amp;rdquo; everything is fine, else, Dr.Watson, we have a problem ;)&lt;/p&gt;
-</description>
+      <description>Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse. Now go to File &amp;gt; New &amp;gt; Maven Project. Click Next. Select maven-archetype-webapp. Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &amp;lsquo;com.companyname.yourname&amp;rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).</description>
     </item>
     
     <item>
@@ -200,96 +70,9 @@ Now run the project - &lt;em&gt;right-click the project &amp;gt; Run As &amp;gt;
       <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</guid>
-      <description>&lt;p&gt;To use SLF4J and logback together, add the following to pom.xml:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
- &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt;
- &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt;
- &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt;
- &amp;lt;/dependency&amp;gt;
- &amp;lt;dependency&amp;gt;
- &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt;
- &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt;
- &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt;
- &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
- &amp;lt;/dependency&amp;gt;
-
-&amp;lt;dependency&amp;gt;
- &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
- &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
- &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt;
- &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
- &amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;span style=&#34;font-family:Georgia, &#39;Times New Roman&#39;, &#39;Bitstream Charter&#39;, Times, serif;font-size:14px;line-height:1.5em;&#34;&gt;Now SLF4J&amp;rsquo;s logger can be used:&lt;/span&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-....
-private final Logger logger =  LoggerFactory.getLogger(MyClass.class);
-...
-logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
-        &amp;lt;pluginManagement&amp;gt;
-            &amp;lt;plugins&amp;gt;
-                &amp;lt;plugin&amp;gt;
-                    &amp;lt;groupId&amp;gt;org.eclipse.m2e&amp;lt;/groupId&amp;gt;
-                    &amp;lt;artifactId&amp;gt;lifecycle-mapping&amp;lt;/artifactId&amp;gt;
-                    &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-                    &amp;lt;configuration&amp;gt;
-                        &amp;lt;lifecycleMappingMetadata&amp;gt;
-                            &amp;lt;pluginExecutions&amp;gt;
-                                &amp;lt;pluginExecution&amp;gt;
-                                    &amp;lt;pluginExecutionFilter&amp;gt;
-                                        &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt;
-                                        &amp;lt;artifactId&amp;gt;properties-maven-plugin&amp;lt;/artifactId&amp;gt;
-                                        &amp;lt;versionRange&amp;gt;[1.0-alpha-2,)&amp;lt;/versionRange&amp;gt;
-                                        &amp;lt;goals&amp;gt;
-                                            &amp;lt;goal&amp;gt;set-system-properties&amp;lt;/goal&amp;gt;
-                                        &amp;lt;/goals&amp;gt;
-                                    &amp;lt;/pluginExecutionFilter&amp;gt;
-                                    &amp;lt;action&amp;gt;
-                                        &amp;lt;ignore /&amp;gt;
-                                    &amp;lt;/action&amp;gt;
-                                &amp;lt;/pluginExecution&amp;gt;
-                            &amp;lt;/pluginExecutions&amp;gt;
-                        &amp;lt;/lifecycleMappingMetadata&amp;gt;
-                    &amp;lt;/configuration&amp;gt;
-                &amp;lt;/plugin&amp;gt;
-            &amp;lt;/plugins&amp;gt;
-        &amp;lt;/pluginManagement&amp;gt;
-        &amp;lt;plugins&amp;gt;
-            &amp;lt;plugin&amp;gt;
-                &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt;
-                &amp;lt;artifactId&amp;gt;properties-maven-plugin&amp;lt;/artifactId&amp;gt;
-                &amp;lt;version&amp;gt;1.0-alpha-2&amp;lt;/version&amp;gt;
-                &amp;lt;executions&amp;gt;
-                    &amp;lt;execution&amp;gt;
-                        &amp;lt;goals&amp;gt;
-                            &amp;lt;goal&amp;gt;set-system-properties&amp;lt;/goal&amp;gt;
-                        &amp;lt;/goals&amp;gt;
-                        &amp;lt;configuration&amp;gt;
-                            &amp;lt;properties&amp;gt;
-                                &amp;lt;property&amp;gt;
-                                    &amp;lt;name&amp;gt;logback.configurationFile&amp;lt;/name&amp;gt;
-                                    &amp;lt;value&amp;gt;src/main/resources/logback.xml&amp;lt;/value&amp;gt;
-                                &amp;lt;/property&amp;gt;
-                            &amp;lt;/properties&amp;gt;
-                        &amp;lt;/configuration&amp;gt;
-                    &amp;lt;/execution&amp;gt;
-                &amp;lt;/executions&amp;gt;
-            &amp;lt;/plugin&amp;gt;
-        &amp;lt;/plugins&amp;gt;
-    &amp;lt;/build&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here &amp;ldquo;src/main/resources/logback.xml&amp;rdquo; has the logback configuration. Even if it is not present output may be sent to console&lt;/p&gt;
-</description>
+      <description>To use SLF4J and logback together, add the following to pom.xml:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  Now SLF4J&amp;rsquo;s logger can be used:
+import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);  If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:</description>
     </item>
     
     <item>
@@ -298,65 +81,7 @@ logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);
       <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/05/jpa-part-3/</guid>
-      <description>&lt;p&gt;Go to &lt;a href=&#34;https://sinujohn.github.io/2013/08/31/jpa-part-1/&#34;&gt;Part 1&lt;/a&gt;.
-&lt;h2&gt;Callback Methods&lt;/h2&gt;
-&lt;div&gt;When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:&lt;/div&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@PrePersist&lt;/strong&gt; - called before persist()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PostPersist&lt;/strong&gt; - called after persist()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PreRemove&lt;/strong&gt; - called before remove()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PostRemove&lt;/strong&gt; - called after commit()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PreUpdate&lt;/strong&gt; - called before commit()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PostUpdate&lt;/strong&gt; - called after commit()&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt; More than one annotation can applied to a single method. There should be only one method with a particular callback annotation(example, there shouldn&amp;rsquo;t be more than one @Prepersist methods). The callback methods shouldn&amp;rsquo;t take any arguments.&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;h2&gt;Entity Listeners&lt;/h2&gt;
-&lt;div&gt;Mixing callback methods into Entity class is not a good practice. So we write it in another class which is an Entity Listener.&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;h3&gt;Annotations Used:&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;@EntityListeners(EntityListener_ClassName.class)
-&lt;ul&gt;
-    &lt;li&gt;Used before the Entity class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- Entity Listener should have public default constructor
-- An Entity class can have some callback methods defined in it and some in an Entity Listener
-- An Entity Listener class can listen to more than one Entity classes.
-- The callback methods defined in Entity Listener class must take an object of Entity class as argument
-&lt;div&gt;&lt;/div&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;@Entity
-@EntityListeners(EmployeeListener.class)
-public class Employee {
-    .....
-}
-
-public class EmployeeListener {
-    @PrePersist
-    public void beforePersist(Employee e) {
-        System.out.println(&amp;amp;quot;Before persist&amp;amp;quot;);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h2&gt;Merge Method&lt;/h2&gt;
-&lt;div&gt;- Used to synchronise the changes between objects and database tables.&lt;/div&gt;
-&lt;div&gt;- Adds a new row if the entity is not present in db table.&lt;/div&gt;
-&lt;div&gt;- Updates the existing row if it is present in table.&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;et.begin();
-    ....
-    ....
-    em.merge(empObject); //merges the changes in empObject with table
-et.commit();
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.</description>
     </item>
     
     <item>
@@ -365,185 +90,8 @@ et.commit();
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/01/jpa-part-2/</guid>
-      <description>&lt;p&gt;This is continued from &lt;a href=&#34;https://sinujohn.github.io/2013/08/31/jpa-part-1/&#34;&gt;JPA: part 1&lt;/a&gt;.
-&lt;h2&gt;Other Annotations:&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before class name to explicitly specify table name.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before instance variables to explicitly set column names.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Entity
-@Table(name = &amp;quot;EMP&amp;quot;)
-public class Employee {
-    @Id
-    @Column(name = &amp;quot;EMP_ID&amp;quot;)
-    private int id;
-
-    @Column(name = &amp;quot;EMP_NAME&amp;quot;)
-    private String name;
-
-    //getters and setters
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;this maps to
-Table: &lt;strong&gt;EMP&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; --------------------------
- | EMP_ID (PK) | EMP_NAME |
- --------------------------
- |_____________|__________|
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;JPA automatically maps &amp;lsquo;int&amp;rsquo; to &amp;lsquo;NUMBER&amp;rsquo; and &amp;lsquo;String&amp;rsquo; to &amp;lsquo;CHAR&amp;rsquo; or &amp;lsquo;VARCHAR&amp;rsquo;. But it cannot automatically convert Date or Time datatypes. So we need to specify the Temporal type to be used. (Temporal = related to time)
-&lt;h2&gt;Other Annotations:&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@Temporal(TemporalType.TYPE)&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;TYPE can be DATE, TIME or TIMESTAMP. Used before &amp;lsquo;Date&amp;rsquo; or &amp;lsquo;Calendar&amp;rsquo; datatypes. Oracle only has DATE datatype. It doesn&amp;rsquo;t have TIME or TIMESTAMP.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@Transient&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before those instance variables that need not be persisted.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;@Entity
-public class Student {
-    @Id
-    private int regNo;
-    private String name;
-
-    @Temporal(TemporalType.DATE)
-    private Calendar dob; //&#39;dob&#39; column od database is of &#39;DATE&#39; datatype
-
-    private int mark1;
-    private int mark2;
-    private int mark3;
-
-    @Transient
-    private float averageMark; //Not stored in database
-
-    //getters and setters
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h2&gt;&lt;/h2&gt;
-&lt;h2&gt;Configuring JPA&lt;/h2&gt;
-Configure &amp;lsquo;persistence unit&amp;rsquo; in &amp;lsquo;&lt;strong&gt;persistence.xml&lt;/strong&gt;&amp;lsquo;:
-Persistence unit name is specified as:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;persistence-unit name=&amp;quot;EmployeeService&amp;quot; transaction-type=&amp;quot;RESOURCE_LOCAL&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here &lt;em&gt;EmployeeService&lt;/em&gt; is the persistence unit.&lt;/p&gt;
-
-&lt;p&gt;We should then specify all Entity classes that need to be persisted in &lt;code&gt;&amp;lt;class&amp;gt;&lt;/code&gt; tags&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;class&amp;gt;me.sinu.entity.Entity1&amp;lt;/class&amp;gt;
-&amp;lt;class&amp;gt;me.sinu.entity.Entity2&amp;lt;/class&amp;gt;
-&amp;lt;class&amp;gt;me.sinu.entity.Entity3&amp;lt;/class&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We then configure the db related stuff like URL,username,password etc.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.url&amp;quot; value=&amp;quot;jdbc:oracle:thin:@127.0.0.1:1521/db&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.user&amp;quot; value=&amp;quot;username&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.password&amp;quot; value=&amp;quot;password&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.driver&amp;quot; value=&amp;quot;oracle.jdbc.driver.OracleDriver&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.ddl-generation&amp;quot; value=&amp;quot;create-tables&amp;quot;/&amp;gt;
-&amp;lt;/properties&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is for TopLink implementation of JPA to connect to Oracle. It might be different for other implementations.
-&lt;h2&gt;Persisting an Entity using JPA&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Creating an instance of &amp;lsquo;&lt;strong&gt;EntityManagerFactory&lt;/strong&gt;&amp;lsquo;
-&lt;ul&gt;
-    &lt;li&gt;Persistence.createEntityManagerFactory(persistence-unit_name_defined_in_xml_file)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;Obtaining an instanceof &amp;lsquo;&lt;strong&gt;EntityManager&lt;/strong&gt;&amp;lsquo;&lt;/li&gt;
-    &lt;li&gt;Persist the Entity
-&lt;ul&gt;
-    &lt;li&gt;Begin EntityTransaction&lt;/li&gt;
-    &lt;li&gt;Invoke &lt;strong&gt;persist()&lt;/strong&gt;&lt;/li&gt;
-    &lt;li&gt;Commit the transaction&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;EntityManagerFactory emf = Persistence.createEntityManagerFactory(&amp;quot;EmployeeService&amp;quot;);
-EntityManager em = emf.createEntityManager();
-EntityTransaction et = em.getTransaction();
-if(et==null) {
-    //ERROR. Cannot obtain transaction
-    return;
-}
-et.begin(); //begin transaction
-    Employee emp = new Employee();
-    emp.setEmpId(101);
-    emp.setName(&amp;quot;sinu&amp;quot;);
-    em.persist(emp); //persist the data
-et.commit(); //ending transaction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When we call em.persist(), data is sent to the database and it is stored in DB Buffer. It is not yet updated in the table. When we call em.commit(), the data gets updated in the table.
-&lt;h2&gt;Finding an Entity&lt;/h2&gt;
-To find an entity, we need not begin a transaction. We can find it using EntityManager.
-Syntax:
-&lt;strong&gt;EntityManager.find(EntityClassName.class, PrimaryKey)&lt;/strong&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Employee empl = em.find(Employee.class, 101);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here 101 is the empId(primary key) to be searched.&lt;/p&gt;
-
-&lt;p&gt;If table doesn&amp;rsquo;t exist or record is not present, it returns null.
-&lt;h2&gt;Updating an Entity&lt;/h2&gt;
-Once we find an entity, the entity object in the heap memory gets a connection to the table. So,if we modify the object, the table also gets updated.
-An object which is connected to a table(relation) is called &amp;lsquo;&lt;strong&gt;Managed Object&lt;/strong&gt;&amp;rsquo;. If we update the Managed Object, the table also gets updated.
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;EntityTransaction et = em.getTransaction();
-et.begin();
-    Employee empl = em.find(Employee.class, 101);
-    //empl is now a Managed Object. We can now modify it
-    if(empl!=null) {
-        empl.setSalary(empl.getSalary()+1000);
-    }
-et.commit();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h2&gt;Removing an Entity&lt;/h2&gt;
-This is similar to update. Once we find the object we call &lt;strong&gt;EntityManager.remove(entityObject)&lt;/strong&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;EntityTransaction et = em.getTransaction();
-et.begin();
-    Employee empl = em.find(Employee.class, 101);
-    //empl is now a Managed Object. We can now modify it
-    if(empl!=null) {
-        em.remove(empl)
-    }
-et.commit();
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This is continued from JPA: part 1. Other Annotations:  @Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)  Used before class name to explicitly specify table name.   @Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)  Used before instance variables to explicitly set column names.    Example:
+@Entity @Table(name = &amp;quot;EMP&amp;quot;) public class Employee { @Id @Column(name = &amp;quot;EMP_ID&amp;quot;) private int id; @Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters }  this maps to Table: EMP</description>
     </item>
     
     <item>
@@ -552,53 +100,7 @@ et.commit();
       <pubDate>Sat, 31 Aug 2013 00:10:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/jpa-part-1/</guid>
-      <description>&lt;p&gt;This post is part of &lt;a href=&#34;https://sinujohn.github.io/2013/08/31/persistence-using-java/&#34;&gt;Project Digitisation&lt;/a&gt;. I have decided to write about JPA in several posts. This is part 1 of the series.
-&lt;h2&gt;JPA - Java Persistence API&lt;/h2&gt;
-JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications.
-JPA provides:
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;ORM&lt;/strong&gt; (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).
-&lt;ul&gt;
-    &lt;li&gt;An Object which can be mapped is called an Entity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;JPQL&lt;/strong&gt; - Java Persistence Query Language&lt;/li&gt;
-&lt;/ul&gt;
-Entity classes should be Java beans (POJOs with private variables and public getters and setters).
-&lt;h3&gt;Annotations used:&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@Entity&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before a class name. By default, table name is same as class name.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@Id&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before the instance variable which is the primary key in the table.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-By default instance variable names is same as the column names.
-&lt;h4&gt;Example:&lt;/h4&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;@Entity
-public class Employee {
-    @Id
-    private int empId; //becomes primary key
-    private String name;
-
-    //getters and setters
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;this maps to
-&lt;strong&gt;Table: &lt;/strong&gt;Employee&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; | empId | name |
- | ----- | ---- |
- | _____ | ____ |
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).</description>
     </item>
     
     <item>
@@ -607,17 +109,10 @@ public class Employee {
       <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/07/09/observer-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt;: Behavioral patterns
-Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.&lt;/p&gt;
-
-&lt;p&gt;This pattern is sometimes referred to as Listeners in some frameworks.&lt;/p&gt;
-
-&lt;p&gt;Read about the pattern &lt;a href=&#34;http://en.wikipedia.org/wiki/Observer_pattern&#34;&gt;here&lt;/a&gt;.
-The code sample can be found in my &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/observer&#34;&gt;git repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the example code I have done, there is a city, as with all cities many things can go wrong in a city. So city is the subject or the observable. To handle the emergency situations we have many emergency handlers. These handlers observe the city and take actions when needed. So handlers are Observers.
-When something happens in the city, all observers will be notified. Some observers respond to the situation and some do not.&lt;br /&gt;&lt;/p&gt;
-</description>
+      <description>Classification: Behavioral patterns Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
+This pattern is sometimes referred to as Listeners in some frameworks.
+Read about the pattern here. The code sample can be found in my git repo.
+In the example code I have done, there is a city, as with all cities many things can go wrong in a city.</description>
     </item>
     
     <item>
@@ -626,28 +121,9 @@ When something happens in the city, all observers will be notified. Some observe
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/12/singleton-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt;: Creational Pattern
-Description : Ensure a class has only one instance, and provide a global point of access to it.&lt;/p&gt;
-
-&lt;p&gt;Whenever I hear about Singleton &amp;lsquo;Forever Alone&amp;rsquo; troll face comes to my mind ;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/forever-alone-guy.png&#34; alt=&#34;forever-alone-guy&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.&lt;/p&gt;
-
-&lt;p&gt;There are 3 ways of creating it :
-1. Traditional way without thread safety, where constructor is made private and a public method returns reference to the only object created.
-2. Thread-safe way : Double check locking
-3. Thread-safe way : Using enums (this is for Java of course!)&lt;/p&gt;
-
-&lt;p&gt;Read about &lt;a href=&#34;http://java.dzone.com/articles/singleton-design-pattern-%E2%80%93&#34;&gt;Singleton Pattern here&lt;/a&gt;.
-The enums&amp;rsquo; way of doing things is explained &lt;a href=&#34;http://javarevisited.blogspot.gr/2012/07/why-enum-singleton-are-better-in-java.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The sample program in Git shows the first 2 ways. Find it &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/singleton&#34;&gt;here on Github &lt;/a&gt;
-&lt;h2&gt;Double check locking:&lt;/h2&gt;
-In Java, we have to use &amp;lsquo;&lt;strong&gt;&lt;em&gt;volatile&lt;/em&gt;&lt;/strong&gt;&amp;rsquo; keyword. I was confused about this because the program gave the same output even if I use or not use the &amp;lsquo;volatile&amp;rsquo; keyword. Then I came across this &lt;a href=&#34;http://jeremymanson.blogspot.com/2008/05/double-checked-locking.html&#34;&gt;awesome blog&lt;/a&gt;. &lt;strong&gt;So according to this we have to use &amp;lsquo;&lt;em&gt;volatile&lt;/em&gt;&amp;rsquo; whenever we use Double check locking&lt;/strong&gt;. The problem is that compiler optimization may reorder execution orders, so that the flow of order of execution may be different from what we have written. The following can occur:
-When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instance&lt;/em&gt; will be assigned the reference value of the &lt;em&gt;Singleton&lt;/em&gt; object. But the constructor &lt;em&gt;Singleton()&lt;/em&gt; may not be called at this point. That means &lt;em&gt;instance&lt;/em&gt; is not fully initialized yet. So other threads that refer instance will get the partly initialized or not-yet-initialized object.&lt;/p&gt;
-</description>
+      <description>Classification: Creational Pattern Description : Ensure a class has only one instance, and provide a global point of access to it.
+Whenever I hear about Singleton &amp;lsquo;Forever Alone&amp;rsquo; troll face comes to my mind ;)
+In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.</description>
     </item>
     
     <item>
@@ -656,16 +132,9 @@ When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instanc
       <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt; : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)&lt;/p&gt;
-
-&lt;p&gt;Find the code example &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/proxy&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.&lt;/p&gt;
-
-&lt;p&gt;Why use proxy pattern? Its because using the real object is more expensive. Read about it here &lt;a href=&#34;http://www.oodesign.com/proxy-pattern.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.oodesign.com/proxy-pattern.html&#34;&gt;http://www.oodesign.com/proxy-pattern.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Proxy pattern is used in Java RMI. But its not limited to RMI. We can use it in those situations where object creation is expensive. So instead of using real object we&amp;rsquo;ll use proxy object. We call methods of the Proxy object, and the proxy will then call the method of the real object.&lt;/p&gt;
-</description>
+      <description>Classification : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
+Find the code example here.
+In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.</description>
     </item>
     
     <item>
@@ -674,91 +143,7 @@ When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instanc
       <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/06/visitor-pattern/</guid>
-      <description>&lt;p&gt;I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&amp;rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!).&lt;/p&gt;
-
-&lt;p&gt;Here is the repo I created to track my experiment with &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns&#34;&gt;Design Patterns&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Read about Visitor pattern &lt;a href=&#34;http://en.wikipedia.org/wiki/Visitor_pattern&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.javaworld.com/javaworld/javatips/jw-javatip98.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Classification : Behavioral Pattern&lt;/p&gt;
-
-&lt;p&gt;Check out the code &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/visitor&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Visitor pattern is used to parse through(or visit, in other words) through collections. Collections are made up of entities which themselves can be collections or simple elements.&lt;/p&gt;
-
-&lt;p&gt;Imagine a big colony. It has got some houses. And there are even smaller colonies. The big-colony and everthing it has (houses and smaller colonies) accepts visitors(athidi-devo-bhav!) with a very good heart. The colony in programming terms is a collection and houses are elements. Visitor is an object that visits the colony.&lt;/p&gt;
-
-&lt;p&gt;Now the colony and houses should declare that they accepts visitors. So they should implement &amp;lsquo;Visitable&amp;rsquo; interface which tells that they will have accept(Visitor).&lt;/p&gt;
-
-&lt;p&gt;Also our visitor should tell that he is really a &amp;lsquo;Visitor&amp;rsquo; and not a thief, so he must implement &amp;lsquo;Visitor&amp;rsquo; interface which tells that he&amp;rsquo;ll visit(Colony) and visit(House). What a visitor will do after visiting a house or colony is upto him, the &amp;lsquo;Visitor&amp;rsquo; tag just tells that he is a legitimate visitor.&lt;/p&gt;
-
-&lt;p&gt;There are two flavors of Visitor Pattern:
-&lt;ol&gt;
-    &lt;li&gt;&lt;strong&gt;Visitable can control where the visitor goes next&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. The colony will then decide where the visitor should go next. It may send the visitor to all the houses first or it can tell the visitor to visit the smaller colonies first.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt; accept()&lt;/em&gt; for colony:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void accept(Visitor visitor) {
-    visitor.visit(this);
-    for(House house : houses) {
-        house.accept(visitor);
-    }
-    for(Colony colony : colonies) {
-        colony.accept(visitor);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;visit()&lt;/em&gt; of visitor:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void visit(Visitable visitable) {
-
-	if(visitable instanceof House) {
-		House house = (House) visitable;
-		System.out.println(&amp;quot;Visited House : &amp;quot; + house.getName());
-	} else if(visitable instanceof Colony) {
-		Colony colony = (Colony) visitable;
-		System.out.println(&amp;quot;Visited colony : &amp;quot; + colony.getName());
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;ol start=&#34;2&#34;&gt;
-    &lt;li&gt;&lt;strong&gt;Visitor controls where he goes next&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. Once the visitor is inside he decides where to go next. In this case there is more flexibility and power for the visitors.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;accept()&lt;/em&gt; for colony:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void accept(Visitor visitor) {
-    visitor.visit(this);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;visit()&lt;/em&gt; of visitor:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void visit(Visitable visitable) {
-
-	if(visitable instanceof House) {
-		House house = (House) visitable;
-		System.out.println(&amp;quot;Visited House : &amp;quot; + house.getName());
-	} else if(visitable instanceof Colony) {
-		Colony colony = (Colony) visitable;
-		System.out.println(&amp;quot;Visited colony : &amp;quot; + colony.getName());
-		for(House h : colony.getHouses()) {
-			this.visit(h);
-		}
-		for(Colony c : colony.getColonies()) {
-			this.visit(c);
-		}
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Happy coding :)&lt;/p&gt;
-</description>
+      <description>I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&amp;rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!</description>
     </item>
     
     <item>
@@ -767,90 +152,9 @@ Suppose we have a big colony and a visitor. We ask the big-colony to accept the 
       <pubDate>Thu, 20 Oct 2011 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2011/10/20/android-opengl-es2-0-template/</guid>
-      <description>&lt;p&gt;Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.&lt;/p&gt;
-
-&lt;p&gt;OpenGL ES2.0 API is provided by &amp;lsquo;android.opengl.GLES20&amp;rsquo; package.&lt;/p&gt;
-
-&lt;p&gt;The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;glClearColor(0.5f, 0.5f, 0.5f, 1.0f) --&amp;gt;&amp;gt; GLES20.glClearColor(0.5f, 0.5f, 0.5f, 1.0f)
-glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) --&amp;gt;&amp;gt; GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For debugging we can can use &amp;lsquo;android.util.Log&amp;rsquo; package. Example, Log.d(&amp;ldquo;TAG name like Program name&amp;rdquo;, &amp;ldquo;Surface Created&amp;rdquo;). These debugging logs can be observed in LogCat window. There are also other functions in Log like Log.e(), Log.i() etc. For making our lives easier there is also a Matrix class - android.opengl.Matrix. Remember these are Column Major Order Matrices. Example,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Matrix.setIdentityM(mModelMatrix, 0);
-Matrix.translateM(mModelMatrix, 0, 0, 0, -3f);
-Matrix.rotateM(mModelMatrix, 0, angleInDegrees, 0, 1, 0);
-Matrix.translateM(mModelMatrix, 0, 0, 0, 1.5f);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We can multiply two matrices by Matrix.multiplyMM(). We can multiply a matrix by a vector using Matrix.multiplyMV(). Other useful functions: Setting up View Matrix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Matrix.setLookAtM(mViewMatrix, 0, eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Setting up Perspective Projection Matrix:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Matrix.frustumM(mProjectionMatrix, 0, left, right, bottom, top, near, far)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The object data is stored in Buffer objects like FloatBuffer. For example,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Float[] positions = {...............}; // Has x,y,z positions of all vertices
-FloatBuffer mPositionBuffer; // from java.nio.FloatBuffer
-mPositionBuffer = ByteBuffer.allocateDirect(mBytesPerFloat * positions.length).order(ByteOrder.nativeOrder()).asFloatBuffer();
-mPositionBuffer.put(objData.positions).position(0);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now the template for the renderer class (the class which implements GLSurfaceView.Renderer):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Constructor()
-{
-    Gather object&#39;s data
-}
-
-OnSurfaceCreated()
-{
-    Create shaders and programs
-    Set View Matrix.
-    Other initializations.
-    Call glClearColor()
-}
-
-OnSurfaceChanged(unusedArg, width, height)
-{
-    Call glViewport()
-    Set Projection Matrix (since the width and height is available over here)
-}
-
-OnDrawFrame()
-{
-    Call glClear()
-    draw calls go over here
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using textures is also easier as Android provides many helper classes. A template for generating textures (returns texture handle):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-private int createTexture(Context ctx, int imgResId) // imgResId = R.drawable.filename&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;
-{
-    int[] tempHandle = new int[1];
-    Bitmap img = null;
-    img = BitmapFactory.decodeResource(ctx.getResources(), imgResId);
-
-    GLES20.glGenTextures(.....);
-    GLES20.glTexParameteri(......);
-    GLES20.glTexParameteri(......); //as many GLES20.glTexParameteri()as u need
-
-    GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, img, 0);
-
-    img.recycle();
-    return tempHandle[0];
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.
+OpenGL ES2.0 API is provided by &amp;lsquo;android.opengl.GLES20&amp;rsquo; package.
+The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:</description>
     </item>
     
     <item>
@@ -859,39 +163,48 @@ private int createTexture(Context ctx, int imgResId) // imgResId = R.drawable.fi
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2011/06/22/add-jar-libraries/</guid>
-      <description>&lt;p&gt;When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Add the library jar files into a folder within the project, say /lib&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When you use the option &amp;ldquo;Add JAR/Folder&amp;rdquo; in Netbeans, make sure you use &amp;lsquo;Relative path&amp;rsquo; option instead of Absolute path.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In the &amp;ldquo;build.xml&amp;rdquo; file present in the project folder, add the following:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&amp;lt;target name=&amp;quot;-post-jar&amp;quot;&amp;gt;
-
-   &amp;lt;jar jarfile=&amp;quot;dist/final_dist.jar&amp;quot;&amp;gt;
-
-      &amp;lt;zipfileset src=&amp;quot;${dist.jar}&amp;quot; excludes=&amp;quot;META-INF/*&amp;quot;/&amp;gt;
-
-      &amp;lt;zipfileset src=&amp;quot;lib/library1.jar&amp;quot; excludes=&amp;quot;META-INF/*&amp;quot;/&amp;gt;
-
-      &amp;lt;zipfileset src=&amp;quot;lib/library2.jar&amp;quot; excludes=&amp;quot;META-INF/*&amp;quot;/&amp;gt;
-
-      &amp;lt;manifest&amp;gt;&amp;lt;attribute name=&amp;quot;Main-Class&amp;quot; value=&amp;quot;packageName.Main&amp;quot;/&amp;gt;&amp;lt;/manifest&amp;gt;
-
-    &amp;lt;/jar&amp;gt;
-
-&amp;lt;/target&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here &amp;lsquo;final_dist&amp;rsquo; is the name of the final jar file that includes the library jars.&lt;/p&gt;
-
-&lt;p&gt;Make sure to set the value of &amp;lsquo;packageName.Main&amp;rsquo; appropriately to the main class file of your main jar file i.e replace &amp;lsquo;packageName&amp;rsquo; and &amp;lsquo;Main&amp;rsquo; as it is in your project&lt;/p&gt;
-</description>
+      <description>When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
+ Add the library jar files into a folder within the project, say /lib</description>
+    </item>
+    
+    <item>
+      <title>Sending a file by HTTP POST</title>
+      <link>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</link>
+      <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</guid>
+      <description>Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.</description>
+    </item>
+    
+    <item>
+      <title>Making ‘make’ work</title>
+      <link>https://sinujohn.github.io/2010/09/04/making-make-work/</link>
+      <pubDate>Sat, 04 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/09/04/making-make-work/</guid>
+      <description>&amp;lsquo;make&amp;rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.
+This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &amp;lsquo;Beginning Linux Programming&amp;rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &amp;lsquo;make&amp;rsquo; utility.
+&amp;lsquo;make&amp;rsquo; searches for a file &amp;lsquo;makefile&amp;rsquo; or &amp;lsquo;Makefile&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>After installing openSUSE 11.3</title>
+      <link>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</link>
+      <pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</guid>
+      <description>First, a very short review! I just installed openSUSE 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop.</description>
+    </item>
+    
+    <item>
+      <title>A quick introduction to GCC</title>
+      <link>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</link>
+      <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
+      <description>GCC - GNU Compiler Collection From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking. Compile and Link a simple program:
+gcc -o hello.out hello.c  This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file. Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
+gcc -o hello.out hello.cpp  This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
     </item>
     
   </channel>

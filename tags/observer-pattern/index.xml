@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Observer Pattern on Hack</title>
-    <link>https://sinujohn.github.io/tags/observer-pattern/index.xml</link>
-    <description>Recent content in Observer Pattern on Hack</description>
+    <title>observer pattern on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/observer-pattern/</link>
+    <description>Recent content in observer pattern on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/observer-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 09 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/observer-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Observer Pattern</title>
@@ -15,17 +18,10 @@
       <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/07/09/observer-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt;: Behavioral patterns
-Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.&lt;/p&gt;
-
-&lt;p&gt;This pattern is sometimes referred to as Listeners in some frameworks.&lt;/p&gt;
-
-&lt;p&gt;Read about the pattern &lt;a href=&#34;http://en.wikipedia.org/wiki/Observer_pattern&#34;&gt;here&lt;/a&gt;.
-The code sample can be found in my &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/observer&#34;&gt;git repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the example code I have done, there is a city, as with all cities many things can go wrong in a city. So city is the subject or the observable. To handle the emergency situations we have many emergency handlers. These handlers observe the city and take actions when needed. So handlers are Observers.
-When something happens in the city, all observers will be notified. Some observers respond to the situation and some do not.&lt;br /&gt;&lt;/p&gt;
-</description>
+      <description>Classification: Behavioral patterns Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
+This pattern is sometimes referred to as Listeners in some frameworks.
+Read about the pattern here. The code sample can be found in my git repo.
+In the example code I have done, there is a city, as with all cities many things can go wrong in a city.</description>
     </item>
     
   </channel>

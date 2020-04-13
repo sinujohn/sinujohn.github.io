@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on Hack</title>
-    <link>https://sinujohn.github.io/tags/git/index.xml</link>
-    <description>Recent content in Git on Hack</description>
+    <title>git on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/git/</link>
+    <description>Recent content in git on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 21 Jun 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>My Git Workflow</title>
@@ -15,8 +18,9 @@
       <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/21/my-git-workflow/</guid>
-      <description>&lt;p&gt;Clone repository to local machine: &lt;strong&gt;git clone &amp;lt;repository&amp;gt;&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git pull&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;code... code .... code...&lt;/li&gt;&lt;li&gt;code more.....&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git stash&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git pull&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git stash apply&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;git add&lt;/strong&gt; &amp;lt;filenames&amp;gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git commit -m &#34;commit message&#34;&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&#34;font-style:normal;&#34;&gt;git push&lt;/strong&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;If any conflict occurs when stash is applied, resolve it either in IDE or using command line: &lt;strong&gt;git mergetool -t kdiff3&lt;/strong&gt; (invokes KDiff 3 if it installed)&lt;/p&gt;&lt;p&gt;Happy Coding :)&lt;/p&gt;
-</description>
+      <description>Clone repository to local machine: git clone &amp;lt;repository&amp;gt;
+git pullcode... code .... code...code more.....git stashgit pullgit stash applygit add &amp;lt;filenames&amp;gt;git commit -m &#34;commit message&#34;git pushIf any conflict occurs when stash is applied, resolve it either in IDE or using command line: git mergetool -t kdiff3 (invokes KDiff 3 if it installed)
+Happy Coding :)</description>
     </item>
     
   </channel>

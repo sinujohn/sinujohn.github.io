@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aop on Hack</title>
-    <link>https://sinujohn.github.io/tags/aop/index.xml</link>
-    <description>Recent content in Aop on Hack</description>
+    <title>aop on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/aop/</link>
+    <description>Recent content in aop on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/aop/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 03 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/aop/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Spring AOP</title>
@@ -15,8 +18,8 @@
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
-      <description>&lt;p&gt;I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.&lt;/p&gt;&lt;p&gt;Here are a couple of cheatsheets/examples for AspectJ. (Remember Spring AOP has limitations, but AspectJ doesn&#39;t).&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An excellent &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://blog.espenberntsen.net/2010/03/20/aspectj-cheat-sheet/&#34;&gt;cheat sheet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;A &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://blog.espenberntsen.net/2010/03/18/aspectj-examples-with-pointcuts-based-on-annotations/&#34;&gt;good example&lt;/a&gt; by the same guy&lt;/li&gt;&lt;li&gt;An &lt;a style=&#34;font-style:normal;&#34; href=&#34;http://stackoverflow.com/a/2522821/952511&#34;&gt;SO answer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To start off a project just start a new Spring Boot project from STS with Spring AOP ticked. Thats it. Spring Boot handles all the dependencies bootifully. It adds some unnecessary dependencies also. So if you just need AOP, just add AOP dependencies instead of Spring Boot.&lt;/p&gt;
-</description>
+      <description>I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.
+Here are a couple of cheatsheets/examples for AspectJ.</description>
     </item>
     
     <item>
@@ -25,14 +28,7 @@
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/05/09/aop-using-aspectj/</guid>
-      <description>&lt;p&gt;Even though I had heard about AOP, I didn&amp;rsquo;t take it seriously. I thought it was meant for Enterprise applications usage like Transaction management, logging etc. But recently I was faced with a problem - how to know an Object&amp;rsquo;s state changes in Java. As you know state of an Object is its properties, so what I want is to know when the state changes. I didn&amp;rsquo;t quite get what to do about it, and so posted in stackoverflow. And the answer was to use AspectJ!&lt;/p&gt;
-
-&lt;p&gt;Here is the link to SO - &lt;a href=&#34;http://stackoverflow.com/q/16352838/952511&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/q/16352838/952511&#34;&gt;http://stackoverflow.com/q/16352838/952511&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;To do AspectJ development in Eclipse we have to install AJDT(AspectJ Development Tools). Just add the correct URL from &lt;a href=&#34;http://www.eclipse.org/ajdt/downloads/&#34;&gt;http://www.eclipse.org/ajdt/downloads/&lt;/a&gt; for the Eclipse version we are using, to &amp;lsquo;Install New Software&amp;rsquo; in Help menu and install AJDT n its tools from the list.&lt;/p&gt;
-
-&lt;p&gt;And now am learning AspectJ - joinpoints and pointcuts!&lt;/p&gt;
-</description>
+      <description>Even though I had heard about AOP, I didn&amp;rsquo;t take it seriously. I thought it was meant for Enterprise applications usage like Transaction management, logging etc. But recently I was faced with a problem - how to know an Object&amp;rsquo;s state changes in Java. As you know state of an Object is its properties, so what I want is to know when the state changes. I didn&amp;rsquo;t quite get what to do about it, and so posted in stackoverflow.</description>
     </item>
     
   </channel>

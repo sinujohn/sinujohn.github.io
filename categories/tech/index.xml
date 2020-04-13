@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech on Hack</title>
-    <link>https://sinujohn.github.io/categories/tech/index.xml</link>
-    <description>Recent content in Tech on Hack</description>
+    <title>Tech on Sinu John</title>
+    <link>https://sinujohn.github.io/categories/tech/</link>
+    <description>Recent content in Tech on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 08 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Another NoSQL to the kitty</title>
@@ -15,14 +18,7 @@
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/01/08/another-nosql-to-the-kitty/</guid>
-      <description>&lt;p&gt;Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs?
-Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table!
-I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&lt;/a&gt; two days back. Its a really simple graph database, and a great starting point to experiment graph databases.&lt;/p&gt;
-
-&lt;p&gt;Now the NoSql databases I am familiar with are HBase(tried it about a year back), Redis and Neo4J.&lt;/p&gt;
-
-&lt;p&gt;Read and explore stuffs outside your domain. Happy coding :)&lt;/p&gt;
-</description>
+      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4J two days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
     </item>
     
     <item>
@@ -31,8 +27,8 @@ I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&
       <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
-      <description>&lt;p&gt;I was searching for good JavaScript resources and then stumbled onto this guy - &lt;a href=&#34;http://www.crockford.com/&#34;&gt;Douglas Crockford&lt;/a&gt;. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - &lt;a href=&#34;http://shop.oreilly.com/product/9780596517748.do&#34;&gt;Javascript: the good parts&lt;/a&gt;. He is one of the most authoritative person to talk about JavaScript.&lt;/p&gt;&lt;p&gt;I found his &lt;a href=&#34;http://www.yuiblog.com/crockford/&#34;&gt;talks on JavaScript&lt;/a&gt; and just finished watching the first part.&lt;/p&gt;&lt;p&gt;Its a video which I wish I had seen when I was in my Engineering class! The first part talks nothing about JavaScript. Its about the history of computing and programming languages. His talk, unlike our Computer Science teachers, is very inspiring - and the reason is, he has EXPERIENCED it (atleast most of it) and not just read about it in some book. The way he speaks about punch card readers, early computers etc. remind you of the way old people tell you the stories of their childhood - with passion and love.&lt;/p&gt;&lt;p&gt;Now I should watch the remaining of the series.&lt;/p&gt;&lt;p&gt;Happy Coding and Keep smiling :)&lt;/p&gt;
-</description>
+      <description>I was searching for good JavaScript resources and then stumbled onto this guy - Douglas Crockford. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - Javascript: the good parts. He is one of the most authoritative person to talk about JavaScript.
+I found his talks on JavaScript and just finished watching the first part.</description>
     </item>
     
     <item>
@@ -41,8 +37,8 @@ I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&
       <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/07/angularjs/</guid>
-      <description>&lt;p&gt;I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. &lt;a href=&#34;http://youtu.be/8ILQOFAgaXE&#34;&gt;Watch it over here&lt;/a&gt;. Parts 1, 2 and 3 are enough to get you up and running.&lt;/p&gt;&lt;h2&gt;Bootstrapping Dev env for Angular JS:&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Download &lt;a href=&#34;http://nodejs.org/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Install http-server using following command: &lt;strong&gt;npm install http-server -g&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Run the server as follows: &lt;strong&gt;http-server /path/to/the root/folder/of/webapp&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;That&#39;s it. You need not do any packaging to set up the dev environment (do not use this for production though, there should be better secure ways). And the best part is all the changes in the files are immediately reflected. No restart of server is required.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;
-</description>
+      <description>I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. Watch it over here. Parts 1, 2 and 3 are enough to get you up and running.
+Bootstrapping Dev env for Angular JS:Download Node.</description>
     </item>
     
     <item>
@@ -51,18 +47,7 @@ I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&
       <pubDate>Mon, 20 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/01/20/boost-and-a-look-back-on-c/</guid>
-      <description>&lt;p&gt;These days am a full time Java guy and the last time I coded in C++ was a little over an year ago. It was then I came across Boost library and I had heard that it packed a lot under the 5 letter library BOOST. Even though I haven&amp;rsquo;t much used Boost, since it is being made part of the C++ standard, I don&amp;rsquo;t want to be a person who knew legacy C++ and so was always keen to know about Boost. And thats when I came across &lt;a href=&#34;http://www.packtpub.com/boost-cplusplus-application-development-cookbook/book&#34;&gt;this book on Boost&lt;/a&gt;. Its a cookbook style book which helps people who already know C++ and want to learn Boost. Here is my review on GoodReads :&lt;em&gt;
-&lt;/em&gt;
-&lt;a style=&#34;float:left;padding-right:20px;&#34; href=&#34;https://www.goodreads.com/book/show/18430596-boost-c-application-development-cookbook&#34;&gt;&lt;img alt=&#34;Boost C++ Application Development Cookbook&#34; src=&#34;https://d202m5krfqbpi5.cloudfront.net/books/1390102286m/18430596.jpg&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/18430596-boost-c-application-development-cookbook&#34;&gt;Boost C++ Application Development Cookbook&lt;/a&gt; by &lt;a href=&#34;https://www.goodreads.com/author/show/7250001.Antony_Polukhin&#34;&gt;Antony Polukhin&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;My rating: &lt;a href=&#34;https://www.goodreads.com/review/show/829027786&#34;&gt;5 of 5 stars&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;All those who want to use C++ in production will one day or other come across Boost Library. Being a coder who doesn&amp;rsquo;t use C++ as a primary language, but who wish to keep abreast of whats happening in the industry (and C++ is still not dead!), I always wanted to learn Boost. I had in fact downloaded boost about an year back, but haven&amp;rsquo;t used it much. A good tutorial was missing. And this cookbook definitely fills the void. It is not a beginners book who want to study C++. But its definitely an introduction to Boost. The author has made the cookbook way to give a very good introduction to Boost library.
-What I liked: It is straight to the point. A no-nonsense book.
-Boost is a large library and some of the it have been added in C++11. And some it is being said to be part of C++14. This itself tells that Boost is a library which every C++ programmer should be familiar of. And this cookbook is really a starting point to learning it. I should say that it is only the tip of the ice-berg, but it should make you capable of digging deep into the ice-berg&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/review/list/17057121-sinu-john&#34;&gt;View all my reviews&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>These days am a full time Java guy and the last time I coded in C++ was a little over an year ago. It was then I came across Boost library and I had heard that it packed a lot under the 5 letter library BOOST. Even though I haven&amp;rsquo;t much used Boost, since it is being made part of the C++ standard, I don&amp;rsquo;t want to be a person who knew legacy C++ and so was always keen to know about Boost.</description>
     </item>
     
     <item>
@@ -71,40 +56,8 @@ Boost is a large library and some of the it have been added in C++11. And some i
       <pubDate>Sun, 26 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/12/26/dellintosh/</guid>
-      <description>&lt;p&gt;Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D&lt;/p&gt;
-
-&lt;p&gt;I followed the excellent guide &lt;a href=&#34;http://macyourpc.com/2009/09/13/mac-os-x-10-6-snow-leopard-retail-install-boot-132-method/&#34;&gt;available here&lt;/a&gt;. Take a print out of this guide and then do as follows:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Follow steps 1 to 7. Restart the system.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Update to 10.6.5 - don&amp;rsquo;t use Software Update, use manual update - &lt;a href=&#34;http://support.apple.com/kb/DL1324&#34;&gt;http://support.apple.com/kb/DL1324&lt;/a&gt; . Restart the system.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Continue from Step 8 onwards - but DON&amp;rsquo;T INSTALL Sleepenabler.kext and EHCIsleepenabler.kext at step 8.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Enjoy the Mac SL 10.6.5 :)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;Now the only problem is that the computer won&amp;rsquo;t sleep - I don&amp;rsquo;t usually put my system to sleep, so its okay for me.
-&lt;h3&gt;Dual Booting with Windows 7:&lt;/h3&gt;
-1. When I installed Mac SL I made 3 partitions instead of 1 and formatted the first partition to &amp;lsquo;Mac OS Extended(Journaled)&amp;rsquo; and the remaining two to MSDOS FAT format.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Installed Mac to first partition and updated it to SL 10.6.5 as specified above.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Installed Windows 7 to second partition - Windows installer formatted it to NTFS&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Now I can only boot into Win7. In Win7 install EasyBCD.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Add MacOS option to boot options (Choose MBR instead of EFI)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Now I can dual boot :)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;And now am ready with my Dellintosh Snow Leopard 10.6.5 :D&lt;/p&gt;
-</description>
+      <description>Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D
+I followed the excellent guide available here. Take a print out of this guide and then do as follows:</description>
     </item>
     
     <item>
@@ -113,25 +66,7 @@ Boost is a large library and some of the it have been added in C++11. And some i
       <pubDate>Sat, 06 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/11/06/wah-android/</guid>
-      <description>&lt;p&gt;Last day, I happened to read about Android programming. I also tried their &amp;lsquo;Hello Android&amp;rsquo; program. I was really surprised (and happy) to know that Android programming is done in Java. That means I don&amp;rsquo;t have to learn any new languages. (Ofcourse we can program in C/C++, but thats a different case). But Android doesn&amp;rsquo;t use JVM to run these programs, instead it uses another VM called Dalvik VM. All android programs are under the control of this VM. This VM also controls the lifetime of the programs, that means Android can stop your program to free the resources!
-&lt;h3&gt;Programming for mobile devices brings up new challenges -&lt;/h3&gt;
-&lt;strong&gt;1. The small screen size&lt;/strong&gt; - The small screen size means that the UI should be very simple. It shouldn&amp;rsquo;t be filled with lots of icons and other widgets that we use while we program for 15&amp;rdquo; desktops&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Small amount of memory&lt;/strong&gt; - Mobile devices have small memory, so the programs should use them efficiently. The program shouldn&amp;rsquo;t hog up too many mamory resources.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Uncertain Network&lt;/strong&gt; - Mobile devices are on the move, so the network won&amp;rsquo;t be always available.&lt;/p&gt;
-
-&lt;p&gt;In short, when we program for mobile devices, we should program with the worst case scenarios in mind. It will help our programs to be robust.
-Another challenge is that our program is not at all a priority for the user. The mobile is first a calling device, then a SMS device, then a music player, then a camera, and then (if the mobile doesn&amp;rsquo;t provide additional facilites) comes your application! So the application we write shouldn&amp;rsquo;t distract the users from all the foresaid activities. Also mobile phone is, well.. mobile! Its not tied to the desktop. Even though this gives a lot of restrictions, it also gives a lot of possibilities! And thats the possibility that we should explore. The other interesting features can be the various sensors (motion sensor and touch sensors) in Android phones. All the Android features are available for the programmer via the Android API.&lt;/p&gt;
-
-&lt;p&gt;I have decided to explore Android, but that&amp;rsquo;ll have to wait atleast a month as I am having my exams now :(&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>Last day, I happened to read about Android programming. I also tried their &amp;lsquo;Hello Android&amp;rsquo; program. I was really surprised (and happy) to know that Android programming is done in Java. That means I don&amp;rsquo;t have to learn any new languages. (Ofcourse we can program in C/C++, but thats a different case). But Android doesn&amp;rsquo;t use JVM to run these programs, instead it uses another VM called Dalvik VM. All android programs are under the control of this VM.</description>
     </item>
     
     <item>
@@ -140,17 +75,8 @@ Another challenge is that our program is not at all a priority for the user. The
       <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</guid>
-      <description>&lt;p&gt;&lt;p&gt;This is the most important question that a Linux newbie faces - &amp;ldquo;&lt;em&gt;How to run his/her favourite Windows application on Linux?&lt;/em&gt;&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!&lt;/p&gt;
-&lt;h2&gt;1. Find the Linux versions of your Windows applications&lt;/h2&gt;
-&lt;p&gt;If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!&lt;/p&gt;
-&lt;h2&gt;2. Find the Linux equivalent of your Windows Application&lt;/h2&gt;
-&lt;p&gt;If you can&amp;rsquo;t find a Linux version, you might find that there are many native Linux softwares that suites your need. This is true for various media players(VLC, Amarok etc. instead of Windows Media Player or Winamp), Graphics applications(GIMP instead of Photoshop) etc. In this case you&amp;rsquo;ll have to search for the new software(again GIYF), and once you have found one you&amp;rsquo;ll have to study how to use it.&lt;/p&gt;
-&lt;h2&gt;3. Use Wine to run your Windows application&lt;/h2&gt;
-&lt;p&gt;If you are not satisfied with neither of the above steps, try running your Windows application with Wine(Wine is a Linux application that reimplements Win32 API). This solution might not work 100% all the time. But still its worth giving a try because running your application with Wine is better than the solution of step4. And if you have got source code of your Windows application then you can port it to Linux using Winelib.&lt;/p&gt;
-&lt;h2&gt;4. Use a virtual machine&lt;/h2&gt;
-&lt;p&gt;If you want your application to work without any glitches (but with some performance overhead) then you can try installing a virtual machine with Windows OS loaded. You can then install your application in the virtual machine in the same way as you do in your Windows OS. VirtualBox is a really easy to use one. It provides seamless integration with your Linux desktop. Here is a screenshot of MS Paint in OpenSuSE with VirtualBox&amp;rsquo;s seamless integration enabled:&lt;/p&gt;
-&lt;img src=&#34;https://sinujohn.github.io/assets/winlin.png&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>This is the most important question that a Linux newbie faces - &amp;ldquo;How to run his/her favourite Windows application on Linux?&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!
+1. Find the Linux versions of your Windows applications If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!</description>
     </item>
     
   </channel>

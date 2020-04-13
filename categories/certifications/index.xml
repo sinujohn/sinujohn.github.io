@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Certifications on Hack</title>
-    <link>https://sinujohn.github.io/categories/certifications/index.xml</link>
-    <description>Recent content in Certifications on Hack</description>
+    <title>Certifications on Sinu John</title>
+    <link>https://sinujohn.github.io/categories/certifications/</link>
+    <description>Recent content in Certifications on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/categories/certifications/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 09 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/categories/certifications/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Certified Monadic I am!</title>
@@ -15,14 +18,9 @@
       <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/01/09/certified-monadic-i-am/</guid>
-      <description>&lt;p&gt;I took the Functional Programming course on edX and completed it last month. Scored 99% :)&lt;/p&gt;
-
-&lt;p&gt;This is the first time I am completing an online MOOC. Usually I drop all the courses after one or two weeks. Lazy me!&lt;/p&gt;
-
-&lt;p&gt;Here is &lt;a href=&#34;https://courses.edx.org/certificates/cb45414ca36c44a395a2985014ce8528&#34; target=&#34;_blank&#34;&gt;my VERIFIED certificate&lt;/a&gt; signed by &lt;a href=&#34;https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)&#34; target=&#34;_blank&#34;&gt;Dr.Erik Meijer&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/monad.png&#34; alt=&#34;Functional Programming&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>I took the Functional Programming course on edX and completed it last month. Scored 99% :)
+This is the first time I am completing an online MOOC. Usually I drop all the courses after one or two weeks. Lazy me!
+Here is my VERIFIED certificate signed by Dr.Erik Meijer:</description>
     </item>
     
     <item>
@@ -31,10 +29,7 @@
       <pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/09/19/certified-spring-professional/</guid>
-      <description>&lt;p&gt;Now am a &lt;a href=&#34;http://pivotal.io/academy#certification&#34; target=&#34;_blank&#34;&gt;Pivotal Certified Spring Professional&lt;/a&gt;. Took the exam yesterday in Core Spring (Spring 4.0) and received the certificate today.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/spring.png&#34; alt=&#34;Certified Spring Professional&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Now am a Pivotal Certified Spring Professional. Took the exam yesterday in Core Spring (Spring 4.0) and received the certificate today.</description>
     </item>
     
   </channel>

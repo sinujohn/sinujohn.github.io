@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nerd on Hack</title>
-    <link>https://sinujohn.github.io/tags/nerd/index.xml</link>
-    <description>Recent content in Nerd on Hack</description>
+    <title>nerd on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/nerd/</link>
+    <description>Recent content in nerd on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/nerd/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 20 Jan 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/nerd/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Nerdy Jokes ;)</title>
@@ -15,37 +18,10 @@
       <pubDate>Thu, 20 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2011/01/20/nerdy-jokes/</guid>
-      <description>&lt;p&gt;Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes &lt;a href=&#34;http://www.reddit.com/r/AskReddit/comments/f3yax/whats_your_favorite_nerdy_joke/&#34;&gt;here&lt;/a&gt; .&lt;/p&gt;
-
-&lt;p&gt;My favourite ones (credit goes to their respective creators):
-&lt;blockquote&gt;there is a physicist, a biologist and a mathematician standing in front of a house. They see one man enter and two men leave.&lt;/p&gt;
-
-&lt;p&gt;The Physicist says, &amp;ldquo;Well there is obviously an unknown variable.&amp;rdquo; The Biologist says, &amp;ldquo;The man must have multiplied.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.&amp;rdquo;&lt;/blockquote&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;A wife asks her husband, who is a software engineer: &#34;Could you please go shopping for me and buy 1 carton of milk. And if they have eggs, get 6!&#34; A short time later the husband comes back with 6 cartons of milk. The wife asks him why the hell did he buy 6 cartons of milk??? He: &#34;They had eggs&#34;&lt;/blockquote&gt;
-________________________________________________________
-&lt;blockquote&gt;An infinite number of mathematicians walk into a bar.
-
-The first asks for a beer. The second asks for half a beer. The third asks for a quarter beer. The fourth is begins to order an eighth of a beer but the bartender cuts him off.
-
-&#34;You&#39;re all idiots.&#34;
-
-He pours two beers and goes to help other customers.&lt;/blockquote&gt;
-&lt;strong&gt;_________________________________________________&lt;/strong&gt;
-&lt;blockquote&gt;Two atoms are walking(?) along.
-
-First atom: I think I&#39;ve lost an electron.
-
-Second atom: Really? An electron? Are you sure?
-
-First atom: Yeah.. I&#39;m positive!
-
-_______________________________________&lt;/blockquote&gt;
-</description>
+      <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here .
+My favourite ones (credit goes to their respective creators): there is a physicist, a biologist and a mathematician standing in front of a house. They see one man enter and two men leave.
+The Physicist says, &amp;ldquo;Well there is obviously an unknown variable.&amp;rdquo; The Biologist says, &amp;ldquo;The man must have multiplied.&amp;rdquo;
+The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.</description>
     </item>
     
   </channel>

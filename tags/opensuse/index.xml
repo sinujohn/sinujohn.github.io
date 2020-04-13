@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Opensuse on Hack</title>
-    <link>https://sinujohn.github.io/tags/opensuse/index.xml</link>
-    <description>Recent content in Opensuse on Hack</description>
+    <title>opensuse on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/opensuse/</link>
+    <description>Recent content in opensuse on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 31 Jul 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>After installing openSUSE 11.3</title>
@@ -15,69 +18,7 @@
       <pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</guid>
-      <description>&lt;p&gt;&lt;h2&gt;First, a very short review!&lt;/h2&gt;
-I just installed &lt;a href=&#34;http://opensuse.org&#34; target=&#34;_blank&#34;&gt;openSUSE&lt;/a&gt; 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop. But still, its good and I like it better than other openSUSE releases.
-&lt;img src=&#34;https://sinujohn.github.io/assets/opensuse.png&#34; alt=&#34;screenshot&#34; /&gt;
-The first thing you notice after installing openSUSE is the boot splash and KDE splash screens. I should admit that it is, well, ugly! But you can change it. I&amp;rsquo;ll tell you how in this post.
-I installed openSUSE in my Dell Inspiron 1525 laptop. So some things mentioned below apply only for laptops.
-&lt;h2&gt;Things to do after installing openSUSE 11.3 KDE&lt;/h2&gt;
-1. Enable touchpad tapping!
-2. Install wifi drivers (if it is not already detected)
-3. Install restricted formats and multimedia codecs
-4. Take a backup of &amp;lsquo;.kde4&amp;rsquo; folder
-5. Change the KDE splash screen
-6. Change the boot splash
-7. Change the GRUB Bootloader background [Update]
-&lt;h3&gt;1. Enable touchpad tapping!&lt;/h3&gt;
-By default eventhough suse recognises the touchpad, it has disabled tapping. I dont know why the hell they disabled tapping option. Maybe, to notify us of the newly included option for configuring touchpad!
-To enable tapping, press &amp;lsquo;Alt-F2&amp;rsquo; and run &amp;lsquo;Touchpad&amp;rsquo; OR Personal Settings -&amp;gt; Keyboard &amp;amp; Mouse -&amp;gt; Touchpad.
-Select the tab &amp;lsquo;Tapping&amp;rsquo; and select &amp;lsquo;Left mouse button&amp;rsquo; at &amp;lsquo;Tapping with one finger&amp;rsquo;. Press &amp;lsquo;Apply&amp;rsquo; and thats it!
-&lt;h3&gt;2. Install wifi drivers&lt;/h3&gt;
-I have got a Broadcom 4312 wifi. It didn&amp;rsquo;t work out of the box. But making it work is easy.
-First of all you need to get connected to internet by Ethernet cable or whatever means.
-Then open a terminal and become superuser.
-Then type &amp;lsquo;install_bcm43xx_firmware&amp;rsquo; and press enter. Thats it, it will install the necessary drivers for you.
-After installation is complete, restart your computer(remember to switch ON the wifi before booting, Its a small glitch - wifi should be ON while booting to enable it)
-&lt;h3&gt;3. Install restricted formats and multimedia codecs&lt;/h3&gt;
-openSUSE doesn&amp;rsquo;t support restricted codecs out of the box. Installing them is made easy by &amp;lsquo;One-Click-Install&amp;rsquo;:
-Go to &lt;a href=&#34;http://opensuse-community.org/Restricted_Formats/11.3&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://opensuse-community.org/Restricted_Formats/11.3&#34;&gt;http://opensuse-community.org/Restricted_Formats/11.3&lt;/a&gt;&lt;/a&gt;
-Select codecs-kde.ymp (if you choose one click install, or other options from the site as you please). Remain subscribed to the repositories as it comes handy to perform installation of other softwares like VLC.
-After the codecs are installed you might also install VLC player from &amp;lsquo;Install/Remove Softwares&amp;rsquo;&lt;/p&gt;
-
-&lt;p&gt;Now, you are ready to explore your openSUSE 11.3! Following steps are optional :)
-&lt;h3&gt;4. Take a backup of &amp;lsquo;.kde4&amp;rsquo; folder&lt;/h3&gt;
-&amp;lsquo;.kde4&amp;rsquo; folder stores your KDE settings. Make changes to Dolphin(like double click to open files), Konsole(change color and fonts) and other ONLY necessary changes. Don&amp;rsquo;t go and change Plasma settings now. Keep it at default. Now take a backup of your &amp;lsquo;.kde4&amp;rsquo; folder and save it as &amp;lsquo;.kde4_copy&amp;rsquo;(or whatever you please).
-Now experiment with KDE as you please :) If something goes wrong, open Dolphin, replace &amp;lsquo;.kde4&amp;rsquo; with &amp;lsquo;.kde4_copy&amp;rsquo; and rename it to &amp;lsquo;.kde4&amp;rsquo;. Now instead of closing Dolphin and logging out, restart KDE by pressing &amp;lsquo;Ctrl-Alt-Backspace&amp;rsquo; two times. Everything should get restored.
-&lt;h3&gt;5. Change the KDE splash screen&lt;/h3&gt;
-You can change this from Personal Settings -&amp;gt; Apperance -&amp;gt; Splash Screen.
-If &amp;lsquo;Get New Themes&amp;rsquo; don&amp;rsquo;t work, try &amp;lsquo;Install Theme Files&amp;rsquo;.
-I used &amp;lsquo;&lt;a href=&#34;http://kde-look.org/content/show.php/SuSE+Elegant?content=117251&#34; target=&#34;_blank&#34;&gt;SuSE-elegant&lt;/a&gt;&amp;rsquo; theme from KDE-look.org. After downloading the tar file use the option &amp;lsquo;Install Theme Files&amp;rsquo;.
-&lt;h3&gt;6. Change the boot splash&lt;/h3&gt;
-I used &amp;lsquo;&lt;a href=&#34;http://kde-look.org/content/show.php/SuSE+Elegant?content=117310&#34; target=&#34;_blank&#34;&gt;SuSE-Elegant&lt;/a&gt;&amp;rsquo; theme (don&amp;rsquo;t confuse with the previously mentioned KDE splash screen, notice the capital E).
-How to install this theme is given in along with the theme file or in the site. But I&amp;rsquo;ll mention it here again:
-&amp;ldquo;Make the following as root user
-Unpack the *tar file
-Copy the file &lt;em&gt;SuSE-Elegant&lt;/em&gt; to &lt;em&gt;/etc/bootspash/themes/&lt;/em&gt;
-Open the file &lt;em&gt;bootspash&lt;/em&gt; located in &lt;em&gt;/etc/sysconfig/&lt;/em&gt;
-Change the line &lt;em&gt;THEME=&amp;ldquo;openSUSE&amp;rdquo;&lt;/em&gt; to &lt;em&gt;THEME=&amp;ldquo;SuSE-Elegant&amp;rdquo;&lt;/em&gt;
-On a terminal write &lt;em&gt;mkinitrd&lt;/em&gt;
-reboot&amp;rdquo;
-&lt;h3&gt;7. Change GRUB Bootloader background&lt;/h3&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;The GRUB background and other details are in a file &lt;em&gt;/boot/message&lt;/em&gt;. So to change the GRUB background we are gonna change that file (more specifically back.jpg inside the archive &amp;lsquo;message&amp;rsquo;). The new background image must be a JPEG file. Follow these steps:&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;1. First create a folder &amp;lsquo;&lt;em&gt;temp&lt;/em&gt;&amp;rsquo; (in your home folder or anywhere you like) and inside it another folder &amp;lsquo;&lt;em&gt;foo&lt;/em&gt;&amp;rsquo;.&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;2. Copy the file &lt;em&gt;/boot/message&lt;/em&gt; to folder &amp;lsquo;&lt;em&gt;foo&lt;/em&gt;&amp;rsquo;. (You might also take a backup of the file /boot/message)&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;3. Open terminal and change to folder &amp;lsquo;&lt;em&gt;foo&lt;/em&gt;&amp;rsquo;, then execute following commands&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;4.  $ cpio -idv &amp;lt; message&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;5.  $ rm message&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;6.  $ cp /path/to/your/picture.jpg back.jpg&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;7.  $ ls | cpio -ov &amp;gt; ../message&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;8.  $ cd..&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;Make sure you are in folder &amp;lsquo;temp&amp;rsquo;, become superuser and copy the file back as shown below:&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;9.   $ su&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;10. $ cp message /boot/message&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;Now delete the folder &amp;lsquo;temp&amp;rsquo;. You are good to go, restart and enjoy your new GRUB background :)&lt;/div&gt;
-Don&amp;rsquo;t be just readers, please comment too.. ;)&lt;/p&gt;
-</description>
+      <description>First, a very short review! I just installed openSUSE 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop.</description>
     </item>
     
   </channel>

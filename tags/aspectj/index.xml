@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aspectj on Hack</title>
-    <link>https://sinujohn.github.io/tags/aspectj/index.xml</link>
-    <description>Recent content in Aspectj on Hack</description>
+    <title>aspectj on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/aspectj/</link>
+    <description>Recent content in aspectj on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/aspectj/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 09 May 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/aspectj/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>AOP using AspectJ</title>
@@ -15,14 +18,7 @@
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/05/09/aop-using-aspectj/</guid>
-      <description>&lt;p&gt;Even though I had heard about AOP, I didn&amp;rsquo;t take it seriously. I thought it was meant for Enterprise applications usage like Transaction management, logging etc. But recently I was faced with a problem - how to know an Object&amp;rsquo;s state changes in Java. As you know state of an Object is its properties, so what I want is to know when the state changes. I didn&amp;rsquo;t quite get what to do about it, and so posted in stackoverflow. And the answer was to use AspectJ!&lt;/p&gt;
-
-&lt;p&gt;Here is the link to SO - &lt;a href=&#34;http://stackoverflow.com/q/16352838/952511&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/q/16352838/952511&#34;&gt;http://stackoverflow.com/q/16352838/952511&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;To do AspectJ development in Eclipse we have to install AJDT(AspectJ Development Tools). Just add the correct URL from &lt;a href=&#34;http://www.eclipse.org/ajdt/downloads/&#34;&gt;http://www.eclipse.org/ajdt/downloads/&lt;/a&gt; for the Eclipse version we are using, to &amp;lsquo;Install New Software&amp;rsquo; in Help menu and install AJDT n its tools from the list.&lt;/p&gt;
-
-&lt;p&gt;And now am learning AspectJ - joinpoints and pointcuts!&lt;/p&gt;
-</description>
+      <description>Even though I had heard about AOP, I didn&amp;rsquo;t take it seriously. I thought it was meant for Enterprise applications usage like Transaction management, logging etc. But recently I was faced with a problem - how to know an Object&amp;rsquo;s state changes in Java. As you know state of an Object is its properties, so what I want is to know when the state changes. I didn&amp;rsquo;t quite get what to do about it, and so posted in stackoverflow.</description>
     </item>
     
   </channel>

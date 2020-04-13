@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Servlet on Hack</title>
-    <link>https://sinujohn.github.io/tags/servlet/index.xml</link>
-    <description>Recent content in Servlet on Hack</description>
+    <title>servlet on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/servlet/</link>
+    <description>Recent content in servlet on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/servlet/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 28 Sep 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/servlet/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Sending a file by HTTP POST</title>
@@ -15,162 +18,7 @@
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</guid>
-      <description>&lt;div id=&#34;_mcePaste&#34;&gt;Recently I created a program which can send a file to a server in several packets using&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;parts and then create a file using them. &lt;a href=&#34;http://www.box.net/shared/yf5hs3qanf&#34; target=&#34;_blank&#34;&gt;Download it&lt;/a&gt;.&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;you can change the size (set value in SIZELIMIT). The program uses Curl library to&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;send the file using HTTP POST. Curl is very easy to use. They also have a great &lt;a href=&#34;http://curl.haxx.se/libcurl/c/libcurl-tutorial.html&#34; target=&#34;_blank&#34;&gt;tutorial&lt;/a&gt;.&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;The program sends each packet by attaching two additional headers to them - Count and Filename.&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;&#39;Count&#39; is used to set the count of the packet(starts from 1) and &#39;Filename&#39; is the name of the file that is being sent.&lt;/div&gt;
-&lt;div&gt;File &#39;client.c&#39;:&lt;/div&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;/////////////////////////////////////////////////////////////
-//client.c
-// Send file to an HTTP server in small parts using POST
-// USAGE: client inputfile
-//
-// Compile:
-// gcc -o client client.c -lcurl
-//
-// Developer:
-// Sinu John - https://sinujohn.github.io/
-//
-//////////////////////////////////////////////////////////////
-
-#include&amp;lt;curl/curl.h&amp;gt;
-#include&amp;lt;fcntl.h&amp;gt;
-#include&amp;lt;unistd.h&amp;gt;
-
-//No. of bytes to be sent in one pass
-#define SIZELIMIT 100*1024
-
-//#define _SEND_DEBUG_
-
-int sendFile(const char *fileName, const char *url)  // Sends file to &#39;url&#39; with an additional header &#39;Count&#39; (specifying count of the packet)
-{                                                    // An header &#39;Filename&#39; is also added
-  int COUNT=0;
-  int fd = open(fileName, O_RDONLY);
-  if(fd&amp;lt;0)
-  {
-    printf(&amp;quot;\nERROR: Cannot open the file\n&amp;quot;);
-    return -1;
-  }
-
-  CURL *handle;
-  char buf[SIZELIMIT]; //Data to be sent is stored in this buffer. Static Allocation of memory.
-  int ndata;
-  struct curl_slist *headers=NULL;
-
-  handle = curl_easy_init();
-
-  #ifdef _SEND_DEBUG_
-  curl_easy_setopt( handle, CURLOPT_VERBOSE, 1);
-  #endif
-
-  curl_easy_setopt( handle, CURLOPT_URL, url);
-
-  while((ndata = read(fd, buf, SIZELIMIT))&amp;gt;0)
-  {
-    COUNT++;
-
-    #ifdef _SEND_DEBUG_
-    printf(&amp;quot;\n\n*****************************************************\n&amp;quot;);
-    printf(&amp;quot;@@@@@@ Bytes Read = %d\n&amp;quot;, ndata);
-    #endif
-
-    ///////////////////////////////////////////////////////
-    //////// Setting Count header and Filename header
-    char countHeader[20], filenameHeader[50];
-    headers=NULL;
-    sprintf(countHeader,&amp;quot;Count:%d&amp;quot;,COUNT);
-    sprintf(filenameHeader,&amp;quot;Filename:%s&amp;quot;,fileName);
-    headers = curl_slist_append(headers, filenameHeader);
-    headers = curl_slist_append(headers, &amp;quot;Expect:&amp;quot;);
-    headers = curl_slist_append(headers, countHeader);
-    curl_easy_setopt(handle, CURLOPT_HTTPHEADER, headers);
-    /////////
-    ///////////////////////////////////////////////////////B1
-
-    curl_easy_setopt( handle, CURLOPT_POSTFIELDS, buf);
-    curl_easy_setopt( handle, CURLOPT_POSTFIELDSIZE, ndata);
-    curl_easy_perform( handle );
-
-    ////////////////////////////////////////////////////////
-    /////////// Freeing all headers
-    curl_slist_free_all(headers);
-    ///////////
-    ////////////////////////////////////////////////////////B1
-  }
-
-  printf(&amp;quot;\n\n**** COUNT is %d ****\n\n&amp;quot;,COUNT);
-  curl_easy_cleanup( handle );
-  close(fd);
-  return 0;
-}
-
-int main(int argc, char **argv)
-{
-  if(argc&amp;lt;2) { printf(&amp;quot;Please provide an input file\n&amp;quot;); return 1; }
-  char *fileName = argv[1];
-  sendFile(fileName, &amp;quot;http://localhost:8080/postapp/makeapp&amp;quot;);
-  return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div id=&#34;_mcePaste&#34;&gt;The servlet &#39;MakeApp.java&#39;, is a very basic program that creates the file at the server from the several&lt;/div&gt;
-&lt;div id=&#34;_mcePaste&#34;&gt;packets. I used Tomcat 6 to deploy it(My first encounter with Tomcat!).&lt;/div&gt;
-&lt;div&gt;File &#39;MakeApp.java&#39;:&lt;/div&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;///////////////////////////////////////////////////////////////////////
-//MakeApp.java
-//Servlet for creating a file obtained as several parts
-//through various POST requests.
-//Creates the file in server folder (in my case: /usr/share/tomcat6/ )
-//
-//
-// Developer: https://sinujohn.github.io/
-//
-//Compile:
-//javac -cp /usr/share/tomcat6/lib/tomcat6-servlet-2.5-api-6.0.24.jar MakeApp.java
-//
-//////////////////////////////////////////////////////////////////////
-
-import java.io.*;
-
-import javax.servlet.http.*;
-import javax.servlet.*;
-
-public class MakeApp extends HttpServlet implements SingleThreadModel {
-  public void doPost (HttpServletRequest req,
-                                         HttpServletResponse res)
-        throws ServletException, IOException
-  {
-	int count;
-	String fileName;
-	OutputStream fout;
-	count=req.getIntHeader(&amp;quot;Count&amp;quot;);
-	fileName = req.getHeader(&amp;quot;Filename&amp;quot;);
-	if(count==1) { fout = new FileOutputStream(fileName); }
-	else { fout = new FileOutputStream(fileName, true); }
-
-	InputStream in = req.getInputStream();
-	byte buf[] = new byte[req.getContentLength()+1];
-	int nbuf;
-	do
-	{
-	  nbuf = in.read(buf, 0, req.getContentLength());
-	  if(nbuf&amp;gt;=0)  fout.write(buf, 0, nbuf);
-	}while(nbuf&amp;gt;=0);
-
-	fout.close();
-        PrintWriter out = res.getWriter();
-        out.println(&amp;quot;Got file &amp;quot;+fileName+&amp;quot; with Count: &amp;quot;+count);
-        out.close();
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.</description>
     </item>
     
   </channel>

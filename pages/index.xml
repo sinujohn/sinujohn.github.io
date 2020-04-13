@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Hack</title>
-    <link>https://sinujohn.github.io/pages/index.xml</link>
-    <description>Recent content in Pages on Hack</description>
+    <title>Pages on Sinu John</title>
+    <link>https://sinujohn.github.io/pages/</link>
+    <description>Recent content in Pages on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 26 Jun 2010 06:33:00 +0000</lastBuildDate>
-    <atom:link href="https://sinujohn.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sinujohn.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Projects</title>
@@ -16,44 +18,10 @@
       <pubDate>Sat, 26 Jun 2010 06:33:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/pages/projects/</guid>
-      <description>&lt;p&gt;&lt;h1&gt;Android&lt;/h1&gt;
-&lt;h2&gt;Thulika Keyboard!&lt;/h2&gt;
-Thulika is an Handwriting recognition keyboard. It is the first Android app that has brought handwriting recognition to an Indian language(Malayalam). The blog post &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-01-14-training-the-thulika-keyboard %}&#34;&gt;Training Thulika&lt;/a&gt; describes the configuration part of the keyboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Find the app on Play Store&lt;/a&gt; | &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-01-21-thulika-keyboard %}&#34;&gt;Other details&lt;/a&gt;
-&lt;h2&gt;Immortal Login!&lt;/h2&gt;
-Log in once! No hassle of getting logged out frequently from your device.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.immortal&#34; target=&#34;_blank&#34;&gt;Find the app on Play Store&lt;/a&gt; | &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-01-21-immortal-login %}&#34;&gt;Other details&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;h1&gt;Java&lt;/h1&gt;
-&lt;h2&gt;j8085sim - an 8085 simulator in Java!&lt;/h2&gt;
-j8085sim is an 8085 simulator.&lt;/p&gt;
-
-&lt;p&gt;Project: &lt;a href=&#34;http://sourceforge.net/projects/j8085sim/&#34;&gt;j8085sim at Sourceforge&lt;/a&gt; &lt;a href=&#34;http://sourceforge.net/donate/index.php?group_id=337340&#34;&gt;&lt;img alt=&#34;Support This Project&#34; src=&#34;http://images.sourceforge.net/images/project-support.jpg&#34; width=&#34;88&#34; height=&#34;32&#34; border=&#34;0&#34; /&gt; &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Blog post: &lt;a href=&#34;{{ site.baseurl }}{% post_url 2010-07-24-j8085sim %}&#34;&gt;j8085sim&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;h1&gt;Python&lt;/h1&gt;
-&lt;h2&gt;A Simple Videocutter&lt;/h2&gt;
-A simple videocutter and converter frontend for ffmpeg written in pyQt.
-File: &lt;a href=&#34;http://www.box.net/shared/k98yqrpeky&#34;&gt;videoCutter.py&lt;/a&gt;
-Details: &lt;a href=&#34;../2010/06/18/simple-videocutter/&#34; rel=&#34;nofollow&#34;&gt;My blog&lt;/a&gt;
-&lt;h2&gt;BSNL Broadband Usage Meter&lt;/h2&gt;
-A simple utility to view your BSNL Broadband Usage statistics - works only for those who use www.data.bsnl.in to check their usage details.&lt;/p&gt;
-
-&lt;p&gt;File: &lt;a href=&#34;http://www.box.net/shared/jxorcjdfrq&#34;&gt;bsnlmeter&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Details: &lt;a href=&#34;{{ site.baseurl }}{% post_url 2010-06-26-bsnl-broadband-usage-viewer %}&#34;&gt;Blog Entry&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Android Thulika Keyboard! Thulika is an Handwriting recognition keyboard. It is the first Android app that has brought handwriting recognition to an Indian language(Malayalam). The blog post Training Thulika describes the configuration part of the keyboard.
+Find the app on Play Store | Other details Immortal Login! Log in once! No hassle of getting logged out frequently from your device.
+Find the app on Play Store | Other details
+&amp;nbsp;</description>
     </item>
     
     <item>
@@ -62,14 +30,10 @@ A simple utility to view your BSNL Broadband Usage statistics - works only for t
       <pubDate>Fri, 26 Mar 2010 17:58:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/pages/about/</guid>
-      <description>&lt;p&gt;Find me&lt;/p&gt;
-
-&lt;p&gt;twitter: &lt;a href=&#34;http://www.twitter.com/sinuvian&#34;&gt;@sinuvian&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;facebook: &lt;!-- Facebook Badge START --&gt;&lt;a href=&#34;http://www.facebook.com/sinujohn&#34;&gt;&lt;span style=&#34;font-style:normal;font-weight:normal;color:#3b5998;text-decoration:none;&#34;&gt;Sinu John&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Github: &lt;a href=&#34;https://github.com/sinujohn/&#34;&gt;https://github.com/sinujohn/&lt;/a&gt; &lt;!-- Facebook Badge END --&gt;&lt;/p&gt;
-</description>
+      <description>Find me
+twitter: @sinuvian
+facebook: Sinu John
+Github: https://github.com/sinujohn/ </description>
     </item>
     
   </channel>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on Hack</title>
-    <link>https://sinujohn.github.io/tags/javascript/index.xml</link>
-    <description>Recent content in Javascript on Hack</description>
+    <title>javascript on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 17 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Hearing it from the granpa!</title>
@@ -15,8 +18,8 @@
       <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
-      <description>&lt;p&gt;I was searching for good JavaScript resources and then stumbled onto this guy - &lt;a href=&#34;http://www.crockford.com/&#34;&gt;Douglas Crockford&lt;/a&gt;. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - &lt;a href=&#34;http://shop.oreilly.com/product/9780596517748.do&#34;&gt;Javascript: the good parts&lt;/a&gt;. He is one of the most authoritative person to talk about JavaScript.&lt;/p&gt;&lt;p&gt;I found his &lt;a href=&#34;http://www.yuiblog.com/crockford/&#34;&gt;talks on JavaScript&lt;/a&gt; and just finished watching the first part.&lt;/p&gt;&lt;p&gt;Its a video which I wish I had seen when I was in my Engineering class! The first part talks nothing about JavaScript. Its about the history of computing and programming languages. His talk, unlike our Computer Science teachers, is very inspiring - and the reason is, he has EXPERIENCED it (atleast most of it) and not just read about it in some book. The way he speaks about punch card readers, early computers etc. remind you of the way old people tell you the stories of their childhood - with passion and love.&lt;/p&gt;&lt;p&gt;Now I should watch the remaining of the series.&lt;/p&gt;&lt;p&gt;Happy Coding and Keep smiling :)&lt;/p&gt;
-</description>
+      <description>I was searching for good JavaScript resources and then stumbled onto this guy - Douglas Crockford. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - Javascript: the good parts. He is one of the most authoritative person to talk about JavaScript.
+I found his talks on JavaScript and just finished watching the first part.</description>
     </item>
     
     <item>
@@ -25,8 +28,8 @@
       <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/07/angularjs/</guid>
-      <description>&lt;p&gt;I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. &lt;a href=&#34;http://youtu.be/8ILQOFAgaXE&#34;&gt;Watch it over here&lt;/a&gt;. Parts 1, 2 and 3 are enough to get you up and running.&lt;/p&gt;&lt;h2&gt;Bootstrapping Dev env for Angular JS:&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Download &lt;a href=&#34;http://nodejs.org/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Install http-server using following command: &lt;strong&gt;npm install http-server -g&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Run the server as follows: &lt;strong&gt;http-server /path/to/the root/folder/of/webapp&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;That&#39;s it. You need not do any packaging to set up the dev environment (do not use this for production though, there should be better secure ways). And the best part is all the changes in the files are immediately reflected. No restart of server is required.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;
-</description>
+      <description>I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. Watch it over here. Parts 1, 2 and 3 are enough to get you up and running.
+Bootstrapping Dev env for Angular JS:Download Node.</description>
     </item>
     
   </channel>

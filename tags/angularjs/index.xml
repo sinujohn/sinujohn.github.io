@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Angularjs on Hack</title>
-    <link>https://sinujohn.github.io/tags/angularjs/index.xml</link>
-    <description>Recent content in Angularjs on Hack</description>
+    <title>angularjs on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/angularjs/</link>
+    <description>Recent content in angularjs on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 07 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>AngularJS</title>
@@ -15,8 +18,8 @@
       <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/07/angularjs/</guid>
-      <description>&lt;p&gt;I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. &lt;a href=&#34;http://youtu.be/8ILQOFAgaXE&#34;&gt;Watch it over here&lt;/a&gt;. Parts 1, 2 and 3 are enough to get you up and running.&lt;/p&gt;&lt;h2&gt;Bootstrapping Dev env for Angular JS:&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Download &lt;a href=&#34;http://nodejs.org/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Install http-server using following command: &lt;strong&gt;npm install http-server -g&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Run the server as follows: &lt;strong&gt;http-server /path/to/the root/folder/of/webapp&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;That&#39;s it. You need not do any packaging to set up the dev environment (do not use this for production though, there should be better secure ways). And the best part is all the changes in the files are immediately reflected. No restart of server is required.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;
-</description>
+      <description>I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. Watch it over here. Parts 1, 2 and 3 are enough to get you up and running.
+Bootstrapping Dev env for Angular JS:Download Node.</description>
     </item>
     
   </channel>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Opensource on Hack</title>
-    <link>https://sinujohn.github.io/tags/opensource/index.xml</link>
-    <description>Recent content in Opensource on Hack</description>
+    <title>opensource on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/opensource/</link>
+    <description>Recent content in opensource on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 05 Mar 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Opensourced Thulika</title>
@@ -15,8 +18,7 @@
       <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/03/05/opensourced-thulika/</guid>
-      <description>&lt;p&gt;I just opensourced the Thulika Keyboard app and the associated training softwares. &lt;a href=&#34;https://github.com/sinujohn/ThulikaIME&#34; target=&#34;_blank&#34;&gt;Find it here on Github&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I just opensourced the Thulika Keyboard app and the associated training softwares. Find it here on Github</description>
     </item>
     
   </channel>

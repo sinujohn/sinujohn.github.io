@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mapreduce on Hack</title>
-    <link>https://sinujohn.github.io/tags/mapreduce/index.xml</link>
-    <description>Recent content in Mapreduce on Hack</description>
+    <title>mapreduce on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/mapreduce/</link>
+    <description>Recent content in mapreduce on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/mapreduce/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 16 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/mapreduce/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Implementing a Search Engine</title>
@@ -15,16 +18,9 @@
       <pubDate>Tue, 16 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/07/16/implementing-a-search-engine/</guid>
-      <description>&lt;p&gt;The WordCount is a trivial problem. What is the next best problem to tackle in Map Reduce? Something in which I can create my own Readers,Writables etc?&lt;/p&gt;
-
-&lt;p&gt;I kept wondering about this for some time. And then decided on what about a Search Engine? After all, the concepts of BigData originated at the house of the Search giant Google (from the papers they published about Map Reduce, BigTable etc.)&lt;/p&gt;
-
-&lt;p&gt;The first step was to implement an Inverted Index. To lookup the index faster, I decided to use the BigTable implementation for hadoop called HBase. So the Inverted Index creator reads the files on the disk and creates an InvertedIndex as an HBase table. (there is a small bug with respect to inserting data to HBase table, but I have written the InvertedIndex data to a file and that works. Should check it sometime later)&lt;/p&gt;
-
-&lt;p&gt;So now the InvertedIndex is ready, the next step is to look it up. Haven&amp;rsquo;t done that yet! Find the code in &lt;a href=&#34;https://github.com/sinujohn/SearchEn/&#34;&gt;my Git Repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;A good read on &lt;a href=&#34;http://www.ardendertat.com/2011/05/30/how-to-implement-a-search-engine-part-1-create-index/&#34;&gt;how to create Search Engine&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>The WordCount is a trivial problem. What is the next best problem to tackle in Map Reduce? Something in which I can create my own Readers,Writables etc?
+I kept wondering about this for some time. And then decided on what about a Search Engine? After all, the concepts of BigData originated at the house of the Search giant Google (from the papers they published about Map Reduce, BigTable etc.)
+The first step was to implement an Inverted Index.</description>
     </item>
     
     <item>
@@ -33,19 +29,8 @@
       <pubDate>Tue, 16 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/07/16/map-reduce/</guid>
-      <description>&lt;p&gt;Everyone is saying that the world is going the cloud way. Big Data, Analytics etc are today&amp;rsquo;s buzzwords. I used to wonder what is so special about the cloud? I read a bit about Hadoop, HBase (the NoSQL DB for Hadoop) etc and came to know about the Map Reduce Framework.&lt;/p&gt;
-
-&lt;p&gt;Map Reduce is a framework which helps us to write program for the cloud. It is a simple framework. The MapReduce version of the Hello World program for Hadoop is the WordCount program.&lt;/p&gt;
-
-&lt;p&gt;I decided to start experimenting with this framework and have written a couple of programs.
-Find it here in &lt;a href=&#34;https://github.com/sinujohn/MapReduce/&#34;&gt;my git repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;How Map and Reduce operations are actually carried out:
-&lt;a href=&#34;http://wiki.apache.org/hadoop/HadoopMapReduce&#34;&gt;http://wiki.apache.org/hadoop/HadoopMapReduce&lt;/a&gt;
-&lt;a href=&#34;http://wiki.apache.org/hadoop/MapReduce&#34;&gt;http://wiki.apache.org/hadoop/MapReduce&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some Usecases of MapReduce: &lt;a href=&#34;http://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/&#34;&gt;http://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Everyone is saying that the world is going the cloud way. Big Data, Analytics etc are today&amp;rsquo;s buzzwords. I used to wonder what is so special about the cloud? I read a bit about Hadoop, HBase (the NoSQL DB for Hadoop) etc and came to know about the Map Reduce Framework.
+Map Reduce is a framework which helps us to write program for the cloud. It is a simple framework. The MapReduce version of the Hello World program for Hadoop is the WordCount program.</description>
     </item>
     
   </channel>

@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hack</title>
-    <link>https://sinujohn.github.io/index.xml</link>
-    <description>Recent content on Hack</description>
+    <title>Sinu John</title>
+    <link>https://sinujohn.github.io/</link>
+    <description>Recent content on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 27 Mar 2017 15:54:02 +0530</lastBuildDate>
-    <atom:link href="https://sinujohn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://sinujohn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Unit test - Sending emails via SMTP</title>
-      <link>https://sinujohn.github.io/2017/03/27/unit-test---sending-emails-via-smtp</link>
+      <link>https://sinujohn.github.io/2017/03/27/unit-test-sending-emails-via-smtp/</link>
       <pubDate>Mon, 27 Mar 2017 15:54:02 +0530</pubDate>
       
-      <guid>https://sinujohn.github.io/2017/03/27/unit-test---sending-emails-via-smtp</guid>
-      <description>&lt;p&gt;I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!) and the content of the mail is actually what I intended to send. That&amp;rsquo;s how I hit upon &lt;a href=&#34;https://github.com/voodoodyne/subethasmtp&#34;&gt;Wiser or SubEtha SMTP&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The code itself is self explanatory:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/sinujohn/f4c6f2fc8d8d2ac05d73cc740943eed2.js&#34;&gt;&lt;/script&gt;
-</description>
+      <guid>https://sinujohn.github.io/2017/03/27/unit-test-sending-emails-via-smtp/</guid>
+      <description>I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!</description>
     </item>
     
     <item>
       <title>From wordpress to github</title>
-      <link>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</link>
+      <link>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github/</link>
       <pubDate>Mon, 27 Mar 2017 15:14:34 +0530</pubDate>
       
-      <guid>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</guid>
-      <description>&lt;p&gt;It has been more than 6 months since I have blogged! I just shifted all my blog posts from my Wordpress &lt;a href=&#34;http://sinujohn.wordpress.com&#34;&gt;blog&lt;/a&gt; to github. First I used Jekyll. Setting it up was a pain on my Windows PC. It needed Ruby and all those extra Rubygems. Then I settled for the Jekyll Docker image. That was better, but still generating the 70-odd-posts took so long everytime, and I knew it&amp;rsquo;ll take longer as the number of posts increase. That is how I found out about &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.
-Hugo is a lot simpler. You have just one file to download and install. It has more appealing themes. It loads and generates the blog almost instantly. There is live reload too. This blog now runs on Hugo.&lt;/p&gt;
-</description>
+      <guid>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github/</guid>
+      <description>It has been more than 6 months since I have blogged! I just shifted all my blog posts from my Wordpress blog to github. First I used Jekyll. Setting it up was a pain on my Windows PC. It needed Ruby and all those extra Rubygems. Then I settled for the Jekyll Docker image. That was better, but still generating the 70-odd-posts took so long everytime, and I knew it&amp;rsquo;ll take longer as the number of posts increase.</description>
     </item>
     
     <item>
@@ -41,108 +36,9 @@ Hugo is a lot simpler. You have just one file to download and install. It has mo
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/chef-notes/</guid>
-      <description>
-
-&lt;p&gt;Sometime back I had to fiddle with &lt;a href=&#34;https://www.chef.io/&#34; target=&#34;_blank&#34;&gt;Chef&lt;/a&gt;. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.&lt;/p&gt;
-
-&lt;p&gt;So, anyone other than me, please ignore this post!&lt;/p&gt;
-
-&lt;h2 id=&#34;write-a-cookbook&#34;&gt;Write a cookbook&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate repo ~/chef-repo&lt;/code&gt;
-=&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ~/chef-repo
-chef generate cookbook cookbooks/COOKBOOK_NAME
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;create-a-recipe&#34;&gt;Create a recipe:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate recipe cookbooks/COOKBOOK_NAME RECIPE_NAME&lt;/code&gt; =&amp;gt; RECIPE_NAME shouldn’t have suffix. Eg. it should be ‘webserver and not ‘webserver.rb’
-=&amp;gt; Write the script in RECIPE_NAME.rb file that got generated&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-refer-include-a-recipe-recipe-name-in-another-recipe&#34;&gt;How to refer(include) a recipe(RECIPE_NAME) in another recipe:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;include_recipe &#39;COOKBOOK_NAME::RECIPE_NAME&#39;&lt;/code&gt; =&amp;gt; Eg: include_recipe &amp;lsquo;my_cookbook::webserver&amp;rsquo;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; By default the recipe that gets called is ‘cookbooks/COOKBOOK_NAME/recipes/default.rb’
-=&amp;gt; So include any other recipe in this using include_recipe&lt;/p&gt;
-
-&lt;h2 id=&#34;create-a-file&#34;&gt;Create a file:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate file cookbooks/COOKBOOK_NAME FILE_NAME.txt&lt;/code&gt;&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;h2 id=&#34;how-to-upload-the-cookbook-to-the-chef-server-there-are-2-ways&#34;&gt;How to upload the cookbook to the chef server. There are 2 ways:&lt;/h2&gt;
-
-&lt;h4 id=&#34;option-1-prefer-this-one-this-one-takes-up-the-dependencies-if-any&#34;&gt;Option 1. Prefer this one. This one takes up the dependencies if any.&lt;/h4&gt;
-
-&lt;p&gt;Create a file named Berksfile in the ~/chef-repo/cookbooks/COOKBOOK_NAME directory
-Add the following to that file:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;source &amp;quot;https://supermarket.chef.io&amp;quot;
-metadata
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Install the dependencies:
-&lt;code&gt;berks install&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally upload (along with dependencies):
-&lt;code&gt;berks upload&lt;/code&gt; =&amp;gt; OR without SSL =&amp;gt; &lt;code&gt;berks upload --no-ssl-verify&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;option-2-this-one-just-uploads-the-cookbook-won-t-download-dependencies&#34;&gt;Option 2. This one just uploads the cookbook. Won’t download dependencies&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;knife cookbook upload COOKBOOK_NAME&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;view-uploaded-cookbooks&#34;&gt;View uploaded cookbooks:&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;knife cookbook list&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;bootstraping-the-node&#34;&gt;Bootstraping the node&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;knife ssl fetch ##Save the SSL certificate
-knife bootstrap IP_ADDRESS_OF_NODE -x ROOT_USER_NAME -P ROOT_PASSWORD --sudo 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;verify-bootstrap-process-was-successful-either-check-in-chef-manage-console-or-do&#34;&gt;Verify bootstrap process was successful. Either check in chef manage console or do:&lt;/h2&gt;
-
-&lt;h4 id=&#34;on-windows&#34;&gt;On Windows&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;knife node list | findstr NODE_NAME_WINDOWS&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;on-linux&#34;&gt;On Linux&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;knife node list | grep NODE_NAME_WINDOWS&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-reference-another-cookbook&#34;&gt;How to reference another cookbook:&lt;/h2&gt;
-
-&lt;p&gt;Append following to &lt;code&gt;~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb&lt;/code&gt;:
-&lt;code&gt;depends &#39;ANOTHER_COOKBOOK_NAME&#39;, &#39;~&amp;gt; MAJOR.MINOR.PATCH&#39;&lt;/code&gt; =&amp;gt; Eg: &lt;code&gt;depends &#39;sql_server&#39;, &#39;~&amp;gt; 2.4.0&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-override-third-party-cookbook-s-attributes&#34;&gt;How to override third party cookbook’s attributes:&lt;/h2&gt;
-
-&lt;h4 id=&#34;create-a-custom-attribute-file-that-overrides-third-party-attribute-values&#34;&gt;Create a custom attribute file that overrides third party attribute values:&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;chef generate attribute cookbooks/COOKBOOK_NAME default&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;add-override-values-as-follows-in-the-generated-cookbooks-cookbook-name-attributes-default-rb&#34;&gt;Add override values as follows in the generated ‘cookbooks/COOKBOOK_NAME/attributes/default.rb‘:&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;default[&#39;ANOTHER_COOKBOOK_NAME&#39;][&#39;ATTRIBUTE_NAME&#39;] = ATTRIBUTE_VALUE&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;accept_eula&#39;] = true&lt;/code&gt;
-Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;version&#39;] = &#39;2012&#39;&lt;/code&gt;
-Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;instance_name&#39;] = &#39;MSSQLSERVER&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;modifying-cookbook-version&#34;&gt;Modifying cookbook version:&lt;/h2&gt;
-
-&lt;p&gt;Edit &lt;code&gt;~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb&lt;/code&gt; to change the version&lt;/p&gt;
-
-&lt;h2 id=&#34;applying-cookbook-on-node&#34;&gt;Applying cookbook on node:&lt;/h2&gt;
-
-&lt;p&gt;Run the following directly on the &lt;strong&gt;NODE&lt;/strong&gt;, (NOT ON THE workstation):
-&lt;code&gt;chef-client&lt;/code&gt;&lt;/p&gt;
-</description>
+      <description>Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
+So, anyone other than me, please ignore this post!
+Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .</description>
     </item>
     
     <item>
@@ -151,36 +47,8 @@ Eg: &lt;code&gt;default[&#39;sql_server&#39;][&#39;instance_name&#39;] = &#39;MS
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
-      <description>&lt;p&gt;Adding non standard, non-maven, custom jars in a maven project is a common issue. And &lt;a href=&#34;http://stackoverflow.com/questions/364114/can-i-add-jars-to-maven-2-build-classpath-without-installing-them&#34; target=&#34;_blank&#34;&gt;this SO post&lt;/a&gt; is usually the first googled result. But here is another easier way: Use &lt;a href=&#34;https://code.google.com/archive/p/addjars-maven-plugin/wikis/UsagePage.wiki&#34; target=&#34;_blank&#34;&gt;addjars-maven-plugin&lt;/a&gt;. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.&lt;/p&gt;
-
-&lt;p&gt;How to use?&lt;/p&gt;
-
-&lt;p&gt;Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff). Now add this to the pom:
-&lt;pre&gt;&amp;lt;build&amp;gt;
-    &amp;lt;plugins&amp;gt;
-        &amp;lt;plugin&amp;gt;
-            &amp;lt;groupId&amp;gt;com.googlecode.addjars-maven-plugin&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;addjars-maven-plugin&amp;lt;/artifactId&amp;gt;
-            &amp;lt;version&amp;gt;1.0.5&amp;lt;/version&amp;gt;
-            &amp;lt;executions&amp;gt;
-                &amp;lt;execution&amp;gt;
-                    &amp;lt;goals&amp;gt;
-                        &amp;lt;goal&amp;gt;add-jars&amp;lt;/goal&amp;gt;
-                    &amp;lt;/goals&amp;gt;
-                    &amp;lt;configuration&amp;gt;
-                        &amp;lt;resources&amp;gt;
-                            &amp;lt;resource&amp;gt;
-                                &amp;lt;directory&amp;gt;${project.basedir}/lib&amp;lt;/directory&amp;gt;
-                            &amp;lt;/resource&amp;gt;
-                        &amp;lt;/resources&amp;gt;
-                    &amp;lt;/configuration&amp;gt;
-                &amp;lt;/execution&amp;gt;
-            &amp;lt;/executions&amp;gt;
-        &amp;lt;/plugin&amp;gt;
-    &amp;lt;/plugins&amp;gt;
-&amp;lt;/build&amp;gt;&lt;/pre&gt;
-This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it will work via CLI. So no worries! Very useful in those rare cases, where you have a dozen of custom jars!&lt;/p&gt;
-</description>
+      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?</description>
     </item>
     
     <item>
@@ -189,14 +57,9 @@ This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it wil
       <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/01/09/certified-monadic-i-am/</guid>
-      <description>&lt;p&gt;I took the Functional Programming course on edX and completed it last month. Scored 99% :)&lt;/p&gt;
-
-&lt;p&gt;This is the first time I am completing an online MOOC. Usually I drop all the courses after one or two weeks. Lazy me!&lt;/p&gt;
-
-&lt;p&gt;Here is &lt;a href=&#34;https://courses.edx.org/certificates/cb45414ca36c44a395a2985014ce8528&#34; target=&#34;_blank&#34;&gt;my VERIFIED certificate&lt;/a&gt; signed by &lt;a href=&#34;https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)&#34; target=&#34;_blank&#34;&gt;Dr.Erik Meijer&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/monad.png&#34; alt=&#34;Functional Programming&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>I took the Functional Programming course on edX and completed it last month. Scored 99% :)
+This is the first time I am completing an online MOOC. Usually I drop all the courses after one or two weeks. Lazy me!
+Here is my VERIFIED certificate signed by Dr.Erik Meijer:</description>
     </item>
     
     <item>
@@ -205,10 +68,7 @@ This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it wil
       <pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/09/19/certified-spring-professional/</guid>
-      <description>&lt;p&gt;Now am a &lt;a href=&#34;http://pivotal.io/academy#certification&#34; target=&#34;_blank&#34;&gt;Pivotal Certified Spring Professional&lt;/a&gt;. Took the exam yesterday in Core Spring (Spring 4.0) and received the certificate today.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/spring.png&#34; alt=&#34;Certified Spring Professional&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Now am a Pivotal Certified Spring Professional. Took the exam yesterday in Core Spring (Spring 4.0) and received the certificate today.</description>
     </item>
     
     <item>
@@ -217,73 +77,8 @@ This may not be recognised by the IDE (my Intellij didn&amp;rsquo;t), but it wil
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/21/my-developer-personality/</guid>
-      <description>&lt;p&gt;I took a &lt;a href=&#34;http://bit.ly/1uSzyss&#34; target=&#34;_blank&#34;&gt;Developer Personality Test&lt;/a&gt;, conducted by &lt;a href=&#34;http://java.dzone.com/dzone-developer-personality-quiz&#34; target=&#34;_blank&#34;&gt;DZone&lt;/a&gt; and it almost sums up what I am! Here&amp;rsquo;s the result I got:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div id=&#34;sgE-1883619-2-119-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Here are your results!&lt;/strong&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-2-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
-&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Independent vs Collaborative&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2 class=&#34;sg-question-options&#34;&gt;You are &lt;strong&gt;Independent&lt;/strong&gt;!&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-104-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Independent:&lt;/strong&gt;
-You prefer to spend most of your time working in an isolated environment.  You rarely want to collaborate because you have a better chance of solving problems on your own.  If you do have to collaborate on the direction of a project, you dislike it when you have to defend your position or when others try to muddy your plans for the project.  It&#39;s better to have one strong vision for a project from the lead programmer on that project.  Having a large team or allowing others to have significant control over the project risks communication errors, a muddied code base, and inefficiencies.  If one developer has a firm grasp on the entire codebase, they&#39;ll be much better at fixing and improving it quickly.
-
-&lt;strong&gt;Collaborative:&lt;/strong&gt;
-Good code doesn&#39;t happen in a vacuum.  You need a team to keep you energized and on your toes so that you&#39;re constantly improving the project code using the entire team&#39;s varied experience and strengths.  You like to talk frequently with colleagues and discuss ideas so that you can learn from others and spark ideas.  It doesn&#39;t matter what their experience level is, you can always learn something by including everyone.  A solo coder can&#39;t possibly code a large software project with the speed and quality that a team can.&lt;/div&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-59-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
-&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Abstract vs Low-Level&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2 class=&#34;sg-question-options&#34;&gt;You are both &lt;strong&gt;Abstract &lt;/strong&gt;&amp;amp;&lt;strong&gt; Low-Level&lt;/strong&gt;!&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-105-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Abstract:&lt;/strong&gt;
-You prefer to write in languages and frameworks that simplify development as much as possible and use as few characters and lines of code as possible. The trajectory of software development has always been toward making life easier and error-free. Programming has always been about adding more abstraction layers to simplify tasks, so why not trust the technology on your layer and don&#39;t worry about handling the lower layers?
-
-&lt;strong&gt;Low-Level:&lt;/strong&gt;
-The more abstraction tools and high-level languages we build, the further we get from understanding and controlling the deeper components in our programs.  This means lower performance and endless bug searches.  Developers today need to have a stronger understanding of compilers, memory management, pointer arithmetic, and other low-level topics.&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-8-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
-&lt;div class=&#34;sg-question-title&#34;&gt;&lt;/div&gt;
-&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Frontier vs Conservative&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2 class=&#34;sg-question-options&#34;&gt;You are &lt;strong&gt;Conservative&lt;/strong&gt;!&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-106-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Frontiers:&lt;/strong&gt;
-You like to work at the cutting edge.  Using too many old languages and technologies bores you, and it severely hinders your software&#39;s potential to keep outdated technologies in it for too long. Developers need keep their ears to the ground for new technologies and new versions of tools that they already use.  Even if the community and maturity of the project isn&#39;t at a level that most enterprises would consider &#34;safe,&#34; you&#39;re willing to be an early adopter if you believe the community and the technology has momentum.  Development technology is changing faster every day, and we need to constantly be adopting new tools and methods to keep up.
-
-&lt;strong&gt;Conservative:&lt;/strong&gt;
-It seems like every 10 years we forget all the problems we solved in the previous decade and start to build &#39;new&#39; tools that solve the same problems, even though there is a perfectly good solution that has existed for years.  Enterprises have it right when they make conservative decisions about their technology stack. Why would you hang your business on a technology with only a few years of maturity in just a handful of production use cases?  Technologies like PHP, Java, and SQL have been mainstays of the development industry for years, and it takes a lot of time for new technologies to make it into that maturity tier.
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-72-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
-&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Generalist vs Specialist&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2 class=&#34;sg-question-options&#34;&gt;You are both a &lt;strong&gt;Generalist &lt;/strong&gt;&amp;amp; a&lt;strong&gt; Specialist&lt;/strong&gt;!&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-107-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Generalist:&lt;/strong&gt;
-You like to be known as a &#34;Jack of all Trades&#34; and a reference for others on your team. You jump at every chance to enhance your skills in a wide variety technology topics, not just the ones that apply to your day to day work.  You don&#39;t always know when it might be useful to have these extra skills, but when the time comes, you are ready.  If more developers took the time to learn other skills outside of the ones relevant to their project, they&#39;d work more seamlessly with the rest of their organization because they&#39;d have more empathy and understanding of the challenges that their colleagues face.
-
-&lt;strong&gt;Specialist:&lt;/strong&gt;
-If you&#39;re a Jack of all Trades, you&#39;re a master of none. Mastery in one or two areas is what makes you valuable.  What&#39;s the point of learning skills for other jobs you don&#39;t have and can&#39;t control? When you plan for a project or do technical research, it&#39;s always focused on something you&#39;re working on. You don&#39;t get side-tracked. If you learn a new skill, it&#39;s because the project requires that you do it. Most or all of your hobby projects are also building your mastery of the skills you use at your job.&lt;/div&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-93-box&#34; class=&#34;sg-question sg-type-quizscore&#34;&gt;
-&lt;h1 class=&#34;sg-question-title&#34;&gt;&lt;strong&gt;Idealist vs Pragmatist&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2 class=&#34;sg-question-options&#34;&gt;You are an &lt;strong&gt;Idealist&lt;/strong&gt;!&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sgE-1883619-2-108-box&#34; class=&#34;sg-question sg-type-instruction&#34;&gt;
-&lt;div class=&#34;sg-instructions&#34;&gt;&lt;strong&gt;Idealist:&lt;/strong&gt;
-You believe in the power of well-defined processes. It&#39;s crucial to an organization&#39;s success that they create and follow appropriate and effective processes for building software. Trying to improvise or play it by ear invites the possibility of workflow errors that can decrease the quality of the software or even cause major product failures. Planning is also extremely important to you.  You like to research all of the things you will need to know before starting a project.  It&#39;s important to find out the best architecture for your software beforehand, and then strictly implement that architecture with objective best practices.  The more planning and scaffolding you do in the beginning, the less overall work you will have to do to complete the software.
-
-&lt;strong&gt;Pragmatist:&lt;/strong&gt;
-Speed is your best weapon in a competitive industry, and to quickly prototype and build new products, you need to have a flexible, pragmatic process.  You don&#39;t have a few months to plan your projects, you need to just start coding and a good path for the project will reveal itself.  Great products are made through frequent feedback and releases, so why shouldn&#39;t your plan be just as adaptable? Your plan should be adapted to changes in the software, and your expertise should be adapted to the project. You shouldn&#39;t spend your precious time studying a problem that you&#39;re not certain to run into while coding your projects.  Trying to build test coverage for every possible scenario and having long meetings throughout the process are a waste of time and distract you from doing more productive work.&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <description>I took a Developer Personality Test, conducted by DZone and it almost sums up what I am! Here&amp;rsquo;s the result I got:
+Here are your results!  Independent vs Collaborative You are Independent!  Independent: You prefer to spend most of your time working in an isolated environment. You rarely want to collaborate because you have a better chance of solving problems on your own. If you do have to collaborate on the direction of a project, you dislike it when you have to defend your position or when others try to muddy your plans for the project.</description>
     </item>
     
     <item>
@@ -292,20 +87,9 @@ Speed is your best weapon in a competitive industry, and to quickly prototype an
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/12/rip-thulika-keyboard-sob-sob/</guid>
-      <description>&lt;p&gt;Just got to know that Google has came up with an handwriting recognition app - &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.android.apps.handwriting.ime&amp;amp;hl=en&#34;&gt;Google Handwriting Input&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;And the good part is it has got Indian language support. Yay!!&lt;/p&gt;
-
-&lt;p&gt;But the bad part is that, it means the demise of my very own &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&amp;amp;hl=en&#34;&gt;Thulika Keyboard&lt;/a&gt;. I had created it &lt;a href=&#34;https://sinujohn.github.io/2013/01/21/thulika-keyboard/&#34;&gt;about 2 years back&lt;/a&gt;, and at that time there was no handwriting recognition app for any Indian language. I also had opensourced it, and have got requests from many to translate it to their language(Arabic, Hausa, Tamil to name a few) and some even have used it as part of their school/college projects.&lt;/p&gt;
-
-&lt;p&gt;RIP Thulika Keyboard, it was pleasure to have you around(it&amp;rsquo;s still out there, so you can download it and play with it, but with Google&amp;rsquo;s new app, mine seems a bit primitive :( ).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/rip.jpg&#34; alt=&#34;RIP&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Google&amp;rsquo;s new app is awesome though, it recognises full words (mine could only do a letter at a time), and speaking about recognition, its very good at that.&lt;/p&gt;
-
-&lt;p&gt;So, here is me(Thulika), the old out dated tech giving way for the new stylish Google app ;)&lt;/p&gt;
-</description>
+      <description>Just got to know that Google has came up with an handwriting recognition app - Google Handwriting Input.
+And the good part is it has got Indian language support. Yay!!
+But the bad part is that, it means the demise of my very own Thulika Keyboard. I had created it about 2 years back, and at that time there was no handwriting recognition app for any Indian language. I also had opensourced it, and have got requests from many to translate it to their language(Arabic, Hausa, Tamil to name a few) and some even have used it as part of their school/college projects.</description>
     </item>
     
     <item>
@@ -314,13 +98,8 @@ Speed is your best weapon in a competitive industry, and to quickly prototype an
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/12/wait-but-why/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t always subscribe to blogs..&lt;/p&gt;
-
-&lt;p&gt;But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like:
-&lt;img src=&#34;https://sinujohn.github.io/assets/9e9.gif&#34; alt=&#34;takemymoney&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I have become a fan of &lt;a href=&#34;http://waitbutwhy.com/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://waitbutwhy.com/&#34;&gt;http://waitbutwhy.com/&lt;/a&gt;&lt;/a&gt; just after reading an &lt;a href=&#34;http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html&#34; target=&#34;_blank&#34;&gt;article about Elon Musk&lt;/a&gt; and one about &lt;a href=&#34;http://waitbutwhy.com/2014/05/fermi-paradox.html&#34; target=&#34;_blank&#34;&gt;Fermi Paradox&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I don&amp;rsquo;t always subscribe to blogs..
+But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like: I have become a fan of http://waitbutwhy.com/ just after reading an article about Elon Musk and one about Fermi Paradox</description>
     </item>
     
     <item>
@@ -329,14 +108,8 @@ Speed is your best weapon in a competitive industry, and to quickly prototype an
       <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/04/programmer-zen/</guid>
-      <description>&lt;p&gt;Just &lt;a href=&#34;http://eloquentjavascript.net/10_modules.html&#34;&gt;read this quote&lt;/a&gt; and I loved it:
-&lt;blockquote&gt;A beginning programmer writes her programs like an ant builds her hill, one piece at a time, without thought for the bigger structure. Her programs will be like loose sand. They may stand for a while, but growing too big they fall apart.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;p_OfZWeuo+oF&#34; class=&#34;p_ident&#34; href=&#34;http://eloquentjavascript.net/10_modules.html#p_OfZWeuo+oF&#34;&gt;&lt;/a&gt;Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures. They are solid, but when they must change, violence must be done to them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;p_fFMEGH1dk3&#34; class=&#34;p_ident&#34; href=&#34;http://eloquentjavascript.net/10_modules.html#p_fFMEGH1dk3&#34;&gt;&lt;/a&gt;The master programmer knows when to apply structure and when to leave things in their simple form. Her programs are like clay, solid yet malleable.&lt;/blockquote&gt;
-&amp;ndash; Master Yuan-Ma, &lt;cite&gt;The Book of Programming&lt;/cite&gt;&lt;/p&gt;
-</description>
+      <description>Just read this quote and I loved it: A beginning programmer writes her programs like an ant builds her hill, one piece at a time, without thought for the bigger structure. Her programs will be like loose sand. They may stand for a while, but growing too big they fall apart.
+Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures.</description>
     </item>
     
     <item>
@@ -345,56 +118,9 @@ Speed is your best weapon in a competitive industry, and to quickly prototype an
       <pubDate>Thu, 12 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</guid>
-      <description>&lt;p&gt;I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)&lt;/p&gt;
-
-&lt;p&gt;Prerequisite: &lt;a href=&#34;https://developers.facebook.com/apps/&#34; target=&#34;_blank&#34;&gt;Create an app&lt;/a&gt; using Facebook Developer account and create the necessary App ID and App Secret keys.&lt;/p&gt;
-
-&lt;p&gt;If you are testing out your app and you are running it locally, the site URL should be something like &lt;a href=&#34;http://localhost:8090/&#34;&gt;http://localhost:8090/&lt;/a&gt;
-&lt;h3&gt;At the client side:&lt;/h3&gt;
-&lt;strong&gt;Asking for permission and login:&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Use the SDK provided by facebook&lt;/li&gt;
-    &lt;li&gt;I am assuming Javascript SDK is used. Inspect the response returned.
-&lt;ul&gt;
-    &lt;li&gt;Send the &lt;strong&gt;authResponse.accessToken&lt;/strong&gt; and &lt;strong&gt;authResponse.userID&lt;/strong&gt; to the server for authentication.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;
-At the server side:&lt;/h3&gt;
-&lt;strong&gt;Authentication:&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Verify the user by calling the Facebook Graph API:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p style=&#34;padding-left:60px;&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://graph.facebook.com/debug_token?input_token={authResponse.accessToken}&amp;amp;access_token={app_id|app_secret&#34;&gt;https://graph.facebook.com/debug_token?input_token={authResponse.accessToken}&amp;amp;access_token={app_id|app_secret&lt;/a&gt;}&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&#34;padding-left:60px;&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;:&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;data&amp;quot;: {
-        &amp;quot;app_id&amp;quot;: &amp;quot;1234&amp;quot;,
-        &amp;quot;application&amp;quot;: &amp;quot;testapp&amp;quot;,
-        &amp;quot;expires_at&amp;quot;: 1426158000,
-        &amp;quot;is_valid&amp;quot;: true,
-        &amp;quot;scopes&amp;quot;: [
-                &amp;quot;public_profile&amp;quot;,
-                &amp;quot;email&amp;quot;
-                ],
-        &amp;quot;user_id&amp;quot;: &amp;quot;111112223333&amp;quot;
-     }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt; input_token&lt;/strong&gt; is the &lt;strong&gt;authResponse.accessToken&lt;/strong&gt; we obtained as a result of the login process from Facebook.
-&lt;strong&gt;access_token&lt;/strong&gt; is the &lt;a href=&#34;https://developers.facebook.com/docs/facebook-login/access-tokens/#apptokens&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;App Token&lt;/strong&gt;&lt;/a&gt;. It can either be generated as mentioned in &lt;a href=&#34;https://developers.facebook.com/docs/facebook-login/access-tokens/#apptokens&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;. Or instead of generating we can use the concatenated form: &lt;strong&gt;{app_id}&lt;/strong&gt; + &lt;strong&gt;&amp;rsquo;|&amp;rsquo;&lt;/strong&gt; + &lt;strong&gt;{app_secret}&lt;/strong&gt;. I have used this second form above.&lt;/li&gt;
-    &lt;li&gt;Verify the JSON obtained and check whether &lt;strong&gt;&amp;ldquo;is_valid&amp;rdquo; == True&lt;/strong&gt; and &lt;strong&gt;&amp;ldquo;user_id&amp;rdquo; == authResponse.userID&lt;/strong&gt; to make sure user is a valid one.&lt;/li&gt;
-    &lt;li&gt;The &lt;strong&gt;authResponse.userID&lt;/strong&gt; returned can be used to identify the user and used instead of username to lookup users.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;strong&gt;Using the Graph API:&lt;/strong&gt;
-&lt;p style=&#34;padding-left:30px;&#34;&gt;Suppose we want to obtain the user&amp;rsquo;s email Id at the server side:
-Call the API as follows:
-&lt;strong&gt;&lt;a href=&#34;https://graph.facebook.com/{authResponse.userID}?fields=email&amp;amp;access_token={authResponse.accessToken&#34;&gt;https://graph.facebook.com/{authResponse.userID}?fields=email&amp;amp;access_token={authResponse.accessToken&lt;/a&gt;}&lt;/strong&gt;&lt;/p&gt;&lt;/p&gt;
-</description>
+      <description>I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)
+Prerequisite: Create an app using Facebook Developer account and create the necessary App ID and App Secret keys.
+If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/ At the client side: Asking for permission and login:  Use the SDK provided by facebook I am assuming Javascript SDK is used.</description>
     </item>
     
     <item>
@@ -403,28 +129,8 @@ Call the API as follows:
       <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/11/again-agastyakoodam/</guid>
-      <description>&lt;p&gt;When I completed the &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}&#34;&gt;Agastyakoodam trek two years back&lt;/a&gt;, I had decided to visit this awesome place again. It happened this year about two months back.&lt;/p&gt;
-
-&lt;p&gt;This time it was a group of 6 friends, including me. We were very much fortunate to get the entry permit on the first day of the trekking season. This gave us the forest in a much more pristine and virgin form. Because, as people start coming forest loses its glory!&lt;/p&gt;
-
-&lt;p&gt;There is not much to write as I have already explained about the trek in &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}&#34;&gt;my previous blog entry&lt;/a&gt;. But I&amp;rsquo;ll highlight the differences that happened this year.&lt;/p&gt;
-
-&lt;p&gt;This year onwards, permit is being sanctioned online by the Kerala Forest Department. This saved us a lot of hassle and we got the permit for the first day itself(the season started on Jan 15th this time).&lt;/p&gt;
-
-&lt;p&gt;We started on January 15 and completed the trek in 3 days, unlike the last time where we did it in 2 days. The result? We enjoyed the trek much more. It was a relaxed trek and we enjoyed it to the core. We took ample photos and videos too, something we couldn&amp;rsquo;t so last time because of time constraints :). I would recommend everyone to complete the trek in 3 days.&lt;/p&gt;
-
-&lt;p&gt;This time our gang was in a uniform (except one - he could make it only at the last moment, and so couldn&amp;rsquo;t have the luxury of being in our uniform). See our uniform for yourself. Bhakti exploding :D&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/agastya4.jpg&#34; alt=&#34;The Five&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In fact, the forest warden in the base camp told us seeing our uniform that we had immense Bhakti inside us :D Little did he know that it was just a show off. Any way, this uniform was one of our best decisions. Trekking wearing this attire was the most comfortable thing!&lt;/p&gt;
-
-&lt;p&gt;So here is the trip in short - we started on Jan 15th morning at about 11:30 (we reached their late) and reached the base camp by 6 PM. The next morning we started the ascend to the peak at about 7 in the morning. This time since we were not at all in a hurry, we took enough time in enjoying each step ;). We reached the top at 2 PM! (thats&amp;rsquo;s too late by any standard, they want you to start the downward trek by 2:45PM max). Unlike last time, it was not at all windy, also it was too hot at the top. We started the downward journey by 2:30PM and reached the base camp by about 5:30PM (ya, downward journey was completed pretty quickly). We rested off the night. Next day morning, our departure was delayed by unexpected rains. So we could only start by 9 AM. We reached forest outpost by about 3:30PM. And thus our trek was done.&lt;/p&gt;
-
-&lt;p&gt;We had tracked our journey with GPS. I&amp;rsquo;ll update this post once I get the track details from my friend.&lt;/p&gt;
-
-&lt;p&gt;Keep Travelling :) Enjoy the world. :) Don&amp;rsquo;t disturb what&amp;rsquo;s left off the forest and don&amp;rsquo;t leave any traces :)&lt;/p&gt;
-</description>
+      <description>When I completed the Agastyakoodam trek two years back, I had decided to visit this awesome place again. It happened this year about two months back.
+This time it was a group of 6 friends, including me. We were very much fortunate to get the entry permit on the first day of the trekking season. This gave us the forest in a much more pristine and virgin form. Because, as people start coming forest loses its glory!</description>
     </item>
     
     <item>
@@ -433,9 +139,7 @@ Call the API as follows:
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/10/angamaly-marakkamo/</guid>
-      <description>&lt;p&gt;&lt;blockquote&gt;&amp;ldquo;മനുഷ്യരെ രക്ഷിക്കേണ്ടത് ദൈവമാണ്. അല്ലാതെ ദൈവത്തെ രക്ഷിക്കേണ്ടത് മനുഷ്യരല്ല. ദൈവത്തെ മനുഷ്യൻ രക്ഷിക്കേണ്ടി വരുമ്പോൾ ദൈവത്തിന്റെ വിലയിടിയുന്നു.&amp;rdquo; - &lt;a href=&#34;http://www.firstministry.kerala.gov.in/pdf/angamali.pdf&#34; target=&#34;_blank&#34;&gt;അങ്കമാലി മറക്കാമോ? - P.J.Antony&lt;/a&gt;&lt;/blockquote&gt;
-P.J. Antony writes that people were fooled into taking part in the Liberation Struggle (Vimochanasamaram) by the Church, the Congress party and everyone else (Uncle Sam&amp;rsquo;s CIA??) who were afraid of the Communist party getting their first foothold in India&lt;/p&gt;
-</description>
+      <description>&amp;ldquo;മനുഷ്യരെ രക്ഷിക്കേണ്ടത് ദൈവമാണ്. അല്ലാതെ ദൈവത്തെ രക്ഷിക്കേണ്ടത് മനുഷ്യരല്ല. ദൈവത്തെ മനുഷ്യൻ രക്ഷിക്കേണ്ടി വരുമ്പോൾ ദൈവത്തിന്റെ വിലയിടിയുന്നു.&amp;rdquo; - അങ്കമാലി മറക്കാമോ? - P.J.Antony P.J. Antony writes that people were fooled into taking part in the Liberation Struggle (Vimochanasamaram) by the Church, the Congress party and everyone else (Uncle Sam&amp;rsquo;s CIA??) who were afraid of the Communist party getting their first foothold in India</description>
     </item>
     
     <item>
@@ -444,14 +148,7 @@ P.J. Antony writes that people were fooled into taking part in the Liberation St
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/01/08/another-nosql-to-the-kitty/</guid>
-      <description>&lt;p&gt;Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs?
-Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table!
-I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&lt;/a&gt; two days back. Its a really simple graph database, and a great starting point to experiment graph databases.&lt;/p&gt;
-
-&lt;p&gt;Now the NoSql databases I am familiar with are HBase(tried it about a year back), Redis and Neo4J.&lt;/p&gt;
-
-&lt;p&gt;Read and explore stuffs outside your domain. Happy coding :)&lt;/p&gt;
-</description>
+      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4J two days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
     </item>
     
     <item>
@@ -460,16 +157,612 @@ I finished the online course on &lt;a href=&#34;http://neo4j.com/&#34;&gt;Neo4J&
       <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/09/29/jackson-json-and-dynamic-json-creations/</guid>
-      <description>&lt;p&gt;FasterXML Jackson is a great tool for converting objects to/from POJOs.&lt;/p&gt;
+      <description>FasterXML Jackson is a great tool for converting objects to/from POJOs.
+Its a great tool when we know the structure of JSON beforehand. But what if we don&amp;rsquo;t know that? In that case we can use a Map&amp;lt;String, Object&amp;gt; to store the unknown objects. Below two links provide useful info:
+http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library
+http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html
+Happy Coding :)</description>
+    </item>
+    
+    <item>
+      <title>Creating collection of Spring Beans</title>
+      <link>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</link>
+      <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
+      <description>Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.
+Usually, you create a Spring bean as follows:
+ But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?</description>
+    </item>
+    
+    <item>
+      <title>JAX-RS</title>
+      <link>https://sinujohn.github.io/2014/08/27/jax-rs/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
+      <description>There is a very good documentation in Jersey website: https://jersey.java.net/documentation/latest/jaxrs-resources.html and https://jersey.java.net/documentation/latest/filters-and-interceptors.html
+Here is a small flowchart that I made showing how the JAX-RS flow works:
+Happy coding :)</description>
+    </item>
+    
+    <item>
+      <title>Skandagiri</title>
+      <link>https://sinujohn.github.io/2014/08/27/skandagiri/</link>
+      <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/08/27/skandagiri/</guid>
+      <description>About two months back, me and a friend of mine went for trekking at Skandagiri Hills. Its about 75km from Bangalore near to Nandi Hills.  We started on my Yamaha Fz at about 2:30AM and reached there by 4.30AM. The place has got a few locals who are waiting there to get hold of your money in the form of parking and acting as guide! We parked (gave the guy Rs20/30 just to make sure he don&#39;t destroy my bike) and dismissed the idea of having a guide.</description>
+    </item>
+    
+    <item>
+      <title>Hearing it from the granpa!</title>
+      <link>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
+      <description>I was searching for good JavaScript resources and then stumbled onto this guy - Douglas Crockford. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - Javascript: the good parts. He is one of the most authoritative person to talk about JavaScript.
+I found his talks on JavaScript and just finished watching the first part.</description>
+    </item>
+    
+    <item>
+      <title>First half of 2014</title>
+      <link>https://sinujohn.github.io/2014/07/08/first-half-of-2014/</link>
+      <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/08/first-half-of-2014/</guid>
+      <description>The past 6 months had been very fruitful for me. I have added many stuffs to my skill set in this small span of time. Here are some of it:
+The new Java kid - Java 8Spring SecurityCreating zero-xml Spring projects using Spring javaconfig and Spring BootSpring AOPGit(had used it before, but had been using it almost daily for past 6 months)RedisSpring Data RedisSpring Data JPAREST(using Spring&#39;s REST as well as JAX-RS spec)Security - PKI, Encryption-Decryption, Certificates, Auth mechanisms (like BASIC and Digest) etc.</description>
+    </item>
+    
+    <item>
+      <title>Musings of a Windows-using Linux fan!</title>
+      <link>https://sinujohn.github.io/2014/07/08/musings-of-a-windows-using-linux-fan/</link>
+      <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/08/musings-of-a-windows-using-linux-fan/</guid>
+      <description>And now, the previous blog post made me thinking... Why didn&#39;t I learn .NET, C#, DirectX or other Microsoft technologies?
+Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono), languages and tools. And maybe, there is a little Leftist hidden in me. (I would like to call myself opportunistic Leftist though :), and by the way I believe most of the Keralites have a soft corner for Communist beliefs - that&#39;s why Kerala is one of the few states where Communists are still strong).</description>
+    </item>
+    
+    <item>
+      <title>AngularJS</title>
+      <link>https://sinujohn.github.io/2014/07/07/angularjs/</link>
+      <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/07/angularjs/</guid>
+      <description>I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. Watch it over here. Parts 1, 2 and 3 are enough to get you up and running.
+Bootstrapping Dev env for Angular JS:Download Node.</description>
+    </item>
+    
+    <item>
+      <title>Imperative vs Declarative</title>
+      <link>https://sinujohn.github.io/2014/07/03/imperative-vs-declarative/</link>
+      <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/03/imperative-vs-declarative/</guid>
+      <description>I was watching an AngularJS video, and it said AngularJS had two sides - Imperative and Declarative programming. I looked it up and here it is :
+Let&#39;s generalize and say that there are two ways in which we can write code: imperative and declarative.
+We could define the difference as follows:
+Imperative programming: telling the &#34;machine&#34; how to do something, and as a result what you want to happen will happen.</description>
+    </item>
+    
+    <item>
+      <title>Spring AOP</title>
+      <link>https://sinujohn.github.io/2014/07/03/spring-aop/</link>
+      <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
+      <description>I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.
+Here are a couple of cheatsheets/examples for AspectJ.</description>
+    </item>
+    
+    <item>
+      <title>My Git Workflow</title>
+      <link>https://sinujohn.github.io/2014/06/21/my-git-workflow/</link>
+      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/06/21/my-git-workflow/</guid>
+      <description>Clone repository to local machine: git clone &amp;lt;repository&amp;gt;
+git pullcode... code .... code...code more.....git stashgit pullgit stash applygit add &amp;lt;filenames&amp;gt;git commit -m &#34;commit message&#34;git pushIf any conflict occurs when stash is applied, resolve it either in IDE or using command line: git mergetool -t kdiff3 (invokes KDiff 3 if it installed)
+Happy Coding :)</description>
+    </item>
+    
+    <item>
+      <title>Debugging</title>
+      <link>https://sinujohn.github.io/2014/06/19/debugging/</link>
+      <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/06/19/debugging/</guid>
+      <description>You can find how good a programmer is by the way he debugs! </description>
+    </item>
+    
+    <item>
+      <title>Tryst with Java 8!</title>
+      <link>https://sinujohn.github.io/2014/06/03/tryst-with-java-8/</link>
+      <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/06/03/tryst-with-java-8/</guid>
+      <description>Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections.</description>
+    </item>
+    
+    <item>
+      <title>DRM-free content</title>
+      <link>https://sinujohn.github.io/2014/05/06/drm-free-content/</link>
+      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/05/06/drm-free-content/</guid>
+      <description>These days all publishers are worried about their rights and the books are locked in, which is especially problematic in this digital age. Because unlike old days where we could share a book(hardcopy) which we bought, the new avatar of books - the e-books - are increasingly made to be under DRM, which means it stays only on one device or person. It can&amp;rsquo;t be shared with our friends even if we bought it with our hard earned cash.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Maven Spring-REST project</title>
+      <link>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</link>
+      <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/</guid>
+      <description>Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse. Now go to File &amp;gt; New &amp;gt; Maven Project. Click Next. Select maven-archetype-webapp. Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &amp;lsquo;com.companyname.yourname&amp;rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).</description>
+    </item>
+    
+    <item>
+      <title>Maven config for SLF4J and Logback</title>
+      <link>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</guid>
+      <description>To use SLF4J and logback together, add the following to pom.xml:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  Now SLF4J&amp;rsquo;s logger can be used:
+import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);  If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:</description>
+    </item>
+    
+    <item>
+      <title>Boost and a look back on C&#43;&#43;</title>
+      <link>https://sinujohn.github.io/2014/01/20/boost-and-a-look-back-on-c/</link>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2014/01/20/boost-and-a-look-back-on-c/</guid>
+      <description>These days am a full time Java guy and the last time I coded in C++ was a little over an year ago. It was then I came across Boost library and I had heard that it packed a lot under the 5 letter library BOOST. Even though I haven&amp;rsquo;t much used Boost, since it is being made part of the C++ standard, I don&amp;rsquo;t want to be a person who knew legacy C++ and so was always keen to know about Boost.</description>
+    </item>
+    
+    <item>
+      <title>The Namesake</title>
+      <link>https://sinujohn.github.io/2013/11/08/the-namesake/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/11/08/the-namesake/</guid>
+      <description>One of the best novels i have ever read - The Namesake. Loved it. Awesome work by Jhumpa Lahiri. Following is a quote I have found to be very inspiring
+&#34;Do yourself a favor. Before it&#39;s too late, without thinking too much about it first, pack a pillow and a blanket and see as much of the world as you can. You will not regret it. One day it will be too late.</description>
+    </item>
+    
+    <item>
+      <title>Thiruvananthapuram Life</title>
+      <link>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</link>
+      <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</guid>
+      <description>For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram. Do I love this place? Yes and No. No? Why? Because this place lacks some sort of energy :( And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the Trivandrum Public Library (where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.</description>
+    </item>
+    
+    <item>
+      <title>Thrown into the ebook bandwagon</title>
+      <link>https://sinujohn.github.io/2013/10/16/thrown-into-the-ebook-bandwagon/</link>
+      <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/10/16/thrown-into-the-ebook-bandwagon/</guid>
+      <description>Recently I have started reading a lot of books. And by recently, I mean the last two weeks. And these books are not ordinary paperback books, but they are ebooks which I read on my Nexus 7. I never thought I will be reading ebooks - I thought this was just a hype and ebooks can&#39;t just give you that feel that you get while reading a hardcopy of the book, I always thought I will miss the turning of pages, the smell of new books, the look of old books, but alas, I haven&#39;t started to miss much of these!</description>
+    </item>
+    
+    <item>
+      <title>I am an INTP</title>
+      <link>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</link>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</guid>
+      <description>A few days back I took the Myers-Briggs Type Indicator test at this site.
+It says that I fall in INTP category. From Myers-Briggs website, this is the description:
+INTPSeek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction. Quiet, contained, flexible, and adaptable. Have unusual ability to focus in depth to solve problems in their area of interest. Skeptical, sometimes critical, always analytical.</description>
+    </item>
+    
+    <item>
+      <title>My New Nexus 7</title>
+      <link>https://sinujohn.github.io/2013/09/23/my-new-nexus-7/</link>
+      <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/09/23/my-new-nexus-7/</guid>
+      <description>After what seemed like a long wait, I finally got my own Nexus7 2nd generation. Am now playing with the device and the first impression is IT IS AWESOME! A good friend of mine asked her family who was flying down from the US to get it for me. The device landed last week but I got my hands on it only today as I was on a vacation last week.</description>
+    </item>
+    
+    <item>
+      <title>JPA - Part 3</title>
+      <link>https://sinujohn.github.io/2013/09/05/jpa-part-3/</link>
+      <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/09/05/jpa-part-3/</guid>
+      <description>Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.</description>
+    </item>
+    
+    <item>
+      <title>JPA - Part 2</title>
+      <link>https://sinujohn.github.io/2013/09/01/jpa-part-2/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/09/01/jpa-part-2/</guid>
+      <description>This is continued from JPA: part 1. Other Annotations:  @Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)  Used before class name to explicitly specify table name.   @Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)  Used before instance variables to explicitly set column names.    Example:
+@Entity @Table(name = &amp;quot;EMP&amp;quot;) public class Employee { @Id @Column(name = &amp;quot;EMP_ID&amp;quot;) private int id; @Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters }  this maps to Table: EMP</description>
+    </item>
+    
+    <item>
+      <title>JPA - Part 1</title>
+      <link>https://sinujohn.github.io/2013/08/31/jpa-part-1/</link>
+      <pubDate>Sat, 31 Aug 2013 00:10:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/08/31/jpa-part-1/</guid>
+      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).</description>
+    </item>
+    
+    <item>
+      <title>Google, Y U NO???</title>
+      <link>https://sinujohn.github.io/2013/08/31/google-y-u-no/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/08/31/google-y-u-no/</guid>
+      <description>I had been waiting for Google&amp;rsquo;s new Nexus 7 to be launched in India since it was released in late July. But seems like we Indians have to wait till year end :(
+I created this meme since I can&amp;rsquo;t control the feeling any longer! aaahh.. now it feels better! :D ;)</description>
+    </item>
+    
+    <item>
+      <title>Persistence Using Java</title>
+      <link>https://sinujohn.github.io/2013/08/31/persistence-using-java/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/08/31/persistence-using-java/</guid>
+      <description>Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
+This blog post mentions JDBC.</description>
+    </item>
+    
+    <item>
+      <title>Unexpected newspaper article!</title>
+      <link>https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/</link>
+      <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/</guid>
+      <description>Today I was scanning through Malayala Manorama and then I saw an article which mentions my Thulika Kayboard. The article appears in Malayala Manorama of 14th August 2013 (Padippura section). I saw it in Thiruvananthapuram edition and don&amp;rsquo;t know whether other editions have it.
+Here is the article:
 
-&lt;p&gt;Its a great tool when we know the structure of JSON beforehand. But what if we don&amp;rsquo;t know that? In that case we can use a Map&amp;lt;String, Object&amp;gt; to store the unknown objects. Below two links provide useful info:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library&#34;&gt;http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html&#34;&gt;http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Happy Coding :)&lt;/p&gt;
-</description>
+&amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>Implementing a Search Engine</title>
+      <link>https://sinujohn.github.io/2013/07/16/implementing-a-search-engine/</link>
+      <pubDate>Tue, 16 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/07/16/implementing-a-search-engine/</guid>
+      <description>The WordCount is a trivial problem. What is the next best problem to tackle in Map Reduce? Something in which I can create my own Readers,Writables etc?
+I kept wondering about this for some time. And then decided on what about a Search Engine? After all, the concepts of BigData originated at the house of the Search giant Google (from the papers they published about Map Reduce, BigTable etc.)
+The first step was to implement an Inverted Index.</description>
+    </item>
+    
+    <item>
+      <title>Map Reduce</title>
+      <link>https://sinujohn.github.io/2013/07/16/map-reduce/</link>
+      <pubDate>Tue, 16 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/07/16/map-reduce/</guid>
+      <description>Everyone is saying that the world is going the cloud way. Big Data, Analytics etc are today&amp;rsquo;s buzzwords. I used to wonder what is so special about the cloud? I read a bit about Hadoop, HBase (the NoSQL DB for Hadoop) etc and came to know about the Map Reduce Framework.
+Map Reduce is a framework which helps us to write program for the cloud. It is a simple framework. The MapReduce version of the Hello World program for Hadoop is the WordCount program.</description>
+    </item>
+    
+    <item>
+      <title>Observer Pattern</title>
+      <link>https://sinujohn.github.io/2013/07/09/observer-pattern/</link>
+      <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/07/09/observer-pattern/</guid>
+      <description>Classification: Behavioral patterns Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
+This pattern is sometimes referred to as Listeners in some frameworks.
+Read about the pattern here. The code sample can be found in my git repo.
+In the example code I have done, there is a city, as with all cities many things can go wrong in a city.</description>
+    </item>
+    
+    <item>
+      <title>Singleton Pattern</title>
+      <link>https://sinujohn.github.io/2013/06/12/singleton-pattern/</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/12/singleton-pattern/</guid>
+      <description>Classification: Creational Pattern Description : Ensure a class has only one instance, and provide a global point of access to it.
+Whenever I hear about Singleton &amp;lsquo;Forever Alone&amp;rsquo; troll face comes to my mind ;)
+In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.</description>
+    </item>
+    
+    <item>
+      <title>Proxy Pattern</title>
+      <link>https://sinujohn.github.io/2013/06/09/proxy-pattern/</link>
+      <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
+      <description>Classification : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
+Find the code example here.
+In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.</description>
+    </item>
+    
+    <item>
+      <title>Starting Eclipse Plugin Development</title>
+      <link>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</link>
+      <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</guid>
+      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.</description>
+    </item>
+    
+    <item>
+      <title>Visitor Pattern</title>
+      <link>https://sinujohn.github.io/2013/06/06/visitor-pattern/</link>
+      <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/06/06/visitor-pattern/</guid>
+      <description>I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&amp;rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!</description>
+    </item>
+    
+    <item>
+      <title>AOP using AspectJ</title>
+      <link>https://sinujohn.github.io/2013/05/09/aop-using-aspectj/</link>
+      <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/05/09/aop-using-aspectj/</guid>
+      <description>Even though I had heard about AOP, I didn&amp;rsquo;t take it seriously. I thought it was meant for Enterprise applications usage like Transaction management, logging etc. But recently I was faced with a problem - how to know an Object&amp;rsquo;s state changes in Java. As you know state of an Object is its properties, so what I want is to know when the state changes. I didn&amp;rsquo;t quite get what to do about it, and so posted in stackoverflow.</description>
+    </item>
+    
+    <item>
+      <title>Agastyakoodam Trekking</title>
+      <link>https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/</link>
+      <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/</guid>
+      <description>On 2nd of March, we (a group of 10 friends) went onto the famous Agastyakoodam (or Agastyarkoodam as some call it that way). It is the second tallest hill in the Western Ghats. The tallest one is Anamudi. The only way to reach the top of Agastyakoodam is a 24km trek (although forest gaurds say it is only 18km). Of this only the last 6km include the flight to the hill.</description>
+    </item>
+    
+    <item>
+      <title>Opensourced Thulika</title>
+      <link>https://sinujohn.github.io/2013/03/05/opensourced-thulika/</link>
+      <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/03/05/opensourced-thulika/</guid>
+      <description>I just opensourced the Thulika Keyboard app and the associated training softwares. Find it here on Github</description>
+    </item>
+    
+    <item>
+      <title>Jeff tweeted Thulika!</title>
+      <link>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</link>
+      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</guid>
+      <description>The developer of Encog library, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard. Someone wrote a nice Android handwriting app with #encog. https://t.co/vd2JpTrR
+&amp;mdash; jeffheaton (@jeffheaton) 2 February 2013</description>
+    </item>
+    
+    <item>
+      <title>Immortal Login</title>
+      <link>https://sinujohn.github.io/2013/01/21/immortal-login/</link>
+      <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/01/21/immortal-login/</guid>
+      <description>Download the app from PlayStore
+Find the source on Github I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
+    </item>
+    
+    <item>
+      <title>Thulika Keyboard</title>
+      <link>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</link>
+      <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</guid>
+      <description>Download the app from PlayStore On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard - in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
+    </item>
+    
+    <item>
+      <title>Training the Thulika Keyboard</title>
+      <link>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
+      <description>Before you read :
+Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+The decomposition is as follows: LetterCode + modifyingSymbolCode
+Eg: ക്രൊ = ( ക + ്ര + ൊ )
+So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).</description>
+    </item>
+    
+    <item>
+      <title>A trip to the Southernmost tip</title>
+      <link>https://sinujohn.github.io/2012/09/01/a-trip-to-the-southernmost-tip/</link>
+      <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2012/09/01/a-trip-to-the-southernmost-tip/</guid>
+      <description>We planned to start to Kanyakumari from Thiruvanathapuram(tvm) by 5 AM so that we could see the sun rise at India&amp;rsquo;s southern-most tip. But as usual, we got delayed! And we left by about 5.45AM. Our rides consisted of my Fz and a friend&amp;rsquo;s Hunk. There were 4 of us - Arun Elias, Dhanoop Bhaskar, Basil Kuriakose and myself.
+We rode through Kanyakumari-Panvel road. We reached Neyyattinkara and had breakfast from a small hotel.</description>
+    </item>
+    
+    <item>
+      <title>Android OpenGL ES2.0 Template</title>
+      <link>https://sinujohn.github.io/2011/10/20/android-opengl-es2-0-template/</link>
+      <pubDate>Thu, 20 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2011/10/20/android-opengl-es2-0-template/</guid>
+      <description>Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.
+OpenGL ES2.0 API is provided by &amp;lsquo;android.opengl.GLES20&amp;rsquo; package.
+The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:</description>
+    </item>
+    
+    <item>
+      <title>Legendary Jobs!</title>
+      <link>https://sinujohn.github.io/2011/10/06/legendary-jobs/</link>
+      <pubDate>Thu, 06 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2011/10/06/legendary-jobs/</guid>
+      <description>Woke up today (actually yesterday as its past 12 midnight) to hear the news of Steve Jobs&amp;rsquo; death. The news about the death of a man whom I consider one of my role models actually left a kind of pain. Yup, I felt sad, as if someone I knew had died :(
+‎3 apples changed the world, 1st one seduced eve,2nd fell on
+newton and the 3rd was offered to the world half bitten by</description>
+    </item>
+    
+    <item>
+      <title>Add jar libraries to the final jar file</title>
+      <link>https://sinujohn.github.io/2011/06/22/add-jar-libraries/</link>
+      <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2011/06/22/add-jar-libraries/</guid>
+      <description>When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
+ Add the library jar files into a folder within the project, say /lib</description>
+    </item>
+    
+    <item>
+      <title>Nerdy Jokes ;)</title>
+      <link>https://sinujohn.github.io/2011/01/20/nerdy-jokes/</link>
+      <pubDate>Thu, 20 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2011/01/20/nerdy-jokes/</guid>
+      <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here .
+My favourite ones (credit goes to their respective creators): there is a physicist, a biologist and a mathematician standing in front of a house. They see one man enter and two men leave.
+The Physicist says, &amp;ldquo;Well there is obviously an unknown variable.&amp;rdquo; The Biologist says, &amp;ldquo;The man must have multiplied.&amp;rdquo;
+The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.</description>
+    </item>
+    
+    <item>
+      <title>Dellintosh :)</title>
+      <link>https://sinujohn.github.io/2010/12/26/dellintosh/</link>
+      <pubDate>Sun, 26 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/12/26/dellintosh/</guid>
+      <description>Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D
+I followed the excellent guide available here. Take a print out of this guide and then do as follows:</description>
+    </item>
+    
+    <item>
+      <title>Wah! Android!</title>
+      <link>https://sinujohn.github.io/2010/11/06/wah-android/</link>
+      <pubDate>Sat, 06 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/11/06/wah-android/</guid>
+      <description>Last day, I happened to read about Android programming. I also tried their &amp;lsquo;Hello Android&amp;rsquo; program. I was really surprised (and happy) to know that Android programming is done in Java. That means I don&amp;rsquo;t have to learn any new languages. (Ofcourse we can program in C/C++, but thats a different case). But Android doesn&amp;rsquo;t use JVM to run these programs, instead it uses another VM called Dalvik VM. All android programs are under the control of this VM.</description>
+    </item>
+    
+    <item>
+      <title>Run Windows programs on Linux</title>
+      <link>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</link>
+      <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</guid>
+      <description>This is the most important question that a Linux newbie faces - &amp;ldquo;How to run his/her favourite Windows application on Linux?&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!
+1. Find the Linux versions of your Windows applications If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!</description>
+    </item>
+    
+    <item>
+      <title>Sending a file by HTTP POST</title>
+      <link>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</link>
+      <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</guid>
+      <description>Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.</description>
+    </item>
+    
+    <item>
+      <title>Making ‘make’ work</title>
+      <link>https://sinujohn.github.io/2010/09/04/making-make-work/</link>
+      <pubDate>Sat, 04 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/09/04/making-make-work/</guid>
+      <description>&amp;lsquo;make&amp;rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.
+This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &amp;lsquo;Beginning Linux Programming&amp;rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &amp;lsquo;make&amp;rsquo; utility.
+&amp;lsquo;make&amp;rsquo; searches for a file &amp;lsquo;makefile&amp;rsquo; or &amp;lsquo;Makefile&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>After installing openSUSE 11.3</title>
+      <link>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</link>
+      <pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</guid>
+      <description>First, a very short review! I just installed openSUSE 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop.</description>
+    </item>
+    
+    <item>
+      <title>j8085sim</title>
+      <link>https://sinujohn.github.io/2010/07/24/j8085sim/</link>
+      <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/07/24/j8085sim/</guid>
+      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/
+To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
+This project is the result of about 5 weeks work by me and my team mates - Jinsmon Kurian and Deepu Devassy. Since the project demo is over, I believe this software should now be released.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://sinujohn.github.io/pages/projects/</link>
+      <pubDate>Sat, 26 Jun 2010 06:33:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/pages/projects/</guid>
+      <description>Android Thulika Keyboard! Thulika is an Handwriting recognition keyboard. It is the first Android app that has brought handwriting recognition to an Indian language(Malayalam). The blog post Training Thulika describes the configuration part of the keyboard.
+Find the app on Play Store | Other details Immortal Login! Log in once! No hassle of getting logged out frequently from your device.
+Find the app on Play Store | Other details
+&amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>BSNL Broadband Usage Viewer</title>
+      <link>https://sinujohn.github.io/2010/06/26/bsnl-broadband-usage-viewer/</link>
+      <pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/06/26/bsnl-broadband-usage-viewer/</guid>
+      <description>[UPDATE] The BSNL site design has been changed. So this program won&amp;rsquo;t work. I suppose only a small change is needed. Will try to update this post with the new link as soon as I find time for making necessary changes.[UPDATE]
+What is the advantage of knowing a scripting language? It helps you to automate much of the boring tasks that you do on a day-to-day basis.
+I was fed up of logging in, clicking a series of links and finally logging out from BSNL&amp;rsquo;s website (to be exact www.</description>
+    </item>
+    
+    <item>
+      <title>A Simple Videocutter</title>
+      <link>https://sinujohn.github.io/2010/06/18/simple-videocutter/</link>
+      <pubDate>Fri, 18 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/06/18/simple-videocutter/</guid>
+      <description>I took out some time to create a simple videocutter and converter. Its actually just a front-end to ffmpeg, so you require ffmpeg to run it. Download videoCutter.
+Why did I make this? Isn&amp;rsquo;t there any other good video converter or cutter? Oh ya, there are many. One of the good ones I have found is WinFF which is also a front-end to ffmpeg. But I don&amp;rsquo;t need all those complex functions to just convert a video.</description>
+    </item>
+    
+    <item>
+      <title>A quick introduction to GCC</title>
+      <link>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</link>
+      <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
+      <description>GCC - GNU Compiler Collection From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking. Compile and Link a simple program:
+gcc -o hello.out hello.c  This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file. Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
+gcc -o hello.out hello.cpp  This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sinujohn.github.io/pages/about/</link>
+      <pubDate>Fri, 26 Mar 2010 17:58:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/pages/about/</guid>
+      <description>Find me
+twitter: @sinuvian
+facebook: Sinu John
+Github: https://github.com/sinujohn/ </description>
+    </item>
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://sinujohn.github.io/2010/03/26/hello-world/</link>
+      <pubDate>Fri, 26 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/2010/03/26/hello-world/</guid>
+      <description>Decided to keep the default title for the first post.So &amp;ldquo;Hello World&amp;rdquo; :)
+Have started three/four blogs in the past. But couldn&amp;rsquo;t stick with them. Atleast i think i wouldn&amp;rsquo;t abandon this one. First reason is i got this blog with my name. And the second one is i really get a feeling that i should be sincere with this one. And the third one is &amp;hellip; hmm.. oops.. no third one.</description>
     </item>
     
   </channel>

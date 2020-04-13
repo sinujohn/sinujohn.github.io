@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Design Patterns on Hack</title>
-    <link>https://sinujohn.github.io/tags/design-patterns/index.xml</link>
-    <description>Recent content in Design Patterns on Hack</description>
+    <title>design patterns on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/design-patterns/</link>
+    <description>Recent content in design patterns on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 09 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Observer Pattern</title>
@@ -15,17 +18,10 @@
       <pubDate>Tue, 09 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/07/09/observer-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt;: Behavioral patterns
-Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.&lt;/p&gt;
-
-&lt;p&gt;This pattern is sometimes referred to as Listeners in some frameworks.&lt;/p&gt;
-
-&lt;p&gt;Read about the pattern &lt;a href=&#34;http://en.wikipedia.org/wiki/Observer_pattern&#34;&gt;here&lt;/a&gt;.
-The code sample can be found in my &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/observer&#34;&gt;git repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the example code I have done, there is a city, as with all cities many things can go wrong in a city. So city is the subject or the observable. To handle the emergency situations we have many emergency handlers. These handlers observe the city and take actions when needed. So handlers are Observers.
-When something happens in the city, all observers will be notified. Some observers respond to the situation and some do not.&lt;br /&gt;&lt;/p&gt;
-</description>
+      <description>Classification: Behavioral patterns Description : Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
+This pattern is sometimes referred to as Listeners in some frameworks.
+Read about the pattern here. The code sample can be found in my git repo.
+In the example code I have done, there is a city, as with all cities many things can go wrong in a city.</description>
     </item>
     
     <item>
@@ -34,28 +30,9 @@ When something happens in the city, all observers will be notified. Some observe
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/12/singleton-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt;: Creational Pattern
-Description : Ensure a class has only one instance, and provide a global point of access to it.&lt;/p&gt;
-
-&lt;p&gt;Whenever I hear about Singleton &amp;lsquo;Forever Alone&amp;rsquo; troll face comes to my mind ;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/forever-alone-guy.png&#34; alt=&#34;forever-alone-guy&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.&lt;/p&gt;
-
-&lt;p&gt;There are 3 ways of creating it :
-1. Traditional way without thread safety, where constructor is made private and a public method returns reference to the only object created.
-2. Thread-safe way : Double check locking
-3. Thread-safe way : Using enums (this is for Java of course!)&lt;/p&gt;
-
-&lt;p&gt;Read about &lt;a href=&#34;http://java.dzone.com/articles/singleton-design-pattern-%E2%80%93&#34;&gt;Singleton Pattern here&lt;/a&gt;.
-The enums&amp;rsquo; way of doing things is explained &lt;a href=&#34;http://javarevisited.blogspot.gr/2012/07/why-enum-singleton-are-better-in-java.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The sample program in Git shows the first 2 ways. Find it &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/singleton&#34;&gt;here on Github &lt;/a&gt;
-&lt;h2&gt;Double check locking:&lt;/h2&gt;
-In Java, we have to use &amp;lsquo;&lt;strong&gt;&lt;em&gt;volatile&lt;/em&gt;&lt;/strong&gt;&amp;rsquo; keyword. I was confused about this because the program gave the same output even if I use or not use the &amp;lsquo;volatile&amp;rsquo; keyword. Then I came across this &lt;a href=&#34;http://jeremymanson.blogspot.com/2008/05/double-checked-locking.html&#34;&gt;awesome blog&lt;/a&gt;. &lt;strong&gt;So according to this we have to use &amp;lsquo;&lt;em&gt;volatile&lt;/em&gt;&amp;rsquo; whenever we use Double check locking&lt;/strong&gt;. The problem is that compiler optimization may reorder execution orders, so that the flow of order of execution may be different from what we have written. The following can occur:
-When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instance&lt;/em&gt; will be assigned the reference value of the &lt;em&gt;Singleton&lt;/em&gt; object. But the constructor &lt;em&gt;Singleton()&lt;/em&gt; may not be called at this point. That means &lt;em&gt;instance&lt;/em&gt; is not fully initialized yet. So other threads that refer instance will get the partly initialized or not-yet-initialized object.&lt;/p&gt;
-</description>
+      <description>Classification: Creational Pattern Description : Ensure a class has only one instance, and provide a global point of access to it.
+Whenever I hear about Singleton &amp;lsquo;Forever Alone&amp;rsquo; troll face comes to my mind ;)
+In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.</description>
     </item>
     
     <item>
@@ -64,16 +41,9 @@ When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instanc
       <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Software_design_pattern&#34;&gt;Classification&lt;/a&gt; : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)&lt;/p&gt;
-
-&lt;p&gt;Find the code example &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/proxy&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.&lt;/p&gt;
-
-&lt;p&gt;Why use proxy pattern? Its because using the real object is more expensive. Read about it here &lt;a href=&#34;http://www.oodesign.com/proxy-pattern.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.oodesign.com/proxy-pattern.html&#34;&gt;http://www.oodesign.com/proxy-pattern.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Proxy pattern is used in Java RMI. But its not limited to RMI. We can use it in those situations where object creation is expensive. So instead of using real object we&amp;rsquo;ll use proxy object. We call methods of the Proxy object, and the proxy will then call the method of the real object.&lt;/p&gt;
-</description>
+      <description>Classification : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
+Find the code example here.
+In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.</description>
     </item>
     
     <item>
@@ -82,91 +52,7 @@ When &lt;em&gt;instance = new Singleton()&lt;/em&gt; is called &lt;em&gt;instanc
       <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/06/visitor-pattern/</guid>
-      <description>&lt;p&gt;I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&amp;rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!).&lt;/p&gt;
-
-&lt;p&gt;Here is the repo I created to track my experiment with &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns&#34;&gt;Design Patterns&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Read about Visitor pattern &lt;a href=&#34;http://en.wikipedia.org/wiki/Visitor_pattern&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.javaworld.com/javaworld/javatips/jw-javatip98.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Classification : Behavioral Pattern&lt;/p&gt;
-
-&lt;p&gt;Check out the code &lt;a href=&#34;https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/visitor&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Visitor pattern is used to parse through(or visit, in other words) through collections. Collections are made up of entities which themselves can be collections or simple elements.&lt;/p&gt;
-
-&lt;p&gt;Imagine a big colony. It has got some houses. And there are even smaller colonies. The big-colony and everthing it has (houses and smaller colonies) accepts visitors(athidi-devo-bhav!) with a very good heart. The colony in programming terms is a collection and houses are elements. Visitor is an object that visits the colony.&lt;/p&gt;
-
-&lt;p&gt;Now the colony and houses should declare that they accepts visitors. So they should implement &amp;lsquo;Visitable&amp;rsquo; interface which tells that they will have accept(Visitor).&lt;/p&gt;
-
-&lt;p&gt;Also our visitor should tell that he is really a &amp;lsquo;Visitor&amp;rsquo; and not a thief, so he must implement &amp;lsquo;Visitor&amp;rsquo; interface which tells that he&amp;rsquo;ll visit(Colony) and visit(House). What a visitor will do after visiting a house or colony is upto him, the &amp;lsquo;Visitor&amp;rsquo; tag just tells that he is a legitimate visitor.&lt;/p&gt;
-
-&lt;p&gt;There are two flavors of Visitor Pattern:
-&lt;ol&gt;
-    &lt;li&gt;&lt;strong&gt;Visitable can control where the visitor goes next&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. The colony will then decide where the visitor should go next. It may send the visitor to all the houses first or it can tell the visitor to visit the smaller colonies first.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt; accept()&lt;/em&gt; for colony:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void accept(Visitor visitor) {
-    visitor.visit(this);
-    for(House house : houses) {
-        house.accept(visitor);
-    }
-    for(Colony colony : colonies) {
-        colony.accept(visitor);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;visit()&lt;/em&gt; of visitor:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void visit(Visitable visitable) {
-
-	if(visitable instanceof House) {
-		House house = (House) visitable;
-		System.out.println(&amp;quot;Visited House : &amp;quot; + house.getName());
-	} else if(visitable instanceof Colony) {
-		Colony colony = (Colony) visitable;
-		System.out.println(&amp;quot;Visited colony : &amp;quot; + colony.getName());
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;ol start=&#34;2&#34;&gt;
-    &lt;li&gt;&lt;strong&gt;Visitor controls where he goes next&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. Once the visitor is inside he decides where to go next. In this case there is more flexibility and power for the visitors.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;accept()&lt;/em&gt; for colony:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void accept(Visitor visitor) {
-    visitor.visit(this);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;visit()&lt;/em&gt; of visitor:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public void visit(Visitable visitable) {
-
-	if(visitable instanceof House) {
-		House house = (House) visitable;
-		System.out.println(&amp;quot;Visited House : &amp;quot; + house.getName());
-	} else if(visitable instanceof Colony) {
-		Colony colony = (Colony) visitable;
-		System.out.println(&amp;quot;Visited colony : &amp;quot; + colony.getName());
-		for(House h : colony.getHouses()) {
-			this.visit(h);
-		}
-		for(Colony c : colony.getColonies()) {
-			this.visit(c);
-		}
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Happy coding :)&lt;/p&gt;
-</description>
+      <description>I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&amp;rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!</description>
     </item>
     
   </channel>

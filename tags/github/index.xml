@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github on Hack</title>
-    <link>https://sinujohn.github.io/tags/github/index.xml</link>
-    <description>Recent content in Github on Hack</description>
+    <title>github on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/github/</link>
+    <description>Recent content in github on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 27 Mar 2017 15:14:34 +0530</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>From wordpress to github</title>
-      <link>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</link>
+      <link>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github/</link>
       <pubDate>Mon, 27 Mar 2017 15:14:34 +0530</pubDate>
       
-      <guid>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github</guid>
-      <description>&lt;p&gt;It has been more than 6 months since I have blogged! I just shifted all my blog posts from my Wordpress &lt;a href=&#34;http://sinujohn.wordpress.com&#34;&gt;blog&lt;/a&gt; to github. First I used Jekyll. Setting it up was a pain on my Windows PC. It needed Ruby and all those extra Rubygems. Then I settled for the Jekyll Docker image. That was better, but still generating the 70-odd-posts took so long everytime, and I knew it&amp;rsquo;ll take longer as the number of posts increase. That is how I found out about &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.
-Hugo is a lot simpler. You have just one file to download and install. It has more appealing themes. It loads and generates the blog almost instantly. There is live reload too. This blog now runs on Hugo.&lt;/p&gt;
-</description>
+      <guid>https://sinujohn.github.io/2017/03/27/from-wordpress-to-github/</guid>
+      <description>It has been more than 6 months since I have blogged! I just shifted all my blog posts from my Wordpress blog to github. First I used Jekyll. Setting it up was a pain on my Windows PC. It needed Ruby and all those extra Rubygems. Then I settled for the Jekyll Docker image. That was better, but still generating the 70-odd-posts took so long everytime, and I knew it&amp;rsquo;ll take longer as the number of posts increase.</description>
     </item>
     
   </channel>

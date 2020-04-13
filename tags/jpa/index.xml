@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jpa on Hack</title>
-    <link>https://sinujohn.github.io/tags/jpa/index.xml</link>
-    <description>Recent content in Jpa on Hack</description>
+    <title>jpa on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/jpa/</link>
+    <description>Recent content in jpa on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/jpa/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 05 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/jpa/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>JPA - Part 3</title>
@@ -15,65 +18,7 @@
       <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/05/jpa-part-3/</guid>
-      <description>&lt;p&gt;Go to &lt;a href=&#34;https://sinujohn.github.io/2013/08/31/jpa-part-1/&#34;&gt;Part 1&lt;/a&gt;.
-&lt;h2&gt;Callback Methods&lt;/h2&gt;
-&lt;div&gt;When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:&lt;/div&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@PrePersist&lt;/strong&gt; - called before persist()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PostPersist&lt;/strong&gt; - called after persist()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PreRemove&lt;/strong&gt; - called before remove()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PostRemove&lt;/strong&gt; - called after commit()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PreUpdate&lt;/strong&gt; - called before commit()&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@PostUpdate&lt;/strong&gt; - called after commit()&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt; More than one annotation can applied to a single method. There should be only one method with a particular callback annotation(example, there shouldn&amp;rsquo;t be more than one @Prepersist methods). The callback methods shouldn&amp;rsquo;t take any arguments.&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;h2&gt;Entity Listeners&lt;/h2&gt;
-&lt;div&gt;Mixing callback methods into Entity class is not a good practice. So we write it in another class which is an Entity Listener.&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;h3&gt;Annotations Used:&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;@EntityListeners(EntityListener_ClassName.class)
-&lt;ul&gt;
-    &lt;li&gt;Used before the Entity class&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- Entity Listener should have public default constructor
-- An Entity class can have some callback methods defined in it and some in an Entity Listener
-- An Entity Listener class can listen to more than one Entity classes.
-- The callback methods defined in Entity Listener class must take an object of Entity class as argument
-&lt;div&gt;&lt;/div&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;@Entity
-@EntityListeners(EmployeeListener.class)
-public class Employee {
-    .....
-}
-
-public class EmployeeListener {
-    @PrePersist
-    public void beforePersist(Employee e) {
-        System.out.println(&amp;amp;quot;Before persist&amp;amp;quot;);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h2&gt;Merge Method&lt;/h2&gt;
-&lt;div&gt;- Used to synchronise the changes between objects and database tables.&lt;/div&gt;
-&lt;div&gt;- Adds a new row if the entity is not present in db table.&lt;/div&gt;
-&lt;div&gt;- Updates the existing row if it is present in table.&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;et.begin();
-    ....
-    ....
-    em.merge(empObject); //merges the changes in empObject with table
-et.commit();
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.</description>
     </item>
     
     <item>
@@ -82,185 +27,8 @@ et.commit();
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/01/jpa-part-2/</guid>
-      <description>&lt;p&gt;This is continued from &lt;a href=&#34;https://sinujohn.github.io/2013/08/31/jpa-part-1/&#34;&gt;JPA: part 1&lt;/a&gt;.
-&lt;h2&gt;Other Annotations:&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before class name to explicitly specify table name.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before instance variables to explicitly set column names.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Entity
-@Table(name = &amp;quot;EMP&amp;quot;)
-public class Employee {
-    @Id
-    @Column(name = &amp;quot;EMP_ID&amp;quot;)
-    private int id;
-
-    @Column(name = &amp;quot;EMP_NAME&amp;quot;)
-    private String name;
-
-    //getters and setters
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;this maps to
-Table: &lt;strong&gt;EMP&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; --------------------------
- | EMP_ID (PK) | EMP_NAME |
- --------------------------
- |_____________|__________|
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;JPA automatically maps &amp;lsquo;int&amp;rsquo; to &amp;lsquo;NUMBER&amp;rsquo; and &amp;lsquo;String&amp;rsquo; to &amp;lsquo;CHAR&amp;rsquo; or &amp;lsquo;VARCHAR&amp;rsquo;. But it cannot automatically convert Date or Time datatypes. So we need to specify the Temporal type to be used. (Temporal = related to time)
-&lt;h2&gt;Other Annotations:&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@Temporal(TemporalType.TYPE)&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;TYPE can be DATE, TIME or TIMESTAMP. Used before &amp;lsquo;Date&amp;rsquo; or &amp;lsquo;Calendar&amp;rsquo; datatypes. Oracle only has DATE datatype. It doesn&amp;rsquo;t have TIME or TIMESTAMP.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@Transient&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before those instance variables that need not be persisted.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;@Entity
-public class Student {
-    @Id
-    private int regNo;
-    private String name;
-
-    @Temporal(TemporalType.DATE)
-    private Calendar dob; //&#39;dob&#39; column od database is of &#39;DATE&#39; datatype
-
-    private int mark1;
-    private int mark2;
-    private int mark3;
-
-    @Transient
-    private float averageMark; //Not stored in database
-
-    //getters and setters
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h2&gt;&lt;/h2&gt;
-&lt;h2&gt;Configuring JPA&lt;/h2&gt;
-Configure &amp;lsquo;persistence unit&amp;rsquo; in &amp;lsquo;&lt;strong&gt;persistence.xml&lt;/strong&gt;&amp;lsquo;:
-Persistence unit name is specified as:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;persistence-unit name=&amp;quot;EmployeeService&amp;quot; transaction-type=&amp;quot;RESOURCE_LOCAL&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here &lt;em&gt;EmployeeService&lt;/em&gt; is the persistence unit.&lt;/p&gt;
-
-&lt;p&gt;We should then specify all Entity classes that need to be persisted in &lt;code&gt;&amp;lt;class&amp;gt;&lt;/code&gt; tags&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;class&amp;gt;me.sinu.entity.Entity1&amp;lt;/class&amp;gt;
-&amp;lt;class&amp;gt;me.sinu.entity.Entity2&amp;lt;/class&amp;gt;
-&amp;lt;class&amp;gt;me.sinu.entity.Entity3&amp;lt;/class&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We then configure the db related stuff like URL,username,password etc.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.url&amp;quot; value=&amp;quot;jdbc:oracle:thin:@127.0.0.1:1521/db&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.user&amp;quot; value=&amp;quot;username&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.password&amp;quot; value=&amp;quot;password&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.jdbc.driver&amp;quot; value=&amp;quot;oracle.jdbc.driver.OracleDriver&amp;quot;/&amp;gt;
-    &amp;lt;property name=&amp;quot;toplink.ddl-generation&amp;quot; value=&amp;quot;create-tables&amp;quot;/&amp;gt;
-&amp;lt;/properties&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is for TopLink implementation of JPA to connect to Oracle. It might be different for other implementations.
-&lt;h2&gt;Persisting an Entity using JPA&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Creating an instance of &amp;lsquo;&lt;strong&gt;EntityManagerFactory&lt;/strong&gt;&amp;lsquo;
-&lt;ul&gt;
-    &lt;li&gt;Persistence.createEntityManagerFactory(persistence-unit_name_defined_in_xml_file)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;Obtaining an instanceof &amp;lsquo;&lt;strong&gt;EntityManager&lt;/strong&gt;&amp;lsquo;&lt;/li&gt;
-    &lt;li&gt;Persist the Entity
-&lt;ul&gt;
-    &lt;li&gt;Begin EntityTransaction&lt;/li&gt;
-    &lt;li&gt;Invoke &lt;strong&gt;persist()&lt;/strong&gt;&lt;/li&gt;
-    &lt;li&gt;Commit the transaction&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;EntityManagerFactory emf = Persistence.createEntityManagerFactory(&amp;quot;EmployeeService&amp;quot;);
-EntityManager em = emf.createEntityManager();
-EntityTransaction et = em.getTransaction();
-if(et==null) {
-    //ERROR. Cannot obtain transaction
-    return;
-}
-et.begin(); //begin transaction
-    Employee emp = new Employee();
-    emp.setEmpId(101);
-    emp.setName(&amp;quot;sinu&amp;quot;);
-    em.persist(emp); //persist the data
-et.commit(); //ending transaction
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When we call em.persist(), data is sent to the database and it is stored in DB Buffer. It is not yet updated in the table. When we call em.commit(), the data gets updated in the table.
-&lt;h2&gt;Finding an Entity&lt;/h2&gt;
-To find an entity, we need not begin a transaction. We can find it using EntityManager.
-Syntax:
-&lt;strong&gt;EntityManager.find(EntityClassName.class, PrimaryKey)&lt;/strong&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Employee empl = em.find(Employee.class, 101);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here 101 is the empId(primary key) to be searched.&lt;/p&gt;
-
-&lt;p&gt;If table doesn&amp;rsquo;t exist or record is not present, it returns null.
-&lt;h2&gt;Updating an Entity&lt;/h2&gt;
-Once we find an entity, the entity object in the heap memory gets a connection to the table. So,if we modify the object, the table also gets updated.
-An object which is connected to a table(relation) is called &amp;lsquo;&lt;strong&gt;Managed Object&lt;/strong&gt;&amp;rsquo;. If we update the Managed Object, the table also gets updated.
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;EntityTransaction et = em.getTransaction();
-et.begin();
-    Employee empl = em.find(Employee.class, 101);
-    //empl is now a Managed Object. We can now modify it
-    if(empl!=null) {
-        empl.setSalary(empl.getSalary()+1000);
-    }
-et.commit();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h2&gt;Removing an Entity&lt;/h2&gt;
-This is similar to update. Once we find the object we call &lt;strong&gt;EntityManager.remove(entityObject)&lt;/strong&gt;
-&lt;h3&gt;Example:&lt;/h3&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;EntityTransaction et = em.getTransaction();
-et.begin();
-    Employee empl = em.find(Employee.class, 101);
-    //empl is now a Managed Object. We can now modify it
-    if(empl!=null) {
-        em.remove(empl)
-    }
-et.commit();
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This is continued from JPA: part 1. Other Annotations:  @Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)  Used before class name to explicitly specify table name.   @Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)  Used before instance variables to explicitly set column names.    Example:
+@Entity @Table(name = &amp;quot;EMP&amp;quot;) public class Employee { @Id @Column(name = &amp;quot;EMP_ID&amp;quot;) private int id; @Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters }  this maps to Table: EMP</description>
     </item>
     
     <item>
@@ -269,53 +37,7 @@ et.commit();
       <pubDate>Sat, 31 Aug 2013 00:10:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/jpa-part-1/</guid>
-      <description>&lt;p&gt;This post is part of &lt;a href=&#34;https://sinujohn.github.io/2013/08/31/persistence-using-java/&#34;&gt;Project Digitisation&lt;/a&gt;. I have decided to write about JPA in several posts. This is part 1 of the series.
-&lt;h2&gt;JPA - Java Persistence API&lt;/h2&gt;
-JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications.
-JPA provides:
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;ORM&lt;/strong&gt; (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).
-&lt;ul&gt;
-    &lt;li&gt;An Object which can be mapped is called an Entity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;JPQL&lt;/strong&gt; - Java Persistence Query Language&lt;/li&gt;
-&lt;/ul&gt;
-Entity classes should be Java beans (POJOs with private variables and public getters and setters).
-&lt;h3&gt;Annotations used:&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;@Entity&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before a class name. By default, table name is same as class name.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;@Id&lt;/strong&gt;
-&lt;ul&gt;
-    &lt;li&gt;Used before the instance variable which is the primary key in the table.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-By default instance variable names is same as the column names.
-&lt;h4&gt;Example:&lt;/h4&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;@Entity
-public class Employee {
-    @Id
-    private int empId; //becomes primary key
-    private String name;
-
-    //getters and setters
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;this maps to
-&lt;strong&gt;Table: &lt;/strong&gt;Employee&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; | empId | name |
- | ----- | ---- |
- | _____ | ____ |
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).</description>
     </item>
     
   </channel>

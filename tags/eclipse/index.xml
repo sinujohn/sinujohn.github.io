@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Eclipse on Hack</title>
-    <link>https://sinujohn.github.io/tags/eclipse/index.xml</link>
-    <description>Recent content in Eclipse on Hack</description>
+    <title>eclipse on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/eclipse/</link>
+    <description>Recent content in eclipse on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 06 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Starting Eclipse Plugin Development</title>
@@ -15,29 +18,7 @@
       <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</guid>
-      <description>&lt;p&gt;I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem.
-&lt;h3&gt;Start here:&lt;/h3&gt;
-&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html&#34;&gt;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html&lt;/a&gt;&lt;/a&gt;This blog post describes how to create a simple plugin(&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject&#34;&gt;http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject&lt;/a&gt;&lt;/a&gt;) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.
-&lt;h3&gt;Displaying markers&lt;/h3&gt;
-Plugins allow us to highlight certain portions of the text in the code editor. Markers are used for this. Markers can also be used to show errors, so that error is marked in compilation and the error is shown in Problems view. The following links show how to create and manipulate markers:
-&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html&#34;&gt;http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html&lt;/a&gt;&lt;/a&gt;
-&lt;a href=&#34;http://cubussapiens.hu/tag/markers/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://cubussapiens.hu/tag/markers/&#34;&gt;http://cubussapiens.hu/tag/markers/&lt;/a&gt;&lt;/a&gt;
-&lt;h3&gt;Create Dialog boxes within Eclipse&lt;/h3&gt;
-Some times our plugin might need to show some dialog boxes to the users. It can range from a simple Error message box to some complex dialog box. Dialog boxes can be created using JFace as mentioned here : &lt;a href=&#34;http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0&#34;&gt;http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0&lt;/a&gt;&lt;/a&gt;
-How do I insert text in the active text editor? This is a common requirement. Find the solution here : &lt;a href=&#34;http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F&#34;&gt;http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F&lt;/a&gt;&lt;/a&gt;
-&lt;h3&gt;Formatting the code&lt;/h3&gt;
-Some times we might need to insert pieces of code into the code editor and it feel good if the code is formatted. Look here to see how to do it : &lt;a href=&#34;http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm&#34;&gt;http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm&lt;/a&gt;&lt;/a&gt;
-&lt;h3&gt;Fiddling with the source code&lt;/h3&gt;
-What is the use of a plugin if you can&amp;rsquo;t get into the details of Java source code of the opened projects? Eclipse provides Java Model and Abstract Syntax Trees for this purpose. Java Model is an easy to use and fast model whereas AST is relatively slow, but ASTs contain much more details. Here are the some links to start with this:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34;&gt;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.vogella.com/articles/EclipseJDT/article.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.vogella.com/articles/EclipseJDT/article.html&#34;&gt;http://www.vogella.com/articles/EclipseJDT/article.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/library/os-ast/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/opensource/library/os-ast/&#34;&gt;http://www.ibm.com/developerworks/opensource/library/os-ast/&lt;/a&gt;&lt;/a&gt;
-&lt;div&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&#34;&gt;http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html&lt;/a&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;a href=&#34;http://sahits.ch/blog/?p=228&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://sahits.ch/blog/?p=228&#34;&gt;http://sahits.ch/blog/?p=228&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.</description>
     </item>
     
   </channel>

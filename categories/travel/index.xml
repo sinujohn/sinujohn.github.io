@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Travel on Hack</title>
-    <link>https://sinujohn.github.io/categories/travel/index.xml</link>
-    <description>Recent content in Travel on Hack</description>
+    <title>Travel on Sinu John</title>
+    <link>https://sinujohn.github.io/categories/travel/</link>
+    <description>Recent content in Travel on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 11 Mar 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Again Agastyakoodam !</title>
@@ -15,28 +18,8 @@
       <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/11/again-agastyakoodam/</guid>
-      <description>&lt;p&gt;When I completed the &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}&#34;&gt;Agastyakoodam trek two years back&lt;/a&gt;, I had decided to visit this awesome place again. It happened this year about two months back.&lt;/p&gt;
-
-&lt;p&gt;This time it was a group of 6 friends, including me. We were very much fortunate to get the entry permit on the first day of the trekking season. This gave us the forest in a much more pristine and virgin form. Because, as people start coming forest loses its glory!&lt;/p&gt;
-
-&lt;p&gt;There is not much to write as I have already explained about the trek in &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}&#34;&gt;my previous blog entry&lt;/a&gt;. But I&amp;rsquo;ll highlight the differences that happened this year.&lt;/p&gt;
-
-&lt;p&gt;This year onwards, permit is being sanctioned online by the Kerala Forest Department. This saved us a lot of hassle and we got the permit for the first day itself(the season started on Jan 15th this time).&lt;/p&gt;
-
-&lt;p&gt;We started on January 15 and completed the trek in 3 days, unlike the last time where we did it in 2 days. The result? We enjoyed the trek much more. It was a relaxed trek and we enjoyed it to the core. We took ample photos and videos too, something we couldn&amp;rsquo;t so last time because of time constraints :). I would recommend everyone to complete the trek in 3 days.&lt;/p&gt;
-
-&lt;p&gt;This time our gang was in a uniform (except one - he could make it only at the last moment, and so couldn&amp;rsquo;t have the luxury of being in our uniform). See our uniform for yourself. Bhakti exploding :D&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/agastya4.jpg&#34; alt=&#34;The Five&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In fact, the forest warden in the base camp told us seeing our uniform that we had immense Bhakti inside us :D Little did he know that it was just a show off. Any way, this uniform was one of our best decisions. Trekking wearing this attire was the most comfortable thing!&lt;/p&gt;
-
-&lt;p&gt;So here is the trip in short - we started on Jan 15th morning at about 11:30 (we reached their late) and reached the base camp by 6 PM. The next morning we started the ascend to the peak at about 7 in the morning. This time since we were not at all in a hurry, we took enough time in enjoying each step ;). We reached the top at 2 PM! (thats&amp;rsquo;s too late by any standard, they want you to start the downward trek by 2:45PM max). Unlike last time, it was not at all windy, also it was too hot at the top. We started the downward journey by 2:30PM and reached the base camp by about 5:30PM (ya, downward journey was completed pretty quickly). We rested off the night. Next day morning, our departure was delayed by unexpected rains. So we could only start by 9 AM. We reached forest outpost by about 3:30PM. And thus our trek was done.&lt;/p&gt;
-
-&lt;p&gt;We had tracked our journey with GPS. I&amp;rsquo;ll update this post once I get the track details from my friend.&lt;/p&gt;
-
-&lt;p&gt;Keep Travelling :) Enjoy the world. :) Don&amp;rsquo;t disturb what&amp;rsquo;s left off the forest and don&amp;rsquo;t leave any traces :)&lt;/p&gt;
-</description>
+      <description>When I completed the Agastyakoodam trek two years back, I had decided to visit this awesome place again. It happened this year about two months back.
+This time it was a group of 6 friends, including me. We were very much fortunate to get the entry permit on the first day of the trekking season. This gave us the forest in a much more pristine and virgin form. Because, as people start coming forest loses its glory!</description>
     </item>
     
     <item>
@@ -45,15 +28,7 @@
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/skandagiri/</guid>
-      <description>&lt;p&gt;About two months back, me and a friend of mine went for trekking at Skandagiri Hills. Its about 75km from Bangalore near to Nandi Hills. &lt;/p&gt;
-&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m29!1m12!1m3!1d497214.8001609372!2d77.65143103991002!3d13.194484654410234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m14!1i0!3e6!4m5!1s0x3bae123e25555555%3A0x695a1bc21346928a!2sDialatron+Telecom+Private+Limited%2C+No+1%2C+28%2F2%2C+Regent+Place%2C+Thubarahalli+Village%2C+Thubarahalli+Village%2C+Bengaluru%2C+Karnataka+560066!3m2!1d12.954193!2d77.72160099999999!4m5!1s0x3bb1e58ea2581285%3A0xd1e16751dc57a045!2sSkandagiri%2C+Suddahalli%2C+Karnataka+562103!3m2!1d13.417499999999999!2d77.682778!5e0!3m2!1sen!2sin!4v1409125768190&#34; width=&#34;600&#34; height=&#34;450&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;We started on my Yamaha Fz at about 2:30AM and reached there by 4.30AM. The place has got a few locals who are waiting there to get hold of your money in the form of parking and acting as guide! We parked (gave the guy Rs20/30 just to make sure he don&#39;t destroy my bike) and dismissed the idea of having a guide. The trek started and we reached the top by 5.15 in the morning. The view was awesome!&lt;br /&gt; Here is a map of the area and route to be taken. It&#39;ll save you the cost of having a guide and give you a sense of adventure as you are finding way through pitch dark (if there is no moonlight ;)). Remember to take a good torchlight and a jacket. It&#39;ll be very cold at the top. Its an easy trek. Once you find the muddy lane you can easily reach the top - you don&#39;t require any guide! There is a small catch though - there is a route which you shouldn&#39;t take - its marked in red colour. This red route is considerably wider and it reaches a dead-end! But what&#39;s the fun if there is no thrill in finding the right way!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/skandagiri_map.png&#34; alt=&#34;skandagiri&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt; We started back by 10 in the morning. On the way back we stopped at a small Fort near Nandi hills - Fort Devanahalli. Took some pictures and then headed back to Bengaluru!&lt;/p&gt;
-</description>
+      <description>About two months back, me and a friend of mine went for trekking at Skandagiri Hills. Its about 75km from Bangalore near to Nandi Hills.  We started on my Yamaha Fz at about 2:30AM and reached there by 4.30AM. The place has got a few locals who are waiting there to get hold of your money in the form of parking and acting as guide! We parked (gave the guy Rs20/30 just to make sure he don&#39;t destroy my bike) and dismissed the idea of having a guide.</description>
     </item>
     
     <item>
@@ -62,39 +37,7 @@
       <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/</guid>
-      <description>&lt;p&gt;On 2nd of March, we (a group of 10 friends) went onto the famous &lt;a href=&#34;http://en.wikipedia.org/wiki/Agastya_Mala&#34; target=&#34;_blank&#34;&gt;Agastyakoodam&lt;/a&gt; (or Agastyarkoodam as some call it that way). It is the second tallest hill in the Western Ghats. The tallest one is Anamudi. The only way to reach the top of Agastyakoodam is a 24km trek (although forest gaurds say it is only 18km). Of this only the last 6km include the flight to the hill. The remaining 18km(or 12km if you believe the forest gaurds) is through dense forests which comprise the Agastyakoodam Biosphere reserve.
-&lt;h3&gt;How to begin:&lt;/h3&gt;
-Obtain a pass from P.T.P Nagar &lt;a href=&#34;http://www.forest.kerala.gov.in/&#34; target=&#34;_blank&#34;&gt;Forest office&lt;/a&gt; in Trivandrum. This year the pass cost Rs.500 per head.The pass is issued usualy in the month of January, but make sure you call and get the correct time from the office by December beginning itself. The Forest Range Officer can be reached at 0472-2892344.
-Once you confirm when the pass gets issued, be there on the first day itself as early in the morning as possible. We didn&amp;rsquo;t take this advice seriously and only got slots in March. So be there before 6 AM! There will be people camping in the office just to get the pass from the previous night itself!
-&lt;strong&gt;-OR-&lt;/strong&gt;
-There is another pass which they sell for about Rs.5000 per three people (check this as the tariff often varies). This pass is issued all-round the year, and so you can go whenever you please. The disadvantage is you&amp;rsquo;ll have to pay extra for a cook as there&amp;rsquo;ll be no regular canteen in off-season.
-&lt;h3&gt;What to carry:&lt;/h3&gt;
-Carry 2 packets of glucose and a 1 liter bottle of water. The bottle can be refilled in the small streams on the way.
-Also carry some food. Make sure this is minimal, as mostly you&amp;rsquo;ll only be drinking and not eating on the way. At max carry a packet of biscuits and some chocolates.
-Also carry some first aid stuffs like muscle pain relievers (Volini etc.), bandages, band aid etc.
-Take a bed sheet and blanket too, as in the forest camp they will only provide you a mat.
-And make sure you carry only the bare minimum things you need. Whatever you carry, you alone will have to carry it for the entire trek of 48km, and believe me every kilogram counts!
-&lt;h3&gt;The trek:&lt;/h3&gt;
-We started from Kazhakkutam at 7am on our motorbikes, had our breakfast on the way at Vithura and reached the first camp at 10AM. There the forest guards took the attendance, and checked our baggage for any prohibitory things like alcohol and cigarettes. If they find any you&amp;rsquo;ll not be allowed to travel and the amount won&amp;rsquo;t be refunded. You can buy lunch for that day from this camp.
-We started our trek by 10.30AM. Even though they advertised that each group of 15 will be accompanied by a forest guard, we didn&amp;rsquo;t had any. But that&amp;rsquo;s okay, as its fairly easy to find the way through the forest (there is a muddy lane, and all you have to do is follow it).
-On the way you&amp;rsquo;ll be damn thirsty, and you&amp;rsquo;ll drink a lot, yeah, a lot of water. There will be streams of pure cold forest streams on your way, so refilling the bottle is not at all a problem. The trek goes through forests, grasslands and then again through dense forest.
-&lt;img src=&#34;https://sinujohn.github.io/assets/agastya1.jpg&#34; alt=&#34;Grasslands on the way&#34; /&gt; Grasslands on the way&lt;/p&gt;
-
-&lt;p&gt;Once the first patch of forests was over (that&amp;rsquo;s after the 3rd river on the way up), we entered grasslands. And we were damn tired in the 3km walk that we took in the grasslands. Someone had told us when we started the trek, &amp;ldquo;ippo ethum ippo ethum ennu thonum, pakshe ethathilla!&amp;rdquo;. This seemed to be so true. We took rest, walked a bit, again rested, again walked, and finally the grasslands were over. Then it was another patch of forests, but this time its more denser. Here we had to climb a bit, and we thought we would never make it. We rested, we climbed, we rested and again climbed! At those times, we saw people who were coming back after the trek. They told us its just the beginning, the actual trek is on the second day! And it was so true! We reached the base camp by 4.30PM. There we have to report, and they&amp;rsquo;ll give us mats to sleep. Its time to take rest! There is a small stream nearby where we had a small bath. At night we were served kanji and payaru. The rice I had for lunch and kanji I had for dinner never tasted so good in my life! We slept by about 8PM. There was heavy wind throughout the night. I stepped out at 2AM, and it was so damn cold and chilly winds blew hard. I looked up. The night sky was so beautiful and clean and virgin. Now I understand why its told that humans destroy nature.
-On the second day, our ascent to the Agastyakoodam began. Boy.. that was one hell of a trekking experience. The first day is nothing when you compare it with this. We woke up early, had our breakfast (poori, some curry and black coffee), and left before 7AM. On the way you pass through the dense Ayurvedic forests, beautiful they are! People say that hereditary mediciners (if such word doesn&amp;rsquo;t exist, I invented that up!), the laada vaidyans, from Tamil Nadu and Kerala come here to take rare medicinal plants for their Ayurvedic medicines and ottamulees. Our group split up, and we a group of 3 were left behind. We climbed real slowly and took ample rest. In fact it was like we climbed only when we got bored of taking rest. This is a climb of 6km after which we can see the Agasthyan. I enjoyed this part of trek, it was AWESOME!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/agastya2.jpg&#34; alt=&#34;Agastya&#34; /&gt; Agastya&lt;/p&gt;
-
-&lt;p&gt;Whenever we rested we got company of some other people who come to this place yearly. They told us stories. We were told that Sree Narayana Guru made this trek. Also Madhusoodhanan Nair, wrote the poem Agasthya Hrudayam on the top of this hill. Indeed if a poetic mind reaches the top of Agastyakoodam they&amp;rsquo;ll atleast pen down a few lines. That is the experience this trek provides. Some said that ONV Kurup also came here, don&amp;rsquo;t know if its real. Stories also said that Agastyakoodam formed when the great Hanuman flew over this place carrying Maruthvamala and a piece of that medicinal-plant rich mountain fell here. May be thats how they explain the Ayurvedic diversity found here. By the way, this is the world&amp;rsquo;s largest Ayurvedic forest. &lt;a href=&#34;http://en.wikipedia.org/wiki/Agastya#Legends_and_beliefs_about_Agastya&#34; target=&#34;_blank&#34;&gt;There is also another story&lt;/a&gt;. The Mount Vindhya was growing taller and taller. When sage Agastya walked through Vindhya bowed low and made a promise to Agasthya that it&amp;rsquo;ll stay so till Agastya returned. But Agastya muni never returned. He settled in a mountain in the Western Ghats. That mountain came to be known as Agastyakoodam.
-On the way there is Pongalapaara, where people are advised to take water, as there are no water sources after this point. Its told that at this spot, people make pongala(that is they cook in small mud utensils). They leave it at this place, so that they can have it on their way back. Here the wind is so strong that no birds will come to disturb/eat what people have cooked. Thus, this place came to be known as Pongalapaara (the rock where you make pongala).
-Then there is Muttidichanpaara. This part got that name because, when we climb this place, due it its steep slope we climb on four limbs and our &amp;lsquo;kaalmuttu&amp;rsquo; (knee) will hit our nose. Muttidichanpaara literally means &amp;lsquo;Rock where our knee hits (the nose)&amp;rsquo;.
-On our way near Pongalapaara, we saw a bird trying to fly against the wind. The wind was so strong that the bird was not moving even a inch forward, and sometimes it slipped two or three inches backward! But despite that the bird continued its struggle. We watched it for some time telling how dumb the bird is! On our way back, about 3 hours later we saw the same bird at exactly the same spot! We don&amp;rsquo;t know what became of that fierce warrior who fought against the wind. May be its perseverence astonished the God of winds, and the wind gave way for the bird. Or may be the bird grew tired, and it was blown away by the wind(which is more likely :P).
-After Pongalapaara, there is a small patch of trees, after which there are steep slopes. At three places, they have provided ropes, without which we won&amp;rsquo;t be able to climb them. When I climbed I was afraid and I always thought how I will be climbing these rocks down. I am afraid of heights and this added to my fear. But climbing down was a breeze. If I knew climbing down was easy I would have enjoyed my flight up a little bit more. After climbing the three rocks, we reached the top of the world and atlast saw Agasthyan! At the top there is a very small patch of trees and at its center there is an idol of sage Agasthya. He is said to be one of the saptarshis. He is believed to be the father of Tamil language(if that&amp;rsquo;s so, he&amp;rsquo;ll be the grandfather of Malayalam, as Malayalam originated from Tamil and Sanskrit!). At the top of Agastyakoodam, the wind blows at a very high speed, and am not exaggerating when I say that I was blown away more than a couple of times. The view from the top is breathtaking. We spend about 15 minutes there as there was not much to be done there. We were so happy that we felt that we almost climbed Mt.Everest!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/agastya3.jpg&#34; alt=&#34;Me On Top&#34; /&gt;
-After that we climbed down. The downward journey was very easy when compared to the upward journey. We started from the top by 11.30AM and reached the base camp by 2.30PM. Our friends who reached the base camp earlier were waiting for us with all the bags packed and ready for the return journey. They didn&amp;rsquo;t even allow us to take 5 minutes rest :( . Forest officials wont allow you for the return journey from base camp after 2PM. So they took all our bags and the packed lunch and waited outside the camp. Then by 2.45PM we started out return journey from the base camp. That was a tiresome journey, and our legs carried us almost automatically. I almost looked at my legs walking forward as if its someone else&amp;rsquo;s legs that is taking me! We reached the outside camp by 7PM. By 6.15PM, we were inside the forest and it was growing dark. It was a bit eery, but it was an awesome experience walking in the forest in the dark without any forest guard! By the time we reached outside, we saw two guards who were getting ready to come to look for us :P When we reached outside camp, we collapsed to the chairs, drank hot coffee, rested for about 20minutes and then made our journey back to our homes. The bike journey of 60km after the 30km trek left me almost numb :)
-Angane Agastyane kandu! It was a really good experience. The walk through the forests really make you closer to nature&lt;/p&gt;
-</description>
+      <description>On 2nd of March, we (a group of 10 friends) went onto the famous Agastyakoodam (or Agastyarkoodam as some call it that way). It is the second tallest hill in the Western Ghats. The tallest one is Anamudi. The only way to reach the top of Agastyakoodam is a 24km trek (although forest gaurds say it is only 18km). Of this only the last 6km include the flight to the hill.</description>
     </item>
     
     <item>
@@ -103,48 +46,8 @@ Angane Agastyane kandu! It was a really good experience. The walk through the fo
       <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2012/09/01/a-trip-to-the-southernmost-tip/</guid>
-      <description>&lt;p&gt;We planned to start to Kanyakumari from Thiruvanathapuram(tvm) by 5 AM so that we could see the sun rise at India&amp;rsquo;s southern-most tip. But as usual, we got
-delayed! And we left by about 5.45AM. Our rides consisted of my Fz and a friend&amp;rsquo;s Hunk. There were 4 of us - Arun Elias, Dhanoop Bhaskar, Basil Kuriakose and
-myself.&lt;/p&gt;
-
-&lt;p&gt;We rode through Kanyakumari-Panvel road. We reached Neyyattinkara and had breakfast from a small hotel. We crossed Amaravila checkpost and very soon the
-surroundings started to resemble Tamil Nadu.&lt;/p&gt;
-
-&lt;p&gt;By about 8 we were only half way when we reached this place:
-&lt;img src=&#34;https://sinujohn.github.io/assets/kanyakumari.jpg&#34; alt=&#34;The Three&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Its a little after the Kumaracoil junction. Here we saw beautiful peaks that touched the clouds. The moment we saw this we changed our route. And we reached
-Mambazhathuraiyar Resevoir. (To reach this place: after Kumaracoil junction, drive on the Kanyakumari route, you&amp;rsquo;ll see an overbridge(actually an aquaduct),
-and just before that on to the left you can see the road that leads to the reservoir). The road goes through a very beautiful place. We spent some time at
-the reservoir.&lt;/p&gt;
-
-&lt;p&gt;Our aim was the top of the peak so we kept going in that direction. We saw Noorul Islam Engineering College and took the right turn that immediately follows
-it. This road went high up till it almost reached a dead end. Here there was a small temple. After this, there was no more road as such. But there was a
-muddy lane which went steeply up. After about 400 metres I found a gate on which it was written- Naga Hills. Here we found a Malayali, who was generous
-enough to allow us to bath in a small forest lake-cum-waterfall (it was on his property). He also said many stories and places to see around that area. It
-was he who gave us our next location - Kaattadi hills/Mt.Devasahayam. But we couldn&amp;rsquo;t reach the top of the hill. There was no road that led there and we had to trek about 4km. Since we didn&amp;rsquo;t carry any food with us, we dropped that plan.&lt;/p&gt;
-
-&lt;p&gt;After the trekking we continued our journey. We took a left turn at Nagercoil(actually before Nagercoil, even though we meant to take the left at Nagercoil), and rode in Thirunelveli route.&lt;/p&gt;
-
-&lt;p&gt;After about 15km we reached Mt.Devasahayam. It was here that Vedasakshi Devasahayam Pilla got killed. Above this hill, there is a rock, which produces the
-sound of a bell. Legend is that, Mr.Pilla was killed by a King for being a Christian. He was killed on this hill. No one knew about this murder. Then a rock
-fell and a clinging noise was heard throughout the forest. The villagers nearby inspected the place and found the dead man. Its this rock thats preserved
-over here. We did strike the rock with small stones, and it did produce bell sound!
-From above Mt.Devasahayam we saw hundreds of wind mills. So our next destination was Kanya Spin(I can&amp;rsquo;t find this place in Google Maps, but it seems to be
-Muppandal Wind Farm). And after reaching that place, we were awestruck. We didn&amp;rsquo;t imagine that thing to be so huge! The place had very little trees and the
-wind was blowing at a high speed. After spending some time there, we started off to Kanyakumari by about 3.30PM!&lt;/p&gt;
-
-&lt;p&gt;We rode to Kanyakumari on Thirunelveli-Kanyakumari route(NH7 that leads connects Kanyakumari and Salem). There are no words to describe that ride. The road
-is simply superb! We were welcomed by wind mills on both sides for some distance. The wind was so strong that sometimes we were almost blown away!&lt;/p&gt;
-
-&lt;p&gt;And finally we reached Kanyakumari by 4.15PM. But alas, we coudn&amp;rsquo;t get to Vivekananda rock, as tickets are issued only till 4PM. But we had more than what we
-thought we would have on that trip. We spent some time at Kanyakumari. Almost dozed off watching the sea. Saw the sunset at one of the world&amp;rsquo;s rarest places
-(the place where 3 seas merge). And finally took the return ride at about 8PM.&lt;/p&gt;
-
-&lt;p&gt;The 204km trip we had imagined went to 264km by the time we reached our rooms!&lt;/p&gt;
-
-&lt;p&gt;(In this trip we didn&amp;rsquo;t go to the usual tourist locations like Padmanabhapuram Palace, Fort etc. We coudn&amp;rsquo;t find time! Instead we gladly explored the village/hilly areas)&lt;/p&gt;
-</description>
+      <description>We planned to start to Kanyakumari from Thiruvanathapuram(tvm) by 5 AM so that we could see the sun rise at India&amp;rsquo;s southern-most tip. But as usual, we got delayed! And we left by about 5.45AM. Our rides consisted of my Fz and a friend&amp;rsquo;s Hunk. There were 4 of us - Arun Elias, Dhanoop Bhaskar, Basil Kuriakose and myself.
+We rode through Kanyakumari-Panvel road. We reached Neyyattinkara and had breakfast from a small hotel.</description>
     </item>
     
   </channel>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apps on Hack</title>
-    <link>https://sinujohn.github.io/tags/apps/index.xml</link>
-    <description>Recent content in Apps on Hack</description>
+    <title>apps on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/apps/</link>
+    <description>Recent content in apps on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/apps/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 12 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/apps/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>RIP Thulika Keyboard.. (sob).. (sob)</title>
@@ -15,20 +18,9 @@
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/12/rip-thulika-keyboard-sob-sob/</guid>
-      <description>&lt;p&gt;Just got to know that Google has came up with an handwriting recognition app - &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.android.apps.handwriting.ime&amp;amp;hl=en&#34;&gt;Google Handwriting Input&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;And the good part is it has got Indian language support. Yay!!&lt;/p&gt;
-
-&lt;p&gt;But the bad part is that, it means the demise of my very own &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&amp;amp;hl=en&#34;&gt;Thulika Keyboard&lt;/a&gt;. I had created it &lt;a href=&#34;https://sinujohn.github.io/2013/01/21/thulika-keyboard/&#34;&gt;about 2 years back&lt;/a&gt;, and at that time there was no handwriting recognition app for any Indian language. I also had opensourced it, and have got requests from many to translate it to their language(Arabic, Hausa, Tamil to name a few) and some even have used it as part of their school/college projects.&lt;/p&gt;
-
-&lt;p&gt;RIP Thulika Keyboard, it was pleasure to have you around(it&amp;rsquo;s still out there, so you can download it and play with it, but with Google&amp;rsquo;s new app, mine seems a bit primitive :( ).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://sinujohn.github.io/assets/rip.jpg&#34; alt=&#34;RIP&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Google&amp;rsquo;s new app is awesome though, it recognises full words (mine could only do a letter at a time), and speaking about recognition, its very good at that.&lt;/p&gt;
-
-&lt;p&gt;So, here is me(Thulika), the old out dated tech giving way for the new stylish Google app ;)&lt;/p&gt;
-</description>
+      <description>Just got to know that Google has came up with an handwriting recognition app - Google Handwriting Input.
+And the good part is it has got Indian language support. Yay!!
+But the bad part is that, it means the demise of my very own Thulika Keyboard. I had created it about 2 years back, and at that time there was no handwriting recognition app for any Indian language. I also had opensourced it, and have got requests from many to translate it to their language(Arabic, Hausa, Tamil to name a few) and some even have used it as part of their school/college projects.</description>
     </item>
     
     <item>
@@ -37,13 +29,8 @@
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/immortal-login/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.immortal&#34; target=&#34;_blank&#34;&gt;Download the app from PlayStore&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sinujohn/immortal&#34; target=&#34;_blank&#34;&gt;Find the source on Github&lt;/a&gt;
-I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.immortal&#34; target=&#34;_blank&#34;&gt;Immortal Login&lt;/a&gt;. It is a very simple app and took only about 2 hours to create it completely. The app have got a web view using which the user can log in to a site. Then upon the pressing of a Start button, my activity starts a service. Since the activity has got a service, the app will not be killed by the Android system (at least it&amp;rsquo;ll try not to kill the app :)). Taadaa thats it.. you have got an Immortal Login app. Now there is no hassle of frequent log outs!
-The app works with any ISP site. Also it need not be an ISP website, it can be any site which you want to keep alive so as not to get logged out :)
-The app is currently used by me and my friends who use this ISP. I have also got downloads and positive comments from users who use BSNL connection.&lt;/p&gt;
-</description>
+      <description>Download the app from PlayStore
+Find the source on Github I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
     </item>
     
     <item>
@@ -52,12 +39,7 @@ The app is currently used by me and my friends who use this ISP. I have also got
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Download the app from PlayStore&lt;/a&gt;
-On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Thulika Keyboard&lt;/a&gt; - in the Play Store.
-Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions. Writing a keyboard for a language like Malayalam is not quite simple as &lt;a href=&#34;http://en.wikipedia.org/wiki/Malayalam_alphabet&#34; target=&#34;_blank&#34;&gt;Malayalam has a complex script&lt;/a&gt; compared to Latin languages. Some symbols may have more than one Unicode letters to accompany it. And in some cases more than one symbols make up a single Unicode letter!
-Thulika uses machine learning/AI technique called &lt;a href=&#34;http://www.ai-junkie.com/ann/som/som1.html&#34; target=&#34;_blank&#34;&gt;SOM (Self Organising Map)&lt;/a&gt; using the library &lt;a href=&#34;http://www.heatonresearch.com/encog&#34; target=&#34;_blank&#34;&gt;Encog&lt;/a&gt;. Encog is a great library and is quite easy to use. I have trained it using the handwriting of my own and some of my friends. I started writing the app in October, took a break for nearly 2 weeks in November end, and the app was completed by mid-December. Then I took it lazily, and waited till January to make some final polishes and then published it :)
-The entire application consists of Thulika Keyboard (the actual keyboard for end user), ThulikaTrainer (an Android app that helps in gathering user handwritings for a particular language) and ThulikaMaker (a Java application that helps in providing additional details required for the keyboard and also creates the language recognition engine). Anyone can easily help me in adding new languages for the Thulika Keyboard. &lt;a href=&#34;https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/&#34;&gt;Read this post&lt;/a&gt; to understand how.&lt;/p&gt;
-</description>
+      <description>Download the app from PlayStore On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard - in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
     </item>
     
     <item>
@@ -66,97 +48,11 @@ The entire application consists of Thulika Keyboard (the actual keyboard for end
       <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Before you read :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.&lt;/p&gt;
-
-&lt;p&gt;The decomposition is as follows: LetterCode + modifyingSymbolCode&lt;/p&gt;
-
-&lt;p&gt;Eg: ക്രൊ = ( ക + ്ര + ൊ )&lt;/p&gt;
-
-&lt;p&gt;So as you see the code that comes first(ക) need not be the first letter that the user writes(െ). Also some symbols(like the symbol that comes after െ) will not have direct Unicode substitution (it should be written as  ്ര).&lt;/p&gt;
-
-&lt;p&gt;Also the code that&amp;rsquo;s already written might have to be modified according to the symbol that the user writes next. For eg:&lt;/p&gt;
-
-&lt;p&gt;If user writes ാ and the symbol just before isെ, then we&amp;rsquo;ll have replaceെ withൊ.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Now onto the training part:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This post describes the steps needed to configure new language/symbols for the &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Thulika Keyboard&lt;/a&gt; app. For this you have to download  &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika.train&#34; target=&#34;_blank&#34;&gt;ThulikaTrainer&lt;/a&gt; app.&lt;/p&gt;
-
-&lt;p&gt;To train Thulika keyboard on new inputs, require three steps:
-&lt;ol&gt;
-    &lt;li&gt;Save handwriting images of all the symbols of the language you wish the keyboard recognises (This is using the ThulikaKeyboard app on your Android phone)&lt;/li&gt;
-    &lt;li&gt;Run a program on your PC (will update the steps for this later)&lt;/li&gt;
-    &lt;li&gt;ThulikaTrainer Load engine (will update later)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Step 1. ThulikaTrainer app&lt;/h3&gt;
-&lt;strong&gt;1.&lt;/strong&gt; Run the app for the first time. It&amp;rsquo;ll create directory structures on your sdcard. Make sure the following directories are created: sdcard/Android/data/me.sinu.thulika.train/files. There&amp;rsquo;ll be two folders under this - engines and letters.
-&lt;strong&gt;2.&lt;/strong&gt; Create a text file alpha.txt in sdcard/Android/data/me.sinu.thulika.train/files. This file should contain the symbols that the keyboard should recognize. Each symbol should be separated from other symbol using a COMMA(,).
-&lt;p style=&#34;padding-left:30px;&#34;&gt;For example, if you want to train the symbols a, b, c, 1 and 2, then, the alpha.txt should contain :&lt;/p&gt;
-&lt;p style=&#34;padding-left:30px;&#34;&gt;a, b, c, 1, 2&lt;/p&gt;
-&lt;p style=&#34;padding-left:30px;&#34;&gt;You can create the alpha.txt file using PC and then copy to the respective folder on your sdcard.&lt;/p&gt;
-&lt;strong&gt;3.&lt;/strong&gt; Now if you run the app, the symbols that you have specified in alpha.txt will be present on each of the buttons at the bottom of the app.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Draw a symbol on the screen and then press the button that corresponds to the symbol you have drawn. It&amp;rsquo;ll add a file under sdcard/Android/data/me.sinu.thulika.train/files/letters
-&lt;p style=&#34;padding-left:30px;&#34;&gt;If you have made a mistake you can press Clear button. If you accidentally pressed the wrong symbol button, press &amp;lsquo;Delete Last&amp;rsquo;, it will delete the last file you have created.&lt;/p&gt;
-&lt;p style=&#34;padding-left:30px;&#34;&gt;Please make sure you press the correct button corresponding to the symbol you have drawn. This is what ensures the correctness of the keyboard.&lt;/p&gt;
-&lt;p style=&#34;padding-left:30px;&#34;&gt;You can draw more than one symbol for each symbol button. It doesn&amp;rsquo;t matter, but it&amp;rsquo;ll be better if one person provides only one set of symbols. You can ask another person to provide images for the entire set again, so that there will be more than one handwriting for each symbol. But in the beginning make sure you have atleast one set of handwriting images for the entire symbol set.&lt;/p&gt;
-&amp;nbsp;
-&lt;h3&gt;Step 2 : Run ThulikaMaker on your PC&lt;/h3&gt;
-&lt;strong&gt;1.&lt;/strong&gt; &lt;a href=&#34;https://www.box.com/s/dt27vxv6769jln4qes0e&#34; target=&#34;_blank&#34;&gt;Click here&lt;/a&gt; to download ThulikaMaker.jar&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Copy the folder sdcard/Android/data/me.sinu.thulika.train/files/letters from your phone to your PC.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Run ThulikaMaker.jar.
-&lt;img src=&#34;https://sinujohn.github.io/assets/thulikamaker.png&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Enter a width and height. For south Indian languages width=13 and height=10 should work. Its usually a trial and error procedure to find width and height. For letters like English, give width=7, height=7. For numbers give width=5, height=5. Try to keep widthxheight (the product) value as low as possible.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Click &amp;lsquo;Load Bundle&amp;rsquo; and select the &amp;lsquo;letters&amp;rsquo; folder that you have copied to the PC. Click open.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; Wait for a minute. Now files will be loaded. You can now select any entry to view the file. Press &amp;lsquo;Delete File&amp;rsquo; if you want to delete any file(if you find that the image is wrong for a particular file).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; Alternatives text is not used now(SKIP)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;8.&lt;/strong&gt; Align value, the default value is 0 :&lt;/p&gt;
-
-&lt;p&gt;If the image is a symbol that comes on the left side of a letter (like െ, േ in Malayalam), set Align=-1&lt;/p&gt;
-
-&lt;p&gt;If the image is a symbol that comes on the right side of a letter (like ു, ൂ, ൃ in Malayalam), set Align=1&lt;/p&gt;
-
-&lt;p&gt;If it is a usual symbol, set Align=0. For latin letters and numerals, align will be 0.&lt;/p&gt;
-
-&lt;p&gt;If you modify align/rules for a symbol, make sure you click &amp;lsquo;Save Symbol&amp;rsquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;9.&lt;/strong&gt; Rules: Give a rule if you want to modify the current letter according to a letter that comes before it. This applies only to complex languages like Indian languages. For English and numerals, there will not be any rules.&lt;/p&gt;
-
-&lt;p&gt;For a symbol X, if you want to modify what happens when letter X is written according to a symbol that comes before it,  then you have to give rules for symbol X. If the letter before is Y, and if you want to turn it into Z, give rule as Y:Z. If the letter is B, and if you want to turn it into BX, give rule as B:BX&lt;/p&gt;
-
-&lt;p&gt;For example: symbol:ാ align:1 rules:ഒ:ഓ; െ:ൊ; േ:ോ&lt;/p&gt;
-
-&lt;p&gt;If you modify align/rules for a symbol, make sure you click &amp;lsquo;Save Symbol&amp;rsquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; Finally, give a language ID.It can be any name. Usuall we give the name of the language. Click &amp;lsquo;Save Engine&amp;rsquo; . Give the name E_engine and click Save.
-&lt;h3&gt;Step 3: ThulikaTrainer Load Engine&lt;/h3&gt;
-&lt;strong&gt;1.&lt;/strong&gt; Copy E_engine file from PC to sdcard/Android/data/me.sinu.thulika.train/files/engines/ of your phone.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Run ThulikaTrainer app on the phone.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Press menu key, and select Load Engine. The E_engine file will be loaded.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Draw a symbol, and press Recognize button. Test for all the letters, and make sure all the letters are getting recognized.&lt;/p&gt;
-
-&lt;p&gt;Example: &lt;a href=&#34;https://www.box.com/s/h905qszbsj27d2rdhoct&#34; target=&#34;_blank&#34;&gt;Click here&lt;/a&gt; to see the details of all the letters for Malayalam language.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;Mail the letter files folder and E_engine to &lt;strong&gt;sjsuperapps at gmail dot com&lt;/strong&gt;. If you have any doubt please mail at this address. I&amp;rsquo;ll do my best to help you.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>Before you read :
+Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+The decomposition is as follows: LetterCode + modifyingSymbolCode
+Eg: ക്രൊ = ( ക + ്ര + ൊ )
+So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).</description>
     </item>
     
   </channel>

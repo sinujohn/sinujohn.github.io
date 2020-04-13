@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ai on Hack</title>
-    <link>https://sinujohn.github.io/tags/ai/index.xml</link>
-    <description>Recent content in Ai on Hack</description>
+    <title>ai on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/ai/</link>
+    <description>Recent content in ai on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 05 Mar 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Opensourced Thulika</title>
@@ -15,8 +18,7 @@
       <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/03/05/opensourced-thulika/</guid>
-      <description>&lt;p&gt;I just opensourced the Thulika Keyboard app and the associated training softwares. &lt;a href=&#34;https://github.com/sinujohn/ThulikaIME&#34; target=&#34;_blank&#34;&gt;Find it here on Github&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>I just opensourced the Thulika Keyboard app and the associated training softwares. Find it here on Github</description>
     </item>
     
     <item>
@@ -25,10 +27,8 @@
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</guid>
-      <description>&lt;p&gt;The developer of &lt;a href=&#34;http://www.heatonresearch.com/encog&#34; target=&#34;_blank&#34;&gt;Encog&lt;/a&gt; library, Jeff Heaton, tweeted about my first Android app - &lt;a href=&#34;https://sinujohn.github.io/2013/01/21/thulika-keyboard/&#34;&gt;Thulika Keyboard&lt;/a&gt;.
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en-gb&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Someone wrote a nice Android handwriting app with &lt;a href=&#34;https://twitter.com/hashtag/encog?src=hash&#34;&gt;#encog&lt;/a&gt;.  &lt;a href=&#34;https://t.co/vd2JpTrR&#34;&gt;https://t.co/vd2JpTrR&lt;/a&gt;&lt;/p&gt;&amp;mdash; jeffheaton (@jeffheaton) &lt;a href=&#34;https://twitter.com/jeffheaton/status/297680860109492224&#34;&gt;2 February 2013&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-</description>
+      <description>The developer of Encog library, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard. Someone wrote a nice Android handwriting app with #encog. https://t.co/vd2JpTrR
+&amp;mdash; jeffheaton (@jeffheaton) 2 February 2013</description>
     </item>
     
     <item>
@@ -37,12 +37,7 @@
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Download the app from PlayStore&lt;/a&gt;
-On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - &lt;a href=&#34;https://play.google.com/store/apps/details?id=me.sinu.thulika&#34; target=&#34;_blank&#34;&gt;Thulika Keyboard&lt;/a&gt; - in the Play Store.
-Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions. Writing a keyboard for a language like Malayalam is not quite simple as &lt;a href=&#34;http://en.wikipedia.org/wiki/Malayalam_alphabet&#34; target=&#34;_blank&#34;&gt;Malayalam has a complex script&lt;/a&gt; compared to Latin languages. Some symbols may have more than one Unicode letters to accompany it. And in some cases more than one symbols make up a single Unicode letter!
-Thulika uses machine learning/AI technique called &lt;a href=&#34;http://www.ai-junkie.com/ann/som/som1.html&#34; target=&#34;_blank&#34;&gt;SOM (Self Organising Map)&lt;/a&gt; using the library &lt;a href=&#34;http://www.heatonresearch.com/encog&#34; target=&#34;_blank&#34;&gt;Encog&lt;/a&gt;. Encog is a great library and is quite easy to use. I have trained it using the handwriting of my own and some of my friends. I started writing the app in October, took a break for nearly 2 weeks in November end, and the app was completed by mid-December. Then I took it lazily, and waited till January to make some final polishes and then published it :)
-The entire application consists of Thulika Keyboard (the actual keyboard for end user), ThulikaTrainer (an Android app that helps in gathering user handwritings for a particular language) and ThulikaMaker (a Java application that helps in providing additional details required for the keyboard and also creates the language recognition engine). Anyone can easily help me in adding new languages for the Thulika Keyboard. &lt;a href=&#34;https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/&#34;&gt;Read this post&lt;/a&gt; to understand how.&lt;/p&gt;
-</description>
+      <description>Download the app from PlayStore On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard - in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
     </item>
     
   </channel>

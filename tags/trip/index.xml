@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trip on Hack</title>
-    <link>https://sinujohn.github.io/tags/trip/index.xml</link>
-    <description>Recent content in Trip on Hack</description>
+    <title>trip on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/trip/</link>
+    <description>Recent content in trip on Sinu John</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://sinujohn.github.io/tags/trip/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 29 Oct 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/trip/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Thiruvananthapuram Life</title>
@@ -15,24 +18,7 @@
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</guid>
-      <description>&lt;p&gt;For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram.
-Do I love this place? Yes and No.
-No? Why? Because this place lacks some sort of energy :(
-And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the &lt;a href=&#34;http://en.wikipedia.org/wiki/Trivandrum_Public_library&#34;&gt;Trivandrum Public Library&lt;/a&gt; (where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.
-The bike trips that I have done around this place is close to 10000 km!
-The following map show some of the short distance trips:&lt;/p&gt;
-
-&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d267521.8636949016!2d76.80008028469128!3d8.555347941141372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05a5960e90dc0f%3A0x6c20be6dc7c83670!2sKovalam+Light+house%2C+Kerala%2C+India!3m2!1d8.3829317!2d76.9796703!4m5!1s0x0%3A0x60cdff4235654bb9!2sVizhinjam+Juma+Masjid!3m2!1d8.3766123!2d76.9865183!4m5!1s0x3b05bb6774e1149b%3A0x1efe85dbc5053198!2sValiathura+Beach!3m2!1d8.464157!2d76.92454149999999!4m5!1s0x3b05bc83dedcfc07%3A0xc899203065f19098!2sShangumugham+Beach%2C+Thiruvananthapuram%2C+Kerala%2C+India!3m2!1d8.4784498!2d76.9119061!4m5!1s0x3b05bc3b8bcd7c63%3A0xf2a956af86a27253!2sVeli+Lake+and+Tourist+Village%2C+Veli+Sanghumugham+Road%2C+Veli%2C+Thiruvananthapuram%2C+Kerala%2C+India!3m2!1d8.5080206!2d76.88867019999999!4m5!1s0x3b05ef1c47000001%3A0x28d32906ae208476!2sPapanasam+Beach%2C+Varkala%2C+Kerala%2C+India!3m2!1d8.7327015!2d76.70605669999999!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05c95ff9740455%3A0x74aefbb63ac4f952!2sVazhvanthol+Waterfalls%2C+Kerala%2C+India!3m2!1d8.6745608!2d77.1633027!4m5!1s0x3b05cdc56677fbd3%3A0xb9400a2604d8f63d!2sPonmudi+Hill+Station%2C+Ponmudi%2C+Kerala%2C+India!3m2!1d8.7577585!2d77.1157944!5e0!3m2!1sen!2sus!4v1489429824438&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;And here are the long distance trips :&lt;/p&gt;
-
-&lt;p&gt;to &lt;a href=&#34;{{ site.baseurl }}{% post_url 2012-09-01-a-trip-to-the-southernmost-tip %}&#34;&gt;Kanyakumari&lt;/a&gt;, to &lt;a href=&#34;{{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}&#34;&gt;Agastyarkoodam&lt;/a&gt; and to Thenkasi (via Thenmala and Palaruvi waterfalls)
-&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m72!1m8!1m3!1d1009750.7718668396!2d77.088097!3d8.659278!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05af5b949c96d9%3A0x82c2dfa6dffb751c!2sPoovar+-+Vizhinjam+Rd%2C+Karumkulam%2C+Kerala+695525%2C+India!3m2!1d8.3271391!2d77.0560321!4m5!1s0x3b0454f79775f7c3%3A0x86b55a2e872ecd32!2sChitral+Rock+Temple%2C+Vellamcode%2C+Tamil+Nadu+629151%2C+India!3m2!1d8.3323779!2d77.2384304!4m5!1s0x3b05af5b949c96d9%3A0x82c2dfa6dffb751c!2sPoovar+-+Vizhinjam+Rd%2C+Karumkulam%2C+Kerala+695525%2C+India!3m2!1d8.3194559!2d77.0655432!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05bf3cc78b105b%3A0xe2d7c8ffbb9798b!2sUnknown%2C+Uliyazhathura%2C+Kerala+695581%2C+India!3m2!1d8.5785933!2d76.8994874!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3b05d628ce443a95%3A0x21700d924118d43c!2sThenmala%2C+Kerala%2C+India!3m2!1d8.9632448!2d77.0650809!4m5!1s0x3b05d570afa845b3%3A0x9ad29897133245dc!2sPalaruvi+Waterfalls%2C+Road+to+Palaruvi+Waterfalls%2C+Kollam%2C+Kerala%2C+India!3m2!1d8.952378699999999!2d77.15484479999999!4m5!1s0x3b0429c15ac547f7%3A0x9a707276cd8ae327!2sTenkasi%2C+Tamil+Nadu%2C+India!3m2!1d8.9590214!2d77.3129383!5e0!3m2!1sen!2sus!4v1489426569264&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m42!1m8!1m3!1d1010633.21746241!2d77.227604!3d8.324051!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!4m5!1s0x3be7e7d457af298f%3A0xf816a5f8d82383ff!2sPanvel+-+Kochi+-+Kanyakumari+Hwy%2C+Vettunimadam%2C+Nagercoil%2C+Tamil+Nadu+629001%2C+India!3m2!1d8.179677!2d77.421188!4m5!1s0x3b04f51233a9b575%3A0xada29bbad5cd14c2!2sMuppandal+Wind+Farm%2C+Aralvaimozhi%2C+Tamil+Nadu+627105%2C+India!3m2!1d8.2616075!2d77.54175599999999!4m5!1s0x3b04ed3d2a087861%3A0x1e790e896aeffaa0!2sKanyakumari%2C+Tamil+Nadu%2C+India!3m2!1d8.0883064!2d77.5384507!4m5!1s0x3b05beffd4dcd581%3A0x10321bb1abc84324!2sKazhakoottam+Junction%2C+NH+47+Bypass%2C+Thiruvananthapuram%2C+Kerala+695582%2C+India!3m2!1d8.5657443!2d76.8748999!5e0!3m2!1sen!2sus!4v1489426740046&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Travelling these routes one time alone is around 1000 kilometres! :D&lt;/p&gt;
-</description>
+      <description>For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram. Do I love this place? Yes and No. No? Why? Because this place lacks some sort of energy :( And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the Trivandrum Public Library (where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.</description>
     </item>
     
   </channel>
