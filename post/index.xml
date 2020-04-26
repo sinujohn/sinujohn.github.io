@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 14 Apr 2020 14:37:20 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 21:22:16 +0530</lastBuildDate>
     
 	<atom:link href="https://sinujohn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Cloud Stream - using Functional constructs</title>
+      <link>https://sinujohn.github.io/2020/04/26/spring-cloud-stream-using-functional-constructs/</link>
+      <pubDate>Sun, 26 Apr 2020 21:22:16 +0530</pubDate>
+      
+      <guid>https://sinujohn.github.io/2020/04/26/spring-cloud-stream-using-functional-constructs/</guid>
+      <description>Preface Spring Cloud Stream provides a framework to implement messaging in a clean way. The new version 3 brings functional paradigm to the Spring Cloud Stream framework where previously the annotations were used for the same. Docs explain it way better, but I will provide a succint way to get started. Read this after going through the docs. In this blog, I chose Kafka as the message broker.
+Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets us create Beans of type Function, Consumer or Supplier.</description>
+    </item>
     
     <item>
       <title>Setting up Development Env in Win10 and WSL2</title>
@@ -62,11 +72,11 @@ How to use?</description>
     </item>
     
     <item>
-      <title>Certified Monadic I am!</title>
-      <link>https://sinujohn.github.io/2016/01/09/certified-monadic-i-am/</link>
+      <title>Certified in Functional Programming</title>
+      <link>https://sinujohn.github.io/2016/01/09/certified-fp/</link>
       <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sinujohn.github.io/2016/01/09/certified-monadic-i-am/</guid>
+      <guid>https://sinujohn.github.io/2016/01/09/certified-fp/</guid>
       <description>I took the Functional Programming course on edX and completed it last month. Scored 99% :)
 This is the first time I am completing an online MOOC. Usually I drop all the courses after one or two weeks. Lazy me!
 Here is my VERIFIED certificate signed by Dr.Erik Meijer:</description>
