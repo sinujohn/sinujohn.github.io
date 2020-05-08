@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>REST on Sinu John</title>
@@ -18,9 +18,7 @@
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
-      <description>There is a very good documentation in Jersey website: https://jersey.java.net/documentation/latest/jaxrs-resources.html and https://jersey.java.net/documentation/latest/filters-and-interceptors.html
-Here is a small flowchart that I made showing how the JAX-RS flow works:
-Happy coding :)</description>
+      <description></description>
     </item>
     
   </channel>

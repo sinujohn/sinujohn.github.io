@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Sinu John</title>
+    <link>https://sinujohn.github.io/tags/windows/</link>
+    <description>Recent content in windows on Sinu John</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 14 Apr 2020 14:37:20 +0530</lastBuildDate>
+    
+	<atom:link href="https://sinujohn.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting up Development Env in Win10 and WSL2</title>
+      <link>https://sinujohn.github.io/2020/04/14/setting-up-development-env-in-win10-and-wsl2/</link>
+      <pubDate>Tue, 14 Apr 2020 14:37:20 +0530</pubDate>
+      
+      <guid>https://sinujohn.github.io/2020/04/14/setting-up-development-env-in-win10-and-wsl2/</guid>
+      <description>Flashback Long back, I was a hardcore Linux enthusiast having been brain washed by the FSF folks. I have long been out of that hate mindset where you are supposed to hate everything which is not free (FSF Free).
+Still I love the *nix env and it is one of the best ways a developer can be productive. I had used Mac in the past and the developer friendliness that ecosystem offers is top notch.</description>
+    </item>
+    
+  </channel>
+</rss>

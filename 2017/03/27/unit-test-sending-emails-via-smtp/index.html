@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Sinu John ">
 <meta name="description" content="I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!" />
-<meta name="keywords" content="" />
+<meta name="keywords" content=", java" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="https://sinujohn.github.io/2017/03/27/unit-test-sending-emails-via-smtp/" />
@@ -25,7 +25,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -39,28 +39,25 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Unit test - Sending emails via SMTP">
 <meta itemprop="description" content="I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!">
-
-
 <meta itemprop="datePublished" content="2017-03-27T15:54:02&#43;05:30" />
 <meta itemprop="dateModified" content="2017-03-27T15:54:02&#43;05:30" />
 <meta itemprop="wordCount" content="110">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="Unit test - Sending emails via SMTP" />
-<meta property="og:description" content="I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2017/03/27/unit-test-sending-emails-via-smtp/" />
-<meta property="article:published_time" content="2017-03-27T15:54:02+05:30" />
-<meta property="article:modified_time" content="2017-03-27T15:54:02+05:30" /><meta property="og:site_name" content="Sinu John" />
+<meta itemprop="keywords" content="java," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Unit test - Sending emails via SMTP"/>
 <meta name="twitter:description" content="I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!"/>
+
+
 
 
 
@@ -138,9 +135,7 @@
 
             <div class="post-content">
                 <p>I had been looking for ways on how to unit test sending out emails via SMTP server. As with all other problems, there are a bunch of options for this. But most of them are not embeddable which means I have to start them and stop them outside my code. I was looking for something very simple. Something thats embeddable and provides just the bare minimum functionality that I need like asserting whether mails have been send (without actually sending them ofcourse!) and the content of the mail is actually what I intended to send. That&rsquo;s how I hit upon <a href="https://github.com/voodoodyne/subethasmtp">Wiser or SubEtha SMTP</a>.</p>
-
 <p>The code itself is self explanatory:</p>
-
 <script type="application/javascript" src="https://gist.github.com/sinujohn/f4c6f2fc8d8d2ac05d73cc740943eed2.js"></script>
 
 
@@ -150,6 +145,9 @@
         <hr />
 
         <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://sinujohn.github.io/tags/java">java</a></span>
+  				</p>
   		</div>
     </main>
 
@@ -183,15 +181,21 @@
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

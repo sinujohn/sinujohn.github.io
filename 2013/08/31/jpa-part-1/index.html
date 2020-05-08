@@ -5,7 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters)." />
+<meta name="description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series.
+//getters and setters  }
+ this maps to &amp;lt;strong&amp;gt;Table: &amp;lt;/strong&amp;gt;Employee    empId name     _____ ____    " />
 <meta name="keywords" content=", java, jpa" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -25,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -39,30 +41,29 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="JPA - Part 1">
-<meta itemprop="description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).">
-
-
+<meta itemprop="description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series.
+//getters and setters  }
+ this maps to &lt;strong&gt;Table: &lt;/strong&gt;Employee    empId name     _____ ____    ">
 <meta itemprop="datePublished" content="2013-08-31T00:10:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-08-31T00:10:00&#43;00:00" />
-<meta itemprop="wordCount" content="179">
+<meta itemprop="wordCount" content="37">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java,jpa," />
-<meta property="og:title" content="JPA - Part 1" />
-<meta property="og:description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2013/08/31/jpa-part-1/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2013-08-31T00:10:00+00:00" />
-<meta property="article:modified_time" content="2013-08-31T00:10:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="JPA - Part 1"/>
-<meta name="twitter:description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters)."/>
+<meta name="twitter:description" content="This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series.
+//getters and setters  }
+ this maps to &lt;strong&gt;Table: &lt;/strong&gt;Employee    empId name     _____ ____    "/>
+
+
 
 
 
@@ -141,53 +142,29 @@
             
 
             <div class="post-content">
-                <p>This post is part of <a href="/2013/08/31/persistence-using-java/">Project Digitisation</a>. I have decided to write about JPA in several posts. This is part 1 of the series.
-<h2>JPA - Java Persistence API</h2>
-JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications.
-JPA provides:
-<ul>
-    <li><strong>ORM</strong> (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).
-<ul>
-    <li>An Object which can be mapped is called an Entity</li>
-</ul>
-</li>
-    <li><strong>JPQL</strong> - Java Persistence Query Language</li>
-</ul>
-Entity classes should be Java beans (POJOs with private variables and public getters and setters).
-<h3>Annotations used:</h3>
-<ul>
-    <li><strong>@Entity</strong>
-<ul>
-    <li>Used before a class name. By default, table name is same as class name.</li>
-</ul>
-</li>
-    <li><strong>@Id</strong>
-<ul>
-    <li>Used before the instance variable which is the primary key in the table.</li>
-</ul>
-</li>
-</ul>
-By default instance variable names is same as the column names.
-<h4>Example:</h4></p>
-
-<pre><code>@Entity
-public class Employee {
-    @Id
-    private int empId; //becomes primary key
-    private String name;
-
-    //getters and setters
-}
+                <p>This post is part of <a href="/2013/08/31/persistence-using-java/">Project Digitisation</a>. I have decided to write about JPA in several posts. This is part 1 of the series.</p>
+<!-- raw HTML omitted -->
+<pre><code>//getters and setters
 </code></pre>
-
-<p>this maps to
-<strong>Table: </strong>Employee</p>
-
-<pre><code> | empId | name |
- | ----- | ---- |
- | _____ | ____ |
-</code></pre>
-
+<p>}</p>
+<pre><code>
+this maps to
+&lt;strong&gt;Table: &lt;/strong&gt;Employee
+</code></pre><table>
+<thead>
+<tr>
+<th>empId</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_____</td>
+<td>____</td>
+</tr>
+</tbody>
+</table>
+<pre><code></code></pre>
             </div>
         </article>
 
@@ -230,15 +207,21 @@ public class Employee {
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

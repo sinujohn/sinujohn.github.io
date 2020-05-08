@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc." />
+<meta name="description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem." />
 <meta name="keywords" content=", java, eclipse" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -25,7 +25,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -39,30 +39,25 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Starting Eclipse Plugin Development">
-<meta itemprop="description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.">
-
-
+<meta itemprop="description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem.">
 <meta itemprop="datePublished" content="2013-06-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-06-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="311">
+<meta itemprop="wordCount" content="45">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java,eclipse," />
-<meta property="og:title" content="Starting Eclipse Plugin Development" />
-<meta property="og:description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2013-06-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-06-06T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Starting Eclipse Plugin Development"/>
-<meta name="twitter:description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc."/>
+<meta name="twitter:description" content="I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem."/>
+
+
 
 
 
@@ -141,28 +136,12 @@
             
 
             <div class="post-content">
-                <p>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem.
-<h3>Start here:</h3>
-<a href="http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html" target="_blank"><a href="http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html">http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html</a></a>This blog post describes how to create a simple plugin(<a href="http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject" target="_blank"><a href="http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject">http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject</a></a>) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.
-<h3>Displaying markers</h3>
-Plugins allow us to highlight certain portions of the text in the code editor. Markers are used for this. Markers can also be used to show errors, so that error is marked in compilation and the error is shown in Problems view. The following links show how to create and manipulate markers:
-<a href="http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html" target="_blank"><a href="http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html">http://www.ibm.com/developerworks/opensource/tutorials/os-eclipse-plugin-guide/section3.html</a></a>
-<a href="http://cubussapiens.hu/tag/markers/" target="_blank"><a href="http://cubussapiens.hu/tag/markers/">http://cubussapiens.hu/tag/markers/</a></a>
-<h3>Create Dialog boxes within Eclipse</h3>
-Some times our plugin might need to show some dialog boxes to the users. It can range from a simple Error message box to some complex dialog box. Dialog boxes can be created using JFace as mentioned here : <a href="http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0" target="_blank"><a href="http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0">http://eclipse.dzone.com/news/discover-eclipses-jface-dialog?page=0,0</a></a>
-How do I insert text in the active text editor? This is a common requirement. Find the solution here : <a href="http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F" target="_blank"><a href="http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F">http://wiki.eclipse.org/FAQ_How_do_I_insert_text_in_the_active_text_editor%3F</a></a>
-<h3>Formatting the code</h3>
-Some times we might need to insert pieces of code into the code editor and it feel good if the code is formatted. Look here to see how to do it : <a href="http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm" target="_blank"><a href="http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm">http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.isv%2Fguide%2Fjdt_api_codeformatter.htm</a></a>
-<h3>Fiddling with the source code</h3>
-What is the use of a plugin if you can&rsquo;t get into the details of Java source code of the opened projects? Eclipse provides Java Model and Abstract Syntax Trees for this purpose. Java Model is an easy to use and fast model whereas AST is relatively slow, but ASTs contain much more details. Here are the some links to start with this:</p>
-
-<p><a href="http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html" target="_blank"><a href="http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html">http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html</a></a></p>
-
-<p><a href="http://www.vogella.com/articles/EclipseJDT/article.html" target="_blank"><a href="http://www.vogella.com/articles/EclipseJDT/article.html">http://www.vogella.com/articles/EclipseJDT/article.html</a></a></p>
-
-<p><a href="http://www.ibm.com/developerworks/opensource/library/os-ast/" target="_blank"><a href="http://www.ibm.com/developerworks/opensource/library/os-ast/">http://www.ibm.com/developerworks/opensource/library/os-ast/</a></a>
-<div><a href="http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html" target="_blank"><a href="http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html">http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html</a></a></div>
-<a href="http://sahits.ch/blog/?p=228" target="_blank"><a href="http://sahits.ch/blog/?p=228">http://sahits.ch/blog/?p=228</a></a></p>
+                <p>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&rsquo;ll point out to the sources that helped me to solve the problem.</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><a href="http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html">http://www.eclipse.org/articles/article.php?file=Article-JavaCodeManipulation_AST/index.html</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><a href="http://www.vogella.com/articles/EclipseJDT/article.html">http://www.vogella.com/articles/EclipseJDT/article.html</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><a href="http://www.ibm.com/developerworks/opensource/library/os-ast/">http://www.ibm.com/developerworks/opensource/library/os-ast/</a><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 
             </div>
         </article>
@@ -206,15 +185,21 @@ What is the use of a plugin if you can&rsquo;t get into the details of Java sour
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

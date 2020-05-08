@@ -25,7 +25,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -39,30 +39,25 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Visitor Pattern">
 <meta itemprop="description" content="I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!">
-
-
 <meta itemprop="datePublished" content="2013-06-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-06-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="532">
+<meta itemprop="wordCount" content="423">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java,design patterns,visitor pattern," />
-<meta property="og:title" content="Visitor Pattern" />
-<meta property="og:description" content="I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2013/06/06/visitor-pattern/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2013-06-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-06-06T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Visitor Pattern"/>
 <meta name="twitter:description" content="I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!"/>
+
+
 
 
 
@@ -142,31 +137,17 @@
 
             <div class="post-content">
                 <p>I had been reading about Design Patterns a while ago, and later dropped it after reading a few designs for reasons unknown. I carried on with my programming after that. Now when I look at the code that I&rsquo;ve written(after reading the Design Patterns) I can see that I have unknowingly put some of the Design Patterns I had read about into the code I have done! Wow! :) Since it has helped me to code better I have decided to learn/revise atleast one new pattern once in a few days(or weeks for that matter ;) as am a bit lazy!).</p>
-
-<p>Here is the repo I created to track my experiment with <a href="https://github.com/sinujohn/DesignPatterns">Design Patterns</a>.</p>
-
-<p>Read about Visitor pattern <a href="http://en.wikipedia.org/wiki/Visitor_pattern">here</a> and <a href="http://www.javaworld.com/javaworld/javatips/jw-javatip98.html">here</a>.</p>
-
+<p>Here is the repo I created to track my experiment with <!-- raw HTML omitted -->Design Patterns<!-- raw HTML omitted -->.</p>
+<p>Read about Visitor pattern <!-- raw HTML omitted -->here<!-- raw HTML omitted --> and <!-- raw HTML omitted -->here<!-- raw HTML omitted -->.</p>
 <p>Classification : Behavioral Pattern</p>
-
-<p>Check out the code <a href="https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/visitor">here</a>.</p>
-
+<p>Check out the code <!-- raw HTML omitted -->here<!-- raw HTML omitted -->.</p>
 <p>Visitor pattern is used to parse through(or visit, in other words) through collections. Collections are made up of entities which themselves can be collections or simple elements.</p>
-
 <p>Imagine a big colony. It has got some houses. And there are even smaller colonies. The big-colony and everthing it has (houses and smaller colonies) accepts visitors(athidi-devo-bhav!) with a very good heart. The colony in programming terms is a collection and houses are elements. Visitor is an object that visits the colony.</p>
-
 <p>Now the colony and houses should declare that they accepts visitors. So they should implement &lsquo;Visitable&rsquo; interface which tells that they will have accept(Visitor).</p>
-
 <p>Also our visitor should tell that he is really a &lsquo;Visitor&rsquo; and not a thief, so he must implement &lsquo;Visitor&rsquo; interface which tells that he&rsquo;ll visit(Colony) and visit(House). What a visitor will do after visiting a house or colony is upto him, the &lsquo;Visitor&rsquo; tag just tells that he is a legitimate visitor.</p>
-
-<p>There are two flavors of Visitor Pattern:
-<ol>
-    <li><strong>Visitable can control where the visitor goes next</strong>.</li>
-</ol>
-Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. The colony will then decide where the visitor should go next. It may send the visitor to all the houses first or it can tell the visitor to visit the smaller colonies first.</p>
-
-<p><em> accept()</em> for colony:</p>
-
+<p>There are two flavors of Visitor Pattern:</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> accept()<!-- raw HTML omitted --> for colony:</p>
 <pre><code>public void accept(Visitor visitor) {
     visitor.visit(this);
     for(House house : houses) {
@@ -176,10 +157,7 @@ Suppose we have a big colony and a visitor. We ask the big-colony to accept the 
         colony.accept(visitor);
     }
 }
-</code></pre>
-
-<p><em>visit()</em> of visitor:</p>
-
+</code></pre><p><!-- raw HTML omitted -->visit()<!-- raw HTML omitted --> of visitor:</p>
 <pre><code>public void visit(Visitable visitable) {
 
 	if(visitable instanceof House) {
@@ -190,22 +168,12 @@ Suppose we have a big colony and a visitor. We ask the big-colony to accept the 
 		System.out.println(&quot;Visited colony : &quot; + colony.getName());
 	}
 }
-</code></pre>
-
-<p><ol start="2">
-    <li><strong>Visitor controls where he goes next</strong></li>
-</ol>
-Suppose we have a big colony and a visitor. We ask the big-colony to accept the visitor. Once the visitor is inside he decides where to go next. In this case there is more flexibility and power for the visitors.</p>
-
-<p><em>accept()</em> for colony:</p>
-
+</code></pre><!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->accept()<!-- raw HTML omitted --> for colony:</p>
 <pre><code>public void accept(Visitor visitor) {
     visitor.visit(this);
 }
-</code></pre>
-
-<p><em>visit()</em> of visitor:</p>
-
+</code></pre><p><!-- raw HTML omitted -->visit()<!-- raw HTML omitted --> of visitor:</p>
 <pre><code>public void visit(Visitable visitable) {
 
 	if(visitable instanceof House) {
@@ -222,9 +190,7 @@ Suppose we have a big colony and a visitor. We ask the big-colony to accept the 
 		}
 	}
 }
-</code></pre>
-
-<p>Happy coding :)</p>
+</code></pre><p>Happy coding :)</p>
 
             </div>
         </article>
@@ -268,15 +234,21 @@ Suppose we have a big colony and a visitor. We ask the big-colony to accept the 
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+<meta name="description" content="Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode &#43; modifyingSymbolCode
 Eg: ക്രൊ = ( ക &#43; ്ര &#43; ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ)." />
@@ -29,7 +28,7 @@ So as you see the code that comes first(ക) need not be the first letter that t
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -43,42 +42,31 @@ So as you see the code that comes first(ക) need not be the first letter that t
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Training the Thulika Keyboard">
-<meta itemprop="description" content="Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+<meta itemprop="description" content="Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode &#43; modifyingSymbolCode
 Eg: ക്രൊ = ( ക &#43; ്ര &#43; ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).">
-
-
 <meta itemprop="datePublished" content="2013-01-14T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-01-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1000">
+<meta itemprop="wordCount" content="638">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="android,apps,thulika," />
-<meta property="og:title" content="Training the Thulika Keyboard" />
-<meta property="og:description" content="Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
-The decomposition is as follows: LetterCode &#43; modifyingSymbolCode
-Eg: ക്രൊ = ( ക &#43; ്ര &#43; ൊ )
-So as you see the code that comes first(ക) need not be the first letter that the user writes(െ)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2013-01-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-01-14T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Training the Thulika Keyboard"/>
-<meta name="twitter:description" content="Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+<meta name="twitter:description" content="Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode &#43; modifyingSymbolCode
 Eg: ക്രൊ = ( ക &#43; ്ര &#43; ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ)."/>
+
+
 
 
 
@@ -157,96 +145,45 @@ So as you see the code that comes first(ക) need not be the first letter that t
             
 
             <div class="post-content">
-                <p><strong>Before you read :</strong></p>
-
+                <p><!-- raw HTML omitted -->Before you read :<!-- raw HTML omitted --></p>
 <p>Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.</p>
-
 <p>The decomposition is as follows: LetterCode + modifyingSymbolCode</p>
-
 <p>Eg: ക്രൊ = ( ക + ്ര + ൊ )</p>
-
 <p>So as you see the code that comes first(ക) need not be the first letter that the user writes(െ). Also some symbols(like the symbol that comes after െ) will not have direct Unicode substitution (it should be written as  ്ര).</p>
-
 <p>Also the code that&rsquo;s already written might have to be modified according to the symbol that the user writes next. For eg:</p>
-
 <p>If user writes ാ and the symbol just before isെ, then we&rsquo;ll have replaceെ withൊ.</p>
-
-<p>&nbsp;</p>
-
-<p><strong>Now onto the training part:</strong></p>
-
-<p>This post describes the steps needed to configure new language/symbols for the <a href="https://play.google.com/store/apps/details?id=me.sinu.thulika" target="_blank">Thulika Keyboard</a> app. For this you have to download  <a href="https://play.google.com/store/apps/details?id=me.sinu.thulika.train" target="_blank">ThulikaTrainer</a> app.</p>
-
-<p>To train Thulika keyboard on new inputs, require three steps:
-<ol>
-    <li>Save handwriting images of all the symbols of the language you wish the keyboard recognises (This is using the ThulikaKeyboard app on your Android phone)</li>
-    <li>Run a program on your PC (will update the steps for this later)</li>
-    <li>ThulikaTrainer Load engine (will update later)</li>
-</ol>
-<h3>Step 1. ThulikaTrainer app</h3>
-<strong>1.</strong> Run the app for the first time. It&rsquo;ll create directory structures on your sdcard. Make sure the following directories are created: sdcard/Android/data/me.sinu.thulika.train/files. There&rsquo;ll be two folders under this - engines and letters.
-<strong>2.</strong> Create a text file alpha.txt in sdcard/Android/data/me.sinu.thulika.train/files. This file should contain the symbols that the keyboard should recognize. Each symbol should be separated from other symbol using a COMMA(,).
-<p style="padding-left:30px;">For example, if you want to train the symbols a, b, c, 1 and 2, then, the alpha.txt should contain :</p>
-<p style="padding-left:30px;">a, b, c, 1, 2</p>
-<p style="padding-left:30px;">You can create the alpha.txt file using PC and then copy to the respective folder on your sdcard.</p>
-<strong>3.</strong> Now if you run the app, the symbols that you have specified in alpha.txt will be present on each of the buttons at the bottom of the app.</p>
-
-<p><strong>4.</strong> Draw a symbol on the screen and then press the button that corresponds to the symbol you have drawn. It&rsquo;ll add a file under sdcard/Android/data/me.sinu.thulika.train/files/letters
-<p style="padding-left:30px;">If you have made a mistake you can press Clear button. If you accidentally pressed the wrong symbol button, press &lsquo;Delete Last&rsquo;, it will delete the last file you have created.</p>
-<p style="padding-left:30px;">Please make sure you press the correct button corresponding to the symbol you have drawn. This is what ensures the correctness of the keyboard.</p>
-<p style="padding-left:30px;">You can draw more than one symbol for each symbol button. It doesn&rsquo;t matter, but it&rsquo;ll be better if one person provides only one set of symbols. You can ask another person to provide images for the entire set again, so that there will be more than one handwriting for each symbol. But in the beginning make sure you have atleast one set of handwriting images for the entire symbol set.</p>
-&nbsp;
-<h3>Step 2 : Run ThulikaMaker on your PC</h3>
-<strong>1.</strong> <a href="https://www.box.com/s/dt27vxv6769jln4qes0e" target="_blank">Click here</a> to download ThulikaMaker.jar</p>
-
-<p><strong>2.</strong> Copy the folder sdcard/Android/data/me.sinu.thulika.train/files/letters from your phone to your PC.</p>
-
-<p><strong>3.</strong> Run ThulikaMaker.jar.
-<img src="/assets/thulikamaker.png" alt="screenshot" /></p>
-
-<p><strong>4.</strong> Enter a width and height. For south Indian languages width=13 and height=10 should work. Its usually a trial and error procedure to find width and height. For letters like English, give width=7, height=7. For numbers give width=5, height=5. Try to keep widthxheight (the product) value as low as possible.</p>
-
-<p><strong>5.</strong> Click &lsquo;Load Bundle&rsquo; and select the &lsquo;letters&rsquo; folder that you have copied to the PC. Click open.</p>
-
-<p><strong>6.</strong> Wait for a minute. Now files will be loaded. You can now select any entry to view the file. Press &lsquo;Delete File&rsquo; if you want to delete any file(if you find that the image is wrong for a particular file).</p>
-
-<p><strong>7.</strong> Alternatives text is not used now(SKIP)</p>
-
-<p><strong>8.</strong> Align value, the default value is 0 :</p>
-
+<p> </p>
+<p><!-- raw HTML omitted -->Now onto the training part:<!-- raw HTML omitted --></p>
+<p>This post describes the steps needed to configure new language/symbols for the <!-- raw HTML omitted -->Thulika Keyboard<!-- raw HTML omitted --> app. For this you have to download  <!-- raw HTML omitted -->ThulikaTrainer<!-- raw HTML omitted --> app.</p>
+<p>To train Thulika keyboard on new inputs, require three steps:</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->4.<!-- raw HTML omitted --> Draw a symbol on the screen and then press the button that corresponds to the symbol you have drawn. It&rsquo;ll add a file under sdcard/Android/data/me.sinu.thulika.train/files/letters</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->2.<!-- raw HTML omitted --> Copy the folder sdcard/Android/data/me.sinu.thulika.train/files/letters from your phone to your PC.</p>
+<p><!-- raw HTML omitted -->3.<!-- raw HTML omitted --> Run ThulikaMaker.jar.
+<img src="/assets/thulikamaker.png" alt="screenshot"></p>
+<p><!-- raw HTML omitted -->4.<!-- raw HTML omitted --> Enter a width and height. For south Indian languages width=13 and height=10 should work. Its usually a trial and error procedure to find width and height. For letters like English, give width=7, height=7. For numbers give width=5, height=5. Try to keep widthxheight (the product) value as low as possible.</p>
+<p><!-- raw HTML omitted -->5.<!-- raw HTML omitted --> Click &lsquo;Load Bundle&rsquo; and select the &lsquo;letters&rsquo; folder that you have copied to the PC. Click open.</p>
+<p><!-- raw HTML omitted -->6.<!-- raw HTML omitted --> Wait for a minute. Now files will be loaded. You can now select any entry to view the file. Press &lsquo;Delete File&rsquo; if you want to delete any file(if you find that the image is wrong for a particular file).</p>
+<p><!-- raw HTML omitted -->7.<!-- raw HTML omitted --> Alternatives text is not used now(SKIP)</p>
+<p><!-- raw HTML omitted -->8.<!-- raw HTML omitted --> Align value, the default value is 0 :</p>
 <p>If the image is a symbol that comes on the left side of a letter (like െ, േ in Malayalam), set Align=-1</p>
-
 <p>If the image is a symbol that comes on the right side of a letter (like ു, ൂ, ൃ in Malayalam), set Align=1</p>
-
 <p>If it is a usual symbol, set Align=0. For latin letters and numerals, align will be 0.</p>
-
 <p>If you modify align/rules for a symbol, make sure you click &lsquo;Save Symbol&rsquo;</p>
-
-<p><strong>9.</strong> Rules: Give a rule if you want to modify the current letter according to a letter that comes before it. This applies only to complex languages like Indian languages. For English and numerals, there will not be any rules.</p>
-
+<p><!-- raw HTML omitted -->9.<!-- raw HTML omitted --> Rules: Give a rule if you want to modify the current letter according to a letter that comes before it. This applies only to complex languages like Indian languages. For English and numerals, there will not be any rules.</p>
 <p>For a symbol X, if you want to modify what happens when letter X is written according to a symbol that comes before it,  then you have to give rules for symbol X. If the letter before is Y, and if you want to turn it into Z, give rule as Y:Z. If the letter is B, and if you want to turn it into BX, give rule as B:BX</p>
-
 <p>For example: symbol:ാ align:1 rules:ഒ:ഓ; െ:ൊ; േ:ോ</p>
-
 <p>If you modify align/rules for a symbol, make sure you click &lsquo;Save Symbol&rsquo;</p>
-
-<p><strong>10.</strong> Finally, give a language ID.It can be any name. Usuall we give the name of the language. Click &lsquo;Save Engine&rsquo; . Give the name E_engine and click Save.
-<h3>Step 3: ThulikaTrainer Load Engine</h3>
-<strong>1.</strong> Copy E_engine file from PC to sdcard/Android/data/me.sinu.thulika.train/files/engines/ of your phone.</p>
-
-<p><strong>2.</strong> Run ThulikaTrainer app on the phone.</p>
-
-<p><strong>3.</strong> Press menu key, and select Load Engine. The E_engine file will be loaded.</p>
-
-<p><strong>4.</strong> Draw a symbol, and press Recognize button. Test for all the letters, and make sure all the letters are getting recognized.</p>
-
-<p>Example: <a href="https://www.box.com/s/h905qszbsj27d2rdhoct" target="_blank">Click here</a> to see the details of all the letters for Malayalam language.</p>
-
-<p>&nbsp;</p>
-
-<p>Mail the letter files folder and E_engine to <strong>sjsuperapps at gmail dot com</strong>. If you have any doubt please mail at this address. I&rsquo;ll do my best to help you.</p>
-
-<p>&nbsp;</p>
+<p><!-- raw HTML omitted -->10.<!-- raw HTML omitted --> Finally, give a language ID.It can be any name. Usuall we give the name of the language. Click &lsquo;Save Engine&rsquo; . Give the name E_engine and click Save.</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->2.<!-- raw HTML omitted --> Run ThulikaTrainer app on the phone.</p>
+<p><!-- raw HTML omitted -->3.<!-- raw HTML omitted --> Press menu key, and select Load Engine. The E_engine file will be loaded.</p>
+<p><!-- raw HTML omitted -->4.<!-- raw HTML omitted --> Draw a symbol, and press Recognize button. Test for all the letters, and make sure all the letters are getting recognized.</p>
+<p>Example: <!-- raw HTML omitted -->Click here<!-- raw HTML omitted --> to see the details of all the letters for Malayalam language.</p>
+<p> </p>
+<p>Mail the letter files folder and E_engine to <!-- raw HTML omitted -->sjsuperapps at gmail dot com<!-- raw HTML omitted -->. If you have any doubt please mail at this address. I&rsquo;ll do my best to help you.</p>
+<p> </p>
 
             </div>
         </article>
@@ -290,15 +227,21 @@ So as you see the code that comes first(ക) need not be the first letter that t
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

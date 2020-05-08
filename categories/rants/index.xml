@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rants on Sinu John</title>
@@ -27,8 +27,8 @@
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/21/my-developer-personality/</guid>
-      <description>I took a Developer Personality Test, conducted by DZone and it almost sums up what I am! Here&amp;rsquo;s the result I got:
-Here are your results!  Independent vs Collaborative You are Independent!  Independent: You prefer to spend most of your time working in an isolated environment. You rarely want to collaborate because you have a better chance of solving problems on your own. If you do have to collaborate on the direction of a project, you dislike it when you have to defend your position or when others try to muddy your plans for the project.</description>
+      <description>I took a Developer Personality Test, conducted by DZoneand it almost sums up what I am! Here&amp;rsquo;s the result I got:
+Collaborative:Good code doesn&amp;rsquo;t happen in a vacuum. You need a team to keep you energized and on your toes so that you&amp;rsquo;re constantly improving the project code using the entire team&amp;rsquo;s varied experience and strengths. You like to talk frequently with colleagues and discuss ideas so that you can learn from others and spark ideas.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@ But the bad part is that, it means the demise of my very own Thulika Keyboard. I
       
       <guid>https://sinujohn.github.io/2015/05/12/wait-but-why/</guid>
       <description>I don&amp;rsquo;t always subscribe to blogs..
-But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like: I have become a fan of http://waitbutwhy.com/ just after reading an article about Elon Musk and one about Fermi Paradox</description>
+But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like: I have become a fan of http://waitbutwhy.com/just after reading an article about Elon Muskand one about Fermi Paradox</description>
     </item>
     
     <item>
@@ -58,8 +58,9 @@ But when its about nicely written articles about science, technology and all the
       <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/04/programmer-zen/</guid>
-      <description>Just read this quote and I loved it: A beginning programmer writes her programs like an ant builds her hill, one piece at a time, without thought for the bigger structure. Her programs will be like loose sand. They may stand for a while, but growing too big they fall apart.
-Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures.</description>
+      <description>Just read this quoteand I loved it:
+Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures. They are solid, but when they must change, violence must be done to them.
+The master programmer knows when to apply structure and when to leave things in their simple form. Her programs are like clay, solid yet malleable.</description>
     </item>
     
     <item>
@@ -68,7 +69,7 @@ Realizing this problem, the programmer will start to spend a lot of time thinkin
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/10/angamaly-marakkamo/</guid>
-      <description>&amp;ldquo;മനുഷ്യരെ രക്ഷിക്കേണ്ടത് ദൈവമാണ്. അല്ലാതെ ദൈവത്തെ രക്ഷിക്കേണ്ടത് മനുഷ്യരല്ല. ദൈവത്തെ മനുഷ്യൻ രക്ഷിക്കേണ്ടി വരുമ്പോൾ ദൈവത്തിന്റെ വിലയിടിയുന്നു.&amp;rdquo; - അങ്കമാലി മറക്കാമോ? - P.J.Antony P.J. Antony writes that people were fooled into taking part in the Liberation Struggle (Vimochanasamaram) by the Church, the Congress party and everyone else (Uncle Sam&amp;rsquo;s CIA??) who were afraid of the Communist party getting their first foothold in India</description>
+      <description></description>
     </item>
     
     <item>
@@ -77,8 +78,7 @@ Realizing this problem, the programmer will start to spend a lot of time thinkin
       <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
-      <description>I was searching for good JavaScript resources and then stumbled onto this guy - Douglas Crockford. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - Javascript: the good parts. He is one of the most authoritative person to talk about JavaScript.
-I found his talks on JavaScript and just finished watching the first part.</description>
+      <description></description>
     </item>
     
     <item>
@@ -87,8 +87,7 @@ I found his talks on JavaScript and just finished watching the first part.</des
       <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/08/first-half-of-2014/</guid>
-      <description>The past 6 months had been very fruitful for me. I have added many stuffs to my skill set in this small span of time. Here are some of it:
-The new Java kid - Java 8Spring SecurityCreating zero-xml Spring projects using Spring javaconfig and Spring BootSpring AOPGit(had used it before, but had been using it almost daily for past 6 months)RedisSpring Data RedisSpring Data JPAREST(using Spring&#39;s REST as well as JAX-RS spec)Security - PKI, Encryption-Decryption, Certificates, Auth mechanisms (like BASIC and Digest) etc.</description>
+      <description></description>
     </item>
     
     <item>
@@ -97,8 +96,7 @@ The new Java kid - Java 8Spring SecurityCreating zero-xml Spring projects using 
       <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/08/musings-of-a-windows-using-linux-fan/</guid>
-      <description>And now, the previous blog post made me thinking... Why didn&#39;t I learn .NET, C#, DirectX or other Microsoft technologies?
-Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono), languages and tools. And maybe, there is a little Leftist hidden in me. (I would like to call myself opportunistic Leftist though :), and by the way I believe most of the Keralites have a soft corner for Communist beliefs - that&#39;s why Kerala is one of the few states where Communists are still strong).</description>
+      <description></description>
     </item>
     
     <item>
@@ -107,7 +105,7 @@ Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono)
       <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/19/debugging/</guid>
-      <description>You can find how good a programmer is by the way he debugs! </description>
+      <description></description>
     </item>
     
     <item>
@@ -126,7 +124,7 @@ Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono)
       
       <guid>https://sinujohn.github.io/2013/11/08/the-namesake/</guid>
       <description>One of the best novels i have ever read - The Namesake. Loved it. Awesome work by Jhumpa Lahiri. Following is a quote I have found to be very inspiring
-&#34;Do yourself a favor. Before it&#39;s too late, without thinking too much about it first, pack a pillow and a blanket and see as much of the world as you can. You will not regret it. One day it will be too late.</description>
+Now I have started reading her another book - &amp;ldquo;The interpreter of maladies&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -135,7 +133,7 @@ Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono)
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</guid>
-      <description>For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram. Do I love this place? Yes and No. No? Why? Because this place lacks some sort of energy :( And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the Trivandrum Public Library (where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.</description>
+      <description>For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram. Do I love this place? Yes and No. No? Why? Because this place lacks some sort of energy :( And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the Trivandrum Public Library(where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.</description>
     </item>
     
     <item>
@@ -144,7 +142,7 @@ Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono)
       <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/16/thrown-into-the-ebook-bandwagon/</guid>
-      <description>Recently I have started reading a lot of books. And by recently, I mean the last two weeks. And these books are not ordinary paperback books, but they are ebooks which I read on my Nexus 7. I never thought I will be reading ebooks - I thought this was just a hype and ebooks can&#39;t just give you that feel that you get while reading a hardcopy of the book, I always thought I will miss the turning of pages, the smell of new books, the look of old books, but alas, I haven&#39;t started to miss much of these!</description>
+      <description></description>
     </item>
     
     <item>
@@ -153,9 +151,7 @@ Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono)
       <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</guid>
-      <description>A few days back I took the Myers-Briggs Type Indicator test at this site.
-It says that I fall in INTP category. From Myers-Briggs website, this is the description:
-INTPSeek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction. Quiet, contained, flexible, and adaptable. Have unusual ability to focus in depth to solve problems in their area of interest. Skeptical, sometimes critical, always analytical.</description>
+      <description></description>
     </item>
     
     <item>
@@ -173,7 +169,7 @@ INTPSeek to develop logical explanations for everything that interests them. The
       <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/google-y-u-no/</guid>
-      <description>I had been waiting for Google&amp;rsquo;s new Nexus 7 to be launched in India since it was released in late July. But seems like we Indians have to wait till year end :(
+      <description>I had been waiting for Google&amp;rsquo;s new Nexus 7 to be launched in India since it was released in late July. But seems like we Indians have to wait till year end:(
 I created this meme since I can&amp;rsquo;t control the feeling any longer! aaahh.. now it feels better! :D ;)</description>
     </item>
     
@@ -185,8 +181,7 @@ I created this meme since I can&amp;rsquo;t control the feeling any longer! aaah
       <guid>https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/</guid>
       <description>Today I was scanning through Malayala Manorama and then I saw an article which mentions my Thulika Kayboard. The article appears in Malayala Manorama of 14th August 2013 (Padippura section). I saw it in Thiruvananthapuram edition and don&amp;rsquo;t know whether other editions have it.
 Here is the article:
-
-&amp;nbsp;</description>
+ </description>
     </item>
     
     <item>
@@ -195,8 +190,7 @@ Here is the article:
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</guid>
-      <description>The developer of Encog library, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard. Someone wrote a nice Android handwriting app with #encog. https://t.co/vd2JpTrR
-&amp;mdash; jeffheaton (@jeffheaton) 2 February 2013</description>
+      <description>The developer of Encoglibrary, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard.</description>
     </item>
     
     <item>
@@ -206,8 +200,7 @@ Here is the article:
       
       <guid>https://sinujohn.github.io/2011/10/06/legendary-jobs/</guid>
       <description>Woke up today (actually yesterday as its past 12 midnight) to hear the news of Steve Jobs&amp;rsquo; death. The news about the death of a man whom I consider one of my role models actually left a kind of pain. Yup, I felt sad, as if someone I knew had died :(
-‎3 apples changed the world, 1st one seduced eve,2nd fell on
-newton and the 3rd was offered to the world half bitten by</description>
+I am not a user of Apple products. But I have used them though. Its not from the Apple-user perspective that I like this man.</description>
     </item>
     
     <item>
@@ -216,10 +209,10 @@ newton and the 3rd was offered to the world half bitten by</description>
       <pubDate>Thu, 20 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2011/01/20/nerdy-jokes/</guid>
-      <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here .
-My favourite ones (credit goes to their respective creators): there is a physicist, a biologist and a mathematician standing in front of a house. They see one man enter and two men leave.
+      <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here.
+My favourite ones (credit goes to their respective creators):
 The Physicist says, &amp;ldquo;Well there is obviously an unknown variable.&amp;rdquo; The Biologist says, &amp;ldquo;The man must have multiplied.&amp;rdquo;
-The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.</description>
+The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.&amp;ldquo; The first asks for a beer. The second asks for half a beer.</description>
     </item>
     
     <item>

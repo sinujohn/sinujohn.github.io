@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Sinu John</title>
@@ -20,7 +20,7 @@
       <guid>https://sinujohn.github.io/2016/06/01/chef-notes/</guid>
       <description>Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
 So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .</description>
+Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server</description>
     </item>
     
     <item>
@@ -31,9 +31,7 @@ Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to
       <guid>https://sinujohn.github.io/2014/09/29/jackson-json-and-dynamic-json-creations/</guid>
       <description>FasterXML Jackson is a great tool for converting objects to/from POJOs.
 Its a great tool when we know the structure of JSON beforehand. But what if we don&amp;rsquo;t know that? In that case we can use a Map&amp;lt;String, Object&amp;gt; to store the unknown objects. Below two links provide useful info:
-http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library
-http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html
-Happy Coding :)</description>
+http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-libraryhttp://www.cowtowncoder.com/blog/archives/2011/07/entry_458.htmlHappy Coding :)</description>
     </item>
     
     <item>
@@ -42,9 +40,7 @@ Happy Coding :)</description>
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
-      <description>There is a very good documentation in Jersey website: https://jersey.java.net/documentation/latest/jaxrs-resources.html and https://jersey.java.net/documentation/latest/filters-and-interceptors.html
-Here is a small flowchart that I made showing how the JAX-RS flow works:
-Happy coding :)</description>
+      <description></description>
     </item>
     
     <item>
@@ -53,10 +49,7 @@ Happy coding :)</description>
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/imperative-vs-declarative/</guid>
-      <description>I was watching an AngularJS video, and it said AngularJS had two sides - Imperative and Declarative programming. I looked it up and here it is :
-Let&#39;s generalize and say that there are two ways in which we can write code: imperative and declarative.
-We could define the difference as follows:
-Imperative programming: telling the &#34;machine&#34; how to do something, and as a result what you want to happen will happen.</description>
+      <description></description>
     </item>
     
     <item>
@@ -65,8 +58,7 @@ Imperative programming: telling the &#34;machine&#34; how to do something, and
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
-      <description>I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.
-Here are a couple of cheatsheets/examples for AspectJ.</description>
+      <description></description>
     </item>
     
     <item>
@@ -75,9 +67,7 @@ Here are a couple of cheatsheets/examples for AspectJ.</description>
       <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/21/my-git-workflow/</guid>
-      <description>Clone repository to local machine: git clone &amp;lt;repository&amp;gt;
-git pullcode... code .... code...code more.....git stashgit pullgit stash applygit add &amp;lt;filenames&amp;gt;git commit -m &#34;commit message&#34;git pushIf any conflict occurs when stash is applied, resolve it either in IDE or using command line: git mergetool -t kdiff3 (invokes KDiff 3 if it installed)
-Happy Coding :)</description>
+      <description></description>
     </item>
     
     <item>
@@ -86,7 +76,7 @@ Happy Coding :)</description>
       <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/03/tryst-with-java-8/</guid>
-      <description>Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+      <description>Java 8- it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
 Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections.</description>
     </item>
     
@@ -96,7 +86,7 @@ Most of the changes is in the way we deal with Collections. And most of our dail
       <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/persistence-using-java/</guid>
-      <description>Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+      <description>Project Digitisation:I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
 There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
 This blog post mentions JDBC.</description>
     </item>
@@ -117,7 +107,7 @@ Map Reduce is a framework which helps us to write program for the cloud. It is a
       <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</guid>
-      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.</description>
+      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem.</description>
     </item>
     
     <item>

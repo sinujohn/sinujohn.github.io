@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>authentication on Sinu John</title>
@@ -19,8 +19,8 @@
       
       <guid>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</guid>
       <description>I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)
-Prerequisite: Create an app using Facebook Developer account and create the necessary App ID and App Secret keys.
-If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/ At the client side: Asking for permission and login:  Use the SDK provided by facebook I am assuming Javascript SDK is used.</description>
+Prerequisite: Create an appusing Facebook Developer account and create the necessary App ID and App Secret keys.
+If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/</description>
     </item>
     
   </channel>

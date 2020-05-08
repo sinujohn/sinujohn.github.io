@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android on Sinu John</title>
@@ -40,8 +40,7 @@ But the bad part is that, it means the demise of my very own Thulika Keyboard. I
       <guid>https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/</guid>
       <description>Today I was scanning through Malayala Manorama and then I saw an article which mentions my Thulika Kayboard. The article appears in Malayala Manorama of 14th August 2013 (Padippura section). I saw it in Thiruvananthapuram edition and don&amp;rsquo;t know whether other editions have it.
 Here is the article:
-
-&amp;nbsp;</description>
+ </description>
     </item>
     
     <item>
@@ -59,8 +58,7 @@ Here is the article:
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</guid>
-      <description>The developer of Encog library, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard. Someone wrote a nice Android handwriting app with #encog. https://t.co/vd2JpTrR
-&amp;mdash; jeffheaton (@jeffheaton) 2 February 2013</description>
+      <description>The developer of Encoglibrary, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard.</description>
     </item>
     
     <item>
@@ -69,8 +67,7 @@ Here is the article:
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/immortal-login/</guid>
-      <description>Download the app from PlayStore
-Find the source on Github I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
+      <description>Download the app from PlayStoreFind the source on GithubI have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
     </item>
     
     <item>
@@ -79,7 +76,7 @@ Find the source on Github I have got Asianet Broadband connection and they requi
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</guid>
-      <description>Download the app from PlayStore On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard - in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
+      <description>Download the app from PlayStoreOn January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard- in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
     </item>
     
     <item>
@@ -88,8 +85,7 @@ Find the source on Github I have got Asianet Broadband connection and they requi
       <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
-      <description>Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+      <description>Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode + modifyingSymbolCode
 Eg: ക്രൊ = ( ക + ്ര + ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).</description>

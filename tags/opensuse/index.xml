@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>opensuse on Sinu John</title>
@@ -18,7 +18,7 @@
       <pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</guid>
-      <description>First, a very short review! I just installed openSUSE 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop.</description>
+      <description>Now, you are ready to explore your openSUSE 11.3! Following steps are optional :)</description>
     </item>
     
   </channel>

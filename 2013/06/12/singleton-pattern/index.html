@@ -27,7 +27,7 @@ In Singleton pattern, there will be only one object and wherever we want to use 
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -41,29 +41,20 @@ In Singleton pattern, there will be only one object and wherever we want to use 
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Singleton Pattern">
 <meta itemprop="description" content="Classification: Creational Pattern Description : Ensure a class has only one instance, and provide a global point of access to it.
 Whenever I hear about Singleton &lsquo;Forever Alone&rsquo; troll face comes to my mind ;)
 In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.">
-
-
 <meta itemprop="datePublished" content="2013-06-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-06-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="290">
+<meta itemprop="wordCount" content="151">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java,design patterns,singleton pattern," />
-<meta property="og:title" content="Singleton Pattern" />
-<meta property="og:description" content="Classification: Creational Pattern Description : Ensure a class has only one instance, and provide a global point of access to it.
-Whenever I hear about Singleton &lsquo;Forever Alone&rsquo; troll face comes to my mind ;)
-In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2013/06/12/singleton-pattern/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2013-06-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-06-12T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
@@ -71,6 +62,8 @@ In Singleton pattern, there will be only one object and wherever we want to use 
 <meta name="twitter:description" content="Classification: Creational Pattern Description : Ensure a class has only one instance, and provide a global point of access to it.
 Whenever I hear about Singleton &lsquo;Forever Alone&rsquo; troll face comes to my mind ;)
 In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class."/>
+
+
 
 
 
@@ -149,27 +142,21 @@ In Singleton pattern, there will be only one object and wherever we want to use 
             
 
             <div class="post-content">
-                <p><a href="http://en.wikipedia.org/wiki/Software_design_pattern">Classification</a>: Creational Pattern
+                <p><!-- raw HTML omitted -->Classification<!-- raw HTML omitted -->: Creational Pattern
 Description : Ensure a class has only one instance, and provide a global point of access to it.</p>
-
 <p>Whenever I hear about Singleton &lsquo;Forever Alone&rsquo; troll face comes to my mind ;)</p>
-
-<p><img src="/assets/forever-alone-guy.png" alt="forever-alone-guy" /></p>
-
+<p><img src="/assets/forever-alone-guy.png" alt="forever-alone-guy"></p>
 <p>In Singleton pattern, there will be only one object and wherever we want to use this class, this only object will be used. While creating this, we have to ensure that no more than one object is created for this class.</p>
-
-<p>There are 3 ways of creating it :
-1. Traditional way without thread safety, where constructor is made private and a public method returns reference to the only object created.
-2. Thread-safe way : Double check locking
-3. Thread-safe way : Using enums (this is for Java of course!)</p>
-
-<p>Read about <a href="http://java.dzone.com/articles/singleton-design-pattern-%E2%80%93">Singleton Pattern here</a>.
-The enums&rsquo; way of doing things is explained <a href="http://javarevisited.blogspot.gr/2012/07/why-enum-singleton-are-better-in-java.html">here</a>.</p>
-
-<p>The sample program in Git shows the first 2 ways. Find it <a href="https://github.com/sinujohn/DesignPatterns/tree/master/src/me/sinu/pattern/singleton">here on Github </a>
-<h2>Double check locking:</h2>
-In Java, we have to use &lsquo;<strong><em>volatile</em></strong>&rsquo; keyword. I was confused about this because the program gave the same output even if I use or not use the &lsquo;volatile&rsquo; keyword. Then I came across this <a href="http://jeremymanson.blogspot.com/2008/05/double-checked-locking.html">awesome blog</a>. <strong>So according to this we have to use &lsquo;<em>volatile</em>&rsquo; whenever we use Double check locking</strong>. The problem is that compiler optimization may reorder execution orders, so that the flow of order of execution may be different from what we have written. The following can occur:
-When <em>instance = new Singleton()</em> is called <em>instance</em> will be assigned the reference value of the <em>Singleton</em> object. But the constructor <em>Singleton()</em> may not be called at this point. That means <em>instance</em> is not fully initialized yet. So other threads that refer instance will get the partly initialized or not-yet-initialized object.</p>
+<p>There are 3 ways of creating it :</p>
+<ol>
+<li>Traditional way without thread safety, where constructor is made private and a public method returns reference to the only object created.</li>
+<li>Thread-safe way : Double check locking</li>
+<li>Thread-safe way : Using enums (this is for Java of course!)</li>
+</ol>
+<p>Read about <!-- raw HTML omitted -->Singleton Pattern here<!-- raw HTML omitted -->.
+The enums&rsquo; way of doing things is explained <!-- raw HTML omitted -->here<!-- raw HTML omitted -->.</p>
+<p>The sample program in Git shows the first 2 ways. Find it <!-- raw HTML omitted -->here on Github <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 
             </div>
         </article>
@@ -213,15 +200,21 @@ When <em>instance = new Singleton()</em> is called <em>instance</em> will be ass
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

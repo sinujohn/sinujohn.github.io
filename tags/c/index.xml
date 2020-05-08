@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C on Sinu John</title>
@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sinujohn.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,7 +27,7 @@
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</guid>
-      <description>Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.</description>
+      <description>///////////////////////////////////////////////////////////// //client.c // Send file to an HTTP server in small parts using POST // USAGE: client inputfile // // Compile: // gcc -o client client.c -lcurl // // Developer: // Sinu John - https://sinujohn.github.io/ // //////////////////////////////////////////////////////////////  #include&amp;lt;curl/curl.h&amp;gt;#include&amp;lt;fcntl.h&amp;gt;#include&amp;lt;unistd.h&amp;gt; //No. of bytes to be sent in one pass #define SIZELIMIT 100*1024  //#define _SEND_DEBUG_  int sendFile(const char *fileName, const char *url) // Sends file to &amp;#39;url&amp;#39; with an additional header &amp;#39;Count&amp;#39; (specifying count of the packet) { // An header &amp;#39;Filename&amp;#39; is also added  int COUNT=0; int fd = open(fileName, O_RDONLY); if(fd&amp;lt;0) { printf(&amp;#34;\nERROR: Cannot open the file\n&amp;#34;); return -1; } CURL *handle; char buf[SIZELIMIT]; //Data to be sent is stored in this buffer.</description>
     </item>
     
     <item>
@@ -36,9 +36,9 @@
       <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
-      <description>GCC - GNU Compiler Collection From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking. Compile and Link a simple program:
-gcc -o hello.out hello.c  This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file. Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
-gcc -o hello.out hello.cpp  This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
+      <description>GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
+gcc -x c -o hello.out hello.cpp -x specifies the language.</description>
     </item>
     
   </channel>

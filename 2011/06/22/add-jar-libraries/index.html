@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
 <meta name="description" content="When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
- Add the library jar files into a folder within the project, say /lib" />
+  Add the library jar files into a folder within the project, say /lib" />
 <meta name="keywords" content=", java" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -26,7 +26,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -40,33 +40,27 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Add jar libraries to the final jar file">
 <meta itemprop="description" content="When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
- Add the library jar files into a folder within the project, say /lib">
-
-
+  Add the library jar files into a folder within the project, say /lib">
 <meta itemprop="datePublished" content="2011-06-22T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2011-06-22T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="174">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java," />
-<meta property="og:title" content="Add jar libraries to the final jar file" />
-<meta property="og:description" content="When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
- Add the library jar files into a folder within the project, say /lib" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2011/06/22/add-jar-libraries/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2011-06-22T00:00:00+00:00" />
-<meta property="article:modified_time" content="2011-06-22T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Add jar libraries to the final jar file"/>
 <meta name="twitter:description" content="When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
- Add the library jar files into a folder within the project, say /lib"/>
+  Add the library jar files into a folder within the project, say /lib"/>
+
+
 
 
 
@@ -146,36 +140,35 @@
 
             <div class="post-content">
                 <p>When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:</p>
-
 <ol>
-<li><p>Add the library jar files into a folder within the project, say /lib</p></li>
-
-<li><p>When you use the option &ldquo;Add JAR/Folder&rdquo; in Netbeans, make sure you use &lsquo;Relative path&rsquo; option instead of Absolute path.</p></li>
-
-<li><p>In the &ldquo;build.xml&rdquo; file present in the project folder, add the following:</p>
-
+<li>
+<p>Add the library jar files into a folder within the project, say /lib</p>
+</li>
+<li>
+<p>When you use the option &ldquo;Add JAR/Folder&rdquo; in Netbeans, make sure you use &lsquo;Relative path&rsquo; option instead of Absolute path.</p>
+</li>
+<li>
+<p>In the &ldquo;build.xml&rdquo; file present in the project folder, add the following:</p>
+</li>
+</ol>
 <pre><code>
 &lt;target name=&quot;-post-jar&quot;&gt;
 
-&lt;jar jarfile=&quot;dist/final_dist.jar&quot;&gt;
+   &lt;jar jarfile=&quot;dist/final_dist.jar&quot;&gt;
 
-  &lt;zipfileset src=&quot;${dist.jar}&quot; excludes=&quot;META-INF/*&quot;/&gt;
+      &lt;zipfileset src=&quot;${dist.jar}&quot; excludes=&quot;META-INF/*&quot;/&gt;
 
-  &lt;zipfileset src=&quot;lib/library1.jar&quot; excludes=&quot;META-INF/*&quot;/&gt;
+      &lt;zipfileset src=&quot;lib/library1.jar&quot; excludes=&quot;META-INF/*&quot;/&gt;
 
-  &lt;zipfileset src=&quot;lib/library2.jar&quot; excludes=&quot;META-INF/*&quot;/&gt;
+      &lt;zipfileset src=&quot;lib/library2.jar&quot; excludes=&quot;META-INF/*&quot;/&gt;
 
-  &lt;manifest&gt;&lt;attribute name=&quot;Main-Class&quot; value=&quot;packageName.Main&quot;/&gt;&lt;/manifest&gt;
+      &lt;manifest&gt;&lt;attribute name=&quot;Main-Class&quot; value=&quot;packageName.Main&quot;/&gt;&lt;/manifest&gt;
 
-&lt;/jar&gt;
+    &lt;/jar&gt;
 
 &lt;/target&gt;
 
-</code></pre></li>
-</ol>
-
-<p>Here &lsquo;final_dist&rsquo; is the name of the final jar file that includes the library jars.</p>
-
+</code></pre><p>Here &lsquo;final_dist&rsquo; is the name of the final jar file that includes the library jars.</p>
 <p>Make sure to set the value of &lsquo;packageName.Main&rsquo; appropriately to the main class file of your main jar file i.e replace &lsquo;packageName&rsquo; and &lsquo;Main&rsquo; as it is in your project</p>
 
             </div>
@@ -220,15 +213,21 @@
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

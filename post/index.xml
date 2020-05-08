@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sinu John</title>
@@ -58,7 +58,7 @@ Still I love the *nix env and it is one of the best ways a developer can be prod
       <guid>https://sinujohn.github.io/2016/06/01/chef-notes/</guid>
       <description>Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
 So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .</description>
+Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server</description>
     </item>
     
     <item>
@@ -67,8 +67,9 @@ Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
-      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?</description>
+      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?
+Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff).</description>
     </item>
     
     <item>
@@ -79,7 +80,7 @@ How to use?</description>
       <guid>https://sinujohn.github.io/2016/01/09/certified-fp/</guid>
       <description>I took the Functional Programming course on edX and completed it last month. Scored 99% :)
 This is the first time I am completing an online MOOC. Usually I drop all the courses after one or two weeks. Lazy me!
-Here is my VERIFIED certificate signed by Dr.Erik Meijer:</description>
+Here is my VERIFIED certificatesigned by Dr.Erik Meijer:</description>
     </item>
     
     <item>
@@ -97,8 +98,8 @@ Here is my VERIFIED certificate signed by Dr.Erik Meijer:</description>
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/21/my-developer-personality/</guid>
-      <description>I took a Developer Personality Test, conducted by DZone and it almost sums up what I am! Here&amp;rsquo;s the result I got:
-Here are your results!  Independent vs Collaborative You are Independent!  Independent: You prefer to spend most of your time working in an isolated environment. You rarely want to collaborate because you have a better chance of solving problems on your own. If you do have to collaborate on the direction of a project, you dislike it when you have to defend your position or when others try to muddy your plans for the project.</description>
+      <description>I took a Developer Personality Test, conducted by DZoneand it almost sums up what I am! Here&amp;rsquo;s the result I got:
+Collaborative:Good code doesn&amp;rsquo;t happen in a vacuum. You need a team to keep you energized and on your toes so that you&amp;rsquo;re constantly improving the project code using the entire team&amp;rsquo;s varied experience and strengths. You like to talk frequently with colleagues and discuss ideas so that you can learn from others and spark ideas.</description>
     </item>
     
     <item>
@@ -119,7 +120,7 @@ But the bad part is that, it means the demise of my very own Thulika Keyboard. I
       
       <guid>https://sinujohn.github.io/2015/05/12/wait-but-why/</guid>
       <description>I don&amp;rsquo;t always subscribe to blogs..
-But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like: I have become a fan of http://waitbutwhy.com/ just after reading an article about Elon Musk and one about Fermi Paradox</description>
+But when its about nicely written articles about science, technology and all the cool things that I usually want to read about, but couldn&amp;rsquo;t, I am like: I have become a fan of http://waitbutwhy.com/just after reading an article about Elon Muskand one about Fermi Paradox</description>
     </item>
     
     <item>
@@ -128,8 +129,9 @@ But when its about nicely written articles about science, technology and all the
       <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/04/programmer-zen/</guid>
-      <description>Just read this quote and I loved it: A beginning programmer writes her programs like an ant builds her hill, one piece at a time, without thought for the bigger structure. Her programs will be like loose sand. They may stand for a while, but growing too big they fall apart.
-Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures.</description>
+      <description>Just read this quoteand I loved it:
+Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures. They are solid, but when they must change, violence must be done to them.
+The master programmer knows when to apply structure and when to leave things in their simple form. Her programs are like clay, solid yet malleable.</description>
     </item>
     
     <item>
@@ -139,8 +141,8 @@ Realizing this problem, the programmer will start to spend a lot of time thinkin
       
       <guid>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</guid>
       <description>I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)
-Prerequisite: Create an app using Facebook Developer account and create the necessary App ID and App Secret keys.
-If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/ At the client side: Asking for permission and login:  Use the SDK provided by facebook I am assuming Javascript SDK is used.</description>
+Prerequisite: Create an appusing Facebook Developer account and create the necessary App ID and App Secret keys.
+If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/</description>
     </item>
     
     <item>
@@ -149,8 +151,8 @@ If you are testing out your app and you are running it locally, the site URL sho
       <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/11/again-agastyakoodam/</guid>
-      <description>When I completed the Agastyakoodam trek two years back, I had decided to visit this awesome place again. It happened this year about two months back.
-This time it was a group of 6 friends, including me. We were very much fortunate to get the entry permit on the first day of the trekking season. This gave us the forest in a much more pristine and virgin form. Because, as people start coming forest loses its glory!</description>
+      <description>When I completed the [Agastyakoodam trek two years back]({{ site.baseurl }}{% post_url 2013-03-11-agastyakoodam-trekking %}), I had decided to visit this awesome place again. It happened this year about two months back.
+This time it was a group of 6 friends, including me. We were very much fortunate to get the entry permit on the first day of the trekking season. This gave us the forest in a much more pristine and virgin form.</description>
     </item>
     
     <item>
@@ -159,7 +161,7 @@ This time it was a group of 6 friends, including me. We were very much fortunate
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/10/angamaly-marakkamo/</guid>
-      <description>&amp;ldquo;മനുഷ്യരെ രക്ഷിക്കേണ്ടത് ദൈവമാണ്. അല്ലാതെ ദൈവത്തെ രക്ഷിക്കേണ്ടത് മനുഷ്യരല്ല. ദൈവത്തെ മനുഷ്യൻ രക്ഷിക്കേണ്ടി വരുമ്പോൾ ദൈവത്തിന്റെ വിലയിടിയുന്നു.&amp;rdquo; - അങ്കമാലി മറക്കാമോ? - P.J.Antony P.J. Antony writes that people were fooled into taking part in the Liberation Struggle (Vimochanasamaram) by the Church, the Congress party and everyone else (Uncle Sam&amp;rsquo;s CIA??) who were afraid of the Communist party getting their first foothold in India</description>
+      <description></description>
     </item>
     
     <item>
@@ -168,7 +170,7 @@ This time it was a group of 6 friends, including me. We were very much fortunate
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/01/08/another-nosql-to-the-kitty/</guid>
-      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4J two days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
+      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4Jtwo days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
     </item>
     
     <item>
@@ -179,9 +181,7 @@ This time it was a group of 6 friends, including me. We were very much fortunate
       <guid>https://sinujohn.github.io/2014/09/29/jackson-json-and-dynamic-json-creations/</guid>
       <description>FasterXML Jackson is a great tool for converting objects to/from POJOs.
 Its a great tool when we know the structure of JSON beforehand. But what if we don&amp;rsquo;t know that? In that case we can use a Map&amp;lt;String, Object&amp;gt; to store the unknown objects. Below two links provide useful info:
-http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-library
-http://www.cowtowncoder.com/blog/archives/2011/07/entry_458.html
-Happy Coding :)</description>
+http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-serialize-java-map-using-jackson-java-libraryhttp://www.cowtowncoder.com/blog/archives/2011/07/entry_458.htmlHappy Coding :)</description>
     </item>
     
     <item>
@@ -190,9 +190,7 @@ Happy Coding :)</description>
       <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
-      <description>Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.
-Usually, you create a Spring bean as follows:
- But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?</description>
+      <description></description>
     </item>
     
     <item>
@@ -201,9 +199,7 @@ Usually, you create a Spring bean as follows:
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
-      <description>There is a very good documentation in Jersey website: https://jersey.java.net/documentation/latest/jaxrs-resources.html and https://jersey.java.net/documentation/latest/filters-and-interceptors.html
-Here is a small flowchart that I made showing how the JAX-RS flow works:
-Happy coding :)</description>
+      <description></description>
     </item>
     
     <item>
@@ -212,7 +208,7 @@ Happy coding :)</description>
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/skandagiri/</guid>
-      <description>About two months back, me and a friend of mine went for trekking at Skandagiri Hills. Its about 75km from Bangalore near to Nandi Hills.  We started on my Yamaha Fz at about 2:30AM and reached there by 4.30AM. The place has got a few locals who are waiting there to get hold of your money in the form of parking and acting as guide! We parked (gave the guy Rs20/30 just to make sure he don&#39;t destroy my bike) and dismissed the idea of having a guide.</description>
+      <description></description>
     </item>
     
     <item>
@@ -221,8 +217,7 @@ Happy coding :)</description>
       <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
-      <description>I was searching for good JavaScript resources and then stumbled onto this guy - Douglas Crockford. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - Javascript: the good parts. He is one of the most authoritative person to talk about JavaScript.
-I found his talks on JavaScript and just finished watching the first part.</description>
+      <description></description>
     </item>
     
     <item>
@@ -231,8 +226,7 @@ I found his talks on JavaScript and just finished watching the first part.</des
       <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/08/first-half-of-2014/</guid>
-      <description>The past 6 months had been very fruitful for me. I have added many stuffs to my skill set in this small span of time. Here are some of it:
-The new Java kid - Java 8Spring SecurityCreating zero-xml Spring projects using Spring javaconfig and Spring BootSpring AOPGit(had used it before, but had been using it almost daily for past 6 months)RedisSpring Data RedisSpring Data JPAREST(using Spring&#39;s REST as well as JAX-RS spec)Security - PKI, Encryption-Decryption, Certificates, Auth mechanisms (like BASIC and Digest) etc.</description>
+      <description></description>
     </item>
     
     <item>
@@ -241,8 +235,7 @@ The new Java kid - Java 8Spring SecurityCreating zero-xml Spring projects using 
       <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/08/musings-of-a-windows-using-linux-fan/</guid>
-      <description>And now, the previous blog post made me thinking... Why didn&#39;t I learn .NET, C#, DirectX or other Microsoft technologies?
-Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono), languages and tools. And maybe, there is a little Leftist hidden in me. (I would like to call myself opportunistic Leftist though :), and by the way I believe most of the Keralites have a soft corner for Communist beliefs - that&#39;s why Kerala is one of the few states where Communists are still strong).</description>
+      <description></description>
     </item>
     
     <item>
@@ -251,8 +244,7 @@ Maybe, because I am a fan of opensource platforms (excuse, I know there is Mono)
       <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/07/angularjs/</guid>
-      <description>I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. Watch it over here. Parts 1, 2 and 3 are enough to get you up and running.
-Bootstrapping Dev env for Angular JS:Download Node.</description>
+      <description></description>
     </item>
     
     <item>
@@ -261,10 +253,7 @@ Bootstrapping Dev env for Angular JS:Download Node.</description>
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/imperative-vs-declarative/</guid>
-      <description>I was watching an AngularJS video, and it said AngularJS had two sides - Imperative and Declarative programming. I looked it up and here it is :
-Let&#39;s generalize and say that there are two ways in which we can write code: imperative and declarative.
-We could define the difference as follows:
-Imperative programming: telling the &#34;machine&#34; how to do something, and as a result what you want to happen will happen.</description>
+      <description></description>
     </item>
     
     <item>
@@ -273,8 +262,7 @@ Imperative programming: telling the &#34;machine&#34; how to do something, and
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
-      <description>I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.
-Here are a couple of cheatsheets/examples for AspectJ.</description>
+      <description></description>
     </item>
     
     <item>
@@ -283,9 +271,7 @@ Here are a couple of cheatsheets/examples for AspectJ.</description>
       <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/21/my-git-workflow/</guid>
-      <description>Clone repository to local machine: git clone &amp;lt;repository&amp;gt;
-git pullcode... code .... code...code more.....git stashgit pullgit stash applygit add &amp;lt;filenames&amp;gt;git commit -m &#34;commit message&#34;git pushIf any conflict occurs when stash is applied, resolve it either in IDE or using command line: git mergetool -t kdiff3 (invokes KDiff 3 if it installed)
-Happy Coding :)</description>
+      <description></description>
     </item>
     
     <item>
@@ -294,7 +280,7 @@ Happy Coding :)</description>
       <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/19/debugging/</guid>
-      <description>You can find how good a programmer is by the way he debugs! </description>
+      <description></description>
     </item>
     
     <item>
@@ -303,7 +289,7 @@ Happy Coding :)</description>
       <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/03/tryst-with-java-8/</guid>
-      <description>Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+      <description>Java 8- it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
 Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections.</description>
     </item>
     
@@ -332,8 +318,8 @@ Most of the changes is in the way we deal with Collections. And most of our dail
       
       <guid>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</guid>
       <description>To use SLF4J and logback together, add the following to pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  Now SLF4J&amp;rsquo;s logger can be used:
-import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);  If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; Now SLF4J&amp;rsquo;s logger can be used:import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;); If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:
+&amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -352,7 +338,7 @@ import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logg
       
       <guid>https://sinujohn.github.io/2013/11/08/the-namesake/</guid>
       <description>One of the best novels i have ever read - The Namesake. Loved it. Awesome work by Jhumpa Lahiri. Following is a quote I have found to be very inspiring
-&#34;Do yourself a favor. Before it&#39;s too late, without thinking too much about it first, pack a pillow and a blanket and see as much of the world as you can. You will not regret it. One day it will be too late.</description>
+Now I have started reading her another book - &amp;ldquo;The interpreter of maladies&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -361,7 +347,7 @@ import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logg
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/29/thiruvananthapuram-life/</guid>
-      <description>For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram. Do I love this place? Yes and No. No? Why? Because this place lacks some sort of energy :( And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the Trivandrum Public Library (where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.</description>
+      <description>For almost two years I am living in Thiruvananthapuram(from March 2012 to be exact). And in these past few months I have travelled a lot in and around Thiruvananthapuram. Do I love this place? Yes and No. No? Why? Because this place lacks some sort of energy :( And yes because, there are a lot of places in and around Thiruvananthapuram, that provides some sort of ancient ambience. The backwaters like Muthalapozhi, the old buildings in the locality of Sree Padmanabha Swami Temple, the green hot spots of the city like Museum, Zoo and Kanakakunnu Palace (where I spent a lot of time in the weekends), the cultural hot spots like Nishagandhi Ground, Vyloppilli Samskriti Bhavan and the reader&amp;rsquo;s paradise - the Trivandrum Public Library(where I am a member and which made me a voracious reader once again) are some spots that I will definitly miss if I leave Thiruvananthapuram.</description>
     </item>
     
     <item>
@@ -370,7 +356,7 @@ import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logg
       <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/16/thrown-into-the-ebook-bandwagon/</guid>
-      <description>Recently I have started reading a lot of books. And by recently, I mean the last two weeks. And these books are not ordinary paperback books, but they are ebooks which I read on my Nexus 7. I never thought I will be reading ebooks - I thought this was just a hype and ebooks can&#39;t just give you that feel that you get while reading a hardcopy of the book, I always thought I will miss the turning of pages, the smell of new books, the look of old books, but alas, I haven&#39;t started to miss much of these!</description>
+      <description></description>
     </item>
     
     <item>
@@ -379,9 +365,7 @@ import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logg
       <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</guid>
-      <description>A few days back I took the Myers-Briggs Type Indicator test at this site.
-It says that I fall in INTP category. From Myers-Briggs website, this is the description:
-INTPSeek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction. Quiet, contained, flexible, and adaptable. Have unusual ability to focus in depth to solve problems in their area of interest. Skeptical, sometimes critical, always analytical.</description>
+      <description></description>
     </item>
     
     <item>
@@ -399,7 +383,9 @@ INTPSeek to develop logical explanations for everything that interests them. The
       <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/05/jpa-part-3/</guid>
-      <description>Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.</description>
+      <description>Go to Part 1.
+public class EmployeeListener { @PrePersist public void beforePersist(Employee e) { System.out.println(&amp;quot;Before persist&amp;quot;); } }
+&amp;lt;h2&amp;gt;Merge Method&amp;lt;/h2&amp;gt; &amp;lt;div&amp;gt;- Used to synchronise the changes between objects and database tables.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Adds a new row if the entity is not present in db table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Updates the existing row if it is present in table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;h3&amp;gt;Example:&amp;lt;/h3&amp;gt; et.begin(); &amp;hellip;. &amp;hellip;. em.merge(empObject); //merges the changes in empObject with table et.commit();</description>
     </item>
     
     <item>
@@ -408,8 +394,10 @@ INTPSeek to develop logical explanations for everything that interests them. The
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/01/jpa-part-2/</guid>
-      <description>This is continued from JPA: part 1. Other Annotations:  @Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)  Used before class name to explicitly specify table name.   @Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)  Used before instance variables to explicitly set column names.    Example:
-@Entity @Table(name = &amp;quot;EMP&amp;quot;) public class Employee { @Id @Column(name = &amp;quot;EMP_ID&amp;quot;) private int id; @Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters }  this maps to Table: EMP</description>
+      <description>This is continued from JPA: part 1.
+@Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters  }
+ this maps to Table: &amp;lt;strong&amp;gt;EMP&amp;lt;/strong&amp;gt;  | EMP_ID (PK) | EMP_NAME | |_____________|__________|
+ JPA automatically maps &#39;int&#39; to &#39;NUMBER&#39; and &#39;String&#39; to &#39;CHAR&#39; or &#39;VARCHAR&#39;. But it cannot automatically convert Date or Time datatypes. So we need to specify the Temporal type to be used. (Temporal = related to time) &amp;lt;h2&amp;gt;Other Annotations:&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;@Temporal(TemporalType.</description>
     </item>
     
     <item>
@@ -418,7 +406,9 @@ INTPSeek to develop logical explanations for everything that interests them. The
       <pubDate>Sat, 31 Aug 2013 00:10:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/jpa-part-1/</guid>
-      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).</description>
+      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series.
+//getters and setters  }
+ this maps to &amp;lt;strong&amp;gt;Table: &amp;lt;/strong&amp;gt;Employee    empId name     _____ ____    </description>
     </item>
     
     <item>
@@ -427,7 +417,7 @@ INTPSeek to develop logical explanations for everything that interests them. The
       <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/google-y-u-no/</guid>
-      <description>I had been waiting for Google&amp;rsquo;s new Nexus 7 to be launched in India since it was released in late July. But seems like we Indians have to wait till year end :(
+      <description>I had been waiting for Google&amp;rsquo;s new Nexus 7 to be launched in India since it was released in late July. But seems like we Indians have to wait till year end:(
 I created this meme since I can&amp;rsquo;t control the feeling any longer! aaahh.. now it feels better! :D ;)</description>
     </item>
     
@@ -437,7 +427,7 @@ I created this meme since I can&amp;rsquo;t control the feeling any longer! aaah
       <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/persistence-using-java/</guid>
-      <description>Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+      <description>Project Digitisation:I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
 There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
 This blog post mentions JDBC.</description>
     </item>
@@ -450,8 +440,7 @@ This blog post mentions JDBC.</description>
       <guid>https://sinujohn.github.io/2013/08/14/unexpected-newspaper-article/</guid>
       <description>Today I was scanning through Malayala Manorama and then I saw an article which mentions my Thulika Kayboard. The article appears in Malayala Manorama of 14th August 2013 (Padippura section). I saw it in Thiruvananthapuram edition and don&amp;rsquo;t know whether other editions have it.
 Here is the article:
-
-&amp;nbsp;</description>
+ </description>
     </item>
     
     <item>
@@ -504,7 +493,7 @@ In Singleton pattern, there will be only one object and wherever we want to use 
       <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
-      <description>Classification : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
+      <description>Classification: Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
 Find the code example here.
 In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.</description>
     </item>
@@ -515,7 +504,7 @@ In this pattern, we create a proxy for the original class that we are trying to 
       <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</guid>
-      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.</description>
+      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem.</description>
     </item>
     
     <item>
@@ -542,7 +531,7 @@ In this pattern, we create a proxy for the original class that we are trying to 
       <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/03/11/agastyakoodam-trekking/</guid>
-      <description>On 2nd of March, we (a group of 10 friends) went onto the famous Agastyakoodam (or Agastyarkoodam as some call it that way). It is the second tallest hill in the Western Ghats. The tallest one is Anamudi. The only way to reach the top of Agastyakoodam is a 24km trek (although forest gaurds say it is only 18km). Of this only the last 6km include the flight to the hill.</description>
+      <description>On 2nd of March, we (a group of 10 friends) went onto the famous Agastyakoodam(or Agastyarkoodam as some call it that way). It is the second tallest hill in the Western Ghats. The tallest one is Anamudi. The only way to reach the top of Agastyakoodam is a 24km trek (although forest gaurds say it is only 18km). Of this only the last 6km include the flight to the hill. The remaining 18km(or 12km if you believe the forest gaurds) is through dense forests which comprise the Agastyakoodam Biosphere reserve.</description>
     </item>
     
     <item>
@@ -560,8 +549,7 @@ In this pattern, we create a proxy for the original class that we are trying to 
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</guid>
-      <description>The developer of Encog library, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard. Someone wrote a nice Android handwriting app with #encog. https://t.co/vd2JpTrR
-&amp;mdash; jeffheaton (@jeffheaton) 2 February 2013</description>
+      <description>The developer of Encoglibrary, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard.</description>
     </item>
     
     <item>
@@ -570,8 +558,7 @@ In this pattern, we create a proxy for the original class that we are trying to 
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/immortal-login/</guid>
-      <description>Download the app from PlayStore
-Find the source on Github I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
+      <description>Download the app from PlayStoreFind the source on GithubI have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
     </item>
     
     <item>
@@ -580,7 +567,7 @@ Find the source on Github I have got Asianet Broadband connection and they requi
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</guid>
-      <description>Download the app from PlayStore On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard - in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
+      <description>Download the app from PlayStoreOn January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard- in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
     </item>
     
     <item>
@@ -589,8 +576,7 @@ Find the source on Github I have got Asianet Broadband connection and they requi
       <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
-      <description>Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+      <description>Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode + modifyingSymbolCode
 Eg: ക്രൊ = ( ക + ്ര + ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).</description>
@@ -624,8 +610,7 @@ The naming convention sticks to the C version. Functions are implemented as stat
       
       <guid>https://sinujohn.github.io/2011/10/06/legendary-jobs/</guid>
       <description>Woke up today (actually yesterday as its past 12 midnight) to hear the news of Steve Jobs&amp;rsquo; death. The news about the death of a man whom I consider one of my role models actually left a kind of pain. Yup, I felt sad, as if someone I knew had died :(
-‎3 apples changed the world, 1st one seduced eve,2nd fell on
-newton and the 3rd was offered to the world half bitten by</description>
+I am not a user of Apple products. But I have used them though. Its not from the Apple-user perspective that I like this man.</description>
     </item>
     
     <item>
@@ -635,7 +620,7 @@ newton and the 3rd was offered to the world half bitten by</description>
       
       <guid>https://sinujohn.github.io/2011/06/22/add-jar-libraries/</guid>
       <description>When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
- Add the library jar files into a folder within the project, say /lib</description>
+  Add the library jar files into a folder within the project, say /lib</description>
     </item>
     
     <item>
@@ -644,10 +629,10 @@ newton and the 3rd was offered to the world half bitten by</description>
       <pubDate>Thu, 20 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2011/01/20/nerdy-jokes/</guid>
-      <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here .
-My favourite ones (credit goes to their respective creators): there is a physicist, a biologist and a mathematician standing in front of a house. They see one man enter and two men leave.
+      <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here.
+My favourite ones (credit goes to their respective creators):
 The Physicist says, &amp;ldquo;Well there is obviously an unknown variable.&amp;rdquo; The Biologist says, &amp;ldquo;The man must have multiplied.&amp;rdquo;
-The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.</description>
+The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.&amp;ldquo; The first asks for a beer. The second asks for half a beer.</description>
     </item>
     
     <item>
@@ -675,8 +660,7 @@ I followed the excellent guide available here. Take a print out of this guide a
       <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</guid>
-      <description>This is the most important question that a Linux newbie faces - &amp;ldquo;How to run his/her favourite Windows application on Linux?&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!
-1. Find the Linux versions of your Windows applications If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!</description>
+      <description></description>
     </item>
     
     <item>
@@ -685,7 +669,7 @@ I followed the excellent guide available here. Take a print out of this guide a
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</guid>
-      <description>Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.</description>
+      <description>///////////////////////////////////////////////////////////// //client.c // Send file to an HTTP server in small parts using POST // USAGE: client inputfile // // Compile: // gcc -o client client.c -lcurl // // Developer: // Sinu John - https://sinujohn.github.io/ // //////////////////////////////////////////////////////////////  #include&amp;lt;curl/curl.h&amp;gt;#include&amp;lt;fcntl.h&amp;gt;#include&amp;lt;unistd.h&amp;gt; //No. of bytes to be sent in one pass #define SIZELIMIT 100*1024  //#define _SEND_DEBUG_  int sendFile(const char *fileName, const char *url) // Sends file to &amp;#39;url&amp;#39; with an additional header &amp;#39;Count&amp;#39; (specifying count of the packet) { // An header &amp;#39;Filename&amp;#39; is also added  int COUNT=0; int fd = open(fileName, O_RDONLY); if(fd&amp;lt;0) { printf(&amp;#34;\nERROR: Cannot open the file\n&amp;#34;); return -1; } CURL *handle; char buf[SIZELIMIT]; //Data to be sent is stored in this buffer.</description>
     </item>
     
     <item>
@@ -705,7 +689,7 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
       <pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</guid>
-      <description>First, a very short review! I just installed openSUSE 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop.</description>
+      <description>Now, you are ready to explore your openSUSE 11.3! Following steps are optional :)</description>
     </item>
     
     <item>
@@ -714,8 +698,7 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/24/j8085sim/</guid>
-      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/
-To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
+      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
 This project is the result of about 5 weeks work by me and my team mates - Jinsmon Kurian and Deepu Devassy. Since the project demo is over, I believe this software should now be released.</description>
     </item>
     
@@ -746,9 +729,9 @@ Why did I make this? Isn&amp;rsquo;t there any other good video converter or cut
       <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
-      <description>GCC - GNU Compiler Collection From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking. Compile and Link a simple program:
-gcc -o hello.out hello.c  This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file. Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
-gcc -o hello.out hello.cpp  This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
+      <description>GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
+gcc -x c -o hello.out hello.cpp -x specifies the language.</description>
     </item>
     
     <item>

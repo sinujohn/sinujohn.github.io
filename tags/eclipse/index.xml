@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>eclipse on Sinu John</title>
@@ -18,7 +18,7 @@
       <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/06/starting-eclipse-plugin-development/</guid>
-      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem. Start here: http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.htmlThis blog post describes how to create a simple plugin(http://meri-stuff.blogspot.com/2012/04/writing-eclipse-plugins-tutorial-part-1.html#SimplePluginProject) and also the terns associated with plugin development. It also gives overall idea about how to create menus, how to select a text etc.</description>
+      <description>I had been developing an Eclipse plugin for the last few weeks. Starting out the plugin development for a person with no idea of Eclipse plugin environment is very difficult. Here I&amp;rsquo;ll point out to the sources that helped me to solve the problem.</description>
     </item>
     
   </channel>

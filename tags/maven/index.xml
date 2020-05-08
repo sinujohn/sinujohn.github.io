@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>maven on Sinu John</title>
@@ -18,8 +18,9 @@
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
-      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?</description>
+      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?
+Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff).</description>
     </item>
     
     <item>
@@ -38,8 +39,8 @@ How to use?</description>
       
       <guid>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</guid>
       <description>To use SLF4J and logback together, add the following to pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  Now SLF4J&amp;rsquo;s logger can be used:
-import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);  If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; Now SLF4J&amp;rsquo;s logger can be used:import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;); If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:
+&amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
   </channel>

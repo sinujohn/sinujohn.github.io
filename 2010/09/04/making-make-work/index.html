@@ -27,7 +27,7 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -41,29 +41,20 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Making ‘make’ work">
 <meta itemprop="description" content="&lsquo;make&rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.
 This is a very short note of &lsquo;make&rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &lsquo;Beginning Linux Programming&rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &lsquo;make&rsquo; utility.
 &lsquo;make&rsquo; searches for a file &lsquo;makefile&rsquo; or &lsquo;Makefile&rsquo;.">
-
-
 <meta itemprop="datePublished" content="2010-09-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2010-09-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="811">
+<meta itemprop="wordCount" content="695">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="linux,make," />
-<meta property="og:title" content="Making ‘make’ work" />
-<meta property="og:description" content="&lsquo;make&rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.
-This is a very short note of &lsquo;make&rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &lsquo;Beginning Linux Programming&rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &lsquo;make&rsquo; utility.
-&lsquo;make&rsquo; searches for a file &lsquo;makefile&rsquo; or &lsquo;Makefile&rsquo;." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2010/09/04/making-make-work/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2010-09-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2010-09-04T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
@@ -71,6 +62,8 @@ This is a very short note of &lsquo;make&rsquo; utility, mostly made for my own 
 <meta name="twitter:description" content="&lsquo;make&rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.
 This is a very short note of &lsquo;make&rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &lsquo;Beginning Linux Programming&rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &lsquo;make&rsquo; utility.
 &lsquo;make&rsquo; searches for a file &lsquo;makefile&rsquo; or &lsquo;Makefile&rsquo;."/>
+
+
 
 
 
@@ -150,29 +143,17 @@ This is a very short note of &lsquo;make&rsquo; utility, mostly made for my own 
 
             <div class="post-content">
                 <p>&lsquo;make&rsquo; is used to produce output files from several input files, although it is more usually used to compile programs.</p>
-
 <p>This is a very short note of &lsquo;make&rsquo; utility, mostly made for my own reference :). The best way to study is to look at makefiles! &lsquo;Beginning Linux Programming&rsquo; by Neil Matthew and Richard Stones is a good book to start linux programming. It also mentions &lsquo;make&rsquo; utility.</p>
-
 <p>&lsquo;make&rsquo; searches for a file &lsquo;makefile&rsquo; or &lsquo;Makefile&rsquo;. To use another filename with make use -f option.</p>
-
 <pre><code>make -f Makefile4
-</code></pre>
-
-<p><h1>Makefile Syntax</h1>
-Makefile is a set of Dependencies and Rules.</p>
-
-<p><strong>Dependencies:</strong> It consist of two parts - Target file and the set of file on which target depends i.e. prerequisites.</p>
-
-<p><strong>Rules:</strong> This consist of the command that must be executed to obtain the Target file from the prerequisites.</p>
-
-<p><strong>Syntax is:</strong><br/><em>Target_name:&lt;space or tab&gt;Prerequisite1 [Prerequisite2 &hellip;]</em><br/>
-<em>&lt;tab&gt;Command_to_Execute</em></p>
-
+</code></pre><!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->Dependencies:<!-- raw HTML omitted --> It consist of two parts - Target file and the set of file on which target depends i.e. prerequisites.</p>
+<p><!-- raw HTML omitted -->Rules:<!-- raw HTML omitted --> This consist of the command that must be executed to obtain the Target file from the prerequisites.</p>
+<p><!-- raw HTML omitted -->Syntax is:<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Target_name:&lt;space or tab&gt;Prerequisite1 [Prerequisite2 &hellip;]<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->&lt;tab&gt;Command_to_Execute<!-- raw HTML omitted --></p>
 <p>Important: The Rule should be on a line that begins with TAB.
 Comments begin with #</p>
-
 <p>Example:</p>
-
 <pre><code>myapp: main.o 2.o 3.o
     gcc -o myapp main.o 2.o 3.o
 
@@ -184,29 +165,18 @@ main.o: main.c a.h
 
 3.o: 3.c b.h c.h
     gcc -c 3.c
-</code></pre>
-
-<p>Here myapp is the final executable. It depends on main.o, 2.o and 3.o.
+</code></pre><p>Here myapp is the final executable. It depends on main.o, 2.o and 3.o.
 main.o in turn depends on main.c and a.h. Similarly others.
-Usually a Target called <em>&lsquo;all&rsquo;</em> is used (as the first target). This is handy if more than one output files are required.
+Usually a Target called <!-- raw HTML omitted -->'all'<!-- raw HTML omitted --> is used (as the first target). This is handy if more than one output files are required.
 By default &lsquo;make&rsquo; tries to fulfill the first &lsquo;Target&rsquo;. So here &lsquo;make&rsquo; tries to obtain first target &lsquo;myapp&rsquo;. To obtain &lsquo;myapp&rsquo;, it requires main.o, 2.o and 3.o. So then it tries to obtain mao=in.o and so on.
 We can also specify a specific target:
-<em>make main.o</em>
-<h1>Macros in Makefile</h1>
-Defined by <em>MACRONAME=value</em>
-The value of a macro is accessed by <em>$(MACRONAME)</em> or <em>${MACRONAME}</em>. Some also support <em>$MACRONAME</em>.
-$(MACRONAME) is replaced with the value of the macro. &lsquo;value&rsquo; can be empty also.</p>
-
+<!-- raw HTML omitted -->make main.o<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>Commonly used macro names:</p>
-
 <p>CC                - Compiler</p>
-
 <p>INCLUDE  - Directory in which include files are present</p>
-
 <p>CFLAGS     - Compiler flags/options</p>
-
 <p>Example:</p>
-
 <pre><code>all: myapp
 CC=gcc
 CFLAGS= -g -Wall -ansi
@@ -221,110 +191,87 @@ main.o: main.c a.h
 
 2.o: 2.c a.h b.h
     $(CC) -I$(INCLUDE) $(CFLAGS) -c 2.c
-</code></pre>
-
-<p>Here <em>$(CC) -I$(INCLUDE) $(CFLAGS) -c main.c</em> is expanded to <em>gcc -I. -g -Wall -ansi -c main.c</em></p>
-
-<p><strong>Predefined Macros:</strong></p>
-
+</code></pre><p>Here <!-- raw HTML omitted -->$(CC) -I$(INCLUDE) $(CFLAGS) -c main.c<!-- raw HTML omitted --> is expanded to <!-- raw HTML omitted -->gcc -I. -g -Wall -ansi -c main.c<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->Predefined Macros:<!-- raw HTML omitted --></p>
 <p>$?              - List of prerequisites changed more recently than the target</p>
-
 <p>$@            - Name of current target</p>
-
 <p>$&lt;             - Name of current prerequisite (Example - main.c)</p>
-
 <p>$*              - Name of current prerequisite without suffix (Example - main for main.c)</p>
-
 <p>Two other useful characters:</p>
-
-<p>&rsquo;-&rsquo; (minus sign)     - Ignore errors. For example, -mkdir ignores any error if the directory already exists.</p>
-
+<p>&lsquo;-&rsquo; (minus sign)     - Ignore errors. For example, -mkdir ignores any error if the directory already exists.</p>
 <p>@                   - Tells &lsquo;make&rsquo; not to print the command to output. We may use echo to print instructions.</p>
+<!-- raw HTML omitted -->
+<p>install: myapp
+@if [ -d $(INSTDIR) ];<br>
+then<br>
+     cp myapp $(INSTDIR);<br>
+     chmod a+x $(INSTDIR)/myapp;<br>
+     echo &ldquo;Installed in $(INSTDIR)&quot;;<br>
+else<br>
+     echo &ldquo;Error: $(INSTDIR) does not exist&rdquo;;<br>
+fi
+&hellip;
+&hellip;</p>
+<pre><code>
 
-<p><h1>Other Targets</h1>
-I have always wondered what is &lsquo;<em>make clean</em>&rsquo; and &lsquo;<em>make install</em>&rsquo; that we type while compiling programs from source. Its only now that I understood that &lsquo;clean&rsquo; and &lsquo;install&rsquo; are just other targets. So &lsquo;make clean&rsquo; and &lsquo;make install&rsquo; tries to achieve &lsquo;clean&rsquo; and &lsquo;install&rsquo; targets.
-Example:</p>
+'clean' has no dependencies. So it is executed whenever the target 'clean' is specified. The command 'rm' is preceded by '-' to ignore the errors. Similarly we have used '@' before 'if'.
+Note: '[' is short for command '&lt;em&gt;test&lt;/em&gt;'. It is used for checking files. For more info, '&lt;em&gt;man test&lt;/em&gt;'
+&lt;h1&gt;Built-in Rules&lt;/h1&gt;
+'make' has several Built-in rules. You can see them by typing '&lt;em&gt;make -p&lt;/em&gt;'.
+So makefile can simply be
+</code></pre><p>main.o: main.c a.h
+2.o: 2.c a.h b.h</p>
+<pre><code>
 
-<pre><code>...
-...
-clean:
-    -rm main.o 2.o 3.o
-
-install: myapp
-    @if [ -d $(INSTDIR) ]; \
-    then \
-        cp myapp $(INSTDIR);\
-        chmod a+x $(INSTDIR)/myapp;\
-        echo &quot;Installed in $(INSTDIR)&quot;;\
-    else \
-        echo &quot;Error: $(INSTDIR) does not exist&quot;;\
-    fi
-...
-...
-</code></pre>
-
-<p>&lsquo;clean&rsquo; has no dependencies. So it is executed whenever the target &lsquo;clean&rsquo; is specified. The command &lsquo;rm&rsquo; is preceded by &lsquo;-&rsquo; to ignore the errors. Similarly we have used &lsquo;@&rsquo; before &lsquo;if&rsquo;.
-Note: &lsquo;[&rsquo; is short for command &lsquo;<em>test</em>&rsquo;. It is used for checking files. For more info, &lsquo;<em>man test</em>&lsquo;
-<h1>Built-in Rules</h1>
-&lsquo;make&rsquo; has several Built-in rules. You can see them by typing &lsquo;<em>make -p</em>&rsquo;.
-So makefile can simply be</p>
-
-<pre><code>main.o: main.c a.h
-2.o: 2.c a.h b.h
-</code></pre>
-
-<p>The built-in rules are applied by looking at the file extensions(suffixes). We can add new suffix rules.
-<strong>Syntax:</strong>
-<em>&lt;old_suffix&gt;.&lt;new_suffix&gt;:</em>
-Example for converting .cpp to .o files:</p>
-
-<pre><code>.SUFFIXES: .cpp
+The built-in rules are applied by looking at the file extensions(suffixes). We can add new suffix rules.
+&lt;strong&gt;Syntax:&lt;/strong&gt;
+&lt;em&gt;&amp;lt;old_suffix&amp;gt;.&amp;lt;new_suffix&amp;gt;:&lt;/em&gt;
+Example for converting .cpp to .o files:
+</code></pre><p>.SUFFIXES: .cpp
 .cpp.o:
-    $(CC) -xc++ -I($INCLUDE) $(CFLAGS) -c $&amp;lt; 
-</code></pre>
+$(CC) -xc++ -I($INCLUDE) $(CFLAGS) -c $&lt; </p>
+<pre><code>
 
-<p><h1>Libraries and &lsquo;make&rsquo;</h1>
-&lsquo;make&rsquo; has built-in rules to create and append to library(archive files created with &lsquo;ar&rsquo; command). To refer to file in the library use following syntax:
-<em>libMyCol(foo.o)</em>
-This refers to file <em>foo.o</em> as stored in library <em>libMyCol.a</em>.
-Example:</p>
-
-<pre><code>...
+&lt;h1&gt;Libraries and 'make'&lt;/h1&gt;
+'make' has built-in rules to create and append to library(archive files created with 'ar' command). To refer to file in the library use following syntax:
+&lt;em&gt;libMyCol(foo.o)&lt;/em&gt;
+This refers to file &lt;em&gt;foo.o&lt;/em&gt; as stored in library &lt;em&gt;libMyCol.a&lt;/em&gt;.
+Example:
+</code></pre><p>&hellip;
 MYLIB = libMyCol.a
-...
-...
+&hellip;
+&hellip;
 myapp: main.o $(MYLIB)
-    $(CC) -o myapp main.o $(MYLIB)
-...
-...
+$(CC) -o myapp main.o $(MYLIB)
+&hellip;
+&hellip;
 $(MYLIB): $(MYLIB)(2.o) $(MYLIB)(3.o)
 main.o: main.c a.h
 2.o: 2.c a.h b.h
 3.o: 3.c b.h c.h
-...
-...
+&hellip;
+&hellip;
 clean:
-    -rm main.o 2.o 3.o
+-rm main.o 2.o 3.o</p>
+<p>install: myapp
+@if [ -d $(INSTDIR) ];<br>
+then<br>
+     cp myapp $(INSTDIR);<br>
+     chmod a+x $(INSTDIR)/myapp;<br>
+     echo &ldquo;Installed in $(INSTDIR)&quot;;<br>
+else<br>
+     echo &ldquo;Error: $(INSTDIR) does not exist&rdquo;;<br>
+fi
+&hellip;</p>
+<pre><code>
 
-install: myapp
-    @if [ -d $(INSTDIR) ]; \
-    then \
-        cp myapp $(INSTDIR);\
-        chmod a+x $(INSTDIR)/myapp;\
-        echo &quot;Installed in $(INSTDIR)&quot;;\
-    else \
-        echo &quot;Error: $(INSTDIR) does not exist&quot;;\
-    fi
-...
+&lt;h1&gt;A Useful Option&lt;/h1&gt;
+Want to create dependency list easily? Use &lt;em&gt;-MM&lt;/em&gt; option with gcc. It produces a list which can be almost copy-pasted for use in a makefile!
+Example:
+</code></pre><p>gcc -MM main.c 2.c 3.c</p>
+<pre><code>
+
 </code></pre>
-
-<p><h1>A Useful Option</h1>
-Want to create dependency list easily? Use <em>-MM</em> option with gcc. It produces a list which can be almost copy-pasted for use in a makefile!
-Example:</p>
-
-<pre><code>gcc -MM main.c 2.c 3.c
-</code></pre>
-
             </div>
         </article>
 
@@ -367,15 +314,21 @@ Example:</p>
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

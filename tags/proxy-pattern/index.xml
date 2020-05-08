@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>proxy pattern on Sinu John</title>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
-      <description>Classification : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
+      <description>Classification: Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
 Find the code example here.
 In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.</description>
     </item>

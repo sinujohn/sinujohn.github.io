@@ -7,7 +7,7 @@
 <meta name="author" content="sinujohn">
 <meta name="description" content="Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
 So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create ." />
+Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server" />
 <meta name="keywords" content=", chef" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -27,7 +27,7 @@ Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -41,36 +41,29 @@ Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="Chef notes">
 <meta itemprop="description" content="Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&rsquo;t loose it. Don&rsquo;t think it&rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
 So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&gt; Install starter kit to create .">
-
-
+Write a cookbook chef generate repo ~/chef-repo =&gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server">
 <meta itemprop="datePublished" content="2016-06-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2016-06-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="383">
+<meta itemprop="wordCount" content="339">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="chef," />
-<meta property="og:title" content="Chef notes" />
-<meta property="og:description" content="Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&rsquo;t loose it. Don&rsquo;t think it&rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
-So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&gt; Install starter kit to create ." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2016/06/01/chef-notes/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2016-06-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-06-01T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Chef notes"/>
 <meta name="twitter:description" content="Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&rsquo;t loose it. Don&rsquo;t think it&rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
 So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&gt; Install starter kit to create ."/>
+Write a cookbook chef generate repo ~/chef-repo =&gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server"/>
+
+
 
 
 
@@ -149,105 +142,53 @@ Write a cookbook chef generate repo ~/chef-repo =&gt; Install starter kit to cre
             
 
             <div class="post-content">
-                
-
-<p>Sometime back I had to fiddle with <a href="https://www.chef.io/" target="_blank">Chef</a>. I created some notes, posting it over here, so that I won&rsquo;t loose it. Don&rsquo;t think it&rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.</p>
-
+                <p>Sometime back I had to fiddle with <!-- raw HTML omitted -->Chef<!-- raw HTML omitted -->. I created some notes, posting it over here, so that I won&rsquo;t loose it. Don&rsquo;t think it&rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.</p>
 <p>So, anyone other than me, please ignore this post!</p>
-
 <h2 id="write-a-cookbook">Write a cookbook</h2>
-
 <p><code>chef generate repo ~/chef-repo</code>
 =&gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server</p>
-
 <pre><code>cd ~/chef-repo
 chef generate cookbook cookbooks/COOKBOOK_NAME
-</code></pre>
-
-<h2 id="create-a-recipe">Create a recipe:</h2>
-
+</code></pre><h2 id="create-a-recipe">Create a recipe:</h2>
 <p><code>chef generate recipe cookbooks/COOKBOOK_NAME RECIPE_NAME</code> =&gt; RECIPE_NAME shouldn’t have suffix. Eg. it should be ‘webserver and not ‘webserver.rb’
 =&gt; Write the script in RECIPE_NAME.rb file that got generated</p>
-
-<h2 id="how-to-refer-include-a-recipe-recipe-name-in-another-recipe">How to refer(include) a recipe(RECIPE_NAME) in another recipe:</h2>
-
+<h2 id="how-to-referinclude-a-reciperecipe_name-in-another-recipe">How to refer(include) a recipe(RECIPE_NAME) in another recipe:</h2>
 <p><code>include_recipe 'COOKBOOK_NAME::RECIPE_NAME'</code> =&gt; Eg: include_recipe &lsquo;my_cookbook::webserver&rsquo;</p>
-
 <p>=&gt; By default the recipe that gets called is ‘cookbooks/COOKBOOK_NAME/recipes/default.rb’
 =&gt; So include any other recipe in this using include_recipe</p>
-
 <h2 id="create-a-file">Create a file:</h2>
-
 <p><code>chef generate file cookbooks/COOKBOOK_NAME FILE_NAME.txt</code></p>
-
-<hr/>
-
-<h2 id="how-to-upload-the-cookbook-to-the-chef-server-there-are-2-ways">How to upload the cookbook to the chef server. There are 2 ways:</h2>
-
-<h4 id="option-1-prefer-this-one-this-one-takes-up-the-dependencies-if-any">Option 1. Prefer this one. This one takes up the dependencies if any.</h4>
-
-<p>Create a file named Berksfile in the ~/chef-repo/cookbooks/COOKBOOK_NAME directory
-Add the following to that file:</p>
-
-<pre><code>source &quot;https://supermarket.chef.io&quot;
-metadata
-</code></pre>
-
+<!-- raw HTML omitted -->
 <p>Install the dependencies:
 <code>berks install</code></p>
-
 <p>Finally upload (along with dependencies):
 <code>berks upload</code> =&gt; OR without SSL =&gt; <code>berks upload --no-ssl-verify</code></p>
-
-<h4 id="option-2-this-one-just-uploads-the-cookbook-won-t-download-dependencies">Option 2. This one just uploads the cookbook. Won’t download dependencies</h4>
-
+<h4 id="option-2-this-one-just-uploads-the-cookbook-wont-download-dependencies">Option 2. This one just uploads the cookbook. Won’t download dependencies</h4>
 <p><code>knife cookbook upload COOKBOOK_NAME</code></p>
-
 <h2 id="view-uploaded-cookbooks">View uploaded cookbooks:</h2>
-
 <p><code>knife cookbook list</code></p>
-
 <h2 id="bootstraping-the-node">Bootstraping the node</h2>
-
 <pre><code>knife ssl fetch ##Save the SSL certificate
 knife bootstrap IP_ADDRESS_OF_NODE -x ROOT_USER_NAME -P ROOT_PASSWORD --sudo 
-</code></pre>
-
-<h2 id="verify-bootstrap-process-was-successful-either-check-in-chef-manage-console-or-do">Verify bootstrap process was successful. Either check in chef manage console or do:</h2>
-
+</code></pre><h2 id="verify-bootstrap-process-was-successful-either-check-in-chef-manage-console-or-do">Verify bootstrap process was successful. Either check in chef manage console or do:</h2>
 <h4 id="on-windows">On Windows</h4>
-
 <p><code>knife node list | findstr NODE_NAME_WINDOWS</code></p>
-
 <h4 id="on-linux">On Linux</h4>
-
 <p><code>knife node list | grep NODE_NAME_WINDOWS</code></p>
-
 <h2 id="how-to-reference-another-cookbook">How to reference another cookbook:</h2>
-
 <p>Append following to <code>~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb</code>:
 <code>depends 'ANOTHER_COOKBOOK_NAME', '~&gt; MAJOR.MINOR.PATCH'</code> =&gt; Eg: <code>depends 'sql_server', '~&gt; 2.4.0'</code></p>
-
-<h2 id="how-to-override-third-party-cookbook-s-attributes">How to override third party cookbook’s attributes:</h2>
-
+<h2 id="how-to-override-third-party-cookbooks-attributes">How to override third party cookbook’s attributes:</h2>
 <h4 id="create-a-custom-attribute-file-that-overrides-third-party-attribute-values">Create a custom attribute file that overrides third party attribute values:</h4>
-
 <p><code>chef generate attribute cookbooks/COOKBOOK_NAME default</code></p>
-
-<h4 id="add-override-values-as-follows-in-the-generated-cookbooks-cookbook-name-attributes-default-rb">Add override values as follows in the generated ‘cookbooks/COOKBOOK_NAME/attributes/default.rb‘:</h4>
-
+<h4 id="add-override-values-as-follows-in-the-generated-cookbookscookbook_nameattributesdefaultrb">Add override values as follows in the generated ‘cookbooks/COOKBOOK_NAME/attributes/default.rb‘:</h4>
 <p><code>default['ANOTHER_COOKBOOK_NAME']['ATTRIBUTE_NAME'] = ATTRIBUTE_VALUE</code></p>
-
 <p>Eg: <code>default['sql_server']['accept_eula'] = true</code>
 Eg: <code>default['sql_server']['version'] = '2012'</code>
 Eg: <code>default['sql_server']['instance_name'] = 'MSSQLSERVER'</code></p>
-
 <h2 id="modifying-cookbook-version">Modifying cookbook version:</h2>
-
 <p>Edit <code>~/chef-repo/cookbooks/COOKBOOK_NAME/metadata.rb</code> to change the version</p>
-
 <h2 id="applying-cookbook-on-node">Applying cookbook on node:</h2>
-
 <p>Run the following directly on the <strong>NODE</strong>, (NOT ON THE workstation):
 <code>chef-client</code></p>
 
@@ -293,15 +234,21 @@ Eg: <code>default['sql_server']['instance_name'] = 'MSSQLSERVER'</code></p>
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 

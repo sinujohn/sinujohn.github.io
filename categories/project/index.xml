@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project on Sinu John</title>
@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 14 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sinujohn.github.io/categories/project/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,8 +18,7 @@
       <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
-      <description>Before you read :
-Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+      <description>Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode + modifyingSymbolCode
 Eg: ക്രൊ = ( ക + ്ര + ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).</description>

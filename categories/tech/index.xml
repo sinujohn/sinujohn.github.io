@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on Sinu John</title>
@@ -18,7 +18,7 @@
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/01/08/another-nosql-to-the-kitty/</guid>
-      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4J two days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
+      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4Jtwo days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
     </item>
     
     <item>
@@ -27,8 +27,7 @@
       <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/17/hearing-it-from-the-granpa/</guid>
-      <description>I was searching for good JavaScript resources and then stumbled onto this guy - Douglas Crockford. Douglas Crockford is Yahoo!&#39;s JavaScript architect. He is also the creator of JSON and the author of the book which I am reading now - Javascript: the good parts. He is one of the most authoritative person to talk about JavaScript.
-I found his talks on JavaScript and just finished watching the first part.</description>
+      <description></description>
     </item>
     
     <item>
@@ -37,8 +36,7 @@ I found his talks on JavaScript and just finished watching the first part.</des
       <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/07/angularjs/</guid>
-      <description>I had been learning about AngularJS last week. Even though Javascript still causes my stomach to turn upside down, I have decided to make myself familiar with it. I completed the Codeschool classes on it. And then I stumbled onto this awesome series of videos by David Mosher. Its superb. Watch it over here. Parts 1, 2 and 3 are enough to get you up and running.
-Bootstrapping Dev env for Angular JS:Download Node.</description>
+      <description></description>
     </item>
     
     <item>
@@ -75,8 +73,7 @@ I followed the excellent guide available here. Take a print out of this guide a
       <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</guid>
-      <description>This is the most important question that a Linux newbie faces - &amp;ldquo;How to run his/her favourite Windows application on Linux?&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!
-1. Find the Linux versions of your Windows applications If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!</description>
+      <description></description>
     </item>
     
   </channel>

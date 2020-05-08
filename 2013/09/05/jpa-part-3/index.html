@@ -5,7 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method." />
+<meta name="description" content="Go to Part 1.
+public class EmployeeListener { @PrePersist public void beforePersist(Employee e) { System.out.println(&amp;quot;Before persist&amp;quot;); } }
+&amp;lt;h2&amp;gt;Merge Method&amp;lt;/h2&amp;gt; &amp;lt;div&amp;gt;- Used to synchronise the changes between objects and database tables.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Adds a new row if the entity is not present in db table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Updates the existing row if it is present in table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;h3&amp;gt;Example:&amp;lt;/h3&amp;gt; et.begin(); &amp;hellip;. &amp;hellip;. em.merge(empObject); //merges the changes in empObject with table et.commit();" />
 <meta name="keywords" content=", java, jpa" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -25,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
 
 
 
@@ -39,30 +41,29 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
+
+
 <meta itemprop="name" content="JPA - Part 3">
-<meta itemprop="description" content="Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.">
-
-
+<meta itemprop="description" content="Go to Part 1.
+public class EmployeeListener { @PrePersist public void beforePersist(Employee e) { System.out.println(&quot;Before persist&quot;); } }
+&lt;h2&gt;Merge Method&lt;/h2&gt; &lt;div&gt;- Used to synchronise the changes between objects and database tables.&lt;/div&gt; &lt;div&gt;- Adds a new row if the entity is not present in db table.&lt;/div&gt; &lt;div&gt;- Updates the existing row if it is present in table.&lt;/div&gt; &lt;div&gt;&lt;/div&gt; &lt;h3&gt;Example:&lt;/h3&gt; et.begin(); &hellip;. &hellip;. em.merge(empObject); //merges the changes in empObject with table et.commit();">
 <meta itemprop="datePublished" content="2013-09-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-09-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="264">
+<meta itemprop="wordCount" content="70">
+<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java,jpa," />
-<meta property="og:title" content="JPA - Part 3" />
-<meta property="og:description" content="Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sinujohn.github.io/2013/09/05/jpa-part-3/" />
-
-<meta property="og:image" content="https://sinujohn.github.io/" />
-<meta property="article:published_time" content="2013-09-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-09-05T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="JPA - Part 3"/>
-<meta name="twitter:description" content="Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method."/>
+<meta name="twitter:description" content="Go to Part 1.
+public class EmployeeListener { @PrePersist public void beforePersist(Employee e) { System.out.println(&quot;Before persist&quot;); } }
+&lt;h2&gt;Merge Method&lt;/h2&gt; &lt;div&gt;- Used to synchronise the changes between objects and database tables.&lt;/div&gt; &lt;div&gt;- Adds a new row if the entity is not present in db table.&lt;/div&gt; &lt;div&gt;- Updates the existing row if it is present in table.&lt;/div&gt; &lt;div&gt;&lt;/div&gt; &lt;h3&gt;Example:&lt;/h3&gt; et.begin(); &hellip;. &hellip;. em.merge(empObject); //merges the changes in empObject with table et.commit();"/>
+
+
 
 
 
@@ -141,65 +142,26 @@
             
 
             <div class="post-content">
-                <p>Go to <a href="/2013/08/31/jpa-part-1/">Part 1</a>.
-<h2>Callback Methods</h2>
-<div>When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:</div>
-<ul>
-    <li><strong>@PrePersist</strong> - called before persist()</li>
-    <li><strong>@PostPersist</strong> - called after persist()</li>
-    <li><strong>@PreRemove</strong> - called before remove()</li>
-    <li><strong>@PostRemove</strong> - called after commit()</li>
-    <li><strong>@PreUpdate</strong> - called before commit()</li>
-    <li><strong>@PostUpdate</strong> - called after commit()</li>
-</ul>
-<div> More than one annotation can applied to a single method. There should be only one method with a particular callback annotation(example, there shouldn&rsquo;t be more than one @Prepersist methods). The callback methods shouldn&rsquo;t take any arguments.</div>
-<div></div>
-<h2>Entity Listeners</h2>
-<div>Mixing callback methods into Entity class is not a good practice. So we write it in another class which is an Entity Listener.</div>
-<div></div>
-<h3>Annotations Used:</h3>
-<ul>
-    <li>@EntityListeners(EntityListener_ClassName.class)
-<ul>
-    <li>Used before the Entity class</li>
-</ul>
-</li>
-</ul>
-- Entity Listener should have public default constructor
-- An Entity class can have some callback methods defined in it and some in an Entity Listener
-- An Entity Listener class can listen to more than one Entity classes.
-- The callback methods defined in Entity Listener class must take an object of Entity class as argument
-<div></div>
-<h3>Example:</h3></p>
-
-<pre><code>@Entity
-@EntityListeners(EmployeeListener.class)
-public class Employee {
-    .....
+                <p>Go to <a href="/2013/08/31/jpa-part-1/">Part 1</a>.</p>
+<!-- raw HTML omitted -->
+<p>public class EmployeeListener {
+@PrePersist
+public void beforePersist(Employee e) {
+System.out.println(&quot;Before persist&quot;);
 }
-
-public class EmployeeListener {
-    @PrePersist
-    public void beforePersist(Employee e) {
-        System.out.println(&amp;quot;Before persist&amp;quot;);
-    }
-}
-</code></pre>
-
-<p><h2>Merge Method</h2>
-<div>- Used to synchronise the changes between objects and database tables.</div>
-<div>- Adds a new row if the entity is not present in db table.</div>
-<div>- Updates the existing row if it is present in table.</div>
-<div></div>
-<h3>Example:</h3></p>
-
-<pre><code>et.begin();
-    ....
-    ....
-    em.merge(empObject); //merges the changes in empObject with table
-et.commit();
-</code></pre>
-
+}</p>
+<pre><code>&lt;h2&gt;Merge Method&lt;/h2&gt;
+&lt;div&gt;- Used to synchronise the changes between objects and database tables.&lt;/div&gt;
+&lt;div&gt;- Adds a new row if the entity is not present in db table.&lt;/div&gt;
+&lt;div&gt;- Updates the existing row if it is present in table.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;h3&gt;Example:&lt;/h3&gt;
+</code></pre><p>et.begin();
+&hellip;.
+&hellip;.
+em.merge(empObject); //merges the changes in empObject with table
+et.commit();</p>
+<pre><code></code></pre>
             </div>
         </article>
 
@@ -242,15 +204,21 @@ et.commit();
 
 
 
-<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96151225-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96151225-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 
 
 
