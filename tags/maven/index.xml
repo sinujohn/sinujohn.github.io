@@ -18,9 +18,8 @@
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
-      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?
-Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff).</description>
+      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?</description>
     </item>
     
     <item>

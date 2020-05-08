@@ -36,9 +36,10 @@
       <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
-      <description>GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
-gcc -x c -o hello.out hello.cpp -x specifies the language.</description>
+      <description>GCC - GNU Compiler Collection
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
     </item>
     
   </channel>

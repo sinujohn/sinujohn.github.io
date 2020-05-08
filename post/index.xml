@@ -67,9 +67,8 @@ Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2016/06/01/java-add-lib-folder-to-classpath/</guid>
-      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?
-Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff).</description>
+      <description>Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?</description>
     </item>
     
     <item>
@@ -98,8 +97,8 @@ Here is my VERIFIED certificatesigned by Dr.Erik Meijer:</description>
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/21/my-developer-personality/</guid>
-      <description>I took a Developer Personality Test, conducted by DZoneand it almost sums up what I am! Here&amp;rsquo;s the result I got:
-Collaborative:Good code doesn&amp;rsquo;t happen in a vacuum. You need a team to keep you energized and on your toes so that you&amp;rsquo;re constantly improving the project code using the entire team&amp;rsquo;s varied experience and strengths. You like to talk frequently with colleagues and discuss ideas so that you can learn from others and spark ideas.</description>
+      <description>I took a Developer Personality Test, conducted by DZone and it almost sums up what I am! Here&amp;rsquo;s the result I got:
+ Here are your results! Independent vs Collaborative You are Independent Independent: You prefer to spend most of your time working in an isolated environment. You rarely want to collaborate because you have a better chance of solving problems on your own. If you do have to collaborate on the direction of a project, you dislike it when you have to defend your position or when others try to muddy your plans for the project.</description>
     </item>
     
     <item>
@@ -129,9 +128,9 @@ But when its about nicely written articles about science, technology and all the
       <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/05/04/programmer-zen/</guid>
-      <description>Just read this quoteand I loved it:
-Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures. They are solid, but when they must change, violence must be done to them.
-The master programmer knows when to apply structure and when to leave things in their simple form. Her programs are like clay, solid yet malleable.</description>
+      <description>Just read this quote and I loved it:
+ A beginning programmer writes her programs like an ant builds her hill, one piece at a time, without thought for the bigger structure. Her programs will be like loose sand. They may stand for a while, but growing too big they fall apart.
+Realizing this problem, the programmer will start to spend a lot of time thinking about structure. Her programs will be rigidly structured, like rock sculptures.</description>
     </item>
     
     <item>
@@ -161,7 +160,9 @@ This time it was a group of 6 friends, including me. We were very much fortunate
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/03/10/angamaly-marakkamo/</guid>
-      <description></description>
+      <description>&amp;ldquo;മനുഷ്യരെ രക്ഷിക്കേണ്ടത് ദൈവമാണ്. അല്ലാതെ ദൈവത്തെ രക്ഷിക്കേണ്ടത് മനുഷ്യരല്ല. ദൈവത്തെ മനുഷ്യൻ രക്ഷിക്കേണ്ടി വരുമ്പോൾ ദൈവത്തിന്റെ വിലയിടിയുന്നു.&amp;rdquo;
+- അങ്കമാലി മറക്കാമോ? - P.J.Antony
+ P.J. Antony writes that people were fooled into taking part in the Liberation Struggle (Vimochanasamaram) by the Church, the Congress party and everyone else (Uncle Sam&amp;rsquo;s CIA??) who were afraid of the Communist party getting their first foothold in India</description>
     </item>
     
     <item>
@@ -170,7 +171,7 @@ This time it was a group of 6 friends, including me. We were very much fortunate
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/01/08/another-nosql-to-the-kitty/</guid>
-      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4Jtwo days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
+      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4J two days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
     </item>
     
     <item>
@@ -280,7 +281,8 @@ http://stackoverflow.com/questions/18043587/why-im-not-able-to-unwrapp-and-seria
       <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/19/debugging/</guid>
-      <description></description>
+      <description> You can find how good a programmer is, by the way he debugs!
+ </description>
     </item>
     
     <item>
@@ -338,7 +340,7 @@ Most of the changes is in the way we deal with Collections. And most of our dail
       
       <guid>https://sinujohn.github.io/2013/11/08/the-namesake/</guid>
       <description>One of the best novels i have ever read - The Namesake. Loved it. Awesome work by Jhumpa Lahiri. Following is a quote I have found to be very inspiring
-Now I have started reading her another book - &amp;ldquo;The interpreter of maladies&amp;rdquo;.</description>
+ &amp;ldquo;Do yourself a favor. Before it&amp;rsquo;s too late, without thinking too much about it first, pack a pillow and a blanket and see as much of the world as you can. You will not regret it. One day it will be too late.</description>
     </item>
     
     <item>
@@ -365,7 +367,10 @@ Now I have started reading her another book - &amp;ldquo;The interpreter of mala
       <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/10/11/i-am-an-intp/</guid>
-      <description></description>
+      <description>A few days back I took the Myers-Briggs Type Indicator test at this site.
+It says that I fall in INTP category.
+From Myers-Briggs website, this is the description:
+ INTP Seek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction. Quiet, contained, flexible, and adaptable. Have unusual ability to focus in depth to solve problems in their area of interest.</description>
     </item>
     
     <item>
@@ -549,7 +554,8 @@ In this pattern, we create a proxy for the original class that we are trying to 
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/02/08/jeff-tweeted-thulika/</guid>
-      <description>The developer of Encoglibrary, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard.</description>
+      <description>The developer of Encog library, Jeff Heaton, tweeted about my first Android app - Thulika Keyboard. Someone wrote a nice Android handwriting app with #encog. https://t.co/vd2JpTrR
+&amp;mdash; jeffheaton (@jeffheaton) February 2, 2013  </description>
     </item>
     
     <item>
@@ -567,7 +573,7 @@ In this pattern, we create a proxy for the original class that we are trying to 
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</guid>
-      <description>Download the app from PlayStoreOn January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard- in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
+      <description>Download the app from PlayStore On January 6th early morning(at about 3 AM), I created my Google Developer account, and published my first Android app - Thulika Keyboard - in the Play Store. Thulika Keyboard is a Handwriting recognition keyboard. It is the first app that brings handwriting recognition to an Indian Language(Malayalam for the time being!). User writes a single symbol, the app recognizes it and may give a possible list of suggestions.</description>
     </item>
     
     <item>
@@ -610,7 +616,9 @@ The naming convention sticks to the C version. Functions are implemented as stat
       
       <guid>https://sinujohn.github.io/2011/10/06/legendary-jobs/</guid>
       <description>Woke up today (actually yesterday as its past 12 midnight) to hear the news of Steve Jobs&amp;rsquo; death. The news about the death of a man whom I consider one of my role models actually left a kind of pain. Yup, I felt sad, as if someone I knew had died :(
-I am not a user of Apple products. But I have used them though. Its not from the Apple-user perspective that I like this man.</description>
+ ‎3 apples changed the world, First one seduced Eve,
+Second fell on Newton
+and the Third was offered to the world half bitten by one Steve Jobs</description>
     </item>
     
     <item>
@@ -631,8 +639,9 @@ I am not a user of Apple products. But I have used them though. Its not from the
       <guid>https://sinujohn.github.io/2011/01/20/nerdy-jokes/</guid>
       <description>Just happened to read some &amp;lsquo;nerdy&amp;rsquo; jokes here.
 My favourite ones (credit goes to their respective creators):
+ there is a physicist, a biologist and a mathematician standing in front of a house. They see one man enter and two men leave.
 The Physicist says, &amp;ldquo;Well there is obviously an unknown variable.&amp;rdquo; The Biologist says, &amp;ldquo;The man must have multiplied.&amp;rdquo;
-The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.&amp;ldquo; The first asks for a beer. The second asks for half a beer.</description>
+The mathematician then looks at them both and says, &amp;ldquo;I don&amp;rsquo;t know how it happened but if one more person enters the house it will be empty.</description>
     </item>
     
     <item>
@@ -729,9 +738,10 @@ Why did I make this? Isn&amp;rsquo;t there any other good video converter or cut
       <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
-      <description>GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
-gcc -x c -o hello.out hello.cpp -x specifies the language.</description>
+      <description>GCC - GNU Compiler Collection
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
     </item>
     
     <item>

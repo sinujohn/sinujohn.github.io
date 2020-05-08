@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C&#43;&#43; compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
-gcc -x c -o hello.out hello.cpp -x specifies the language." />
+<meta name="description" content="GCC - GNU Compiler Collection
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C&#43;&#43; compilation(assumed from the extension ." />
 <meta name="keywords" content=", C, gcc, linux" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,12 +45,13 @@ gcc -x c -o hello.out hello.cpp -x specifies the language." />
 
 
 <meta itemprop="name" content="A quick introduction to GCC">
-<meta itemprop="description" content="GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &lsquo;hello.out&rsquo; from file &lsquo;hello.c&rsquo; -o specifies the output file.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C&#43;&#43; compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
-gcc -x c -o hello.out hello.cpp -x specifies the language.">
+<meta itemprop="description" content="GCC - GNU Compiler Collection
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &lsquo;hello.out&rsquo; from file &lsquo;hello.c&rsquo; -o specifies the output file.
+Specify Language: Create a C file and save it as &lsquo;hello.cpp&rsquo;.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C&#43;&#43; compilation(assumed from the extension .">
 <meta itemprop="datePublished" content="2010-06-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2010-06-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="634">
+<meta itemprop="wordCount" content="899">
 <meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
@@ -59,9 +61,10 @@ gcc -x c -o hello.out hello.cpp -x specifies the language.">
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="A quick introduction to GCC"/>
-<meta name="twitter:description" content="GCC- GNU Compiler CollectionFrom GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.This creates an executable &lsquo;hello.out&rsquo; from file &lsquo;hello.c&rsquo; -o specifies the output file.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C&#43;&#43; compilation(assumed from the extension .cpp). We can specify that the file is a C file as follows:
-gcc -x c -o hello.out hello.cpp -x specifies the language."/>
+<meta name="twitter:description" content="GCC - GNU Compiler Collection
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &lsquo;hello.out&rsquo; from file &lsquo;hello.c&rsquo; -o specifies the output file.
+Specify Language: Create a C file and save it as &lsquo;hello.cpp&rsquo;.
+gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C&#43;&#43; compilation(assumed from the extension ."/>
 
 
 
@@ -142,20 +145,24 @@ gcc -x c -o hello.out hello.cpp -x specifies the language."/>
             
 
             <div class="post-content">
-                <p><!-- raw HTML omitted --><!-- raw HTML omitted -->GCC<!-- raw HTML omitted --> - GNU Compiler Collection<!-- raw HTML omitted -->
-From GCC manual - <!-- raw HTML omitted -->When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<p>This creates an executable &lsquo;hello.out&rsquo; from file &lsquo;hello.c&rsquo;
+                <p><strong><a href="http://gcc.gnu.org/">GCC</a> - GNU Compiler Collection</strong></p>
+<p>From GCC manual - <!-- raw HTML omitted -->When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.<!-- raw HTML omitted --></p>
+<h2 id="compile-and-link-a-simple-program">Compile and Link a simple program:</h2>
+<pre><code>gcc -o hello.out hello.c
+</code></pre><p>This creates an executable &lsquo;hello.out&rsquo; from file &lsquo;hello.c&rsquo;
 -o specifies the output file.</p>
-<!-- raw HTML omitted -->
+<h3 id="specify-language">Specify Language:</h3>
+<p>Create a C file and save it as &lsquo;hello.cpp&rsquo;.</p>
 <pre><code>gcc -o hello.out hello.cpp
 </code></pre><p>This results in an error as gcc tries to perform C++ compilation(assumed from the extension .cpp).
 We can specify that the file is a C file as follows:</p>
 <pre><code>gcc -x c -o hello.out hello.cpp
 </code></pre><p>-x specifies the language.</p>
-<!-- raw HTML omitted -->
-<p>-c tells gcc to compile ONLY. This creates &lsquo;hello.o&rsquo;, which is an object file.</p>
-<!-- raw HTML omitted -->
+<h3 id="compile-onlyno-linking">Compile Only(No Linking):</h3>
+<pre><code>gcc -c hello.c
+</code></pre><p>-c tells gcc to compile ONLY. This creates &lsquo;hello.o&rsquo;, which is an object file.</p>
+<h2 id="compiling-and-linking-multiple-files">Compiling and Linking multiple files:</h2>
+<p>File: hello.c</p>
 <pre><code>#include&lt;stdio.h&gt;
 
 long myabs(long);
@@ -179,18 +186,21 @@ int main()
  if(no&lt;=1) return 1;
  else return no*factorial(no-1);
 }
-</code></pre><p><!-- raw HTML omitted -->METHOD 1: Use source files directly:<!-- raw HTML omitted -->
-Make executable hello.out from 3 files by</p>
+</code></pre><p><strong>METHOD 1: Use source files directly:</strong></p>
+<p>Make executable hello.out from 3 files by</p>
 <pre><code> gcc -o hello.out hello.c myabs.c myfac.c
-</code></pre><p><!-- raw HTML omitted -->METHOD 2: Use a source file with one or more object files:<!-- raw HTML omitted -->
-Compile one file</p>
+</code></pre><p><strong>METHOD 2: Use a source file with one or more object files:</strong></p>
+<p>Compile one file</p>
 <pre><code> gcc -c myabs.c
 </code></pre><p>Now object code of myabs.c is obtained. Use this in usual gcc command:</p>
 <pre><code> gcc -o hello.out hello.c myabs.o myfac.c
 </code></pre><p>Or you can compile remaining files also and use their object files:</p>
 <pre><code> gcc -o hello.out hello.c myabs.o myfac.o
  gcc -o hello.out hello.o myabs.o myfac.o
-</code></pre><!-- raw HTML omitted -->
+</code></pre><h2 id="create-library">Create Library:</h2>
+<p>The above methods are suitable if the number of source files are really small. But if there are large number of source files, then its difficult to specify them each and every time you compile. To make this easy, you can create library.
+Library is a collection of object files. Create library with &lsquo;ar&rsquo; command, which is short for &lsquo;archive&rsquo;.
+So first create object files (.o files). With above example we have two object files - myabs.o and myfac.o. Now create library:</p>
 <pre><code> ar cr libMyCol.a myabs.o myfac.o
 </code></pre><p>Now a library libMyCol.a is created. To see the contents of a library use &lsquo;ar t&rsquo;:</p>
 <pre><code> ar t libMyCol.a
@@ -201,25 +211,31 @@ Compile one file</p>
 <pre><code> gcc -o hello.out hello.c -L. -lMyCol
 </code></pre><p>-L<!-- raw HTML omitted -->dir<!-- raw HTML omitted --> specifies the direcory in which library files are present. Here we use current directory, so we use a &lsquo;dot&rsquo; as directory.
 -l<!-- raw HTML omitted -->library<!-- raw HTML omitted --> specifies the library name. library should only contain library name - extensions and preceeding &lsquo;lib&rsquo; is omitted. So here &lsquo;libMyCol.a&rsquo; is represented by -lMyCol   . This is why library names should start with &lsquo;lib&rsquo;.</p>
-<!-- raw HTML omitted -->
+<h2 id="create-shared-library">Create Shared Library:</h2>
+<p>To create shared libraries, object files must be created with -fPIC.
+From gcc manual :
+<em>-fpic
+Generate position-independent code (PIC) suitable for use in a shared library, if supported for the target machine.  Such code accesses all constant addresses through a global offset table (GOT). The dynamic loader resolves the GOT entries when the program starts (the dynamic loader is not part of GCC; it is part of the operating system).  If the GOT size for the linked executable exceeds a machine-specific maximum size, you get an error message from the linker indicating that -fpic does not work; in that case, recompile with -fPIC instead.</em></p>
 <p>Here we use -fPIC
 Before continuing delete all files except the three C files - it looks nice to have a clean directory :)</p>
-<p><!-- raw HTML omitted -->STEP 1: Create object files as follows:<!-- raw HTML omitted --></p>
+<p><strong>STEP 1: Create object files as follows:</strong></p>
 <pre><code> gcc -c -fPIC myabs.c
  gcc -c -fPIC myfac.c
-</code></pre><p><!-- raw HTML omitted -->STEP 2: Now we create shared library or shared object(.so) file from the two .o files created above.<!-- raw HTML omitted --></p>
+</code></pre><p><strong>STEP 2: Now we create shared library or shared object(.so) file from the two .o files created above.</strong></p>
 <pre><code>gcc -shared -o libMyCol.so myabs.o myfac.o
 </code></pre><p>The shared library created is libMyCol.so. You can delete the .o files as they are no longer needed.</p>
 <p>The Shared Library can be linked either Statically or Dynamically.</p>
-<!-- raw HTML omitted -->
+<h2 id="static-linking-of-shared-library">Static Linking of Shared Library:</h2>
+<p><strong>METHOD 1: Give full path to .so file</strong></p>
 <pre><code> gcc -o hello.out hello.c ./libMyCol.so
-</code></pre><p><!-- raw HTML omitted -->METHOD 2: Use LD_LIBRARY_PATH environment variable<!-- raw HTML omitted --></p>
+</code></pre><p><strong>METHOD 2: Use LD_LIBRARY_PATH environment variable</strong></p>
 <p>First set LD_LIBRARY_PATH variable to current directory (dot). Then export it. These two steps are shown below:</p>
 <pre><code>LD_LIBRARY_PATH=.
  export LD_LIBRARY_PATH
 </code></pre><p>Now you can perform the final compilation and linking as follows:</p>
 <pre><code> gcc -o hello.out hello.c libMyCol.so
-</code></pre><!-- raw HTML omitted -->
+</code></pre><h2 id="dynamic-linking-of-shared-library">Dynamic Linking of Shared Library:</h2>
+<p>To do dynamic linking, you need to modify the source file &lsquo;hello.c&rsquo; as follows:</p>
 <p>File: hello.c</p>
 <pre><code>#include&lt;stdio.h&gt;
 #include&lt;dlfcn.h&gt;
@@ -258,7 +274,7 @@ dlopen is used to open a .so file. It returns a handle to the file.
 FUN_PTR is a function pointer. fptr1 has address of function myabs().
 dlsym takes two parameters - handle and function name.
 dlclose is used to close the .so file.</p>
-<p>Thanks to <!-- raw HTML omitted -->Praseed.P<!-- raw HTML omitted --> for his session on GCC at <!-- raw HTML omitted -->ILUG Cochin<!-- raw HTML omitted -->. It had been very informative and this post is a result of that session.</p>
+<p>Thanks to <a href="http://praseedp.blogspot.com/">Praseed.P</a> for his session on GCC at <a href="http://www.ilug-cochin.org/">ILUG Cochin</a>. It had been very informative and this post is a result of that session.</p>
 
             </div>
         </article>

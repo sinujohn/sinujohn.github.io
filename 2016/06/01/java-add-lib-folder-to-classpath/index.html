@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?
-Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff)." />
+<meta name="description" content="Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?" />
 <meta name="keywords" content=", java, maven" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,12 +43,11 @@ Add the jars to a lib folder directly inside the project directory (the project 
 
 
 <meta itemprop="name" content="Java - Add lib folder to classpath">
-<meta itemprop="description" content="Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?
-Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff).">
+<meta itemprop="description" content="Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?">
 <meta itemprop="datePublished" content="2016-06-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2016-06-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="132">
+<meta itemprop="wordCount" content="156">
 <meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
@@ -59,9 +57,8 @@ Add the jars to a lib folder directly inside the project directory (the project 
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Java - Add lib folder to classpath"/>
-<meta name="twitter:description" content="Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO postis usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
-How to use?
-Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff)."/>
+<meta name="twitter:description" content="Adding non standard, non-maven, custom jars in a maven project is a common issue. And this SO post is usually the first googled result. But here is another easier way: Use addjars-maven-plugin. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.
+How to use?"/>
 
 
 
@@ -142,12 +139,33 @@ Add the jars to a lib folder directly inside the project directory (the project 
             
 
             <div class="post-content">
-                <p>Adding non standard, non-maven, custom jars in a maven project is a common issue. And <!-- raw HTML omitted -->this SO post<!-- raw HTML omitted --> is usually the first googled result. But here is another easier way: Use <!-- raw HTML omitted -->addjars-maven-plugin<!-- raw HTML omitted -->. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.</p>
+                <p>Adding non standard, non-maven, custom jars in a maven project is a common issue. And <a href="http://stackoverflow.com/questions/364114/can-i-add-jars-to-maven-2-build-classpath-without-installing-them">this SO post</a> is usually the first googled result. But here is another easier way: Use <a href="https://code.google.com/archive/p/addjars-maven-plugin/wikis/UsagePage.wiki">addjars-maven-plugin</a>. Its easier, no need to run any script, no installing of jars manually, or use the dreaded system scope. Using this also means, the shaded uber jar that gets created will contain the custom jars.</p>
 <p>How to use?</p>
 <p>Add the jars to a lib folder directly inside the project directory (the project directory now contains lib, src and other usual stuff). Now add this to the pom:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>This may not be recognised by the IDE (my Intellij didn&rsquo;t), but it will work via CLI. So no worries! Very useful in those rare cases, where you have a dozen of custom jars!</p>
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.googlecode.addjars-maven-plugin&lt;/groupId&gt;
+            &lt;artifactId&gt;addjars-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;1.0.5&lt;/version&gt;
+            &lt;executions&gt;
+                &lt;execution&gt;
+                    &lt;goals&gt;
+                        &lt;goal&gt;add-jars&lt;/goal&gt;
+                    &lt;/goals&gt;
+                    &lt;configuration&gt;
+                        &lt;resources&gt;
+                            &lt;resource&gt;
+                                &lt;directory&gt;${project.basedir}/lib&lt;/directory&gt;
+                            &lt;/resource&gt;
+                        &lt;/resources&gt;
+                    &lt;/configuration&gt;
+                &lt;/execution&gt;
+            &lt;/executions&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre><p>This may not be recognised by the IDE (my Intellij didn&rsquo;t), but it will work via CLI. So no worries! Very useful in those rare cases, where you have a dozen of custom jars!</p>
 
             </div>
         </article>

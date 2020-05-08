@@ -18,7 +18,7 @@
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2015/01/08/another-nosql-to-the-kitty/</guid>
-      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4Jtwo days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
+      <description>Graph database is a great tool for mapping and traversing data with relationships. But doesn&amp;rsquo;t RDBMS have relationships - one-to-one, many-to-one etc? Why should we go for graphs? Its simple! Graph databases are best suited for those cases in which a graph comes to our mind instead of a table! I finished the online course on Neo4J two days back. Its a really simple graph database, and a great starting point to experiment graph databases.</description>
     </item>
     
     <item>
