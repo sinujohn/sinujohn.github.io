@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>chef on Sinu John</title>
@@ -20,7 +20,7 @@
       <guid>https://sinujohn.github.io/2016/06/01/chef-notes/</guid>
       <description>Sometime back I had to fiddle with Chef. I created some notes, posting it over here, so that I won&amp;rsquo;t loose it. Don&amp;rsquo;t think it&amp;rsquo;ll be useful much to anyone else other than me :) Its basically a list of instructions that is scattered on their site.
 So, anyone other than me, please ignore this post!
-Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .chef directory and certs that we need to communicate with chef server</description>
+Write a cookbook chef generate repo ~/chef-repo =&amp;gt; Install starter kit to create .</description>
     </item>
     
   </channel>

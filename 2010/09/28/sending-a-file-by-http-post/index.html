@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="///////////////////////////////////////////////////////////// //client.c // Send file to an HTTP server in small parts using POST // USAGE: client inputfile // // Compile: // gcc -o client client.c -lcurl // // Developer: // Sinu John - https://sinujohn.github.io/ // //////////////////////////////////////////////////////////////  #include&amp;lt;curl/curl.h&amp;gt;#include&amp;lt;fcntl.h&amp;gt;#include&amp;lt;unistd.h&amp;gt; //No. of bytes to be sent in one pass #define SIZELIMIT 100*1024  //#define _SEND_DEBUG_  int sendFile(const char *fileName, const char *url) // Sends file to &amp;#39;url&amp;#39; with an additional header &amp;#39;Count&amp;#39; (specifying count of the packet) { // An header &amp;#39;Filename&amp;#39; is also added  int COUNT=0; int fd = open(fileName, O_RDONLY); if(fd&amp;lt;0) { printf(&amp;#34;\nERROR: Cannot open the file\n&amp;#34;); return -1; } CURL *handle; char buf[SIZELIMIT]; //Data to be sent is stored in this buffer." />
+<meta name="description" content="Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST." />
 <meta name="keywords" content=", C, CURL, java, servlet" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -25,7 +25,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -39,25 +39,30 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Sending a file by HTTP POST">
-<meta itemprop="description" content="///////////////////////////////////////////////////////////// //client.c // Send file to an HTTP server in small parts using POST // USAGE: client inputfile // // Compile: // gcc -o client client.c -lcurl // // Developer: // Sinu John - https://sinujohn.github.io/ // //////////////////////////////////////////////////////////////  #include&lt;curl/curl.h&gt;#include&lt;fcntl.h&gt;#include&lt;unistd.h&gt; //No. of bytes to be sent in one pass #define SIZELIMIT 100*1024  //#define _SEND_DEBUG_  int sendFile(const char *fileName, const char *url) // Sends file to &#39;url&#39; with an additional header &#39;Count&#39; (specifying count of the packet) { // An header &#39;Filename&#39; is also added  int COUNT=0; int fd = open(fileName, O_RDONLY); if(fd&lt;0) { printf(&#34;\nERROR: Cannot open the file\n&#34;); return -1; } CURL *handle; char buf[SIZELIMIT]; //Data to be sent is stored in this buffer.">
+<meta itemprop="description" content="Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.">
+
+
 <meta itemprop="datePublished" content="2010-09-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2010-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="366">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
+<meta itemprop="wordCount" content="534">
 
 
 
 <meta itemprop="keywords" content="C,CURL,java,servlet," />
+<meta property="og:title" content="Sending a file by HTTP POST" />
+<meta property="og:description" content="Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2010-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2010-09-28T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Sending a file by HTTP POST"/>
-<meta name="twitter:description" content="///////////////////////////////////////////////////////////// //client.c // Send file to an HTTP server in small parts using POST // USAGE: client inputfile // // Compile: // gcc -o client client.c -lcurl // // Developer: // Sinu John - https://sinujohn.github.io/ // //////////////////////////////////////////////////////////////  #include&lt;curl/curl.h&gt;#include&lt;fcntl.h&gt;#include&lt;unistd.h&gt; //No. of bytes to be sent in one pass #define SIZELIMIT 100*1024  //#define _SEND_DEBUG_  int sendFile(const char *fileName, const char *url) // Sends file to &#39;url&#39; with an additional header &#39;Count&#39; (specifying count of the packet) { // An header &#39;Filename&#39; is also added  int COUNT=0; int fd = open(fileName, O_RDONLY); if(fd&lt;0) { printf(&#34;\nERROR: Cannot open the file\n&#34;); return -1; } CURL *handle; char buf[SIZELIMIT]; //Data to be sent is stored in this buffer."/>
-
-
+<meta name="twitter:description" content="Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST."/>
 
 
 
@@ -136,147 +141,162 @@
             
 
             <div class="post-content">
-                <!-- raw HTML omitted -->
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">/////////////////////////////////////////////////////////////
-</span><span style="color:#75715e">//client.c
-</span><span style="color:#75715e">// Send file to an HTTP server in small parts using POST
-</span><span style="color:#75715e">// USAGE: client inputfile
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">// Compile:
-</span><span style="color:#75715e">// gcc -o client client.c -lcurl
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">// Developer:
-</span><span style="color:#75715e">// Sinu John - https://sinujohn.github.io/
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">//////////////////////////////////////////////////////////////
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">#include</span><span style="color:#75715e">&lt;curl/curl.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;fcntl.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">//No. of bytes to be sent in one pass
-</span><span style="color:#75715e"></span><span style="color:#75715e">#define SIZELIMIT 100*1024
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">//#define _SEND_DEBUG_
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sendFile</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>fileName, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>url)  <span style="color:#75715e">// Sends file to &#39;url&#39; with an additional header &#39;Count&#39; (specifying count of the packet)
-</span><span style="color:#75715e"></span>{                                                    <span style="color:#75715e">// An header &#39;Filename&#39; is also added
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> COUNT<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
-  <span style="color:#66d9ef">int</span> fd <span style="color:#f92672">=</span> open(fileName, O_RDONLY);
-  <span style="color:#66d9ef">if</span>(fd<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span>)
+                <div id="_mcePaste">Recently I created a program which can send a file to a server in several packets using</div>
+<div id="_mcePaste">HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file</div>
+<div id="_mcePaste">parts and then create a file using them. <a href="http://www.box.net/shared/yf5hs3qanf" target="_blank">Download it</a>.</div>
+<div id="_mcePaste">The program 'client.c' sends a file to the server as mentioned in small parts - 100KB, but</div>
+<div id="_mcePaste">you can change the size (set value in SIZELIMIT). The program uses Curl library to</div>
+<div id="_mcePaste">send the file using HTTP POST. Curl is very easy to use. They also have a great <a href="http://curl.haxx.se/libcurl/c/libcurl-tutorial.html" target="_blank">tutorial</a>.</div>
+<div id="_mcePaste">The program sends each packet by attaching two additional headers to them - Count and Filename.</div>
+<div id="_mcePaste">'Count' is used to set the count of the packet(starts from 1) and 'Filename' is the name of the file that is being sent.</div>
+<div>File 'client.c':</div>
+
+<pre><code class="language-c">/////////////////////////////////////////////////////////////
+//client.c
+// Send file to an HTTP server in small parts using POST
+// USAGE: client inputfile
+//
+// Compile:
+// gcc -o client client.c -lcurl
+//
+// Developer:
+// Sinu John - https://sinujohn.github.io/
+//
+//////////////////////////////////////////////////////////////
+
+#include&lt;curl/curl.h&gt;
+#include&lt;fcntl.h&gt;
+#include&lt;unistd.h&gt;
+
+//No. of bytes to be sent in one pass
+#define SIZELIMIT 100*1024
+
+//#define _SEND_DEBUG_
+
+int sendFile(const char *fileName, const char *url)  // Sends file to 'url' with an additional header 'Count' (specifying count of the packet)
+{                                                    // An header 'Filename' is also added
+  int COUNT=0;
+  int fd = open(fileName, O_RDONLY);
+  if(fd&lt;0)
   {
-    printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">ERROR: Cannot open the file</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    printf(&quot;\nERROR: Cannot open the file\n&quot;);
+    return -1;
   }
 
-  CURL <span style="color:#f92672">*</span>handle;
-  <span style="color:#66d9ef">char</span> buf[SIZELIMIT]; <span style="color:#75715e">//Data to be sent is stored in this buffer. Static Allocation of memory.
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> ndata;
-  <span style="color:#66d9ef">struct</span> curl_slist <span style="color:#f92672">*</span>headers<span style="color:#f92672">=</span>NULL;
+  CURL *handle;
+  char buf[SIZELIMIT]; //Data to be sent is stored in this buffer. Static Allocation of memory.
+  int ndata;
+  struct curl_slist *headers=NULL;
 
-  handle <span style="color:#f92672">=</span> curl_easy_init();
+  handle = curl_easy_init();
 
-  <span style="color:#75715e">#ifdef _SEND_DEBUG_
-</span><span style="color:#75715e"></span>  curl_easy_setopt( handle, CURLOPT_VERBOSE, <span style="color:#ae81ff">1</span>);
-  <span style="color:#75715e">#endif
-</span><span style="color:#75715e"></span>
+  #ifdef _SEND_DEBUG_
+  curl_easy_setopt( handle, CURLOPT_VERBOSE, 1);
+  #endif
+
   curl_easy_setopt( handle, CURLOPT_URL, url);
 
-  <span style="color:#66d9ef">while</span>((ndata <span style="color:#f92672">=</span> read(fd, buf, SIZELIMIT))<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)
+  while((ndata = read(fd, buf, SIZELIMIT))&gt;0)
   {
-    COUNT<span style="color:#f92672">++</span>;
+    COUNT++;
 
-    <span style="color:#75715e">#ifdef _SEND_DEBUG_
-</span><span style="color:#75715e"></span>    printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">*****************************************************</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    printf(<span style="color:#e6db74">&#34;@@@@@@ Bytes Read = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ndata);
-    <span style="color:#75715e">#endif
-</span><span style="color:#75715e"></span>
-    <span style="color:#75715e">///////////////////////////////////////////////////////
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//////// Setting Count header and Filename header
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> countHeader[<span style="color:#ae81ff">20</span>], filenameHeader[<span style="color:#ae81ff">50</span>];
-    headers<span style="color:#f92672">=</span>NULL;
-    sprintf(countHeader,<span style="color:#e6db74">&#34;Count:%d&#34;</span>,COUNT);
-    sprintf(filenameHeader,<span style="color:#e6db74">&#34;Filename:%s&#34;</span>,fileName);
-    headers <span style="color:#f92672">=</span> curl_slist_append(headers, filenameHeader);
-    headers <span style="color:#f92672">=</span> curl_slist_append(headers, <span style="color:#e6db74">&#34;Expect:&#34;</span>);
-    headers <span style="color:#f92672">=</span> curl_slist_append(headers, countHeader);
+    #ifdef _SEND_DEBUG_
+    printf(&quot;\n\n*****************************************************\n&quot;);
+    printf(&quot;@@@@@@ Bytes Read = %d\n&quot;, ndata);
+    #endif
+
+    ///////////////////////////////////////////////////////
+    //////// Setting Count header and Filename header
+    char countHeader[20], filenameHeader[50];
+    headers=NULL;
+    sprintf(countHeader,&quot;Count:%d&quot;,COUNT);
+    sprintf(filenameHeader,&quot;Filename:%s&quot;,fileName);
+    headers = curl_slist_append(headers, filenameHeader);
+    headers = curl_slist_append(headers, &quot;Expect:&quot;);
+    headers = curl_slist_append(headers, countHeader);
     curl_easy_setopt(handle, CURLOPT_HTTPHEADER, headers);
-    <span style="color:#75715e">/////////
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">///////////////////////////////////////////////////////B1
-</span><span style="color:#75715e"></span>
+    /////////
+    ///////////////////////////////////////////////////////B1
+
     curl_easy_setopt( handle, CURLOPT_POSTFIELDS, buf);
     curl_easy_setopt( handle, CURLOPT_POSTFIELDSIZE, ndata);
     curl_easy_perform( handle );
 
-    <span style="color:#75715e">////////////////////////////////////////////////////////
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">/////////// Freeing all headers
-</span><span style="color:#75715e"></span>    curl_slist_free_all(headers);
-    <span style="color:#75715e">///////////
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">////////////////////////////////////////////////////////B1
-</span><span style="color:#75715e"></span>  }
+    ////////////////////////////////////////////////////////
+    /////////// Freeing all headers
+    curl_slist_free_all(headers);
+    ///////////
+    ////////////////////////////////////////////////////////B1
+  }
 
-  printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">**** COUNT is %d ****</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span>,COUNT);
+  printf(&quot;\n\n**** COUNT is %d ****\n\n&quot;,COUNT);
   curl_easy_cleanup( handle );
   close(fd);
-  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  return 0;
 }
 
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>argv)
+int main(int argc, char **argv)
 {
-  <span style="color:#66d9ef">if</span>(argc<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">2</span>) { printf(<span style="color:#e6db74">&#34;Please provide an input file</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>); <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>; }
-  <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>fileName <span style="color:#f92672">=</span> argv[<span style="color:#ae81ff">1</span>];
-  sendFile(fileName, <span style="color:#e6db74">&#34;http://localhost:8080/postapp/makeapp&#34;</span>);
-  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  if(argc&lt;2) { printf(&quot;Please provide an input file\n&quot;); return 1; }
+  char *fileName = argv[1];
+  sendFile(fileName, &quot;http://localhost:8080/postapp/makeapp&quot;);
+  return 0;
 }
-</code></pre></div><!-- raw HTML omitted -->
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">///////////////////////////////////////////////////////////////////////
-</span><span style="color:#75715e">//MakeApp.java
-</span><span style="color:#75715e">//Servlet for creating a file obtained as several parts
-</span><span style="color:#75715e">//through various POST requests.
-</span><span style="color:#75715e">//Creates the file in server folder (in my case: /usr/share/tomcat6/ )
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">// Developer: https://sinujohn.github.io/
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">//Compile:
-</span><span style="color:#75715e">//javac -cp /usr/share/tomcat6/lib/tomcat6-servlet-2.5-api-6.0.24.jar MakeApp.java
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">//////////////////////////////////////////////////////////////////////
-</span><span style="color:#75715e"></span>
-<span style="color:#f92672">import</span> java.io.*<span style="color:#f92672">;</span>
+</code></pre>
 
-<span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+<div id="_mcePaste">The servlet 'MakeApp.java', is a very basic program that creates the file at the server from the several</div>
+<div id="_mcePaste">packets. I used Tomcat 6 to deploy it(My first encounter with Tomcat!).</div>
+<div>File 'MakeApp.java':</div>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MakeApp</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#66d9ef">implements</span> SingleThreadModel <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span> <span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span>
-                                         HttpServletResponse res<span style="color:#f92672">)</span>
-        <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException
-  <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">int</span> count<span style="color:#f92672">;</span>
-	String fileName<span style="color:#f92672">;</span>
-	OutputStream fout<span style="color:#f92672">;</span>
-	count<span style="color:#f92672">=</span>req<span style="color:#f92672">.</span><span style="color:#a6e22e">getIntHeader</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Count&#34;</span><span style="color:#f92672">);</span>
-	fileName <span style="color:#f92672">=</span> req<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeader</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Filename&#34;</span><span style="color:#f92672">);</span>
-	<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>count<span style="color:#f92672">==</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> fout <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span> <span style="color:#f92672">}</span>
-	<span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span> fout <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>fileName<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span> <span style="color:#f92672">}</span>
+<pre><code class="language-java">///////////////////////////////////////////////////////////////////////
+//MakeApp.java
+//Servlet for creating a file obtained as several parts
+//through various POST requests.
+//Creates the file in server folder (in my case: /usr/share/tomcat6/ )
+//
+//
+// Developer: https://sinujohn.github.io/
+//
+//Compile:
+//javac -cp /usr/share/tomcat6/lib/tomcat6-servlet-2.5-api-6.0.24.jar MakeApp.java
+//
+//////////////////////////////////////////////////////////////////////
 
-	InputStream in <span style="color:#f92672">=</span> req<span style="color:#f92672">.</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
-	<span style="color:#66d9ef">byte</span> buf<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>req<span style="color:#f92672">.</span><span style="color:#a6e22e">getContentLength</span><span style="color:#f92672">()+</span>1<span style="color:#f92672">];</span>
-	<span style="color:#66d9ef">int</span> nbuf<span style="color:#f92672">;</span>
-	<span style="color:#66d9ef">do</span>
-	<span style="color:#f92672">{</span>
-	  nbuf <span style="color:#f92672">=</span> in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>buf<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> req<span style="color:#f92672">.</span><span style="color:#a6e22e">getContentLength</span><span style="color:#f92672">());</span>
-	  <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>nbuf<span style="color:#f92672">&gt;=</span>0<span style="color:#f92672">)</span>  fout<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>buf<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> nbuf<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span><span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>nbuf<span style="color:#f92672">&gt;=</span>0<span style="color:#f92672">);</span>
+import java.io.*;
 
-	fout<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        PrintWriter out <span style="color:#f92672">=</span> res<span style="color:#f92672">.</span><span style="color:#a6e22e">getWriter</span><span style="color:#f92672">();</span>
-        out<span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Got file &#34;</span><span style="color:#f92672">+</span>fileName<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; with Count: &#34;</span><span style="color:#f92672">+</span>count<span style="color:#f92672">);</span>
-        out<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
+import javax.servlet.http.*;
+import javax.servlet.*;
+
+public class MakeApp extends HttpServlet implements SingleThreadModel {
+  public void doPost (HttpServletRequest req,
+                                         HttpServletResponse res)
+        throws ServletException, IOException
+  {
+	int count;
+	String fileName;
+	OutputStream fout;
+	count=req.getIntHeader(&quot;Count&quot;);
+	fileName = req.getHeader(&quot;Filename&quot;);
+	if(count==1) { fout = new FileOutputStream(fileName); }
+	else { fout = new FileOutputStream(fileName, true); }
+
+	InputStream in = req.getInputStream();
+	byte buf[] = new byte[req.getContentLength()+1];
+	int nbuf;
+	do
+	{
+	  nbuf = in.read(buf, 0, req.getContentLength());
+	  if(nbuf&gt;=0)  fout.write(buf, 0, nbuf);
+	}while(nbuf&gt;=0);
+
+	fout.close();
+        PrintWriter out = res.getWriter();
+        out.println(&quot;Got file &quot;+fileName+&quot; with Count: &quot;+count);
+        out.close();
+  }
+}
+</code></pre>
+
             </div>
         </article>
 
@@ -319,21 +339,15 @@
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

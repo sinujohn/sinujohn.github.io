@@ -25,7 +25,7 @@
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -39,25 +39,30 @@
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Creating a Maven Spring-REST project">
 <meta itemprop="description" content="Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse. Now go to File &gt; New &gt; Maven Project. Click Next. Select maven-archetype-webapp. Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &lsquo;com.companyname.yourname&rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).">
+
+
 <meta itemprop="datePublished" content="2014-02-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-02-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="409">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
+<meta itemprop="wordCount" content="530">
 
 
 
 <meta itemprop="keywords" content="java,spring,maven," />
+<meta property="og:title" content="Creating a Maven Spring-REST project" />
+<meta property="og:description" content="Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse. Now go to File &gt; New &gt; Maven Project. Click Next. Select maven-archetype-webapp. Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &lsquo;com.companyname.yourname&rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2014/02/19/creating-a-maven-spring-rest-project/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2014-02-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-02-19T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Creating a Maven Spring-REST project"/>
 <meta name="twitter:description" content="Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse. Now go to File &gt; New &gt; Maven Project. Click Next. Select maven-archetype-webapp. Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &lsquo;com.companyname.yourname&rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID)."/>
-
-
 
 
 
@@ -138,35 +143,56 @@
             <div class="post-content">
                 <p>Open Eclipse. Make sure it is a recent version with m2e integration. I am using Kepler version of Eclipse.
 Now go to File &gt; New &gt; Maven Project.
-<img src="/assets/rest1.png" alt="screenshot1"></p>
+<img src="/assets/rest1.png" alt="screenshot1" /></p>
+
 <p>Click Next. Select maven-archetype-webapp.
-<img src="/assets/rest2.png" alt="screenshot2"></p>
+<img src="/assets/rest2.png" alt="screenshot2" /></p>
+
 <p>Click Next. Enter GroupID (group ID is the name that refers to a group of projects. It should be unique. A name like &lsquo;com.companyname.yourname&rsquo; would be suffice) and Artifact ID (Artifact ID is the project name. It should be unique within a groupID).</p>
-<p>There can be several projects under the same GroupID, but ArtifactID should be different for each project. I have given GroupID as <!-- raw HTML omitted -->'me.sinu.jugaad'<!-- raw HTML omitted --> and ArtifactID as <!-- raw HTML omitted -->'rest'<!-- raw HTML omitted -->.
-<img src="/assets/rest3.png" alt="screenshot3"></p>
+
+<p>There can be several projects under the same GroupID, but ArtifactID should be different for each project. I have given GroupID as <em>&lsquo;me.sinu.jugaad&rsquo;</em> and ArtifactID as <em>&lsquo;rest&rsquo;</em>.
+<img src="/assets/rest3.png" alt="screenshot3" /></p>
+
 <p>Click Finish to create the project.</p>
+
 <p>The webapp archetype would have created the necessary folder structure and a web.xml for you. This web.xml might be for older Servlets without support for Servlet v.3, it doesn&rsquo;t matter as we&rsquo;ll overwrite it later.
 You might examine pom.xml now, it may contain a single dependency of jUnit(even if you won&rsquo;t find it its fine :) )</p>
-<p>Now lets examine the dependencies we might require for our simple project:</p>
-<!-- raw HTML omitted -->
+
+<p>Now lets examine the dependencies we might require for our simple project:
+<ul>
+    <li>We are building REST services, so we need REST api (<strong>javax.ws.rs-api</strong>) and an implentation for it. We&rsquo;ll use Apache CXF implementation (<strong>cxf-bundle-jaxrs</strong>).</li>
+    <li>We&rsquo;ll use Spring to wire the beans and for dependency injection. So we need a bunch of Spring libraries (<strong>spring-web</strong> and <strong>spring-context</strong> should be enough for our skeleton project. <em><strong>spring-context</strong></em> is needed for <em>ContextLoaderListener</em> which loads the beans by scanning some Spring context xml configuration files)</li>
+    <li>We&rsquo;ll use a JSON provider which helps in converting object to/from JSON. It is not needed for this skeleton project, but its usually handy in almost all REST projects. So we&rsquo;ll add one such provider (<strong>jackson-jaxrs-json-provider</strong>) just in case we need it in future.</li>
+</ul>
+Here is the <strong>pom.xml</strong>:</p>
+
 <script type="application/javascript" src="https://gist.github.com/sinujohn/c2839b0528fdbc8115b0.js"></script>
 
-<p>Now create a java folder under <!-- raw HTML omitted -->src/main<!-- raw HTML omitted -->. Create a package (<!-- raw HTML omitted -->me.sinu.jugaad.rest<!-- raw HTML omitted -->) and a class file inside it(<!-- raw HTML omitted -->HelloWorld.java<!-- raw HTML omitted -->).
-We&rsquo;ll just tell a simple &ldquo;<!-- raw HTML omitted -->Hello REST!<!-- raw HTML omitted -->&rdquo; from our REST service. Here is the class:</p>
+
+<p>Now create a java folder under <strong>src/main</strong>. Create a package (<strong>me.sinu.jugaad.rest</strong>) and a class file inside it(<strong>HelloWorld.java</strong>).
+We&rsquo;ll just tell a simple &ldquo;<strong>Hello REST!</strong>&rdquo; from our REST service. Here is the class:</p>
+
 <script type="application/javascript" src="https://gist.github.com/sinujohn/f4cc9425e52b407da5c4.js"></script>
 
-<p>Now we&rsquo;ll create a Spring configuration file under <!-- raw HTML omitted -->WEB-INF<!-- raw HTML omitted --> folder, say <!-- raw HTML omitted -->rest-context.xml<!-- raw HTML omitted -->:</p>
+
+<p>Now we&rsquo;ll create a Spring configuration file under <strong>WEB-INF</strong> folder, say <strong>rest-context.xml</strong>:</p>
+
 <script type="application/javascript" src="https://gist.github.com/sinujohn/60f8b04e584b5a0e5b0f.js"></script>
 
-<p>In this we just defined our <!-- raw HTML omitted -->helloWorld<!-- raw HTML omitted --> bean and hooked it up with our JAXRS servlet. We also provided our JSON provider to it to automatically do any marshalling/unmarshalling. You may provide your own providers, which will be necessary as the app grows. Providers can contain Filters or other interceptors.</p>
-<p>Now lets define our webapp&rsquo;s <!-- raw HTML omitted -->web.xml<!-- raw HTML omitted -->:</p>
+
+<p>In this we just defined our <strong>helloWorld</strong> bean and hooked it up with our JAXRS servlet. We also provided our JSON provider to it to automatically do any marshalling/unmarshalling. You may provide your own providers, which will be necessary as the app grows. Providers can contain Filters or other interceptors.</p>
+
+<p>Now lets define our webapp&rsquo;s <strong>web.xml</strong>:</p>
+
 <script type="application/javascript" src="https://gist.github.com/sinujohn/982335d88382c37f60b4.js"></script>
 
-<p>We specify &lsquo;<!-- raw HTML omitted -->contextConfigLocation<!-- raw HTML omitted -->&rsquo; for the Spring&rsquo;s &lsquo;<!-- raw HTML omitted -->ContextLoaderListener<!-- raw HTML omitted -->&rsquo; to pick it up as the webapp is loaded. The <!-- raw HTML omitted -->contextConfigLocation<!-- raw HTML omitted --> can be given as exact file names or using wild cards.
-Since we are using CXF implementation, a CXF servlet is used. The address for our <!-- raw HTML omitted -->servlet<!-- raw HTML omitted --> is &ldquo;<!-- raw HTML omitted -->/services<!-- raw HTML omitted -->&rdquo; and that for our &lsquo;<!-- raw HTML omitted -->helloREST<!-- raw HTML omitted -->&rsquo; JAX RS server is &ldquo;<!-- raw HTML omitted -->/greet<!-- raw HTML omitted -->&rdquo;.
-So &ldquo;<!-- raw HTML omitted -->WAR_FILE/services/greet<!-- raw HTML omitted -->&rdquo; will take us to the JAXRS server. Our simple GET function is annotated with <!-- raw HTML omitted -->@Path(&quot;/hello&rdquo;)<!-- raw HTML omitted -->, so to access this we should give as follows: &ldquo;<!-- raw HTML omitted -->WAR_FILE/services/greet/hello<!-- raw HTML omitted -->&rdquo;.
-Now run the project - <!-- raw HTML omitted -->right-click the project &gt; Run As &gt; Run on server<!-- raw HTML omitted -->. You might choose a server like Tomcat server v.7. Now in a browser go to &ldquo;<!-- raw HTML omitted -->http://localhost:8080/rest/services/greet/hello<!-- raw HTML omitted -->&rdquo; (here &lsquo;<!-- raw HTML omitted -->rest<!-- raw HTML omitted -->&rsquo; is the WAR file name).</p>
-<p>If you see &ldquo;<!-- raw HTML omitted -->Hello REST!<!-- raw HTML omitted -->&rdquo; everything is fine, else, Dr.Watson, we have a problem ;)</p>
+
+<p>We specify &lsquo;<strong>contextConfigLocation</strong>&rsquo; for the Spring&rsquo;s &lsquo;<strong>ContextLoaderListener</strong>&rsquo; to pick it up as the webapp is loaded. The <em>contextConfigLocation</em> can be given as exact file names or using wild cards.
+Since we are using CXF implementation, a CXF servlet is used. The address for our <strong>servlet</strong> is &ldquo;<strong>/services</strong>&rdquo; and that for our &lsquo;<strong>helloREST</strong>&rsquo; JAX RS server is &ldquo;<strong>/greet</strong>&rdquo;.
+So &ldquo;<strong>WAR_FILE/services/greet</strong>&rdquo; will take us to the JAXRS server. Our simple GET function is annotated with <strong>@Path(&ldquo;/hello&rdquo;)</strong>, so to access this we should give as follows: &ldquo;<strong>WAR_FILE/services/greet/hello</strong>&rdquo;.
+Now run the project - <em>right-click the project &gt; Run As &gt; Run on server</em>. You might choose a server like Tomcat server v.7. Now in a browser go to &ldquo;<strong><a href="http://localhost:8080/rest/services/greet/hello">http://localhost:8080/rest/services/greet/hello</a></strong>&rdquo; (here &lsquo;<em>rest</em>&rsquo; is the WAR file name).</p>
+
+<p>If you see &ldquo;<strong>Hello REST!</strong>&rdquo; everything is fine, else, Dr.Watson, we have a problem ;)</p>
 
             </div>
         </article>
@@ -210,21 +236,15 @@ Now run the project - <!-- raw HTML omitted -->right-click the project &gt; Run 
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

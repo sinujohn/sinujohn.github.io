@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>apps on Sinu John</title>
@@ -29,7 +29,8 @@ But the bad part is that, it means the demise of my very own Thulika Keyboard. I
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/immortal-login/</guid>
-      <description>Download the app from PlayStoreFind the source on GithubI have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
+      <description>Download the app from PlayStore
+Find the source on Github I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
     </item>
     
     <item>
@@ -47,7 +48,8 @@ But the bad part is that, it means the demise of my very own Thulika Keyboard. I
       <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/14/training-the-thulika-keyboard/</guid>
-      <description>Before you read :Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
+      <description>Before you read :
+Indian languages use complex script unlike English letters. Each English letter is composed of a single Unicode letter. But each letter of Indian languages may be composed of more than one Unicode letters.
 The decomposition is as follows: LetterCode + modifyingSymbolCode
 Eg: ക്രൊ = ( ക + ്ര + ൊ )
 So as you see the code that comes first(ക) need not be the first letter that the user writes(െ).</description>

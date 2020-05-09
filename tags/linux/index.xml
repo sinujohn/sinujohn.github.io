@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on Sinu John</title>
@@ -18,7 +18,8 @@
       <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/10/10/run-windows-programs-on-linux/</guid>
-      <description></description>
+      <description>This is the most important question that a Linux newbie faces - &amp;ldquo;How to run his/her favourite Windows application on Linux?&amp;rdquo; Well, here is a really short guide. For more help GIYF (Google Is Your Friend)!
+1. Find the Linux versions of your Windows applications If you are lucky you might find that the developers have also created a Linux version for their software. In this case, you are, hmm.. lucky!</description>
     </item>
     
     <item>
@@ -39,9 +40,10 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
       
       <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
       <description>GCC - GNU Compiler Collection
-From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.
+Compile and Link a simple program: gcc -o hello.out hello.c  This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
 Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
+gcc -o hello.out hello.cpp  This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
     </item>
     
   </channel>

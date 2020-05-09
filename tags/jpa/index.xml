@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jpa on Sinu John</title>
@@ -18,9 +18,7 @@
       <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/05/jpa-part-3/</guid>
-      <description>Go to Part 1.
-public class EmployeeListener { @PrePersist public void beforePersist(Employee e) { System.out.println(&amp;quot;Before persist&amp;quot;); } }
-&amp;lt;h2&amp;gt;Merge Method&amp;lt;/h2&amp;gt; &amp;lt;div&amp;gt;- Used to synchronise the changes between objects and database tables.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Adds a new row if the entity is not present in db table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Updates the existing row if it is present in table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;h3&amp;gt;Example:&amp;lt;/h3&amp;gt; et.begin(); &amp;hellip;. &amp;hellip;. em.merge(empObject); //merges the changes in empObject with table et.commit();</description>
+      <description>Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.</description>
     </item>
     
     <item>
@@ -29,10 +27,8 @@ public class EmployeeListener { @PrePersist public void beforePersist(Employee e
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/01/jpa-part-2/</guid>
-      <description>This is continued from JPA: part 1.
-@Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters  }
- this maps to Table: &amp;lt;strong&amp;gt;EMP&amp;lt;/strong&amp;gt;  | EMP_ID (PK) | EMP_NAME | |_____________|__________|
- JPA automatically maps &#39;int&#39; to &#39;NUMBER&#39; and &#39;String&#39; to &#39;CHAR&#39; or &#39;VARCHAR&#39;. But it cannot automatically convert Date or Time datatypes. So we need to specify the Temporal type to be used. (Temporal = related to time) &amp;lt;h2&amp;gt;Other Annotations:&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;@Temporal(TemporalType.</description>
+      <description>This is continued from JPA: part 1. Other Annotations:  @Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)  Used before class name to explicitly specify table name.   @Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)  Used before instance variables to explicitly set column names.    Example:
+@Entity @Table(name = &amp;quot;EMP&amp;quot;) public class Employee { @Id @Column(name = &amp;quot;EMP_ID&amp;quot;) private int id; @Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters }  this maps to Table: EMP</description>
     </item>
     
     <item>
@@ -41,9 +37,7 @@ public class EmployeeListener { @PrePersist public void beforePersist(Employee e
       <pubDate>Sat, 31 Aug 2013 00:10:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/jpa-part-1/</guid>
-      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series.
-//getters and setters  }
- this maps to &amp;lt;strong&amp;gt;Table: &amp;lt;/strong&amp;gt;Employee    empId name     _____ ____    </description>
+      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).</description>
     </item>
     
   </channel>

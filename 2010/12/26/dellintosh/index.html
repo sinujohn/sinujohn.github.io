@@ -26,7 +26,7 @@ I followed the excellent guide available here. Take a print out of this guide a
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -40,27 +40,33 @@ I followed the excellent guide available here. Take a print out of this guide a
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Dellintosh :)">
 <meta itemprop="description" content="Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D
 I followed the excellent guide available here. Take a print out of this guide and then do as follows:">
+
+
 <meta itemprop="datePublished" content="2010-12-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2010-12-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="210">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
+<meta itemprop="wordCount" content="247">
 
 
 
 <meta itemprop="keywords" content="hackintosh,mac os," />
+<meta property="og:title" content="Dellintosh :)" />
+<meta property="og:description" content="Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D
+I followed the excellent guide available here. Take a print out of this guide and then do as follows:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2010/12/26/dellintosh/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2010-12-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2010-12-26T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Dellintosh :)"/>
 <meta name="twitter:description" content="Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D
 I followed the excellent guide available here. Take a print out of this guide and then do as follows:"/>
-
-
 
 
 
@@ -140,41 +146,37 @@ I followed the excellent guide available here. Take a print out of this guide a
 
             <div class="post-content">
                 <p>Last day I managed to install Mac OS X Snaow Leopard 10.6 from the original retail DVD on my Dell Inspiron 1525. And to my astonishment it was pretty easy! - even though it took me 3 trials to get the hang of it :) After that I also updated it to SL version 10.6.5 :D</p>
-<p>I followed the excellent guide <!-- raw HTML omitted -->available here<!-- raw HTML omitted -->. Take a print out of this guide and then do as follows:</p>
+
+<p>I followed the excellent guide <a href="http://macyourpc.com/2009/09/13/mac-os-x-10-6-snow-leopard-retail-install-boot-132-method/">available here</a>. Take a print out of this guide and then do as follows:</p>
+
 <ol>
-<li>
-<p>Follow steps 1 to 7. Restart the system.</p>
-</li>
-<li>
-<p>Update to 10.6.5 - don&rsquo;t use Software Update, use manual update - <!-- raw HTML omitted --><a href="http://support.apple.com/kb/DL1324">http://support.apple.com/kb/DL1324</a><!-- raw HTML omitted --> . Restart the system.</p>
-</li>
-<li>
-<p>Continue from Step 8 onwards - but DON&rsquo;T INSTALL Sleepenabler.kext and EHCIsleepenabler.kext at step 8.</p>
-</li>
-<li>
-<p>Enjoy the Mac SL 10.6.5 :)</p>
-</li>
+<li><p>Follow steps 1 to 7. Restart the system.</p></li>
+
+<li><p>Update to 10.6.5 - don&rsquo;t use Software Update, use manual update - <a href="http://support.apple.com/kb/DL1324">http://support.apple.com/kb/DL1324</a> . Restart the system.</p></li>
+
+<li><p>Continue from Step 8 onwards - but DON&rsquo;T INSTALL Sleepenabler.kext and EHCIsleepenabler.kext at step 8.</p></li>
+
+<li><p>Enjoy the Mac SL 10.6.5 :)</p></li>
 </ol>
-<p> </p>
-<p>Now the only problem is that the computer won&rsquo;t sleep - I don&rsquo;t usually put my system to sleep, so its okay for me.</p>
-<!-- raw HTML omitted -->
-<ol start="2">
-<li>
-<p>Installed Mac to first partition and updated it to SL 10.6.5 as specified above.</p>
-</li>
-<li>
-<p>Installed Windows 7 to second partition - Windows installer formatted it to NTFS</p>
-</li>
-<li>
-<p>Now I can only boot into Win7. In Win7 install EasyBCD.</p>
-</li>
-<li>
-<p>Add MacOS option to boot options (Choose MBR instead of EFI)</p>
-</li>
-<li>
-<p>Now I can dual boot :)</p>
-</li>
+
+<p>&nbsp;</p>
+
+<p>Now the only problem is that the computer won&rsquo;t sleep - I don&rsquo;t usually put my system to sleep, so its okay for me.
+<h3>Dual Booting with Windows 7:</h3>
+1. When I installed Mac SL I made 3 partitions instead of 1 and formatted the first partition to &lsquo;Mac OS Extended(Journaled)&rsquo; and the remaining two to MSDOS FAT format.</p>
+
+<ol>
+<li><p>Installed Mac to first partition and updated it to SL 10.6.5 as specified above.</p></li>
+
+<li><p>Installed Windows 7 to second partition - Windows installer formatted it to NTFS</p></li>
+
+<li><p>Now I can only boot into Win7. In Win7 install EasyBCD.</p></li>
+
+<li><p>Add MacOS option to boot options (Choose MBR instead of EFI)</p></li>
+
+<li><p>Now I can dual boot :)</p></li>
 </ol>
+
 <p>And now am ready with my Dellintosh Snow Leopard 10.6.5 :D</p>
 
             </div>
@@ -219,21 +221,15 @@ I followed the excellent guide available here. Take a print out of this guide a
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

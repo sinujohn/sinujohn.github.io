@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Sinu John</title>
@@ -59,7 +59,8 @@ Map Reduce is a framework which helps us to write program for the cloud. It is a
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/01/21/immortal-login/</guid>
-      <description>Download the app from PlayStoreFind the source on GithubI have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
+      <description>Download the app from PlayStore
+Find the source on Github I have got Asianet Broadband connection and they require me to log in inorder to have an internet connection. In Android whenever I log in, Android keeps the browser app alive only for about 15 minutes. So I used to get logged out frequently. I was fed up of this, and because of a Developer&amp;rsquo;s itch, I developed an Android app - Immortal Login.</description>
     </item>
     
     <item>
@@ -77,7 +78,8 @@ Map Reduce is a framework which helps us to write program for the cloud. It is a
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/24/j8085sim/</guid>
-      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
+      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/
+To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
 This project is the result of about 5 weeks work by me and my team mates - Jinsmon Kurian and Deepu Devassy. Since the project demo is over, I believe this software should now be released.</description>
     </item>
     

@@ -26,7 +26,7 @@ Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets 
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -40,27 +40,33 @@ Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets 
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Spring Cloud Stream - using Functional constructs">
 <meta itemprop="description" content="Preface Spring Cloud Stream provides a framework to implement messaging in a clean way. The new version 3 brings functional paradigm to the Spring Cloud Stream framework where previously the annotations were used for the same. Docs explain it way better, but I will provide a succint way to get started. Read this after going through the docs. In this blog, I chose Kafka as the message broker.
 Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets us create Beans of type Function, Consumer or Supplier.">
+
+
 <meta itemprop="datePublished" content="2020-04-26T21:22:16&#43;05:30" />
 <meta itemprop="dateModified" content="2020-04-26T21:22:16&#43;05:30" />
 <meta itemprop="wordCount" content="1137">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="java,spring,spring-cloud-stream,kafka," />
+<meta property="og:title" content="Spring Cloud Stream - using Functional constructs" />
+<meta property="og:description" content="Preface Spring Cloud Stream provides a framework to implement messaging in a clean way. The new version 3 brings functional paradigm to the Spring Cloud Stream framework where previously the annotations were used for the same. Docs explain it way better, but I will provide a succint way to get started. Read this after going through the docs. In this blog, I chose Kafka as the message broker.
+Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets us create Beans of type Function, Consumer or Supplier." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2020/04/26/spring-cloud-stream-using-functional-constructs/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2020-04-26T21:22:16+05:30" />
+<meta property="article:modified_time" content="2020-04-26T21:22:16+05:30" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Spring Cloud Stream - using Functional constructs"/>
 <meta name="twitter:description" content="Preface Spring Cloud Stream provides a framework to implement messaging in a clean way. The new version 3 brings functional paradigm to the Spring Cloud Stream framework where previously the annotations were used for the same. Docs explain it way better, but I will provide a succint way to get started. Read this after going through the docs. In this blog, I chose Kafka as the message broker.
 Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets us create Beans of type Function, Consumer or Supplier."/>
-
-
 
 
 
@@ -139,112 +145,189 @@ Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets 
             
 
             <div class="post-content">
-                <h1 id="preface">Preface</h1>
+                
+
+<h1 id="preface">Preface</h1>
+
 <p>Spring Cloud Stream provides a framework to implement messaging in a clean way. The new version 3 brings functional paradigm to the Spring Cloud Stream framework where previously the annotations were used for the same. <a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/3.0.3.RELEASE/reference/html/spring-cloud-stream.html#spring-cloud-stream-reference">Docs</a> explain it way better, but I will provide a succint way to get started. Read this after going through the docs. In this blog, I chose Kafka as the message broker.</p>
+
 <h1 id="getting-started">Getting Started</h1>
+
 <h2 id="add-dependencies">Add Dependencies</h2>
+
 <ol>
 <li>Cloud Stream</li>
 <li>Kafka</li>
 </ol>
+
 <p>Adding Cloud Stream, lets us create Beans of type <code>Function</code>, <code>Consumer</code> or <code>Supplier</code>. As per the docs - <em>beans of type Supplier, Function or Consumer are treated as defacto message handlers triggering binding of to destinations exposed by the provided binder following certain naming conventions and rules to avoid extra configuration.</em></p>
+
 <h2 id="create-beans">Create Beans</h2>
+
 <p>In this step, create Producer, Consumer and/or Transformer(which accepts an input and publishes a possibly modified output) beans. I will call these as Functional beans.</p>
+
 <p>Functional beans are tied to input(s) and output(s). The <code>input</code> and <code>output</code> are abstractions and depending on the actual underlying broker it might be a queue or topic or something else.</p>
+
 <p><code>Supplier</code> acts as a Producer and is tied to only the <code>output</code>. Whatever the <code>Supplier</code> produces is sent to the <code>output</code>.</p>
+
 <p><code>Consumer</code>, similarly, acts as a consumer of a message. So it is only tied to <code>input</code>. From the <code>input</code> it consumes the message.</p>
+
 <p><code>Function</code> acts as a transformer and so it consumes a message from the <code>input</code> and produces a new message which is sent to the <code>output</code>.</p>
+
 <h3 id="binding-names">Binding Names</h3>
+
 <p>The <code>input</code> or <code>output</code> is tied to the real world queue names or topic names. To identify each <code>input</code>/<code>output</code> of each function they are associated with a binding name whenever they are referred to in properties or in code.</p>
-<p><strong>bindingName for input</strong> - <code>&lt;functionName&gt;</code> + <code>-in-</code> + <code>&lt;index&gt; </code></p>
+
+<p><strong>bindingName for input</strong> - <code>&lt;functionName&gt;</code> + <code>-in-</code> + <code>&lt;index&gt;</code></p>
+
 <p><strong>bindingName for output</strong> - <code>&lt;functionName&gt;</code> + <code>-out-</code> + <code>&lt;index&gt;</code></p>
+
 <p>Index starts from 0. If the function name is <code>uppercase</code>, and it is a <code>Function</code>, then the input binding name is <code>uppercase-in-0</code> and output binding name is <code>uppercase-out-0</code>.</p>
+
 <h3 id="publish-a-message-on-demand">Publish a message on demand</h3>
+
 <p>By default, the <code>Supplier</code> bean is invoked by the Spring Framework periodically every second. Most of the times this is not the behaviour we want.</p>
+
 <p>Usually, a message has to be published in response to another <a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/3.0.3.RELEASE/reference/html/spring-cloud-stream.html#_foreign_event_driven_sources">foreign event</a>, say for example, a user registration event.</p>
+
 <p>For these use cases of publishing a message whenever we want, we can make use of <code>StreamBridge</code>. <strong>DO NOT</strong> create <code>Supplier</code> bean.
 Instead declare a property <code>spring.cloud.stream.source</code> with the function name.</p>
+
 <ol>
 <li>Autowire a bean of <code>StreamBridge</code>.</li>
 <li>Set property: <code>spring.cloud.stream.source=functionName1;functionName2</code></li>
 <li>Call <code>streamBridge.send(...)</code> whenever needed.</li>
 </ol>
+
 <p>Example from the docs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootApplication</span>
-<span style="color:#a6e22e">@Controller</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebSourceApplication</span> <span style="color:#f92672">{</span>
 
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>WebSourceApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;--spring.cloud.stream.source=toStream&#34;</span><span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
+<pre><code class="language-java">@SpringBootApplication
+@Controller
+public class WebSourceApplication {
 
-	<span style="color:#a6e22e">@Autowired</span>
-	<span style="color:#66d9ef">private</span> StreamBridge streamBridge<span style="color:#f92672">;</span>
+	public static void main(String[] args) {
+		SpringApplication.run(WebSourceApplication.class, &quot;--spring.cloud.stream.source=toStream&quot;);
+	}
 
-	<span style="color:#a6e22e">@RequestMapping</span>
-	<span style="color:#a6e22e">@ResponseStatus</span><span style="color:#f92672">(</span>HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">ACCEPTED</span><span style="color:#f92672">)</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">delegateToSupplier</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@RequestBody</span> String body<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sending &#34;</span> <span style="color:#f92672">+</span> body<span style="color:#f92672">);</span>
-		streamBridge<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;toStream-out-0&#34;</span><span style="color:#f92672">,</span> body<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="mandatory-properties">Mandatory Properties</h2>
+	@Autowired
+	private StreamBridge streamBridge;
+
+	@RequestMapping
+	@ResponseStatus(HttpStatus.ACCEPTED)
+	public void delegateToSupplier(@RequestBody String body) {
+		System.out.println(&quot;Sending &quot; + body);
+		streamBridge.send(&quot;toStream-out-0&quot;, body);
+	}
+}
+</code></pre>
+
+<h2 id="mandatory-properties">Mandatory Properties</h2>
+
 <h3 id="1-specify-function-names">1. Specify function names:</h3>
+
 <p>For all functional beans present, specify their names:
 <code>spring.cloud.function.definition=functionName1;functionName2</code></p>
+
 <p>If producer function is not present but publishing is done using <code>StreamBridge</code>, then add: <code>spring.cloud.stream.source=functionName3;functionName4</code></p>
+
 <p><strong>NOTE</strong>: Same functionName should not be present in both the above properties.</p>
+
 <p>These properties act as a hint to the Spring framework to create the bindings required for the messaging.</p>
+
 <p><strong>#EDIT:</strong> ALWAYS specify the property <code>spring.cloud.function.definition</code> when Spring Cloud Stream is present in the classpath. This will prevent some unintended surprises. Add this property even if it is not required (for example, you might be using the <code>StreamBridge</code> approach). If there is no value which can be given for this property, then any dummy value like <code>blahblah</code> can be used. For more information see the footnote.</p>
+
 <h3 id="2-bind-topic-names">2. Bind Topic Names:</h3>
+
 <p>Function Names specified in the above property is bound to the actual topic/queue name using the property:
 <code>spring.cloud.stream.bindings.&lt;bindingName&gt;.destination=&lt;topic-name&gt;</code></p>
+
 <h2 id="usually-needed-properties">Usually Needed Properties</h2>
+
 <h3 id="consumer-group-names-applicable-only-to-message-consumers">Consumer Group Names (Applicable only to Message Consumers):</h3>
+
 <p>Most of the times, there will be multiple instances of the same application running and it is desirable that only on of them gets the message to process. Consumer Groups puts that limitation:
 <code>spring.cloud.stream.bindings.&lt;bindingName&gt;.group=&lt;groupName&gt;</code></p>
+
 <h2 id="properties-to-enable-partition-support">Properties to enable Partition Support</h2>
+
 <p>Properties have to be set at <strong>BOTH</strong> Producer and Consumer ends inorder for the partitioning to work properly.</p>
+
 <h3 id="producer-side-configuration">Producer-side configuration</h3>
+
 <pre><code>spring.cloud.stream.bindings.&lt;bindingName&gt;.producer.partitionKeyExpression=&lt;expression&gt;
 spring.cloud.stream.bindings.&lt;bindingName&gt;.producer.partitionCount=&lt;count&gt;
-</code></pre><p>Example:</p>
+</code></pre>
+
+<p>Example:</p>
+
 <pre><code>spring.cloud.stream.bindings.func-out-0.producer.partitionKeyExpression=payload.id
 spring.cloud.stream.bindings.func-out-0.producer.partitionCount=5
-</code></pre><h3 id="consumer-side-configuration">Consumer-side configuration</h3>
+</code></pre>
+
+<h3 id="consumer-side-configuration">Consumer-side configuration</h3>
+
 <pre><code>spring.cloud.stream.bindings.&lt;bindingName&gt;.consumer.partitioned=true
-</code></pre><p>Example: <code>spring.cloud.stream.bindings.func-in-0.consumer.partitioned=true</code></p>
+</code></pre>
+
+<p>Example: <code>spring.cloud.stream.bindings.func-in-0.consumer.partitioned=true</code></p>
+
 <h4 id="note">Note:</h4>
+
 <p>If the broker is <em>NOT</em> Kafka or if Kafka&rsquo;s <code>autoRebalanceEnabled</code> is set to false, then following two additional properties are also needed.</p>
+
 <pre><code>spring.cloud.stream.instanceIndex=&lt;indexOfTheInstance&gt;
 spring.cloud.stream.instanceCount=&lt;totalNumberOfInstances&gt;
-</code></pre><p>These properties have to be set properly - <code>instanceIndex</code> shoud be unique for each instance of the microservice. So setting these for autoscaling scenarios will be difficult.</p>
+</code></pre>
+
+<p>These properties have to be set properly - <code>instanceIndex</code> shoud be unique for each instance of the microservice. So setting these for autoscaling scenarios will be difficult.</p>
+
 <h1 id="demo">Demo</h1>
+
 <p>To play with the demo programs Kafka is required. I have a <a href="https://gist.github.com/sinujohn/a4c2670983ad7763b965dc7499da5fed">Docker Compose</a> file which runs both Kafka and a UI called Kafdrop. Run it wih <code>docker-compose up -d</code> and stop it with <code>docker-compose down -v</code>. Once its up, the UI is available at <code>http://localhost:9000</code></p>
+
 <h4 id="to-send-messages-to-kafka-topic">To send messages to Kafka topic:</h4>
+
 <p>Log in to the docker container: <code>docker exec -it &lt;containerId&gt; /bin/bash</code></p>
+
 <p>Run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash-4.4# kafka-console-producer.sh --broker-list localhost:9092 --topic funcName-in-0
-&gt;<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Sam Spade&#34;</span><span style="color:#f92672">}</span>
-</code></pre></div><h4 id="running-multiple-instances-of-demo-spring-application">Running multiple instances of Demo Spring application:</h4>
+
+<pre><code class="language-bash">bash-4.4# kafka-console-producer.sh --broker-list localhost:9092 --topic funcName-in-0
+&gt;{&quot;name&quot;:&quot;Sam Spade&quot;}
+</code></pre>
+
+<h4 id="running-multiple-instances-of-demo-spring-application">Running multiple instances of Demo Spring application:</h4>
+
 <p>Open multiple terminals and run the following passing different port number each time:
 <code>mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081</code></p>
+
 <h1 id="stream-message-demo-without-partitioning">Stream Message Demo without partitioning</h1>
+
 <script type="application/javascript" src="https://gist.github.com/sinujohn/94e96dea5788cf2818e198d47147faab.js"></script>
 
+
 <h1 id="stream-message-demo-with-partitioning">Stream Message Demo with partitioning</h1>
+
 <script type="application/javascript" src="https://gist.github.com/sinujohn/e2708943e884118b3440350778b2f9b0.js"></script>
 
+
 <h3 id="without-partitioning-and-consumer-groups">Without partitioning and consumer groups</h3>
+
 <p>When Consumer Group is not enabled, every consumers gets every message.
-<img src="/assets/kafka-no-partitioning.PNG" alt="Kafka No Partitioning"></p>
+<img src="/assets/kafka-no-partitioning.PNG" alt="Kafka No Partitioning" /></p>
+
 <h3 id="with-partitioning-and-consumer-groups">With partitioning and consumer groups</h3>
+
 <p>When both consumer group and partitioning is enabled, each instance is allotted some partitions while other instances are allotted other partitions.
 In the demo we have 2 partitions and 4 running instances. Two instances are allotted partitions and other two are idle. Message gets to the partitions according to the <code>id</code> field.</p>
-<p><img src="/assets/kafka-partitioning-1.PNG" alt="Kafka With Partitioning 1"></p>
+
+<p><img src="/assets/kafka-partitioning-1.PNG" alt="Kafka With Partitioning 1" /></p>
+
 <p>When one of the allotted instance is killed, the partition gets assigned to another one.</p>
-<p><img src="/assets/kafka-partitioning-2.PNG" alt="Kafka With Partitioning 2"></p>
+
+<p><img src="/assets/kafka-partitioning-2.PNG" alt="Kafka With Partitioning 2" /></p>
+
 <p>Following images from Kafdrop UI tells the picture at Kafka side where each partition has different data - message gets allotted to the partition on the basis of its <code>id</code> which is specified as the <code>partitionKeyExpression</code>.</p>
+
 <p>
     <img src="/assets/kafka-partitioning-3.png"  alt="Hello Friend"  class="left"  style="width: 50%; float: left;"  />
 
@@ -253,15 +336,23 @@ In the demo we have 2 partitions and 4 running instances. Two instances are allo
     <img src="/assets/kafka-partitioning-4.png"  alt="Hello Friend"  class="left"  style="width: 50%; float: left;"  />
 
 
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted --></p>
+<img class="special-img-class" style="float: left;" width="50%" src="/assets/kafka-partitioning-3.png" />
+<img class="special-img-class" style="float: left;" width="40%" src="/assets/kafka-partitioning-4.png" /></p>
+
 <h1 id="footnotes">Footnotes</h1>
+
 <p>I got a weird error in one of my applications when Spring Cloud Stream was used. It was a producer only application which used the <code>StreamBridge</code> to publish a message. So the only property I had was <code>spring.cloud.stream.source</code>.</p>
+
 <p>But when the application started I started getting error message which said something like the following: <code>LoggingHandler: MessagingException: Failed to convert message... No converters present</code> - I don&rsquo;t have the exact error message now.</p>
+
 <p>The issue which caused this was there was a Spring Boot Actuator bean called <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/actuate/autoconfigure/jolokia/JolokiaEndpoint.html">JolokiaEndpoint</a> which got autoconfigured. This bean extends <code>Supplier&lt;EndpointServlet&gt;</code> and thus qualifies as a candidate to be picked up by the Spring Cloud Stream.</p>
+
 <p>To prevent above scenario and to avoid any such nasty surprises <strong>ALWAYS</strong> add the property <code>spring.cloud.function.definition</code> with a non-existing function name. For example:</p>
+
 <pre><code>spring.cloud.function.definition=nonExistingFunctionName
-</code></pre><p>If in the future any function gets added to the application, then <code>nonExistingFunctionName</code> can be replaced with the actual function name.</p>
+</code></pre>
+
+<p>If in the future any function gets added to the application, then <code>nonExistingFunctionName</code> can be replaced with the actual function name.</p>
 
             </div>
         </article>
@@ -305,21 +396,15 @@ In the demo we have 2 partitions and 4 running instances. Two instances are allo
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

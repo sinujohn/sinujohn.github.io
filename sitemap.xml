@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -88,11 +88,6 @@
   </url>
   
   <url>
-    <loc>https://sinujohn.github.io/tags/git/</loc>
-    <lastmod>2017-03-27T15:14:34+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sinujohn.github.io/tags/github/</loc>
     <lastmod>2017-03-27T15:14:34+05:30</lastmod>
   </url>
@@ -100,11 +95,6 @@
   <url>
     <loc>https://sinujohn.github.io/categories/rants/</loc>
     <lastmod>2017-03-27T15:14:34+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sinujohn.github.io/tags/c/</loc>
-    <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -174,11 +164,6 @@
   
   <url>
     <loc>https://sinujohn.github.io/tags/apps/</loc>
-    <lastmod>2015-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sinujohn.github.io/categories/project/</loc>
     <lastmod>2015-05-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -343,6 +328,11 @@
   </url>
   
   <url>
+    <loc>https://sinujohn.github.io/tags/git/</loc>
+    <lastmod>2014-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sinujohn.github.io/2014/06/21/my-git-workflow/</loc>
     <lastmod>2014-06-21T00:00:00+00:00</lastmod>
   </url>
@@ -379,6 +369,11 @@
   
   <url>
     <loc>https://sinujohn.github.io/2014/01/20/boost-and-a-look-back-on-c/</loc>
+    <lastmod>2014-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sinujohn.github.io/tags/c/</loc>
     <lastmod>2014-01-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -605,6 +600,11 @@
   <url>
     <loc>https://sinujohn.github.io/2013/01/21/thulika-keyboard/</loc>
     <lastmod>2013-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sinujohn.github.io/categories/project/</loc>
+    <lastmod>2013-01-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>

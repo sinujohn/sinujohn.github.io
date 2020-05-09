@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="Project Digitisation:I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+<meta name="description" content="Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
 There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
 This blog post mentions JDBC." />
 <meta name="keywords" content=", java" />
@@ -27,7 +27,7 @@ This blog post mentions JDBC." />
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -41,29 +41,36 @@ This blog post mentions JDBC." />
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Persistence Using Java">
-<meta itemprop="description" content="Project Digitisation:I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+<meta itemprop="description" content="Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
 There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
 This blog post mentions JDBC.">
+
+
 <meta itemprop="datePublished" content="2013-08-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2013-08-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="106">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
+<meta itemprop="wordCount" content="253">
 
 
 
 <meta itemprop="keywords" content="java," />
+<meta property="og:title" content="Persistence Using Java" />
+<meta property="og:description" content="Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
+This blog post mentions JDBC." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2013/08/31/persistence-using-java/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2013-08-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-08-31T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Persistence Using Java"/>
-<meta name="twitter:description" content="Project Digitisation:I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
+<meta name="twitter:description" content="Project Digitisation: I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.
 There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).
 This blog post mentions JDBC."/>
-
-
 
 
 
@@ -142,10 +149,25 @@ This blog post mentions JDBC."/>
             
 
             <div class="post-content">
-                <p><!-- raw HTML omitted -->Project Digitisation:<!-- raw HTML omitted --> I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.</p>
+                <p><strong>Project Digitisation:</strong> I have decided to convert the notes that I have written into blogs :) This post and some posts that follow(about JPA) is part of that project.</p>
+
 <p>There are several frameworks that are used for persisting objects in databases like JPA, Hibernate etc. (JPA is actually a specification. Hibernate is an implementation of JPA. Hibernate also has several extra features which are not specified by JPA).</p>
-<p>This blog post mentions JDBC. I will not go into the details of how to use JDBC as using JPA is the focus. Details about how to persist objects in Java using JPA is discussed in next blog post.</p>
-<!-- raw HTML omitted -->
+
+<p>This blog post mentions JDBC. I will not go into the details of how to use JDBC as using JPA is the focus. Details about how to persist objects in Java using JPA is discussed in next blog post.
+<h2>JDBC</h2>
+<strong>JDBC - Java DataBase Connectivity</strong>
+JDBC works in the backstage of all the frameworks. Frameworks makes our life easy in persisting objects and modifying them.
+JDBC is a specification - it tells the DB vendor how to provide driver for Java and it tells the programmer how to write Java programs that can connect to the db. It is in &ldquo;java.sql&rdquo; package.
+JDBC drivers:
+<ol>
+    <li>Type 1 (JDBC - ODBC Bridge) - obsolete</li>
+    <li>Type 2 (Native API Driver) - obsolete</li>
+    <li>Type 3 (Network Protocol Driver)</li>
+    <li>Type 4 (Native Protocol Driver)</li>
+</ol>
+Type 4 is NOT an improvement over Type3.
+Type 3 communicates with Application Servers. So even if we change databases, the programs need not be changed. The application server automatically selects the suitable driver.
+Type 4 is specific to each DB vendor. If we change the vendor then we need new driver. It is platform independent.</p>
 
             </div>
         </article>
@@ -189,21 +211,15 @@ This blog post mentions JDBC."/>
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

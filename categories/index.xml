@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Sinu John</title>
@@ -67,15 +67,6 @@
     </item>
     
     <item>
-      <title>Project</title>
-      <link>https://sinujohn.github.io/categories/project/</link>
-      <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://sinujohn.github.io/categories/project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Projects</title>
       <link>https://sinujohn.github.io/categories/projects/</link>
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
@@ -99,6 +90,15 @@
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>https://sinujohn.github.io/categories/project/</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinujohn.github.io/categories/project/</guid>
       <description></description>
     </item>
     

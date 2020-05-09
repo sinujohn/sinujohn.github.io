@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Sinu John</title>
@@ -18,10 +18,10 @@
       <pubDate>Sat, 26 Jun 2010 06:33:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/pages/projects/</guid>
-      <description>Find the app on Play Store| [Other details]({{ site.baseurl }}{% post_url 2013-01-21-thulika-keyboard %})
-Find the app on Play Store| [Other details]({{ site.baseurl }}{% post_url 2013-01-21-immortal-login %})
- Project: j8085sim at SourceforgeBlog post: [j8085sim]({{ site.baseurl }}{% post_url 2010-07-24-j8085sim %})
- File: bsnlmeterDetails: [Blog Entry]({{ site.baseurl }}{% post_url 2010-06-26-bsnl-broadband-usage-viewer %})</description>
+      <description>Android Thulika Keyboard! Thulika is an Handwriting recognition keyboard. It is the first Android app that has brought handwriting recognition to an Indian language(Malayalam). The blog post Training Thulika describes the configuration part of the keyboard.
+Find the app on Play Store | Other details Immortal Login! Log in once! No hassle of getting logged out frequently from your device.
+Find the app on Play Store | Other details
+&amp;nbsp;</description>
     </item>
     
     <item>
@@ -31,7 +31,9 @@ Find the app on Play Store| [Other details]({{ site.baseurl }}{% post_url 2013-0
       
       <guid>https://sinujohn.github.io/pages/about/</guid>
       <description>Find me
-twitter: @sinuvianfacebook: Sinu JohnGithub: https://github.</description>
+twitter: @sinuvian
+facebook: Sinu John
+Github: https://github.com/sinujohn/ </description>
     </item>
     
   </channel>

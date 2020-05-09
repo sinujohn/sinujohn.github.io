@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aop on Sinu John</title>
@@ -18,7 +18,8 @@
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
-      <description></description>
+      <description>I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.
+Here are a couple of cheatsheets/examples for AspectJ.</description>
     </item>
     
     <item>

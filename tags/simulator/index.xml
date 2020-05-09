@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>simulator on Sinu John</title>
@@ -18,7 +18,8 @@
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/24/j8085sim/</guid>
-      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
+      <description>I just published my BTech miniproject - 8085sim, an 8085 simulator - on Sourceforge. Download it from here -http://sourceforge.net/projects/j8085sim/
+To get a valid name I added a &amp;lsquo;j&amp;rsquo; (short for Java) before the name, so it is now &amp;lsquo;j8085sim&amp;rsquo;.
 This project is the result of about 5 weeks work by me and my team mates - Jinsmon Kurian and Deepu Devassy. Since the project demo is over, I believe this software should now be released.</description>
     </item>
     

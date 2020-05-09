@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>spring on Sinu John</title>
@@ -37,7 +37,9 @@ Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets 
       <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
-      <description></description>
+      <description>Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.
+Usually, you create a Spring bean as follows:
+ But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?</description>
     </item>
     
     <item>
@@ -46,7 +48,8 @@ Getting Started Add Dependencies  Cloud Stream Kafka  Adding Cloud Stream, lets 
       <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/07/03/spring-aop/</guid>
-      <description></description>
+      <description>I was doing some Spring AOP stuff the other day using @AspectJ style annotations. One of the limitations of Spring AOP is that it supports only method level interception. We cannot intercept Constructors or fields. For that we&#39;ll have to use AspectJ, and different compilers may be - for load time weaving or compile time weaving. I decided to stick to Spring restrictions though.
+Here are a couple of cheatsheets/examples for AspectJ.</description>
     </item>
     
     <item>

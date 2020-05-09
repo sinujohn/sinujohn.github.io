@@ -27,7 +27,7 @@ The naming convention sticks to the C version. Functions are implemented as stat
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -41,20 +41,29 @@ The naming convention sticks to the C version. Functions are implemented as stat
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Android OpenGL ES2.0 Template">
 <meta itemprop="description" content="Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.
 OpenGL ES2.0 API is provided by &lsquo;android.opengl.GLES20&rsquo; package.
 The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:">
+
+
 <meta itemprop="datePublished" content="2011-10-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2011-10-20T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="375">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
 
 
 
 <meta itemprop="keywords" content="android,opengl es 2," />
+<meta property="og:title" content="Android OpenGL ES2.0 Template" />
+<meta property="og:description" content="Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.
+OpenGL ES2.0 API is provided by &lsquo;android.opengl.GLES20&rsquo; package.
+The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2011/10/20/android-opengl-es2-0-template/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2011-10-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2011-10-20T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
@@ -62,8 +71,6 @@ The naming convention sticks to the C version. Functions are implemented as stat
 <meta name="twitter:description" content="Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.
 OpenGL ES2.0 API is provided by &lsquo;android.opengl.GLES20&rsquo; package.
 The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:"/>
-
-
 
 
 
@@ -143,25 +150,43 @@ The naming convention sticks to the C version. Functions are implemented as stat
 
             <div class="post-content">
                 <p>Learning OpenGLES 2.0 is easier on Android than on iOS because we can directly focus on OpenGLES implementation rather than wasting time on making the EGL bingings working properly. EGL stuffs are taken care of by android.opengl.GLSurfaceView.</p>
+
 <p>OpenGL ES2.0 API is provided by &lsquo;android.opengl.GLES20&rsquo; package.</p>
+
 <p>The naming convention sticks to the C version. Functions are implemented as static in GLES20 package. So they can be called like GLES20.function_name(). For example, the mappings are as follows from C to the Android Java version:</p>
+
 <pre><code>glClearColor(0.5f, 0.5f, 0.5f, 1.0f) --&gt;&gt; GLES20.glClearColor(0.5f, 0.5f, 0.5f, 1.0f)
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) --&gt;&gt; GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT)
-</code></pre><p>For debugging we can can use &lsquo;android.util.Log&rsquo; package. Example, Log.d(&ldquo;TAG name like Program name&rdquo;, &ldquo;Surface Created&rdquo;). These debugging logs can be observed in LogCat window. There are also other functions in Log like Log.e(), Log.i() etc. For making our lives easier there is also a Matrix class - android.opengl.Matrix. Remember these are Column Major Order Matrices. Example,</p>
+</code></pre>
+
+<p>For debugging we can can use &lsquo;android.util.Log&rsquo; package. Example, Log.d(&ldquo;TAG name like Program name&rdquo;, &ldquo;Surface Created&rdquo;). These debugging logs can be observed in LogCat window. There are also other functions in Log like Log.e(), Log.i() etc. For making our lives easier there is also a Matrix class - android.opengl.Matrix. Remember these are Column Major Order Matrices. Example,</p>
+
 <pre><code>Matrix.setIdentityM(mModelMatrix, 0);
 Matrix.translateM(mModelMatrix, 0, 0, 0, -3f);
 Matrix.rotateM(mModelMatrix, 0, angleInDegrees, 0, 1, 0);
 Matrix.translateM(mModelMatrix, 0, 0, 0, 1.5f);
-</code></pre><p>We can multiply two matrices by Matrix.multiplyMM(). We can multiply a matrix by a vector using Matrix.multiplyMV(). Other useful functions: Setting up View Matrix:</p>
+</code></pre>
+
+<p>We can multiply two matrices by Matrix.multiplyMM(). We can multiply a matrix by a vector using Matrix.multiplyMV(). Other useful functions: Setting up View Matrix:</p>
+
 <pre><code>Matrix.setLookAtM(mViewMatrix, 0, eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ)
-</code></pre><p>Setting up Perspective Projection Matrix:</p>
+</code></pre>
+
+<p>Setting up Perspective Projection Matrix:</p>
+
 <pre><code>Matrix.frustumM(mProjectionMatrix, 0, left, right, bottom, top, near, far)
-</code></pre><p>The object data is stored in Buffer objects like FloatBuffer. For example,</p>
+</code></pre>
+
+<p>The object data is stored in Buffer objects like FloatBuffer. For example,</p>
+
 <pre><code>Float[] positions = {...............}; // Has x,y,z positions of all vertices
 FloatBuffer mPositionBuffer; // from java.nio.FloatBuffer
 mPositionBuffer = ByteBuffer.allocateDirect(mBytesPerFloat * positions.length).order(ByteOrder.nativeOrder()).asFloatBuffer();
 mPositionBuffer.put(objData.positions).position(0);
-</code></pre><p>Now the template for the renderer class (the class which implements GLSurfaceView.Renderer):</p>
+</code></pre>
+
+<p>Now the template for the renderer class (the class which implements GLSurfaceView.Renderer):</p>
+
 <pre><code>Constructor()
 {
     Gather object's data
@@ -186,7 +211,10 @@ OnDrawFrame()
     Call glClear()
     draw calls go over here
 }
-</code></pre><p>Using textures is also easier as Android provides many helper classes. A template for generating textures (returns texture handle):</p>
+</code></pre>
+
+<p>Using textures is also easier as Android provides many helper classes. A template for generating textures (returns texture handle):</p>
+
 <pre><code>
 private int createTexture(Context ctx, int imgResId) // imgResId = R.drawable.filename&lt;/span&gt;&lt;/pre&gt;
 {
@@ -204,6 +232,7 @@ private int createTexture(Context ctx, int imgResId) // imgResId = R.drawable.fi
     return tempHandle[0];
 }
 </code></pre>
+
             </div>
         </article>
 
@@ -246,21 +275,15 @@ private int createTexture(Context ctx, int imgResId) // imgResId = R.drawable.fi
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

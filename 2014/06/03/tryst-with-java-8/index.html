@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="sinujohn">
-<meta name="description" content="Java 8- it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+<meta name="description" content="Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
 Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections." />
 <meta name="keywords" content=", java" />
 <meta name="robots" content="noodp" />
@@ -26,7 +26,7 @@ Most of the changes is in the way we deal with Collections. And most of our dail
 
 
 
-<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
 
 
 
@@ -40,27 +40,33 @@ Most of the changes is in the way we deal with Collections. And most of our dail
     <meta name="msapplication-TileColor" content="#252627">
     <meta name="theme-color" content="#252627">
 
-
-
 <meta itemprop="name" content="Tryst with Java 8!">
-<meta itemprop="description" content="Java 8- it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+<meta itemprop="description" content="Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
 Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections.">
+
+
 <meta itemprop="datePublished" content="2014-06-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-06-03T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="239">
-<meta itemprop="image" content="https://sinujohn.github.io/"/>
+<meta itemprop="wordCount" content="383">
 
 
 
 <meta itemprop="keywords" content="java," />
+<meta property="og:title" content="Tryst with Java 8!" />
+<meta property="og:description" content="Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2014/06/03/tryst-with-java-8/" />
+
+<meta property="og:image" content="https://sinujohn.github.io/" />
+<meta property="article:published_time" content="2014-06-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-06-03T00:00:00+00:00" /><meta property="og:site_name" content="Sinu John" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sinujohn.github.io/"/>
 
 <meta name="twitter:title" content="Tryst with Java 8!"/>
-<meta name="twitter:description" content="Java 8- it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
+<meta name="twitter:description" content="Java 8 - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!
 Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections."/>
-
-
 
 
 
@@ -139,10 +145,35 @@ Most of the changes is in the way we deal with Collections. And most of our dail
             
 
             <div class="post-content">
-                <p><!-- raw HTML omitted -->Java 8<!-- raw HTML omitted --> - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!</p>
-<p>Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections. Java 8 has brought in functional programming and Lambda expressions. There are many examples out there in the WWW which go to the intricacies of Lambda expressions and Java 8 features. Here I&rsquo;ll jot down some notes which I found to be useful. Its no way an introduction or tutorial, its just some notes I have made which&rsquo;ll help in understanding Java 8 features.</p>
-<!-- raw HTML omitted -->
+                <p><strong>Java 8</strong> - it has been making headlines as the version which brings dramatic changes to Java. And I believe its true. I have been using Java 8 for the last few months and using Java 8 features has really brought changes in the way I write code and sometimes even the way I think about code!</p>
+
+<p>Most of the changes is in the way we deal with Collections. And most of our daily life as a programmer revolves around manipulating or using Java Collections. Java 8 has brought in functional programming and Lambda expressions. There are many examples out there in the WWW which go to the intricacies of Lambda expressions and Java 8 features. Here I&rsquo;ll jot down some notes which I found to be useful. Its no way an introduction or tutorial, its just some notes I have made which&rsquo;ll help in understanding Java 8 features.
+<h3>Functional Interfaces</h3>
+Any interface with just one non-default method.
+-Even though not necessary, we can enforce this constraint by annotating an interface with <em><strong>@FunctionalInterface</strong></em>
+<h3>Default Methods</h3>
+An interface method with modifier &lsquo;<em><strong>default</strong></em>&rsquo;. Should have method implementation.
+<h3>Lambdas</h3>
+Short-cut way to implement <em>anonymous inner classes</em> for <span style="text-decoration:underline;"><strong>functional interfaces</strong></span>.
+<strong>Syntax:</strong>
+parameter || (parameters) || () -&gt; expression || statement || { statements }
+<ul>
+    <li>Can reference external variables which are effectively final in the lambda body</li>
+    <li>&lsquo;parameters&rsquo; - parameters for the functional interface method. Datatype is not required. Eg: (String s1, int i), (s1, i)</li>
+    <li>a single &lsquo;expression&rsquo; can be used if the lambda body is just a return statement</li>
+</ul>
+<h3>Method Reference</h3>
+<strong>Syntax:</strong>
+ClassName::methodName
+<strong>To refer constructors:</strong> ClassName::new
+<ul>
+    <li>Can be used anywhere where a lambda or functional interface implementation is expected.</li>
+    <li>The referred method should be having same signature as of the functional interface method</li>
+</ul>
+&nbsp;</p>
+
 <p>Functions like foreach(), stream(), filter(), map(), findFirst() along with Consumer, Function and Predicate make life a hell lot of easy in dealing with Java Collections. Java 8 also brings functional programming to Java world with its lambdas. That means we can now pass a function to a function and return a function from a function! That brings a lot of changes in which we write Java programs. Java 8 also brings a new Date/Time API as well as some utils like Base64 encoding in the default library set.</p>
+
 <p>Happy coding :)</p>
 
             </div>
@@ -187,21 +218,15 @@ Most of the changes is in the way we deal with Collections. And most of our dail
 
 
 
-<script type="text/javascript" src="/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-96151225-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

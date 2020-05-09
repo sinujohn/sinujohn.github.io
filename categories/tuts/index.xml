@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tuts on Sinu John</title>
@@ -29,8 +29,8 @@ How to use?</description>
       
       <guid>https://sinujohn.github.io/2015/03/12/authenticating-using-facebook/</guid>
       <description>I had figured out how to authenticate users using Facebook a couple of months back. But I didn&amp;rsquo;t document it, and so yesterday I again wasted my time figuring it out. So here is the brain dumb so that I won&amp;rsquo;t waste my time again at the time of need. :)
-Prerequisite: Create an appusing Facebook Developer account and create the necessary App ID and App Secret keys.
-If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/</description>
+Prerequisite: Create an app using Facebook Developer account and create the necessary App ID and App Secret keys.
+If you are testing out your app and you are running it locally, the site URL should be something like http://localhost:8090/ At the client side: Asking for permission and login:  Use the SDK provided by facebook I am assuming Javascript SDK is used.</description>
     </item>
     
     <item>
@@ -39,7 +39,9 @@ If you are testing out your app and you are running it locally, the site URL sho
       <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/09/04/creating-collection-of-spring-beans/</guid>
-      <description></description>
+      <description>Some times there might arise situations where you want to create a number of Spring Beans, but you don&#39;t know how many beans are there at coding time.
+Usually, you create a Spring bean as follows:
+ But what if you want to create 50 such beans which differ only in the argument supplied to the constructor? Or a similar case arise where the number of beans to be created cannot be determined at coding time?</description>
     </item>
     
     <item>
@@ -48,7 +50,9 @@ If you are testing out your app and you are running it locally, the site URL sho
       <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/08/27/jax-rs/</guid>
-      <description></description>
+      <description>There is a very good documentation in Jersey website: https://jersey.java.net/documentation/latest/jaxrs-resources.html and https://jersey.java.net/documentation/latest/filters-and-interceptors.html
+Here is a small flowchart that I made showing how the JAX-RS flow works:
+Happy coding :)</description>
     </item>
     
     <item>
@@ -67,8 +71,8 @@ If you are testing out your app and you are running it locally, the site URL sho
       
       <guid>https://sinujohn.github.io/2014/02/04/maven-config-for-slf4j-and-logback/</guid>
       <description>To use SLF4J and logback together, add the following to pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; Now SLF4J&amp;rsquo;s logger can be used:import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;); If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:
-&amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.slf4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;slf4j-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.7.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;ch.qos.logback&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;logback-classic&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.13&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  Now SLF4J&amp;rsquo;s logger can be used:
+import org.slf4j.Logger; import org.slf4j.LoggerFactory; .... private final Logger logger = LoggerFactory.getLogger(MyClass.class); ... logger.debug(&amp;quot;Mandatory fields are missing&amp;quot;);  If while running this in Eclipse or in console, it complains of some missing configuration, add thisto pom.xml:</description>
     </item>
     
     <item>
@@ -77,9 +81,7 @@ If you are testing out your app and you are running it locally, the site URL sho
       <pubDate>Thu, 05 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/05/jpa-part-3/</guid>
-      <description>Go to Part 1.
-public class EmployeeListener { @PrePersist public void beforePersist(Employee e) { System.out.println(&amp;quot;Before persist&amp;quot;); } }
-&amp;lt;h2&amp;gt;Merge Method&amp;lt;/h2&amp;gt; &amp;lt;div&amp;gt;- Used to synchronise the changes between objects and database tables.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Adds a new row if the entity is not present in db table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;- Updates the existing row if it is present in table.&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;h3&amp;gt;Example:&amp;lt;/h3&amp;gt; et.begin(); &amp;hellip;. &amp;hellip;. em.merge(empObject); //merges the changes in empObject with table et.commit();</description>
+      <description>Go to Part 1. Callback Methods When insert, update and delete occurs, we can listen to those events and call some methods when such events occur. Callback methods should be prefixed by following annotations:  @PrePersist - called before persist() @PostPersist - called after persist() @PreRemove - called before remove() @PostRemove - called after commit() @PreUpdate - called before commit() @PostUpdate - called after commit()   More than one annotation can applied to a single method.</description>
     </item>
     
     <item>
@@ -88,10 +90,8 @@ public class EmployeeListener { @PrePersist public void beforePersist(Employee e
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/09/01/jpa-part-2/</guid>
-      <description>This is continued from JPA: part 1.
-@Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters  }
- this maps to Table: &amp;lt;strong&amp;gt;EMP&amp;lt;/strong&amp;gt;  | EMP_ID (PK) | EMP_NAME | |_____________|__________|
- JPA automatically maps &#39;int&#39; to &#39;NUMBER&#39; and &#39;String&#39; to &#39;CHAR&#39; or &#39;VARCHAR&#39;. But it cannot automatically convert Date or Time datatypes. So we need to specify the Temporal type to be used. (Temporal = related to time) &amp;lt;h2&amp;gt;Other Annotations:&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;@Temporal(TemporalType.</description>
+      <description>This is continued from JPA: part 1. Other Annotations:  @Table(name = &amp;ldquo;TABLENAME&amp;rdquo;)  Used before class name to explicitly specify table name.   @Column(name = &amp;ldquo;COLUMN_NAME&amp;rdquo;)  Used before instance variables to explicitly set column names.    Example:
+@Entity @Table(name = &amp;quot;EMP&amp;quot;) public class Employee { @Id @Column(name = &amp;quot;EMP_ID&amp;quot;) private int id; @Column(name = &amp;quot;EMP_NAME&amp;quot;) private String name; //getters and setters }  this maps to Table: EMP</description>
     </item>
     
     <item>
@@ -100,9 +100,7 @@ public class EmployeeListener { @PrePersist public void beforePersist(Employee e
       <pubDate>Sat, 31 Aug 2013 00:10:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/08/31/jpa-part-1/</guid>
-      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series.
-//getters and setters  }
- this maps to &amp;lt;strong&amp;gt;Table: &amp;lt;/strong&amp;gt;Employee    empId name     _____ ____    </description>
+      <description>This post is part of Project Digitisation. I have decided to write about JPA in several posts. This is part 1 of the series. JPA - Java Persistence API JPA is a specification. There are several implementations like Hibernate, TopLink etc. Persisting objects in DB is an integral part of Enterprise applications. JPA provides:  ORM (Object Relation Mapping) i.e. it maps an Object to a Relation(Table).  An Object which can be mapped is called an Entity   JPQL - Java Persistence Query Language  Entity classes should be Java beans (POJOs with private variables and public getters and setters).</description>
     </item>
     
     <item>
@@ -134,7 +132,7 @@ In Singleton pattern, there will be only one object and wherever we want to use 
       <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2013/06/09/proxy-pattern/</guid>
-      <description>Classification: Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
+      <description>Classification : Structural Pattern(Proxy), Creational Pattern(Lazy Initialization)
 Find the code example here.
 In this pattern, we create a proxy for the original class that we are trying to use. This class will have all the methods(which we are interested in) of the original class and may or may not have extra methods. When we say proxy has the methods of original object, we mean the method signature. So using proxy object will be similar to using the real object.</description>
     </item>
@@ -166,7 +164,7 @@ The naming convention sticks to the C version. Functions are implemented as stat
       
       <guid>https://sinujohn.github.io/2011/06/22/add-jar-libraries/</guid>
       <description>When using Netbeans to create Java projects, you might be using extra library files (jar files), for example, twitter4j-core-2.2.3.jar. The default Netbeans packaging excludes these library files when you build the project. This will result in missing class files when you run the jar file. To prevent this we can add the jar files itself as part of the final application. For this do as follows:
-  Add the library jar files into a folder within the project, say /lib</description>
+ Add the library jar files into a folder within the project, say /lib</description>
     </item>
     
     <item>
@@ -175,7 +173,7 @@ The naming convention sticks to the C version. Functions are implemented as stat
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/09/28/sending-a-file-by-http-post/</guid>
-      <description>///////////////////////////////////////////////////////////// //client.c // Send file to an HTTP server in small parts using POST // USAGE: client inputfile // // Compile: // gcc -o client client.c -lcurl // // Developer: // Sinu John - https://sinujohn.github.io/ // //////////////////////////////////////////////////////////////  #include&amp;lt;curl/curl.h&amp;gt;#include&amp;lt;fcntl.h&amp;gt;#include&amp;lt;unistd.h&amp;gt; //No. of bytes to be sent in one pass #define SIZELIMIT 100*1024  //#define _SEND_DEBUG_  int sendFile(const char *fileName, const char *url) // Sends file to &amp;#39;url&amp;#39; with an additional header &amp;#39;Count&amp;#39; (specifying count of the packet) { // An header &amp;#39;Filename&amp;#39; is also added  int COUNT=0; int fd = open(fileName, O_RDONLY); if(fd&amp;lt;0) { printf(&amp;#34;\nERROR: Cannot open the file\n&amp;#34;); return -1; } CURL *handle; char buf[SIZELIMIT]; //Data to be sent is stored in this buffer.</description>
+      <description>Recently I created a program which can send a file to a server in several packets using HTTP POST. I also created a servlet(in fact, my first servlet!) to receive these file parts and then create a file using them. Download it. The program &#39;client.c&#39; sends a file to the server as mentioned in small parts - 100KB, but you can change the size (set value in SIZELIMIT). The program uses Curl library to send the file using HTTP POST.</description>
     </item>
     
     <item>
@@ -195,7 +193,7 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
       <pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2010/07/31/after-installing-opensuse-11-3/</guid>
-      <description>Now, you are ready to explore your openSUSE 11.3! Following steps are optional :)</description>
+      <description>First, a very short review! I just installed openSUSE 11.3 KDE version (with KDE 4.4.4). This is the first time Iam installing a 64-bit OS. My previous openSUSE were all 32 bit! First of all, it feels much more stable and sexier than early openSUSE releases. For the first time Nepomuk integration worked flawlessly. But it still has some glitches like the system getting hung (it will be okay after the first one or two updates I hope) and the unstabilities with &amp;lsquo;Activity&amp;rsquo; setting of Plasma desktop.</description>
     </item>
     
     <item>
@@ -205,9 +203,10 @@ This is a very short note of &amp;lsquo;make&amp;rsquo; utility, mostly made for
       
       <guid>https://sinujohn.github.io/2010/06/06/a-quick-introduction-to-gcc/</guid>
       <description>GCC - GNU Compiler Collection
-From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.Compile and Link a simple program: gcc -o hello.out hello.c This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
+From GCC manual - When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.
+Compile and Link a simple program: gcc -o hello.out hello.c  This creates an executable &amp;lsquo;hello.out&amp;rsquo; from file &amp;lsquo;hello.c&amp;rsquo; -o specifies the output file.
 Specify Language: Create a C file and save it as &amp;lsquo;hello.cpp&amp;rsquo;.
-gcc -o hello.out hello.cpp This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
+gcc -o hello.out hello.cpp  This results in an error as gcc tries to perform C++ compilation(assumed from the extension .</description>
     </item>
     
   </channel>

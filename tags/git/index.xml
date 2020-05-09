@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Sinu John</title>
@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 Mar 2017 15:14:34 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sinujohn.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,7 +18,9 @@
       <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://sinujohn.github.io/2014/06/21/my-git-workflow/</guid>
-      <description></description>
+      <description>Clone repository to local machine: git clone &amp;lt;repository&amp;gt;
+git pullcode... code .... code...code more.....git stashgit pullgit stash applygit add &amp;lt;filenames&amp;gt;git commit -m &#34;commit message&#34;git pushIf any conflict occurs when stash is applied, resolve it either in IDE or using command line: git mergetool -t kdiff3 (invokes KDiff 3 if it installed)
+Happy Coding :)</description>
     </item>
     
   </channel>
