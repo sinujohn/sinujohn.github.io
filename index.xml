@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 26 Apr 2020 21:22:16 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 13:29:12 +0530</lastBuildDate>
     
 	<atom:link href="https://sinujohn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why Software Architecture Matters</title>
+      <link>https://sinujohn.github.io/2020/07/18/why-software-architecture-matters/</link>
+      <pubDate>Sat, 18 Jul 2020 13:29:12 +0530</pubDate>
+      
+      <guid>https://sinujohn.github.io/2020/07/18/why-software-architecture-matters/</guid>
+      <description>In Software world, Architecture refers to those things which are considered important, things which we wish we get right, early on in the project.
+Software has internal and external qualities. External qualities can be measured with UX, UI, performance of the software, getting things done, no bugs etc. Internal quality can be measured in how easy it is to add new features to the project.
+Users of the software are not at all interested how the software is designed.</description>
+    </item>
     
     <item>
       <title>Spring Cloud Stream - using Functional constructs</title>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Sinu John ">
+<meta name="description" content="In Software world, Architecture refers to those things which are considered important, things which we wish we get right, early on in the project.
+Software has internal and external qualities. External qualities can be measured with UX, UI, performance of the software, getting things done, no bugs etc. Internal quality can be measured in how easy it is to add new features to the project.
+Users of the software are not at all interested how the software is designed." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://sinujohn.github.io/2020/07/18/why-software-architecture-matters/" />
+
+
+    <title>
+        
+            Why Software Architecture Matters :: Sinu John  — Cogito, ergo sum
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="Why Software Architecture Matters">
+<meta itemprop="description" content="In Software world, Architecture refers to those things which are considered important, things which we wish we get right, early on in the project.
+Software has internal and external qualities. External qualities can be measured with UX, UI, performance of the software, getting things done, no bugs etc. Internal quality can be measured in how easy it is to add new features to the project.
+Users of the software are not at all interested how the software is designed.">
+
+
+<meta itemprop="datePublished" content="2020-07-18T13:29:12&#43;05:30" />
+<meta itemprop="dateModified" content="2020-07-18T13:29:12&#43;05:30" />
+<meta itemprop="wordCount" content="381">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Why Software Architecture Matters" />
+<meta property="og:description" content="In Software world, Architecture refers to those things which are considered important, things which we wish we get right, early on in the project.
+Software has internal and external qualities. External qualities can be measured with UX, UI, performance of the software, getting things done, no bugs etc. Internal quality can be measured in how easy it is to add new features to the project.
+Users of the software are not at all interested how the software is designed." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sinujohn.github.io/2020/07/18/why-software-architecture-matters/" />
+<meta property="article:published_time" content="2020-07-18T13:29:12+05:30" />
+<meta property="article:modified_time" content="2020-07-18T13:29:12+05:30" /><meta property="og:site_name" content="Sinu John" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://sinujohn.github.io/"/>
+
+<meta name="twitter:title" content="Why Software Architecture Matters"/>
+<meta name="twitter:description" content="In Software world, Architecture refers to those things which are considered important, things which we wish we get right, early on in the project.
+Software has internal and external qualities. External qualities can be measured with UX, UI, performance of the software, getting things done, no bugs etc. Internal quality can be measured in how easy it is to add new features to the project.
+Users of the software are not at all interested how the software is designed."/>
+
+
+
+
+
+    <meta property="article:published_time" content="2020-07-18 13:29:12 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://sinujohn.github.io/post/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://sinujohn.github.io/2020/07/18/why-software-architecture-matters/">Why Software Architecture Matters</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>In Software world, Architecture refers to those things which are considered important, things which we wish we get right, early on in the project.</p>
+
+<p>Software has internal and external qualities. External qualities can be measured with UX, UI, performance of the software, getting things done, no bugs etc. Internal quality can be measured in how easy it is to add new features to the project.</p>
+
+<p>Users of the software are not at all interested how the software is designed. And the management layer of an organization only wants the users of the software to be happy. Because money flows only if the users are happy 😉</p>
+
+<p>Happy Users 😊 -&gt; More Money 💰💰💰 -&gt; Happy Management 🤑 -&gt; More Budget for the project 💰💰-&gt; Hike for the developers! 💰</p>
+
+<p>Architecture contributes to the internal quality of the project. So how is good architecture beneficial for the end users? If it doesn&rsquo;t concern the end users why should management invest in having a sound architecture for a project?</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/DngAZyWMGR0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>It can be reasoned as making a quick buck vs thinking long term. As a software project evolves, customer requirement changes, so some existing features have to modified/removed fast enough so that customers are happy. Also new features have to be added to the software without breaking existing functionalities as quickly as possible. This can be done only if the life of software developers are easy. If adding or modifying a piece of code takes a huge effort, releasing new features becomes a tough task and it takes longer and longer to add new features - existing features also add to maintenance burden.</p>
+
+<p>A good architecture makes the life of software engineers easier. Application Architecture structures code/components at an application level (here application is a loosely defined term - it can be one microservice or a set of microservices). Whereas Enterprise Architecture looks at one level higher - a set of applications, the CI/CD pipeline, security of all applications etc.</p>
+
+<p>If a company is in for the long term, it makes sense to invest time and money early on in having a sound <strong>evolvable</strong> architecture. The time and effort for this will only take a few weeks not months or years. But the benefits of this investment lasts for the life of the project.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://sinujohn.github.io/">Sinu John</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></span>
+            <span> <a href="https://sinujohn.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96151225-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+    </body>
+</html>
